@@ -1,0 +1,97 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "T1";
+
+M$Information = {
+  Authors      -> {"Alejo Rossia"}, 
+  Version      -> "1.0",
+  Date         -> "YY. 05. 2022",
+  Institutions -> {"University of Manchester"},
+  Emails       -> {"alejo.rossia@manchester.ac.uk"}
+};
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+(* UV fermion T1, vector-like fermion, triplet of colour and SU2, hypercharge -1/3. *)
+
+  F[56] == {
+    ClassName        -> T1,
+    Indices          -> {Index[SU2W],Index[Colour]},
+    SelfConjugate    -> False,
+    QuantumNumbers   -> {Y -> -1/3},
+    FullName         -> "heavy",
+    Mass             -> MT1,
+    Width            -> 0
+  },
+
+(* Unphysical fermions T1L and T1R, chiral projections of T1. *)
+ F[156] == {
+    ClassName        -> T1L,
+    Indices          -> {Index[SU2W],Index[Colour]},
+    SelfConjugate    -> False,
+    Unphysical       -> True,
+    QuantumNumbers   -> {Y -> -1/3},
+    FullName         -> "heavy",
+    Mass             -> MT1,
+    Definitions      -> { T1L[sp_,ff_,cc_] :> left[T1[sp,ff,cc]] }
+  },
+
+F[157] == {
+    ClassName        -> T1R,
+    Indices          -> {Index[SU2D],Index[Colour]},
+    SelfConjugate    -> False,
+    Unphysical       -> True,
+    QuantumNumbers   -> {Y -> -1/3},
+    FullName         -> "heavy",
+    Mass             -> MT1,
+    Definitions      -> { T1R[sp_,ff_,cc_] :> right[T1[sp,ff,cc]] }
+  }
+
+};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+
+  MT1 == { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+
+  lambdaT1 == {
+      ParameterType -> Internal,
+      Indices -> {Index[Generation]},
+(*      AllowSummation -> True,*)
+      ComplexParameter -> True
+  }
+};
+
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+LHeavy := Block[{mu}, 
+  ExpandIndices[I*(T1bar.Ga[mu].DC[T1, mu])-MT1 * T1bar.T1]/.gotoBFM];
+
+LHeavylight := Block[{sp1,ii,jj,kk,cc,ff1,yukup,yukdown},
+yukup= 
+   -(lambdaT1[ff1]/2) T1Rbar[sp1,jj,cc].QL[sp1,kk,ff1,cc] (2*Ta[jj,ii,kk]) Phibar[ii];
+ yukup+HC[yukup]
+];
+
+LNP := LHeavy + LHeavylight;
+
+Ltot := LSM + LNP;

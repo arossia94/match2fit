@@ -1,0 +1,6 @@
+listareplacesymmetry ={
+gWtiLe[i_,j_]->gWtiLe[j,i],
+gWtiQ[i_,j_]->gWtiQ[j,i],
+gWtiLebar[i_,j_] -> gWtiLebar[j,i],
+gWtiQbar[i_,j_] -> gWtiQbar[j,i]
+}

@@ -1,0 +1,194 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "Q1Q7W";
+
+M$Information = {
+  Authors      -> {"Alejo Rossia"}, 
+  Version      -> "1.0",
+  Date         -> "23. 06. 2023",
+  Institutions -> {"University of Manchester"},
+  Emails       -> {"alejo.rossia@manchester.ac.uk"}
+};
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+(* UV fermion Q1, vector-like fermion, triplet of colour, SU2 doublet, hypercharge 1/6. *)
+
+  F[56] == {
+    ClassName        -> Q1,
+    Indices          -> {Index[SU2D],Index[Colour]},
+    SelfConjugate    -> False,
+    QuantumNumbers   -> {Y -> 1/6},
+    FullName         -> "heavy",
+    Mass             -> MQ1,
+    Width            -> 0
+  },
+
+(* Unphysical fermions Q1L and Q1R, chiral projections of Q1. *)
+  F[156] == {
+    ClassName        -> Q1L,
+    Indices          -> {Index[SU2D],Index[Colour]},
+    SelfConjugate    -> False,
+    Unphysical       -> True,
+    QuantumNumbers   -> {Y -> 1/6},
+    FullName         -> "heavy",
+    Mass             -> MQ1,
+    Definitions      -> { Q1L[sp_,ff_,cc_] :> left[Q1[sp,ff,cc]] }
+  },
+
+  F[157] == {
+    ClassName        -> Q1R,
+    Indices          -> {Index[SU2D],Index[Colour]},
+    SelfConjugate    -> False,
+    Unphysical       -> True,
+    QuantumNumbers   -> {Y -> 1/6},
+    FullName         -> "heavy",
+    Mass             -> MQ1,
+    Definitions      -> { Q1R[sp_,ff_,cc_] :> right[Q1[sp,ff,cc]] }
+  },
+
+(* UV fermion Q7, vector-like fermion, triplet of colour, SU2 doublet, hypercharge 7/6. *)
+
+  F[58] == {
+    ClassName        -> Q7,
+    Indices          -> {Index[SU2D],Index[Colour]},
+    SelfConjugate    -> False,
+    QuantumNumbers   -> {Y -> 7/6},
+    FullName         -> "heavy",
+    Mass             -> MQ7,
+    Width            -> 0
+  },
+
+(* Unphysical fermions Q7L and Q7R, chiral projections of Q7. *)
+  F[158] == {
+    ClassName        -> Q7L,
+    Indices          -> {Index[SU2D],Index[Colour]},
+    SelfConjugate    -> False,
+    Unphysical       -> True,
+    QuantumNumbers   -> {Y -> 7/6},
+    FullName         -> "heavy",
+    Mass             -> MQ7,
+    Definitions      -> { Q7L[sp_,ff_,cc_] :> left[Q7[sp,ff,cc]] }
+  },
+
+  F[159] == {
+    ClassName        -> Q7R,
+    Indices          -> {Index[SU2D],Index[Colour]},
+    SelfConjugate    -> False,
+    Unphysical       -> True,
+    QuantumNumbers   -> {Y -> 7/6},
+    FullName         -> "heavy",
+    Mass             -> MQ7,
+    Definitions      -> { Q7R[sp_,ff_,cc_] :> right[Q7[sp,ff,cc]] }
+  },
+
+  V[30] == {
+    ClassName        -> Wti,
+    Indices          -> {Index[SU2W]},
+    SelfConjugate    -> True,
+    FullName         -> "heavy",
+    Mass             -> MWti,
+    Width            -> 0,
+    QuantumNumbers   -> { Y -> 0}
+  }
+
+};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+
+  MQ1 == { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+
+  MQ7 == { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+
+  MWti == { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+
+  lambdaQ7 == {
+      ParameterType -> Internal,
+      Indices -> {Index[Generation]},
+    (*   AllowSummation -> True,*)
+      ComplexParameter -> True
+  },
+  
+  lambdaQ1 == {
+      ParameterType -> Internal,
+      Indices -> {Index[Generation]},
+    (*   AllowSummation -> True,*)
+      ComplexParameter -> True
+  },
+  
+  gWtiLe == {
+    ParameterType -> Internal,
+    Indices->{Index[Generation],Index[Generation]},
+    ComplexParameter -> True
+  },
+
+  gWtiQ == {
+    ParameterType -> Internal,
+    Indices->{Index[Generation],Index[Generation]},
+    ComplexParameter -> True
+  },
+
+  gWtiH == {
+    ParameterType -> Internal,
+    ComplexParameter -> False
+  }
+
+};
+
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+nDC[f_,ind_,lor1_,lor2_]:=del[f[lor1,ind],lor2]-g2*fsu2[ind,bb,cc] Wi[lor1,bb] f[lor2,cc];
+
+LHeavyQ1 := Block[{mu}, 
+  ExpandIndices[I*(Q1bar.Ga[mu].DC[Q1, mu])-MQ1 * Q1bar.Q1]/.gotoBFM];
+
+LHeavyQ7 := Block[{mu}, 
+  ExpandIndices[I*(Q7bar.Ga[mu].DC[Q7, mu])-MQ7 * Q7bar.Q7]/.gotoBFM];
+
+LHeavyWti := Block[{ii,mu,nu}, 
+  (-(1/4)(nDC[Wti,ii,mu,nu] - nDC[Wti,ii,nu,mu])*(nDC[Wti,ii,mu,nu] - nDC[Wti,ii,nu,mu]) + (MWti^2/2)*Wti[mu,ii]*Wti[mu,ii])/.gotoBFM]
+
+LHeavylightQ := Block[{sp1,ii,jj,kk,cc,ff1,yukup},
+yukup= 
+   -(lambdaQ7[ff1]) Q7Lbar[sp1,jj,cc].UR[sp1,ff1,cc]*Phi[jj] - (lambdaQ1[ff1]) Q1Lbar[sp1,jj,cc].UR[sp1,ff1,cc]*Eps[jj,kk]*Phibar[kk];
+yukup + HC[yukup] ];
+
+LHeavylightWti := Block[{ii, jj, mu, nu, ffll1, ffll2, ffll3, ffll4, sp1, sp2, cc, vectorcurrent, kk},
+
+vectorcurrent=-(gWtiLe[ffll1,ffll2]) Wti[mu,jj]  LLbar[sp1, ii, ffll1].Ga[mu,sp1,sp2].LL[sp2, kk, ffll2] Ta[jj,ii,kk]
+-(gWtiQ[ffll3,ffll4]) Wti[mu,jj]  QLbar[sp1, ii, ffll3, cc].Ga[mu,sp1,sp2].QL[sp2, kk, ffll4,cc] Ta[jj,ii,kk] 
+-gWtiH * Wti[mu,ii] * I *( Phibar[jj] Ta[ii,jj,kk] DC[Phi[kk],mu]  - HC[DC[Phi[jj],mu]] Ta[ii,jj,kk] Phi[kk]);
+ 
+vectorcurrent/.gotoBFM
+];
+
+
+LNP := LHeavyQ1 + LHeavyQ7 + LHeavyWti + LHeavylightQ + LHeavylightWti;
+
+Ltot := LSM + LNP;
