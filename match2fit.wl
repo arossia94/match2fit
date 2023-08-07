@@ -489,7 +489,7 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SM numerical inputs*)
 
 
@@ -514,24 +514,25 @@ Subscript[g3, SM]:=Rationalize[Sqrt[4Pi \[Alpha]Strong]];
 vSM=Rationalize[0.24622];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Masses and Yukawas*)
 
 
 (*/// SM masses and Yukawas ///*)
 (*/// Option for mass and Yukawa flavour assumption.
 "SMEFiT3" : \[Tau], bottom and top Yukawas to their SM values.
-"SMEFiTop" : only top Yukawa to its SM value, all the rest to zero. ///*)
-flavourOption="SMEFiTop";
-mSM[\[Tau]]:=Piecewise[{{Rationalize[0.00178],flavourOption=="SMEFiT3"},{0,flavourOption=="SMEFiTop"}},0];
+"SMEFiTop" : only top Yukawa to its SM value, all the rest to zero.
+"SMEFiTcharm: \[Tau], bottom, charm and top Yukawas and masses to their SM values.///*)
+flavourOption="SMEFiT3";
+mSM[\[Tau]]:=Piecewise[{{Rationalize[0.00178],flavourOption=="SMEFiT3"},{0,flavourOption=="SMEFiTop"}},Rationalize[0.00178]];
 mSM[\[Mu]]:=0;
 mSM[e]:=0;
 mSM[W]:=Rationalize[0.080379];
 mSM[Z]:=Rationalize[0.0911876];
 mSM[h]:=Rationalize[0.12525];
 mSM[t]:=Rationalize[0.17276];
-mSM[b]:=Piecewise[{{Rationalize[0.00418],flavourOption=="SMEFiT3"},{0,flavourOption=="SMEFiTop"}},0];
-mSM[c]:=0;
+mSM[b]:=Piecewise[{{Rationalize[0.00418],flavourOption=="SMEFiT3"},{0,flavourOption=="SMEFiTop"}},Rationalize[0.00418]];
+mSM[c]:=Piecewise[{{Rationalize[0.00127],flavourOption=="SMEFiTcharm"}},0];
 mSM[u]:=0;
 mSM[d]:=0;
 mSM[s]:=0;
@@ -1170,7 +1171,7 @@ WriteLine[str2,"inspect_model(MODEL_SPECS, build_uv_posterior, ["<>auxInvList<>"
 Close[str2];]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Public functions*)
 
 
@@ -1235,7 +1236,7 @@ If[listProblems!={},Print["The matching was completed but problems were reported
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV parameters recognition*)
 
 
@@ -1271,7 +1272,7 @@ flavourSymChecker[matchResFile_,OptionsPattern[]]:=flavourSymCheckerBack[matchRe
 flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile,OptionValue["UVFlavourAssumption"]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*From model to run card*)
 
 
@@ -1289,7 +1290,7 @@ If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
 dictPrinterWCscanV2[direct<>model<>"_MM/MatchingResult.dat",mass,parametersList["~/Music/","T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model];]*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*From matching result to run card*)
 
 
@@ -1302,7 +1303,7 @@ matchResToUVscanCard[matchResFile_,mass_,OptionsPattern[]]:=dictPrinterUVcoup[ma
 
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Closing the package*)
 
 
