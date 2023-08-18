@@ -1,0 +1,7 @@
+listahermiticity ={
+			yVarphiEbar[i_,j_]->yVarphiE[j,i],
+			yVarphiUbar[i_,j_]->yVarphiU[j,i],
+			yVarphiDbar[i_,j_]->yVarphiD[j,i],
+			Mvarphibar->Mvarphi,
+			lamvarphibar->lamvarphi
+}

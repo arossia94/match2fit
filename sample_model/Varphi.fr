@@ -1,0 +1,110 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "Varphi";
+
+M$Information = {
+  Authors      -> {"Alejo Rossia"}, 
+  Version      -> "1.0",
+  Date         -> "13. 03. 2022",
+  Institutions -> {"University of Manchester"},
+  Emails       -> {"alejo.rossia@manchester.ac.uk"}
+};
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+(* UV particle Varphi, just another Higgs doublet but without VEV *)
+
+  S[37] == {
+    ClassName        -> Varphi,
+    Indices          -> {Index[SU2D]},
+    SelfConjugate    -> False,
+    QuantumNumbers -> {Y -> 1/2},
+    FullName         -> "heavy" ,
+    Mass             -> Mvarphi,
+    Width            -> 0
+  },
+
+(* Unphysical, just to apply the tilde transformation more easily *)
+
+ S[38] == {
+    ClassName        -> Varphitilde,
+    Indices          -> {Index[SU2D]},
+    SelfConjugate    -> False,
+    QuantumNumbers   -> {Y -> -1/2},
+    Unphysical       -> True,
+    Definitions      -> { Varphitilde[i_] :> Eps[i,j] Varphibar[j]}
+  }
+
+};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+
+  yVarphiU == { 
+    ParameterType     -> Internal, 
+    Indices           -> {Index[Generation],Index[Generation]},
+    ComplexParameter  -> False
+  },
+
+yVarphiD == { 
+    ParameterType     -> Internal, 
+    Indices           -> {Index[Generation],Index[Generation]},
+    ComplexParameter  -> False
+  },
+  
+yVarphiE == { 
+    ParameterType     -> Internal, 
+    Indices           -> {Index[Generation],Index[Generation]},
+    ComplexParameter  -> False
+  },
+
+  Mvarphi == { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+  lamvarphi == { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+  Lam4Varphi == { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  }
+};
+
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+LHeavy := Block[{ii,mu}, 
+  ExpandIndices[(DC[Varphibar[ii],mu]DC[Varphi[ii], mu])-Mvarphi^2*Varphibar*Varphi-Lam4Varphi *(Varphibar*Varphi)^2/]/.gotoBFM];
+
+LHeavylight := Block[{sp1,ii,jj,cc,ff1,ff2,ff3,yuklep,yukup,yukdown,sca},
+sca=
+  -lamvarphi*(Varphibar[ii]*Phi[ii])(Phibar[jj]*Phi[jj]);
+yuklep =
+   - yVarphiE[ff1,ff2] Varphibar[jj] LRbar[sp1,ff1].LL[sp1,jj,ff2];
+yukup= 
+   -yVarphiU[ff1,ff2] Varphibar[ii] Eps[ii,jj] QLbar[sp1,jj,ff1,cc].UR[sp1,ff2,cc];
+yukdown=
+   - yVarphiD[ff1,ff2] Varphibar[jj] DRbar[sp1,ff1,cc].QL[sp1,jj,ff2,cc];
+  sca+HC[sca]+yukup+HC[yukup]+yuklep+HC[yuklep]+yukdown+HC[yukdown]
+ ];
+
+LNP := LHeavy + LHeavylight;
+
+Ltot := LSM + LNP;
