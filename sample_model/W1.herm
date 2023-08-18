@@ -1,0 +1,5 @@
+listahermiticity ={
+gWtiLebar[i_,j_]->gWtiLe[j,i],
+gWtiQbar[i_,j_]->gWtiQ[j,i],
+gWtiHbar -> gWtiH
+}
