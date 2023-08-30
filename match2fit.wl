@@ -11,7 +11,7 @@ BeginPackage["match2fit`"];
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
 Print["Version: 1.0"];
-Print["Date: 02/08/2023"];
+Print["Date: 30/08/2023"];
 Print["Author: Alejo N. Rossia"];
 Print["Affiliations: The University of Manchester"];
 
@@ -160,7 +160,7 @@ replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[Symbol[SymbolNa
 ewReemp:={sW->g1/Sqrt[g2^2+g1^2],cW->g2/Sqrt[g2^2+g1^2]};
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SMEFiT conventions*)
 
 
@@ -180,7 +180,7 @@ ret]
 (*Flavour assumptions*)
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Condition lists*)
 
 
@@ -260,7 +260,7 @@ Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[\[Phi]ud]]][2,3]==0,
 Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[\[Phi]ud]]][3,1]==0,
 Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[\[Phi]ud]]][3,2]==0,
 Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[\[Phi]ud]]][3,3]==0};
-assumOpe[Fl2,Subscript[wwC, ll]]:=Table[Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[ll]]][toVanishLeptonsLL[Fl2][[i,1]],toVanishLeptonsLL[Fl2][[i,2]],toVanishLeptonsLL[Fl2][[i,3]],toVanishLeptonsLL[Fl2][[i,4]]]==0,{i,1,Length[toVanishLeptonsLL[Fl2]]}];
+assumOpe[Fl2,Subscript[wwC, ll]]:=Join[{Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[ll]]][1,1,1,1]==Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[ll]]][1,2,2,1]},Table[Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[ll]]][toVanishLeptonsLL[Fl2][[i,1]],toVanishLeptonsLL[Fl2][[i,2]],toVanishLeptonsLL[Fl2][[i,3]],toVanishLeptonsLL[Fl2][[i,4]]]==0,{i,1,Length[toVanishLeptonsLL[Fl2]]}]];
 assumOpe[Fl2,Subscript[wwC, ee]]:=Table[Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[ee]]][toVanishLeptonsLL[Fl2][[i,1]],toVanishLeptonsLL[Fl2][[i,2]],toVanishLeptonsLL[Fl2][[i,3]],toVanishLeptonsLL[Fl2][[i,4]]]==0,{i,1,Length[toVanishLeptonsLL[Fl2]]}];
 assumOpe[Fl2,Subscript[wwC, le]]:=Table[Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[le]]][toVanishLeptonsLLRR[Fl2][[i,1]],toVanishLeptonsLLRR[Fl2][[i,2]],toVanishLeptonsLLRR[Fl2][[i,3]],toVanishLeptonsLLRR[Fl2][[i,4]]]==0,{i,1,Length[toVanishLeptonsLLRR[Fl2]]}];
 assumOpe[Fl2,Subscript[wwC, qq1]]:=Join[{Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][1,1,1,1]==Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][2,2,2,2],2*Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][1,1,1,1]==Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][1,1,2,2]+Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][1,2,2,1],Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][1,1,3,3]==Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][2,2,3,3],Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][1,3,3,1]==Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][2,3,3,2]},Table[Subscript[Symbol[SymbolName[wwC]], Symbol[SymbolName[qq1]]][toVanishQuarksLL[Fl2][[i,1]],toVanishQuarksLL[Fl2][[i,2]],toVanishQuarksLL[Fl2][[i,3]],toVanishQuarksLL[Fl2][[i,4]]]==0,{i,1,Length[toVanishQuarksLL[Fl2]]}]];
@@ -489,7 +489,7 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SM numerical inputs*)
 
 
@@ -514,7 +514,7 @@ Subscript[g3, SM]:=Rationalize[Sqrt[4Pi \[Alpha]Strong]];
 vSM=Rationalize[0.24622];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Masses and Yukawas*)
 
 
@@ -904,7 +904,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Run card printing*)
 
 
@@ -938,7 +938,7 @@ WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Loop level of the results : 0"];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Setting of the UV mass in TeV:"];
-WriteLine[str1,"m : "<>ToString[mass]<>" TeV"];
+WriteLine[str1,"m : "<>ToString[mass]<>" # TeV"];
 (*WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Free UV couplings :"];
 For[indFree=1,indFree<=Length[varsUV],indFree++,
@@ -1122,7 +1122,7 @@ Close[str1];]
 *)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Invariant printing*)
 
 
