@@ -11,7 +11,7 @@ The User's Manual is included as a PDF file. Alternatively, a continuously evolv
 # Usage
 See the User's Manual and the PackageTester notebook for usage examples.
 
-For examples of the global fit results, see arXiv:23XX.YYZZZ
+For examples of the global fit results, see [arXiv:2309.04523](https://arxiv.org/abs/2309.04523)
 
 # Citation
 
@@ -21,5 +21,5 @@ If you use this package together with the UV capabilities of SMEFiT in a scienti
 >
 > "Automation of SMEFT-Assisted Constraints on UV-Complete Models"
 >
-> [arXiv:23XX.YYZZZ]()
+> [arXiv:2309.04523](https://arxiv.org/abs/2309.04523)
 
