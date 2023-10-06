@@ -4,14 +4,14 @@ BeginPackage["match2fit`"];
 
 
 ":Name: match2fit"
-":Version: 1.0"
+":Version: 1.5-beta"
 ":Author: Alejo N. Rossia"
 ":Affiliation: Department of Physics and Astronomy, The University of Manchester."
 
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
-Print["Version: 1.0"];
-Print["Date: 30/08/2023"];
+Print["Version: 1.5-beta"];
+Print["Date: 06/10/2023"];
 Print["Author: Alejo N. Rossia"];
 Print["Affiliations: The University of Manchester"];
 
@@ -144,20 +144,20 @@ massReemp={Symbol[SymbolName[m]]->massInt};];
 {dicTotal,massString,massReemp}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*MMEFT conventions*)
 
 
 (*Code prepared for tree-level matching results only. *)
 renormReemp:={onelooporder->0};
-leviCivitaConvention:={iCPV->1};
+leviCivitaConvention:={Symbol[SymbolName[iCPV]]->1};
 (*/// MMEFT WC naming convention. ///*)
 listWCsMatchMakerEFT:={alphaKB,alphaKW,alphaKG,alphaKq[mif1_,mif2_],alphaKl[mif1_,mif2_],alphaKu[mif1_,mif2_],alphaKd[mif1_,mif2_],alphaKe[mif1_,mif2_],alphaOmuH2,alphaKH,alphaOlambda,alphaOlambdad[mif1_,mif2_],alphaOlambdae[mif1_,mif2_],alphaOlambdau[mif1_,mif2_],alphaKqbar[mif1_,mif2_],alphaKlbar[mif1_,mif2_],alphaKubar[mif1_,mif2_],alphaKdbar[mif1_,mif2_],alphaKebar[mif1_,mif2_],alphaOlambdadbar[mif1_,mif2_],alphaOlambdaebar[mif1_,mif2_],alphaOlambdaubar[mif1_,mif2_],alphaO3G,alphaO3Gt,alphaO3W,alphaO3Wt,alphaOHG,alphaOHGt,alphaOHW,alphaOHWt,alphaOHB,alphaOHBt,alphaOHWB,alphaOHWBt,alphaOHBox,alphaOHD,alphaOH,alphaOuG[mif1_,mif2_],alphaOuW[mif1_,mif2_],alphaOuB[mif1_,mif2_],alphaOdG[mif1_,mif2_],alphaOdW[mif1_,mif2_],alphaOdB[mif1_,mif2_],alphaOeW[mif1_,mif2_],alphaOeB[mif1_,mif2_],alphaOHq1[mif1_,mif2_],alphaOHq3[mif1_,mif2_],alphaOHu[mif1_,mif2_],alphaOHd[mif1_,mif2_],alphaOHud[mif1_,mif2_],alphaOHl1[mif1_,mif2_],alphaOHl3[mif1_,mif2_],alphaOHe[mif1_,mif2_],alphaOuH[mif1_,mif2_],alphaOdH[mif1_,mif2_],alphaOeH[mif1_,mif2_],alphaOuGbar[mif1_,mif2_],alphaOuWbar[mif1_,mif2_],alphaOuBbar[mif1_,mif2_],alphaOdGbar[mif1_,mif2_],alphaOdWbar[mif1_,mif2_],alphaOdBbar[mif1_,mif2_],alphaOeWbar[mif1_,mif2_],alphaOeBbar[mif1_,mif2_],alphaOHq1bar[mif1_,mif2_],alphaOHq3bar[mif1_,mif2_],alphaOHubar[mif1_,mif2_],alphaOHdbar[mif1_,mif2_],alphaOHudbar[mif1_,mif2_],alphaOHl1bar[mif1_,mif2_],alphaOHl3bar[mif1_,mif2_],alphaOHebar[mif1_,mif2_],alphaOuHbar[mif1_,mif2_],alphaOdHbar[mif1_,mif2_],alphaOeHbar[mif1_,mif2_],alphaOqq1[mif1_,mif2_,mif3_,mif4_],alphaOqq3[mif1_,mif2_,mif3_,mif4_],alphaOuu[mif1_,mif2_,mif3_,mif4_],alphaOdd[mif1_,mif2_,mif3_,mif4_],alphaOud1[mif1_,mif2_,mif3_,mif4_],alphaOud8[mif1_,mif2_,mif3_,mif4_],alphaOqu1[mif1_,mif2_,mif3_,mif4_],alphaOqu8[mif1_,mif2_,mif3_,mif4_],alphaOqd1[mif1_,mif2_,mif3_,mif4_],alphaOqd8[mif1_,mif2_,mif3_,mif4_],alphaOquqd1[mif1_,mif2_,mif3_,mif4_],alphaOquqd8[mif1_,mif2_,mif3_,mif4_],alphaOll[mif1_,mif2_,mif3_,mif4_],alphaOee[mif1_,mif2_,mif3_,mif4_],alphaOle[mif1_,mif2_,mif3_,mif4_],alphaOlq1[mif1_,mif2_,mif3_,mif4_],alphaOlq3[mif1_,mif2_,mif3_,mif4_],alphaOeu[mif1_,mif2_,mif3_,mif4_],alphaOed[mif1_,mif2_,mif3_,mif4_],alphaOqe[mif1_,mif2_,mif3_,mif4_],alphaOlu[mif1_,mif2_,mif3_,mif4_],alphaOld[mif1_,mif2_,mif3_,mif4_],alphaOledq[mif1_,mif2_,mif3_,mif4_],alphaOlequ1[mif1_,mif2_,mif3_,mif4_],alphaOlequ3[mif1_,mif2_,mif3_,mif4_],alphaOqq1bar[mif1_,mif2_,mif3_,mif4_],alphaOqq3bar[mif1_,mif2_,mif3_,mif4_],alphaOuubar[mif1_,mif2_,mif3_,mif4_],alphaOddbar[mif1_,mif2_,mif3_,mif4_],alphaOud1bar[mif1_,mif2_,mif3_,mif4_],alphaOud8bar[mif1_,mif2_,mif3_,mif4_],alphaOqu1bar[mif1_,mif2_,mif3_,mif4_],alphaOqu8bar[mif1_,mif2_,mif3_,mif4_],alphaOqd1bar[mif1_,mif2_,mif3_,mif4_],alphaOqd8bar[mif1_,mif2_,mif3_,mif4_],alphaOquqd1bar[mif1_,mif2_,mif3_,mif4_],alphaOquqd8bar[mif1_,mif2_,mif3_,mif4_],alphaOllbar[mif1_,mif2_,mif3_,mif4_],alphaOeebar[mif1_,mif2_,mif3_,mif4_],alphaOlebar[mif1_,mif2_,mif3_,mif4_],alphaOlq1bar[mif1_,mif2_,mif3_,mif4_],alphaOlq3bar[mif1_,mif2_,mif3_,mif4_],alphaOeubar[mif1_,mif2_,mif3_,mif4_],alphaOedbar[mif1_,mif2_,mif3_,mif4_],alphaOqebar[mif1_,mif2_,mif3_,mif4_],alphaOlubar[mif1_,mif2_,mif3_,mif4_],alphaOldbar[mif1_,mif2_,mif3_,mif4_],alphaOledqbar[mif1_,mif2_,mif3_,mif4_],alphaOlequ1bar[mif1_,mif2_,mif3_,mif4_],alphaOlequ3bar[mif1_,mif2_,mif3_,mif4_],alphaWeinberg[mif1_,mif2_],alphaWeinbergbar[mif1_,mif2_]};
 (*listSMcouplingsMMEFT:={g1,g2,g3,muH,lam,v};*)
 (*/// Translation between MMEFT and Warsaw naming conventions. ///*)
 reempMMtoWarsaw:={Symbol[SymbolName[alphaWeinberg]]->Subscript[Symbol[SymbolName[wwC]], 5],Symbol[SymbolName[alphaOll]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]],Symbol[SymbolName[alphaOqq1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ qq1]]],Symbol[SymbolName[alphaOqq3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ qq3]]],Symbol[SymbolName[alphaOlq1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]],Symbol[SymbolName[alphaOlq3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]],Symbol[SymbolName[alphaOee]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]],Symbol[SymbolName[alphaOdd]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[dd]]],Symbol[SymbolName[alphaOuu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]],Symbol[SymbolName[alphaOed]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ed]]],Symbol[SymbolName[alphaOeu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eu]]],Symbol[SymbolName[alphaOud1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ud1]]],Symbol[SymbolName[alphaOud8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ud8]]],Symbol[SymbolName[alphaOle]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]],Symbol[SymbolName[alphaOld]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]],Symbol[SymbolName[alphaOlu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]],Symbol[SymbolName[alphaOqe]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]],Symbol[SymbolName[alphaOqu1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]],Symbol[SymbolName[alphaOqu8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]],Symbol[SymbolName[alphaOqd1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd1]]],Symbol[SymbolName[alphaOqd8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd8]]],Symbol[SymbolName[alphaOledq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ledq]]],Symbol[SymbolName[alphaOquqd1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ quqd1]]],Symbol[SymbolName[alphaOquqd8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ quqd8]]],Symbol[SymbolName[alphaOlequ1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lequ1]]],Symbol[SymbolName[alphaOlequ3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ lequ3]]],Symbol[SymbolName[alphaOduq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ duq]]],Symbol[SymbolName[alphaOqqu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]],Symbol[SymbolName[alphaOqqq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]],Symbol[SymbolName[alphaOduu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]],Symbol[SymbolName[alphaO3W]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[W]]],Symbol[SymbolName[alphaO3Wt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ Wtil]]],Symbol[SymbolName[alphaO3G]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[G]]],Symbol[SymbolName[alphaO3Gt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ Gtil]]],Symbol[SymbolName[alphaOH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]]]],Symbol[SymbolName[alphaOHD]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]D]]],Symbol[SymbolName[alphaOHBox]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Sq]]],Symbol[SymbolName[alphaOHB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]B]]],Symbol[SymbolName[alphaOHBt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Btil]]],Symbol[SymbolName[alphaOHW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]W]]],Symbol[SymbolName[alphaOHWt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Wtil]]],Symbol[SymbolName[alphaOHWB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]WB]]],Symbol[SymbolName[alphaOHWBt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]WBtil]]],Symbol[SymbolName[alphaOHG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]G]]],Symbol[SymbolName[alphaOHGt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]Gtil]]],Symbol[SymbolName[alphaOeH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ e\[Phi]]]],Symbol[SymbolName[alphaOdH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ d\[Phi]]]],Symbol[SymbolName[alphaOuH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ u\[Phi]]]],Symbol[SymbolName[alphaOeB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eB]]],Symbol[SymbolName[alphaOeW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eW]]],Symbol[SymbolName[alphaOdB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ dB]]],Symbol[SymbolName[alphaOuB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]],Symbol[SymbolName[alphaOuW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ uW]]],Symbol[SymbolName[alphaOdW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[dW]]],Symbol[SymbolName[alphaOdG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ dG]]],Symbol[SymbolName[alphaOuG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ uG]]],Symbol[SymbolName[alphaOHl1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]],Symbol[SymbolName[alphaOHl3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]L3]]],Symbol[SymbolName[alphaOHq1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]q1]]],Symbol[SymbolName[alphaOHq3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]q3]]],Symbol[SymbolName[alphaOHe]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]e]]],Symbol[SymbolName[alphaOHd]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]d]]],Symbol[SymbolName[alphaOHu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]u]]],Symbol[SymbolName[alphaOHud]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]ud]]],Symbol[SymbolName[alphaOlambda]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]4]]],Symbol[SymbolName[alphaOlambdad]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[d]]],Symbol[SymbolName[alphaOlambdae]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[e]]],Symbol[SymbolName[alphaOlambdau]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[u]]]};
 replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[Symbol[SymbolName[g1]],Symbol[SymbolName[SM]]],Symbol[SymbolName[g2]]->Subscript[Symbol[SymbolName[g2]],Symbol[SymbolName[SM]]],g3->Subscript[Symbol[SymbolName[g3]],Symbol[SymbolName[SM]]],Symbol[SymbolName[yu]][a_,b_]->y[u][a,b],Symbol[SymbolName[yubar]][a_,b_]->Conjugate[y[u][a,b]],Symbol[SymbolName[yd]][a_,b_]->y[d][a,b],Symbol[SymbolName[ydbar]][a_,b_]->Conjugate[y[d][a,b]],Symbol[SymbolName[yl]][a_,b_]->y[e][a,b],Symbol[SymbolName[ylbar]][a_,b_]->Conjugate[y[e][a,b]],Symbol[SymbolName[lam]]->Symbol[SymbolName[\[Lambda]\[Phi]]],Symbol[SymbolName[muH]]->I*Subscript[Symbol[SymbolName[\[Mu]]],Symbol[SymbolName[\[Phi]]]]};
-ewReemp:={sW->g1/Sqrt[g2^2+g1^2],cW->g2/Sqrt[g2^2+g1^2]};
+ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
 
 
 (* ::Section:: *)
@@ -176,11 +176,11 @@ ret=Flatten[Table[{ToExpression[ToString[UVcoups[[j]]]<>"[a_]:>ToExpression[\""<
 ret]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Flavour assumptions*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Condition lists*)
 
 
@@ -489,12 +489,12 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SM numerical inputs*)
 
 
-(* ::Subsection::Closed:: *)
-(*Gauge parameters*)
+(* ::Subsection:: *)
+(*Gauge and Higgs parameters*)
 
 
 (*/// SM Gauge parameters ///*)
@@ -512,6 +512,7 @@ Subscript[g2, SM]:=Rationalize[Sqrt[8/Sqrt[2]*(10^(3)*mSM[W])^2*GFermi]];
 Subscript[g1, SM]:=Rationalize[Subscript[g2, SM]*Sqrt[sin2Weinberg/(1-sin2Weinberg)]];
 Subscript[g3, SM]:=Rationalize[Sqrt[4Pi \[Alpha]Strong]];
 vSM=Rationalize[0.24622];
+\[Lambda]\[Phi]=Rationalize[(1/2)*(mSM[H]/vSM)^2];
 
 
 (* ::Subsection::Closed:: *)
@@ -908,7 +909,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 (*Run card printing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV scan run card printing*)
 
 
@@ -1171,16 +1172,16 @@ WriteLine[str2,"inspect_model(MODEL_SPECS, build_uv_posterior, ["<>auxInvList<>"
 Close[str2];]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Public functions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV to EFT matching*)
 
 
 (*/// Function that does the matching procedure. ///*)
-matcher[directory_,model_]:=Block[{listInputFiles,listResultFiles,listProblems,streamScriptMatch,streamScript1,streamScript2},
+matcher[directory_,model_,looplevel_]:=Block[{listInputFiles,listResultFiles,listProblems,streamScriptMatch,streamScript1,streamScript2},
 (*/// Checking existence of mandatory input files. ///*)
 listInputFiles=FileNames[model<>"*",directory];
 If[Not[MemberQ[listInputFiles,directory<>model<>".fr"]],
@@ -1210,7 +1211,7 @@ Close[streamScript2];
 (*/// Final script to perform the matching. ///*)
 streamScriptMatch=OpenWrite[directory<>"script_MMEFT"];
 WriteLine[streamScriptMatch,"create_model UnbrokenSM_BFM.fr "<>model<>".fr"];
-WriteLine[streamScriptMatch,"match_model_to_eft_onlytree "<>model<>"_MM/ SMEFT_Green_Bpreserving_MM/"];
+WriteLine[streamScriptMatch,"match_model_to_eft"<>Piecewise[{{"_onlytree ",looplevel==0||looplevel=="Tree"||looplevel=="tree"},{" ",looplevel==1||looplevel=="loop"||looplevel=="1loop"}}," "]<>model<>"_MM/ SMEFT_Green_Bpreserving_MM/"];
 WriteLine[streamScriptMatch,"exit"];
 Close[streamScriptMatch];
 (*/// Run Scripts. ///*)
