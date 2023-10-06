@@ -1,3 +1,7 @@
+# Disclaimer and warning
+
+The version in this branch is under development for full support of 1-loop matching results. Use with extreme care, problems and errors are expected.
+
 # match2fit
 Mathematica package to interface UV-EFT matching codes with SMEFT global fit codes. Currently, it interfaces matchmakereft and SMEFiT and is limited to tree-level matching results.
 
