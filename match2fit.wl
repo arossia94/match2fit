@@ -489,11 +489,11 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SM numerical inputs*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Gauge and Higgs parameters*)
 
 
@@ -905,7 +905,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Run card printing*)
 
 
@@ -1176,7 +1176,7 @@ Close[str2];]
 (*Public functions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV to EFT matching*)
 
 
@@ -1237,7 +1237,7 @@ If[listProblems!={},Print["The matching was completed but problems were reported
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV parameters recognition*)
 
 
@@ -1252,15 +1252,14 @@ posListCoup=(Position[frFileList,_?((Quiet[StringCount[#,"ParameterType"]]==1)&)
 listcoup=StringTrim[StringTrim[frFileList[[posListCoup]],{"\n\n","\t"," "," == "}],{" ","  "}]//DeleteDuplicates//ToExpression;
 listUVcoup=Complement[listcoup,listMass];
 {listMass,listUVcoup}];
-
 (*/// Function that reads the .dat file with the matching results and identifies the masses and UV couplings.
 It takes the address of the MatchingResult.dat file as only input.
 It returns a list with 2 lists, {listMasses,listUVcouplings}. listMasses is a list with all the masses of the heavy UV particles. 
 listUVcouplings is a list with all the couplings defined for those particles. ///*)
-parametersListFromMatchingResult[matchingResultFile_]:=Module[{matchRes,varsSM,listMass,listUVcoup,allVar,allVarSimp,uvVarsComp},
-matchRes=Get[matchingResultFile];
+parametersListFromMatchingResult[matchingResultFile_,looporder_]:=Module[{matchRes,varsSM,listMass,listUVcoup,allVar,allVarSimp,uvVarsComp},
+matchRes=Get[matchingResultFile]/.Piecewise[{{{Symbol[SymbolName[onelooporder]]->0},looporder==0||looporder=="tree"||looporder=="Tree"}},{Symbol[SymbolName[onelooporder]]->1}];
 allVar=Variables[matchRes[[3]][[;;,2]]];
-varsSM={g1,g2,g3,lam,muH,yu,yubar,yd,ydbar,yl,ylbar,KroneckerDelta,onelooporder};
+varsSM={g1,g2,g3,lam,muH,yu,yubar,yd,ydbar,yl,ylbar,KroneckerDelta,onelooporder,aEV,bEV,cEV,iCPV,Log,invepsilonbar,ee};
 listMass=Select[allVar,(MemberQ[{"m","M"},StringTake[ToString[#],1]]&&FreeQ[Map[SymbolName,varsSM],ToString[#]])&];
 allVarSimp=allVar/.{a_[b_]:>a,a_[b_,c_]:>a,a_[b_,c_,d_]:>a,a_[b_,c_,d_,e_]:>a}//DeleteDuplicates;
 uvVarsComp=Complement[allVarSimp,Union[listMass,varsSM],SameTest->(SymbolName[#1]==SymbolName[#2]&)];
@@ -1273,7 +1272,7 @@ flavourSymChecker[matchResFile_,OptionsPattern[]]:=flavourSymCheckerBack[matchRe
 flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile,OptionValue["UVFlavourAssumption"]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*From model to run card*)
 
 
@@ -1291,7 +1290,7 @@ If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
 dictPrinterWCscanV2[direct<>model<>"_MM/MatchingResult.dat",mass,parametersList["~/Music/","T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model];]*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*From matching result to run card*)
 
 
@@ -1304,7 +1303,7 @@ matchResToUVscanCard[matchResFile_,mass_,OptionsPattern[]]:=dictPrinterUVcoup[ma
 
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Closing the package*)
 
 
