@@ -124,9 +124,10 @@ ret=Select[list,(StringSplit[StringCases[#,pattern],limiters][[1,1]]!="0"&&Strin
 ];
 ret
 ];
-massHandler[matchResFile_,mass_,flaUVassum_]:=Block[{dicTotal,preVarsUV,massString,massInt,massIntList,massReemp},
+massHandler[matchResFile_,mass_,looplevel_,flaUVassum_]:=Block[{dicTotal,preVarsUV,massString,massInt,massIntList,massReemp,looporderset},
+looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
 If[Length[mass]>1,
-{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile]/.{Symbol[SymbolName[onelooporder]]->0}/.flaUVassum;
+{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
 (*preVarsUV stores the names of the recognised UV masses.*)
 massString=StringRiffle[ToString/@IntegerPart/@mass,""];
 If[Length[mass]<Length[preVarsUV],
@@ -139,7 +140,7 @@ massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->mass[[j]],{j,1,Length[preVar
 ,
 massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
 massString=ToString[massInt];
-dicTotal=dictionaryToPrint[matchResFile]/.{Symbol[SymbolName[onelooporder]]->0}/.flaUVassum;
+dicTotal=dictionaryToPrint[matchResFile]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
 massReemp={Symbol[SymbolName[m]]->massInt};];
 {dicTotal,massString,massReemp}]
 
@@ -148,8 +149,10 @@ massReemp={Symbol[SymbolName[m]]->massInt};];
 (*MMEFT conventions*)
 
 
-(*Code prepared for tree-level matching results only. *)
-renormReemp:={onelooporder->0};
+(*(*Code prepared for tree-level matching results only. *)
+renormReemp:={onelooporder->0};*)
+renormReemp:={};
+(*Option useful for results from older MMEFT versions*)
 leviCivitaConvention:={Symbol[SymbolName[iCPV]]->1};
 (*/// MMEFT WC naming convention. ///*)
 listWCsMatchMakerEFT:={alphaKB,alphaKW,alphaKG,alphaKq[mif1_,mif2_],alphaKl[mif1_,mif2_],alphaKu[mif1_,mif2_],alphaKd[mif1_,mif2_],alphaKe[mif1_,mif2_],alphaOmuH2,alphaKH,alphaOlambda,alphaOlambdad[mif1_,mif2_],alphaOlambdae[mif1_,mif2_],alphaOlambdau[mif1_,mif2_],alphaKqbar[mif1_,mif2_],alphaKlbar[mif1_,mif2_],alphaKubar[mif1_,mif2_],alphaKdbar[mif1_,mif2_],alphaKebar[mif1_,mif2_],alphaOlambdadbar[mif1_,mif2_],alphaOlambdaebar[mif1_,mif2_],alphaOlambdaubar[mif1_,mif2_],alphaO3G,alphaO3Gt,alphaO3W,alphaO3Wt,alphaOHG,alphaOHGt,alphaOHW,alphaOHWt,alphaOHB,alphaOHBt,alphaOHWB,alphaOHWBt,alphaOHBox,alphaOHD,alphaOH,alphaOuG[mif1_,mif2_],alphaOuW[mif1_,mif2_],alphaOuB[mif1_,mif2_],alphaOdG[mif1_,mif2_],alphaOdW[mif1_,mif2_],alphaOdB[mif1_,mif2_],alphaOeW[mif1_,mif2_],alphaOeB[mif1_,mif2_],alphaOHq1[mif1_,mif2_],alphaOHq3[mif1_,mif2_],alphaOHu[mif1_,mif2_],alphaOHd[mif1_,mif2_],alphaOHud[mif1_,mif2_],alphaOHl1[mif1_,mif2_],alphaOHl3[mif1_,mif2_],alphaOHe[mif1_,mif2_],alphaOuH[mif1_,mif2_],alphaOdH[mif1_,mif2_],alphaOeH[mif1_,mif2_],alphaOuGbar[mif1_,mif2_],alphaOuWbar[mif1_,mif2_],alphaOuBbar[mif1_,mif2_],alphaOdGbar[mif1_,mif2_],alphaOdWbar[mif1_,mif2_],alphaOdBbar[mif1_,mif2_],alphaOeWbar[mif1_,mif2_],alphaOeBbar[mif1_,mif2_],alphaOHq1bar[mif1_,mif2_],alphaOHq3bar[mif1_,mif2_],alphaOHubar[mif1_,mif2_],alphaOHdbar[mif1_,mif2_],alphaOHudbar[mif1_,mif2_],alphaOHl1bar[mif1_,mif2_],alphaOHl3bar[mif1_,mif2_],alphaOHebar[mif1_,mif2_],alphaOuHbar[mif1_,mif2_],alphaOdHbar[mif1_,mif2_],alphaOeHbar[mif1_,mif2_],alphaOqq1[mif1_,mif2_,mif3_,mif4_],alphaOqq3[mif1_,mif2_,mif3_,mif4_],alphaOuu[mif1_,mif2_,mif3_,mif4_],alphaOdd[mif1_,mif2_,mif3_,mif4_],alphaOud1[mif1_,mif2_,mif3_,mif4_],alphaOud8[mif1_,mif2_,mif3_,mif4_],alphaOqu1[mif1_,mif2_,mif3_,mif4_],alphaOqu8[mif1_,mif2_,mif3_,mif4_],alphaOqd1[mif1_,mif2_,mif3_,mif4_],alphaOqd8[mif1_,mif2_,mif3_,mif4_],alphaOquqd1[mif1_,mif2_,mif3_,mif4_],alphaOquqd8[mif1_,mif2_,mif3_,mif4_],alphaOll[mif1_,mif2_,mif3_,mif4_],alphaOee[mif1_,mif2_,mif3_,mif4_],alphaOle[mif1_,mif2_,mif3_,mif4_],alphaOlq1[mif1_,mif2_,mif3_,mif4_],alphaOlq3[mif1_,mif2_,mif3_,mif4_],alphaOeu[mif1_,mif2_,mif3_,mif4_],alphaOed[mif1_,mif2_,mif3_,mif4_],alphaOqe[mif1_,mif2_,mif3_,mif4_],alphaOlu[mif1_,mif2_,mif3_,mif4_],alphaOld[mif1_,mif2_,mif3_,mif4_],alphaOledq[mif1_,mif2_,mif3_,mif4_],alphaOlequ1[mif1_,mif2_,mif3_,mif4_],alphaOlequ3[mif1_,mif2_,mif3_,mif4_],alphaOqq1bar[mif1_,mif2_,mif3_,mif4_],alphaOqq3bar[mif1_,mif2_,mif3_,mif4_],alphaOuubar[mif1_,mif2_,mif3_,mif4_],alphaOddbar[mif1_,mif2_,mif3_,mif4_],alphaOud1bar[mif1_,mif2_,mif3_,mif4_],alphaOud8bar[mif1_,mif2_,mif3_,mif4_],alphaOqu1bar[mif1_,mif2_,mif3_,mif4_],alphaOqu8bar[mif1_,mif2_,mif3_,mif4_],alphaOqd1bar[mif1_,mif2_,mif3_,mif4_],alphaOqd8bar[mif1_,mif2_,mif3_,mif4_],alphaOquqd1bar[mif1_,mif2_,mif3_,mif4_],alphaOquqd8bar[mif1_,mif2_,mif3_,mif4_],alphaOllbar[mif1_,mif2_,mif3_,mif4_],alphaOeebar[mif1_,mif2_,mif3_,mif4_],alphaOlebar[mif1_,mif2_,mif3_,mif4_],alphaOlq1bar[mif1_,mif2_,mif3_,mif4_],alphaOlq3bar[mif1_,mif2_,mif3_,mif4_],alphaOeubar[mif1_,mif2_,mif3_,mif4_],alphaOedbar[mif1_,mif2_,mif3_,mif4_],alphaOqebar[mif1_,mif2_,mif3_,mif4_],alphaOlubar[mif1_,mif2_,mif3_,mif4_],alphaOldbar[mif1_,mif2_,mif3_,mif4_],alphaOledqbar[mif1_,mif2_,mif3_,mif4_],alphaOlequ1bar[mif1_,mif2_,mif3_,mif4_],alphaOlequ3bar[mif1_,mif2_,mif3_,mif4_],alphaWeinberg[mif1_,mif2_],alphaWeinbergbar[mif1_,mif2_]};
@@ -160,7 +163,7 @@ replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[Symbol[SymbolNa
 ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SMEFiT conventions*)
 
 
@@ -542,11 +545,11 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Dictionary*)
 
 
@@ -905,7 +908,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Run card printing*)
 
 
@@ -913,11 +916,18 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 (*UV scan run card printing*)
 
 
-dictPrinterUVcoup[matchResFile_,mass_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel"]:=Block[{indFree,massString,dicTotal,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,invarsUV,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp},
-(*Load the dictionary with tree-level matching results*)
+dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel"]:=Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,
+str1,indWCzero,ind1,invarsUV,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar},
+(*Load the dictionary with matching results*)
 (*preVarsUV=Piecewise[{{parametersListFromMatchingResult[matchResFile],varsUVinp=={}}},varsUVinp]; (*// Will be useful for the masses //*)*)
 preVarsUV=parametersListFromMatchingResult[matchResFile][[1]];
-{dicTotal,massString,massReemp}=massHandler[matchResFile,mass,flaUVassum];
+{dicTotal,massString,massReemp}=massHandler[matchResFile,mass,looplevel,flaUVassum];
+(*For now, the invariatns computation is limited to tree-level*)
+If[MemberQ[{0,"tree","Tree"},looplevel],
+dicInvar=dicTotal;massReempInvar=massReemp;
+,
+{dicInvar,massReempInvar}=massHandler[matchResFile,mass,0,flaUVassum][[{1,3}]];
+];
 varsUV=DeleteDuplicates[Variables[dicTotal[[;;,2]]/.massReemp]];
 (*Get simpler names for the UV variables. *)
 simpleUVnames=simplifyUVcoupNames[Replace[varsUV,{a_[b__]:>a},1]];
@@ -936,7 +946,7 @@ WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"UV couplings : "<>StringReplace[ToString[InputForm[Table[CForm[varsUV[[k]]],{k,1,Length[varsUV]}]]],{"{"->"[","}"->"]","*^"->"e"}]];
 WriteLine[str1,"UV masses : "<>StringReplace[ToString[InputForm[Table[CForm[preVarsUV[[k]]],{k,1,Length[preVarsUV]}]]],{"{"->"[","}"->"]","*^"->"e"}]];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Loop level of the results : 0"];
+WriteLine[str1,"# Loop level of the results : "<>Piecewise[{{"0",looplevel==0||looplevel=="Tree"||looplevel=="tree"},{"1",looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1]];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Setting of the UV mass in TeV:"];
 WriteLine[str1,"m : "<>ToString[mass]<>" # TeV"];
@@ -953,7 +963,7 @@ WriteLine[str1,"# Miscellaneous information"];
 WriteLine[str1,"# Tree-level results address: "<>matchResFile];
 WriteLine[str1,"# Export date: "<>DateString[]];
 Close[str1];
-{invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicTotal/.massReemp)]];
+{invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar)]];
 zeroWCs=Select[dicTotal,(#[[2]]==0)&][[;;,1]];
 nonZeroWCs=Select[dicTotal,(FreeQ[zeroWCs,#[[1]]])&];
 reempNamesRelev=Table[nonZeroWCs[[i,1]]->ToExpression[printNameWCs[nonZeroWCs[[i,1]]]],{i,1,Length[nonZeroWCs]}];
@@ -1233,11 +1243,14 @@ DeleteFile[directory<>"UnbrokenSM_BFM.fr"];,
 Print["There was a problem during the matching and no results were generated.\nCheck input files."];];
 If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingProblems.dat"],
 listProblems=Get[directory<>model<>"_MM/MatchingProblems.dat"];
+If[Not[MemberQ[{0,"Tree","tree"},looplevel]],
+listProblems=Select[Simplify[listProblems/.{Symbol[SymbolName[ee]][a_,b_,c_,d_]:>0}],(DeleteDuplicates[#[[3]]]!={0})&];
+];
 If[listProblems!={},Print["The matching was completed but problems were reported after internal checks.\nPlease, check the problem list at:\n"<>directory<>model<>"_MM/MatchingProblems.dat\n"<>"Modify the input files in consequence and try again."]],
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV parameters recognition*)
 
 
@@ -1272,15 +1285,15 @@ flavourSymChecker[matchResFile_,OptionsPattern[]]:=flavourSymCheckerBack[matchRe
 flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile,OptionValue["UVFlavourAssumption"]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*From model to run card*)
 
 
 Options[modelToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection"};
-modelToUVscanCard[directory_,model_,mass_,OptionsPattern[]]:=Block[{direct},
-matcher[directory,model];
+modelToUVscanCard[directory_,model_,mass_,looplevel_,OptionsPattern[]]:=Block[{direct},
+matcher[directory,model,looplevel];
 If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
-dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,parametersList["~/Music/","T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model];]
+dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList["~/Music/","T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model];]
 
 
 (*Options[modelToWCscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection"};
@@ -1296,11 +1309,8 @@ dictPrinterWCscanV2[direct<>model<>"_MM/MatchingResult.dat",mass,parametersList[
 
 Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel"};
 (*Options[matchResToWCscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel"};*)
-matchResToUVscanCard[matchResFile_,mass_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,parametersListFromMatchingResult[matchResFile],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]
+matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]
 (*matchResToWCscanCard[matchResFile_,mass_,OptionsPattern[]]:=dictPrinterWCscanV2[matchResFile,mass,parametersListFromMatchingResult[matchResFile],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]*)
-
-
-
 
 
 (* ::Section:: *)
