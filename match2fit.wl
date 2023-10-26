@@ -118,7 +118,7 @@ numFac=numFactMultRelations[reempMultRel,dictFinal,listExpo];
 ret[[1,2]]=numFac;
 ret];
 funcRemoveZeros[list_]:=Block[{ret,pattern,limiters},If[Length[list]<=1,ret=list,
-pattern="["~~RegularExpression["[\\-]?[0-9]+(\\.)*[0-9]*"]~~","~~RegularExpression["[\\-]?[0-9]+(\\.)*[0-9]*"]~~"]";
+pattern="["~~RegularExpression["[\\-]?[0-9]+(\\.)*[0-9]*[e\\-]*[0-9]*"]~~","~~RegularExpression["[\\-]?[0-9]+(\\.)*[0-9]*"]~~"]";
 limiters={"[",",","]"};
 ret=Select[list,(StringSplit[StringCases[#,pattern],limiters][[1,1]]!="0"&&StringSplit[StringCases[#, pattern], limiters][[1,1]]!="0.")&];
 ];
@@ -935,7 +935,7 @@ varsUV=DeleteDuplicates[Variables[dicTotal[[;;,2]]/.massReemp]];
 (*Get simpler names for the UV variables. *)
 simpleUVnames=simplifyUVcoupNames[Replace[varsUV,{a_[b__]:>a},1]];
 (*Apply them*)
-dicTotal=Chop[dicTotal/.simpleUVnames];
+dicTotal=Chop[(dicTotal/.simpleUVnames)/.massReemp];
 varsUV=varsUV/.simpleUVnames;
 (*Print the card*)
 If[Length[varsUV]>0,
@@ -961,18 +961,20 @@ WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Expressions for all the WCs in SMEFiT basis"];
 Print["Printing expressions"];
 For[ind1=1,ind1<=Length[dicTotal],ind1++,
-If[printNameWCs[dicTotal[[ind1,1]]]=="ccp",Print[Flatten[MapIndexed[writeStrBlock[varsUV],CoefficientList[Chop[N[dicTotal[[ind1,2]]/.massReemp]],varsUV],{Length[varsUV]}]]]];
-WriteLine[str1,printNameWCs[dicTotal[[ind1,1]]]<>" : "<>"["<>StringRiffle[funcRemoveZeros[Flatten[MapIndexed[writeStrBlock[varsUV],CoefficientList[Chop[N[dicTotal[[ind1,2]]/.massReemp]],varsUV],{Length[varsUV]}]]],","]<>"]"]];
+If[ind1==12,Print[funcRemoveZeros[Flatten[MapIndexed[writeStrBlock[varsUV],CoefficientList[N[dicTotal[[ind1,2]]],varsUV],{Length[varsUV]}]]]];
+Print["test"];];
+WriteLine[str1,printNameWCs[dicTotal[[ind1,1]]]<>" : "<>"["<>StringRiffle[funcRemoveZeros[Flatten[MapIndexed[writeStrBlock[varsUV],CoefficientList[N[dicTotal[[ind1,2]]],varsUV],{Length[varsUV]}]]],","]<>"]"]
+Print[ind1];
+];
 Print["Finished printing"];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Miscellaneous information"];
 WriteLine[str1,"# Tree-level results address: "<>matchResFile];
 WriteLine[str1,"# Export date: "<>DateString[]];
 Close[str1];
-
 {invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar/.simpleUVnames)]];
-zeroWCs=Select[dicTotal,(#[[2]]==0)&][[;;,1]];
-nonZeroWCs=Select[dicTotal,(FreeQ[zeroWCs,#[[1]]])&];
+zeroWCs=Select[dicInvar,(#[[2]]==0)&][[;;,1]];
+nonZeroWCs=Select[dicInvar,(FreeQ[zeroWCs,#[[1]]])&];
 reempNamesRelev=Table[nonZeroWCs[[i,1]]->ToExpression[printNameWCs[nonZeroWCs[[i,1]]]],{i,1,Length[nonZeroWCs]}];
 invarFilePrinter[model,collection,0,massString,invarsUV,inverRelUV,reempNamesRelev];
 ];];
