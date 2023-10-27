@@ -148,7 +148,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 {dicTotal,massString,massReemp}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*MMEFT conventions*)
 
 
@@ -182,7 +182,7 @@ ret=Flatten[Table[{ToExpression[ToString[UVcoups[[j]]]<>"[a_]:>ToExpression[\""<
 ret]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Flavour assumptions*)
 
 
@@ -298,23 +298,24 @@ Subscript[wwC, quqd1],Subscript[wwC, quqd8],Subscript[wwC, lequ1],Subscript[wwC,
 
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Assumption checker*)
 
 
 (*/// Public function to check flavour assumption fulfillment. ///*)
 flavourSymCheckerBack[matchResFile_,flaUVassum_:{}]:=Module[{uvparams,reempUVreal,file,reempWClist,listChecks,flag,indexCheck},
-uvparams=parametersListFromMatchingResult[matchResFile];
+uvparams=parametersListFromMatchingResult[matchResFile,0];
 reempUVreal=Table[ToExpression[ToString[j]<>"bar"]->j,{j,uvparams[[2]]}];
 file=Get[matchResFile];
+If[MemberQ[Variables[file[[3,;;,2]]],Symbol[SymbolName[onelooporder]]],
+Print["WARNING: This code only supports tree-level matching results. 1-loop contributions will be neglected"];];
 reempWClist=((file[[3]]/.reempMMtoWarsaw/.vanishBviolation/.{Symbol[SymbolName[onelooporder]]->0})/.file[[4]]/.renormReemp/.leviCivitaConvention/.replaceSMparamsMatchMakerEFT);
 flag="YES";
 indexCheck=0;
 While[flag=="YES"&&indexCheck<Length[listNameChecks],
 indexCheck++;
-listChecks=(*DeleteDuplicates[*)Simplify[assumOpe[Fl2,listNameChecks[[indexCheck]]]/.reempWClist/.reempUVreal//.flaUVassum](*]*);
+listChecks=Simplify[assumOpe[Fl2,listNameChecks[[indexCheck]]]/.reempWClist/.reempUVreal//.flaUVassum];
 If[DeleteDuplicates[listChecks]!={True},flag="NO";
-(*Print[listChecks];*)
 ];
 ];
 Print[flag];
@@ -323,14 +324,16 @@ Print["First WC for which the conditions are not satisfied: "<>ToString[Standard
 ];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Flavour solver*)
 
 
 flavourSolverGeneral[matchResFile_,flaUVassum_]:=Block[{uvparams,reempUVreal,file,reempWClist},
-uvparams=parametersListFromMatchingResult[matchResFile];
+uvparams=parametersListFromMatchingResult[matchResFile,0];
 reempUVreal=Table[ToExpression[ToString[j]<>"bar"]->j,{j,uvparams[[2]]}];
 file=Get[matchResFile];
+If[MemberQ[Variables[file[[3,;;,2]]],Symbol[SymbolName[onelooporder]]],
+Print["WARNING: This code only supports tree-level matching results. 1-loop contributions will be neglected"];];
 reempWClist=(file[[3]]/.reempMMtoWarsaw/.vanishBviolation/.{Symbol[SymbolName[onelooporder]]->0})/.file[[4]]/.renormReemp/.leviCivitaConvention//.reempUVreal//.flaUVassum;
 superSolAsummOpe[reempWClist,uvparams]
 ];
@@ -499,7 +502,7 @@ Print["All conditions satisfied trivially."];{{AA->AA}}]];
 (*SM numerical inputs*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Gauge and Higgs parameters*)
 
 
@@ -522,7 +525,7 @@ vSM=Rationalize[0.24622];
 \[Lambda]\[Phi]=Rationalize[(1/2)*(mSM[h]/vSM)^2];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Masses and Yukawas*)
 
 
@@ -843,7 +846,6 @@ invarsToRet={};
 solToRet={};
 If[Length[nonZeroWCs]>0,
 varsUV=DeleteCases[DeleteCases[Variables[nonZeroWCs[[;;,2]]],Symbol[SymbolName[m]]],v];
-(*Print[varsUV];*)
 setVarsUVZero=Table[varsUV[[i]]:>0,{i,1,Length[varsUV]}];
 (*// Part that receives the expression for the couplings and determines how many of them are non-zero. //*)
 indexNonZeroWCs=Table[k,{k,1,Length[nonZeroWCs]}];(*/// Enumerates the non-zero WCs ///*)
@@ -915,12 +917,12 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 (*Run card printing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV scan run card printing*)
 
 
 dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel"]:=Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,
-str1,indWCzero,ind1,invarsUV,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar},
+str1,indWCzero,ind1,invarsUV,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel},
 (*Load the dictionary with matching results*)
 (*preVarsUV=Piecewise[{{parametersListFromMatchingResult[matchResFile],varsUVinp=={}}},varsUVinp]; (*// Will be useful for the masses //*)*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
@@ -938,8 +940,9 @@ simpleUVnames=simplifyUVcoupNames[Replace[varsUV,{a_[b__]:>a},1]];
 dicTotal=Chop[(dicTotal/.simpleUVnames)/.massReemp];
 varsUV=varsUV/.simpleUVnames;
 (*Print the card*)
+orderlabel=Piecewise[{{"Tree",looplevel==0||looplevel=="tree"||looplevel=="Tree"}},"1Loop"];
 If[Length[varsUV]>0,
-str1=OpenWrite[NotebookDirectory[]<>"//out_UV_dict_Coll_"<>collection<>"_Mod_"<>ToString[model]<>"_Mass_"<>massString<>"_Tree.yaml"];
+str1=OpenWrite[NotebookDirectory[]<>"//out_UV_dict_Coll_"<>collection<>"_Mod_"<>ToString[model]<>"_Mass_"<>massString<>"_"<>orderlabel<>".yaml"];
 WriteLine[str1,"# UV dictionary with WCs in terms of UV variables"];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"UV Collection : "<>collection];
@@ -949,7 +952,7 @@ WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"UV couplings : "<>StringReplace[ToString[InputForm[Table[CForm[varsUV[[k]]],{k,1,Length[varsUV]}]]],{"{"->"[","}"->"]","*^"->"e"}]];
 WriteLine[str1,"UV masses : "<>StringReplace[ToString[InputForm[Table[CForm[preVarsUV[[k]]],{k,1,Length[preVarsUV]}]]],{"{"->"[","}"->"]","*^"->"e"}]];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Loop level of the results : "<>Piecewise[{{"0",looplevel==0||looplevel=="Tree"||looplevel=="tree"},{"1",looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1]];
+WriteLine[str1,"# Loop level of the results : "<>orderlabel];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Setting of the UV mass in TeV:"];
 WriteLine[str1,"m : "<>ToString[mass]<>" # TeV"];
@@ -959,24 +962,19 @@ For[indFree=1,indFree<=Length[varsUV],indFree++,
 WriteLine[str1,ToString[InputForm[CForm[varsUV[[indFree]]]]]<>": {min: -100.0, max: 100.0}"]];*)
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Expressions for all the WCs in SMEFiT basis"];
-Print["Printing expressions"];
 For[ind1=1,ind1<=Length[dicTotal],ind1++,
-If[ind1==12,Print[funcRemoveZeros[Flatten[MapIndexed[writeStrBlock[varsUV],CoefficientList[N[dicTotal[[ind1,2]]],varsUV],{Length[varsUV]}]]]];
-Print["test"];];
 WriteLine[str1,printNameWCs[dicTotal[[ind1,1]]]<>" : "<>"["<>StringRiffle[funcRemoveZeros[Flatten[MapIndexed[writeStrBlock[varsUV],CoefficientList[N[dicTotal[[ind1,2]]],varsUV],{Length[varsUV]}]]],","]<>"]"]
-Print[ind1];
 ];
-Print["Finished printing"];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Miscellaneous information"];
-WriteLine[str1,"# Tree-level results address: "<>matchResFile];
+WriteLine[str1,"# Matching results address: "<>matchResFile];
 WriteLine[str1,"# Export date: "<>DateString[]];
 Close[str1];
 {invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar/.simpleUVnames)]];
 zeroWCs=Select[dicInvar,(#[[2]]==0)&][[;;,1]];
 nonZeroWCs=Select[dicInvar,(FreeQ[zeroWCs,#[[1]]])&];
 reempNamesRelev=Table[nonZeroWCs[[i,1]]->ToExpression[printNameWCs[nonZeroWCs[[i,1]]]],{i,1,Length[nonZeroWCs]}];
-invarFilePrinter[model,collection,0,massString,invarsUV,inverRelUV,reempNamesRelev];
+invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reempNamesRelev];
 ];];
 
 
@@ -1160,7 +1158,7 @@ listPythonFunctionNames={"Abs"->"np.abs","Sqrt"->"np.emath.sqrt","Log"->"np.log"
 "(" ~~ a : NumberString ~~ "," ~~ b : NumberString ~~ ")" :> "(" <> a <> Piecewise[{{"", StringMatchQ[StringTake[b, 1], RegularExpression["[+-]"]]}}, "+"] <> b <> "J)"};
 invarFilePrinter[part_,collection_,loop_,mass_,invarsUV_,inverRelUV_,reempNamesRelev_]:=Block[{str2,indInvar,uvVarsInInv,strName,indUVcoupInvar,inverRelUVcouPrint,indUVcoup2,auxInvList,accessWCs},
 (*Print[reempNamesRelev];*)
-str2=OpenWrite[NotebookDirectory[]<>"//InvarsFit_"<>collection<>"_Model_"<>ToString[part]<>"_Mass_"<>mass<>"_"<>Piecewise[{{"Loop",loop==1},{"Tree",loop==0}}]<>".py"];
+str2=OpenWrite[NotebookDirectory[]<>"//InvarsFit_"<>collection<>"_Model_"<>ToString[part]<>"_Mass_"<>mass<>"_"<>Piecewise[{{"Tree",loop==0||loop=="tree"||loop=="Tree"}},"1Loop"]<>".py"];
 WriteLine[str2,"import numpy as np
 from utils import inspect_model\n" ];
 WriteLine[str2,"MODEL_SPECS = dict(id=\""<>ToString[part]<>"\", collection=\""<>collection<>"\", mass="<>ToString[mass]<>", pto=\"NLO\", eft=\"NHO\" )\n\n"];
@@ -1173,21 +1171,6 @@ strName=ToString[uvVarsInInv[[indUVcoupInvar]]];
 WriteLine[str2,"\t"<>strName<>" = results."<>strName];];
 WriteLine[str2,"\treturn "<>StringReplace[ToString[FortranForm[invarsUV[[indInvar]]/.replacementsPreFortran]],listPythonFunctionNames]<>"\n"];
 ];];
-(*/// Discarded part of the cards. ///*)
-(*
-If[Length[inverRelUV]>0,
-WriteLine[str2,"def build_uv_posterior(results):"];
-inverRelUVcouPrint=inverRelUV[[1]];
-accessWCs=Table[ToString[reempNamesRelev[[i,2]]]->"results.O"<>StringDrop[ToString[reempNamesRelev[[i,2]]],1],{i,1,Length[reempNamesRelev]}];
-For[indUVcoup2=1,indUVcoup2<=Length[inverRelUVcouPrint],indUVcoup2++,
-WriteLine[str2,"\tresults[\""<>ToString[inverRelUVcouPrint[[indUVcoup2,1]]]<>"\"] = "<>StringReplace[ToString[FortranForm[inverRelUVcouPrint[[indUVcoup2,2]]/.reempNamesRelev/.replacementsPreFortran]],Join[listPythonFunctionNames,accessWCs]]];
-];
-WriteLine[str2,"\treturn results\n"];];
-WriteLine[str2,"def check_constrain(wc, uv):"];
-WriteLine[str2,"\tpass\n"];
-auxInvList=Piecewise[{{StringRiffle[Table["inv"<>ToString[j],{j,1,Length[invarsUV]}],", "],Length[invarsUV]>0}}," "];
-WriteLine[str2,"inspect_model(MODEL_SPECS, build_uv_posterior, ["<>auxInvList<>"], check_constrain)"];
-*)
 Close[str2];]
 
 
@@ -1195,7 +1178,7 @@ Close[str2];]
 (*Public functions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV to EFT matching*)
 
 
