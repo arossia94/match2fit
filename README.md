@@ -1,5 +1,5 @@
 # match2fit
-Mathematica package to interface UV-EFT matching codes with SMEFT global fit codes. Currently, it interfaces matchmakereft and SMEFiT and is limited to tree-level matching results.
+Mathematica package to interface UV-EFT matching codes with SMEFT global fit codes. It interfaces matchmakereft and SMEFiT and supports one-loop-level matching results.
 
 matchmakereft is a prerequisite for full functionality and hence requires using Linux/Mac as OS. 
 Except for the matching functionality, the rest of the match2fit package should work on Windows too.
