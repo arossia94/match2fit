@@ -165,7 +165,7 @@ replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[g1, SM],Symbol[
 ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SMEFiT conventions*)
 
 
@@ -181,7 +181,7 @@ ret=Flatten[Table[{ToExpression[ToString[UVcoups[[j]]]<>"[a_]:>ToExpression[\""<
 ret]
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Flavour assumptions*)
 
 
@@ -568,11 +568,11 @@ dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMake
 dictProv];
 dictionaryToPrintMultiPart[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassNoDegen,dictProv,looporderset},file=Get[matchResFile];
 looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
-uvparams=parametersListFromMatchingResult[matchResFile];
+uvparams=parametersListFromMatchingResult[matchResFile,looplevel];
 reempUVreal=Table[ToExpression[ToString[j]<>"bar"]->j,{j,uvparams[[2]]}];
 reempMassNoDegen=Table[uvparams[[1]][[j]]->Symbol[SymbolName[m]<>ToString[j]],{j,1,Length[uvparams[[1]]]}];
 dictProv=requiredWCsmeftsimBasisNonEval[[2;;-1]]/.(file[[3]]/.reempMMtoWarsaw/.vanishBviolation)/.file[[4]]/.renormReemp/.leviCivitaConvention;
-dictProv=dictProv/.{Symbol[SymbolName[onelooporder]]->looporderset}/.reempUVreal/.reempMassNoDegen
+dictProv=dictProv/.{Symbol[SymbolName[onelooporder]]->looporderset}/.reempUVreal/.reempMassNoDegen;
 dictProv=ParallelTable[{dictProv[[i,1]],EinsteinSum[dictProv[[i,2]]]},{i,1,Length[dictProv]},DistributedContexts -> {"match2fit`Private`"}];
 dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMakerEFT;
 {dictProv,uvparams[[1]]}];
