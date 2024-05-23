@@ -11,15 +11,23 @@ The User's Manual is included as a PDF file. Alternatively, a continuously evolv
 # Usage
 See the User's Manual and the PackageTester notebook for usage examples.
 
-For examples of the global fit results, see [arXiv:2309.04523](https://arxiv.org/abs/2309.04523)
+The runcards can be parsed into the SMEFiT format with [this script](https://github.com/LHCfitNikhef/smefit_release/blob/smefit_uv/runcards/uv_models/write_runcards.py).
+
+Examples of the usage of this package can be found in the following scientific publications:
+ - J. ter Hoeve et al, "The Automation of SMEFT-Assisted Constraints on UV-Complete Models" [arXiv:2309.04523, JHEP 01 (2024) 179](https://inspirehep.net/literature/2696156)
+ - E. Celada et al, "Mapping the SMEFT at High-Energy Colliders: from LEP and the (HL-)LHC to the FCC-ee" [arXiv:2404.12809](https://inspirehep.net/literature/2779255)
 
 # Citation
 
-If you use this package together with the UV capabilities of SMEFiT in a scientific publication, please cite
+If you use this package and/or the UV capabilities of SMEFiT in a scientific publication, please cite
 
 > Jaco ter Hoeve, Giacomo Magni, Juan Rojo, Alejo N. Rossia, and Eleni Vryonidou
 >
-> "Automation of SMEFT-Assisted Constraints on UV-Complete Models"
+> "The Automation of SMEFT-Assisted Constraints on UV-Complete Models"
+> 
+> DOI: [10.1007/JHEP01(2024)179](https://link.springer.com/article/10.1007/JHEP01(2024)179)
 >
-> [arXiv:2309.04523](https://arxiv.org/abs/2309.04523)
+> Published in: JHEP 01 (2024), 179
+>
+> [https://arxiv.org/abs/2309.04523](https://inspirehep.net/literature/2696156)
 
