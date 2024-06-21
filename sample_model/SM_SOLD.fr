@@ -1,0 +1,137 @@
+(***************************************************************************************************************)
+(******This is the FeynRules mod-file for the Unbroken Standard model******)
+(************)
+(******Authors:J.Santiago******)
+(************)
+(******Choose whether Feynman gauge is desired.******)
+(******If set to False,unitary gauge is assumed.****)
+(******Feynman gauge is especially useful for CalcHEP/CompHEP where the calculation is 10-100 times faster.***)(******Feynman gauge is not supported in MadGraph and Sherpa.****)
+(***************************************************************************************************************)(* ***************************)
+(* *****Information******)
+(* ***************************)
+M$ModelName="UnbrokenSM_BFM";
+M$Information={Authors->{"J. Santiago"},
+Version->"1.0",
+Date->"26. 01. 2021",
+Institutions->{"CAFPE and Universidad de Granada"},
+Emails->{"jsantiago@ugr.es"}};
+
+FeynmanGauge=True;
+
+(* ***************************)
+(* *****Gauge groups******)
+(* ***************************)
+
+M$GaugeGroups={
+U1Y=={Abelian->True,
+CouplingConstant->g1,
+GaugeBoson->B,
+Charge->Y},
+
+SU2L=={Abelian->False,
+CouplingConstant->g2,
+GaugeBoson->Wi,
+StructureConstant->fsu2,
+Representations->{{Ta,SU2D},{Ta4,SU24}}
+  },
+  SU3C == { 
+    Abelian           -> False, 
+    CouplingConstant  -> g3, 
+    GaugeBoson        -> G,
+    StructureConstant -> fsu3, 
+    Representations   -> {{T,Colour}
+}
+  } 
+};
+
+
+(* ************************** *)
+(* *****    Indices     ***** *)
+(* ************************** *)
+
+IndexRange[Index[SU2W      ]] = Range[3]; 
+IndexRange[Index[SU2D      ]] = Range[2];
+IndexRange[Index[Gluon     ]] = Range[8];
+IndexRange[Index[Colour    ]] = Range[3]; 
+IndexRange[Index[Generation]] = Range[3];
+IndexRange[Index[SU24]]=Range[4];
+
+
+ IndexStyle[SU2W,       n];
+IndexStyle[SU2D,       l];
+IndexStyle[Gluon,      a];
+IndexStyle[Colour,     m];
+IndexStyle[Generation, fl];
+IndexStyle[SU24, lq];
+
+
+
+(* ***************************)
+(* ****Particle classes*****)
+(* ***************************)
+
+M$ClassesDescription={
+(*Gaugebosons:physicalvector fields*)
+V[4]=={ClassName->G,SelfConjugate->True,Indices->{Index[Gluon]},Mass->0,FullName->"light",Width->0},V[2]=={ClassName->Wi,SelfConjugate->True,Indices->{Index[SU2W]},Mass->0,FullName->"light",Width->0},
+V[11]=={ClassName->B,SelfConjugate->True,Mass->0,FullName->"light",Width->0},(*Gauge bosons:quantum fluctuations*)V[104]=={ClassName->GQuantum,SelfConjugate->True,Indices->{Index[Gluon]},Mass->0,FullName->"light",Width->0},
+V[102]=={ClassName->WiQuantum,SelfConjugate->True,Indices->{Index[SU2W]},Mass->0,FullName->"light",Width->0},V[111]=={ClassName->BQuantum,SelfConjugate->True,Mass->0,FullName->"light",Width->0},
+
+(*Ghosts:related to physical gauge bosons*)
+U[4]=={ClassName->ghG,SelfConjugate->False,Indices->{Index[Gluon]},Ghost->G,PDG->82,QuantumNumbers->{GhostNumber->1},Mass->0,FullName->"light",Width->0},
+U[1]=={ClassName->ghWi,SelfConjugate->False,Indices->{Index[SU2W]},Ghost->Wi,QuantumNumbers->{GhostNumber->1},Mass->0,FullName->"light",Width->0},
+U[11]=={ClassName->ghB,SelfConjugate->False,Ghost->B,QuantumNumbers->{GhostNumber->1},Mass->0,FullName->"light",Width->0},
+
+(*Fermions:physical fields*)
+F[11]=={ClassName->lL,Indices->{Index[SU2D],Index[Generation]},SelfConjugate->False,Mass->0,FullName->"light",QuantumNumbers->{Y->-1/2}},
+F[12]=={ClassName->eR,Indices->{Index[Generation]},SelfConjugate->False,Mass->0,FullName->"light",QuantumNumbers->{Y->-1}
+(*QuantumNumbers->{Y->-1}*)},
+F[13]=={ClassName->qL,Indices->{Index[SU2D],Index[Generation],Index[Colour]},SelfConjugate->False,Mass->0,FullName->"light",QuantumNumbers->{Y->1/6}},
+F[14]=={ClassName->uR,Indices->{Index[Generation],Index[Colour]},SelfConjugate->False,Mass->0,FullName->"light",QuantumNumbers->{Y->2/3}},
+F[15]=={ClassName->dR,Indices->{Index[Generation],Index[Colour]},SelfConjugate->False,Mass->0,FullName->"light",QuantumNumbers->{Y->-1/3}},
+(*Fermions:unphysical fields,we use them just to apply directly the chirality*)
+F[111]=={ClassName->LL,Indices->{Index[SU2D],Index[Generation]},SelfConjugate->False,QuantumNumbers->{Y->-1/2},Unphysical->True,Definitions->{LL[sp_,kk_,ff_]:>left[lL[sp,kk,ff]]}},
+F[112]=={ClassName->LR,Indices->{Index[Generation]},SelfConjugate->False,Mass->0,QuantumNumbers->{Y->-1},Unphysical->True,Definitions->{LR[sp_,ff_]:>right[eR[sp,ff]]}},
+F[113]=={ClassName->QL,Indices->{Index[SU2D],Index[Generation],Index[Colour]},SelfConjugate->False,Mass->0,QuantumNumbers->{Y->1/6},Unphysical->True,Definitions->{QL[sp_,kk_,ff_,cc_]:>left[qL[sp,kk,ff,cc]]}},
+F[114]=={ClassName->UR,Indices->{Index[Generation],Index[Colour]},SelfConjugate->False,Mass->0,QuantumNumbers->{Y->2/3},Unphysical->True,Definitions->{UR[sp_,ff_,cc_]:>right[uR[sp,ff,cc]]}},
+F[115]=={ClassName->DR,Indices->{Index[Generation],Index[Colour]},SelfConjugate->False,Mass->0,QuantumNumbers->{Y->-1/3},Unphysical->True,Definitions->{DR[sp_,ff_,cc_]:>right[dR[sp,ff,cc]]}},
+(*Higgs:physical scalars*)
+S[11]=={ClassName->Phi,Indices->{Index[SU2D]},SelfConjugate->False,Mass->muH,FullName->"light",QuantumNumbers->{Y->1/2}},
+(*Higgs tilde:unphysical scalars*)
+S[12]=={ClassName->Phitilde,Indices->{Index[SU2D]},SelfConjugate->False,Mass->0,QuantumNumbers->{Y->-1/2},Unphysical->True,Definitions->{Phitilde[i_]:>Eps[i,j] Phibar[j]}}};
+
+
+(* ***************************)
+(* *****Parameters******)
+(* ***************************)
+M$Parameters={(*External parameters*)(*Internal Parameters*)g1=={ParameterType->Internal},g2=={ParameterType->Internal},g3=={ParameterType->Internal},lam=={ParameterType->Internal},muH=={ParameterType->Internal},(*Yq=={ParameterType->Internal},Yu=={ParameterType->Internal},Yd=={ParameterType->Internal},Yl=={ParameterType->Internal},Ye=={ParameterType->Internal},*)yl=={ParameterType->Internal,Indices->{Index[Generation],Index[Generation]},ComplexParameter->True},yu=={ParameterType->Internal,Indices->{Index[Generation],Index[Generation]},ComplexParameter->True},yd=={ParameterType->Internal,Indices->{Index[Generation],Index[Generation]},ComplexParameter->True}};
+
+
+(* ***************************)
+(* *****Lagrangian******)
+(* ***************************)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+LGauge:=Block[{mu,nu,ii,aa},-1/4 FS[B,mu,nu] FS[B,mu,nu]-1/4 FS[Wi,mu,nu,ii] FS[Wi,mu,nu,ii]-1/4 FS[G,mu,nu,aa] FS[G,mu,nu,aa]]/.gotoBFM;
+
+LFermions:=Block[{mu},I*(QLbar.Ga[mu].DC[QL,mu]+LLbar.Ga[mu].DC[LL,mu]+URbar.Ga[mu].DC[UR,mu]+DRbar.Ga[mu].DC[DR,mu]+LRbar.Ga[mu].DC[LR,mu])]/.gotoBFM;
+
+
+
+LHiggs:=Block[{ii,mu},DC[Phibar[ii],mu] DC[Phi[ii],mu]-muH^2 Phibar[ii] Phi[ii]-lam Phibar[ii] Phi[ii] Phibar[jj] Phi[jj]]/.gotoBFM;
+
+LYukawa:=Block[{sp1,ii,jj,cc,ff1,ff2,ff3,yuk},yuk=-yd[ff1,ff2] QLbar[sp1,ii,ff1,cc].DR[sp1,ff2,cc] Phi[ii]-yl[ff1,ff2] LLbar[sp1,ii,ff1].LR[sp1,ff2] Phi[ii]-yu[ff1,ff2] QLbar[sp1,ii,ff1,cc].UR[sp1,ff2,cc] Phibar[jj] Eps[ii,jj];
+yuk+HC[yuk]];
+
+
+LGhost:=Block[{aa,LGh1,LGhw,LGhs,LGhphi,mu,generators,gh,ghbar,Vectorize,phi1,phi2,togoldstones,doublet,doublet0},(*Pure gauge piece*)LGh1=-ghBbar.DC[(DC[ghB,mu]/.gotoBFM),mu];
+LGhw=-ghWibar[aa].DC[(DC[ghWi[aa],mu]/.gotoBFM),mu];
+LGhs=-ghGbar[aa].DC[(DC[ghG[aa],mu]/.gotoBFM),mu];
+ExpandIndices[LGhs+LGh1+LGhw,FlavorExpand->SU2W]];
+
+LGaugeFixing:=Block[{aa,LGFg,LGFw,LGFb},LGFg=-DC[GQuantum[mu,a],mu] DC[GQuantum[nu,a],nu];
+LGFw=-DC[WiQuantum[mu,a],mu] DC[WiQuantum[nu,a],nu];
+LGFb=-DC[BQuantum[mu],mu] DC[BQuantum[nu],nu];
+ExpandIndices[(LGFg+LGFw+LGFb)/2]];
+
+LSM:=LGauge+LFermions+LHiggs+LYukawa+LGhost+LGaugeFixing;
