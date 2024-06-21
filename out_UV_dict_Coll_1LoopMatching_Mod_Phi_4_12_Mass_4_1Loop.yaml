@@ -1,0 +1,70 @@
+# UV dictionary with WCs in terms of UV variables
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV Collection : 1LoopMatching
+UV model : Phi_4_12
+Model name : Phi_4_12
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV couplings : [lamPhi]
+UV masses : [MSa]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Loop level of the results : 1Loop
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Setting of the UV mass in TeV:
+m : 4 # TeV
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Expressions for all the WCs in SMEFiT basis
+cpG : [{lamPhi: [0.,0]}]
+cpB : [{lamPhi: [0.,0]}]
+cpW : [{lamPhi: [0.,0]}]
+cpWB : [{lamPhi: [0.,0]}]
+cpd : [{lamPhi: [-4.5222098057732525e-6,0]},{lamPhi: [0.0007915717472057639,2]}]
+cpD : [{lamPhi: [-1.0841923755457767e-7,0]},{lamPhi: [-0.0015831434944115277,2]}]
+cWWW : [{lamPhi: [3.059901446046024e-6,0]}]
+cpqMi : [{lamPhi: [2.978666791330643e-6,0]}]
+cpQM : [{lamPhi: [2.978666791330643e-6,0]}]
+c3pq : [{lamPhi: [-2.996736664256406e-6,0]}]
+c3pQ3 : [{lamPhi: [-2.996736664256406e-6,0]}]
+cpl1 : [{lamPhi: [5.4209618777288834e-8,0]}]
+cpl2 : [{lamPhi: [5.4209618777288834e-8,0]}]
+cpl3 : [{lamPhi: [5.4209618777288834e-8,0]}]
+c3pl1 : [{lamPhi: [-2.996736664256406e-6,0]}]
+c3pl2 : [{lamPhi: [-2.996736664256406e-6,0]}]
+c3pl3 : [{lamPhi: [-2.996736664256406e-6,0]}]
+cpui : [{lamPhi: [-7.227949170305177e-8,0]}]
+cpdi : [{lamPhi: [3.613974585152589e-8,0]}]
+cpt : [{lamPhi: [-7.227949170305177e-8,0]}]
+cpe : [{lamPhi: [1.0841923755457767e-7,0]}]
+cpmu : [{lamPhi: [1.0841923755457767e-7,0]}]
+cpta : [{lamPhi: [1.0841923755457767e-7,0]}]
+c81qq : [{lamPhi: [0.,0]}]
+c11qq : [{lamPhi: [-3.0116454876271576e-9,0]}]
+c83qq : [{lamPhi: [0.,0]}]
+c13qq : [{lamPhi: [-1.498368332128203e-6,0]}]
+c8qt : [{lamPhi: [0.,0]}]
+c1qt : [{lamPhi: [-2.409316390101726e-8,0]}]
+c8ut : [{lamPhi: [0.,0]}]
+c1ut : [{lamPhi: [-4.818632780203452e-8,0]}]
+c8qu : [{lamPhi: [0.,0]}]
+c1qu : [{lamPhi: [-2.409316390101726e-8,0]}]
+c8dt : [{lamPhi: [0.,0]}]
+c1dt : [{lamPhi: [4.818632780203452e-8,0]}]
+c8qd : [{lamPhi: [0.,0]}]
+c1qd : [{lamPhi: [1.204658195050863e-8,0]}]
+cQQ1 : [{lamPhi: [9.928889304435477e-7,0]}]
+cQQ8 : [{lamPhi: [-0.000011986946657025623,0]}]
+cQt1 : [{lamPhi: [-2.409316390101726e-8,0]}]
+cQt8 : [{lamPhi: [0.,0]}]
+ctt1 : [{lamPhi: [-4.818632780203452e-8,0]}]
+cll : [{lamPhi: [-2.996736664256406e-6,0]}]
+cll1111 : [{lamPhi: [-1.5254731415168474e-6,0]}]
+cbp : [{lamPhi: [-7.194763686065248e-8,0]},{lamPhi: [0.00003167429718711714,2]}]
+ctp : [{lamPhi: [-2.9736061588627563e-6,0]},{lamPhi: [0.0013091032492933868,2]}]
+ctG : [{lamPhi: [0.,0]}]
+ccp : [{lamPhi: [0.,0]}]
+ctap : [{lamPhi: [-3.063798890238311e-8,0]},{lamPhi: [0.0000134880978452317,2]}]
+ctW : [{lamPhi: [0.,0]}]
+ctZ : [{lamPhi: [0.,0]}]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Miscellaneous information
+# Matching results address: C:\Users\a95826ar.DS\Documents\GitHub\match2fit\/sample_results/MatchingResult_EW_Quad_Y12.dat
+# Export date: Fri 21 Jun 2024 14:57:27
