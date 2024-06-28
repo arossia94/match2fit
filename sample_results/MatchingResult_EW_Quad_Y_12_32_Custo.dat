@@ -1,0 +1,2706 @@
+MatchingResult = {{{{alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1, 
+        alphaO3G -> 0, alphaO3Gt -> 0, alphaO3W -> 0, alphaO3Wt -> 0, 
+        alphaOH -> (L6*L6bar)/(12*MSa^2) + (L1*L1bar)/(4*MSb^2), 
+        alphaOHB -> 0, alphaOHBox -> 0, alphaOHBt -> 0, alphaOHD -> 0, 
+        alphaOHG -> 0, alphaOHGt -> 0, alphaOHW -> 0, alphaOHWB -> 0, 
+        alphaOHWBt -> 0, alphaOHWt -> 0, alphaOlambda -> lam, 
+        alphaOmuH2 -> muH^2, alphaR2B -> 0, alphaR2G -> 0, alphaR2W -> 0, 
+        alphaRBDH -> 0, alphaRDH -> 0, alphaRHDp -> 0, alphaRHDpp -> 0, 
+        alphaRWDH -> 0, alphaEBd[fl99_, fl97_] -> 0, 
+        alphaEBdbar[fl99_, fl97_] -> 0, alphaEBdp[fl99_, fl97_] -> 0, 
+        alphaEBdpbar[fl99_, fl97_] -> 0, alphaEBdtp[fl99_, fl97_] -> 0, 
+        alphaEBdtpbar[fl99_, fl97_] -> 0, alphaEBe[fl99_, fl97_] -> 0, 
+        alphaEBebar[fl99_, fl97_] -> 0, alphaEBep[fl99_, fl97_] -> 0, 
+        alphaEBepbar[fl99_, fl97_] -> 0, alphaEBetp[fl99_, fl97_] -> 0, 
+        alphaEBetpbar[fl99_, fl97_] -> 0, alphaEBl[fl99_, fl97_] -> 0, 
+        alphaEBlbar[fl99_, fl97_] -> 0, alphaEBlp[fl99_, fl97_] -> 0, 
+        alphaEBlpbar[fl99_, fl97_] -> 0, alphaEBltp[fl99_, fl97_] -> 0, 
+        alphaEBltpbar[fl99_, fl97_] -> 0, alphaEBq[fl99_, fl97_] -> 0, 
+        alphaEBqbar[fl99_, fl97_] -> 0, alphaEBqp[fl99_, fl97_] -> 0, 
+        alphaEBqpbar[fl99_, fl97_] -> 0, alphaEBqtp[fl99_, fl97_] -> 0, 
+        alphaEBqtpbar[fl99_, fl97_] -> 0, alphaEBu[fl99_, fl97_] -> 0, 
+        alphaEBubar[fl99_, fl97_] -> 0, alphaEBup[fl99_, fl97_] -> 0, 
+        alphaEBupbar[fl99_, fl97_] -> 0, alphaEButp[fl99_, fl97_] -> 0, 
+        alphaEButpbar[fl99_, fl97_] -> 0, alphaEcdd[fl95_, fl97_, fl93_, 
+          fl99_] -> 0, alphaEcddbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEced[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcee[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceebar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceu[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceubar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcld[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcle[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcll[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcllbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEclubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqd[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdp[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqe[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedl[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcql[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqq[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqp[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqpbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqup[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupbar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcud[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudqq[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqbar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwo[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwobar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcuelq[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwo[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwobar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuu[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuubar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEdB[fl97_, fl99_] -> 0, alphaEdBbar[fl97_, fl99_] -> 0, 
+        alphaEdd8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdd8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdG[fl97_, fl99_] -> 0, alphaEdGbar[fl97_, fl99_] -> 0, 
+        alphaEdH[fl97_, fl99_] -> 0, alphaEdHbar[fl97_, fl99_] -> 0, 
+        alphaEdW[fl97_, fl99_] -> 0, alphaEdWbar[fl97_, fl99_] -> 0, 
+        alphaEeB[fl97_, fl99_] -> 0, alphaEeBbar[fl97_, fl99_] -> 0, 
+        alphaEed[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEedthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeH[fl97_, fl99_] -> 0, alphaEeHbar[fl97_, fl99_] -> 0, 
+        alphaEeu[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeubar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeuthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeW[fl97_, fl99_] -> 0, alphaEeWbar[fl97_, fl99_] -> 0, 
+        alphaEGd[fl99_, fl97_] -> 0, alphaEGdbar[fl99_, fl97_] -> 0, 
+        alphaEGdp[fl99_, fl97_] -> 0, alphaEGdpbar[fl99_, fl97_] -> 0, 
+        alphaEGdtp[fl99_, fl97_] -> 0, alphaEGdtpbar[fl99_, fl97_] -> 0, 
+        alphaEGq[fl99_, fl97_] -> 0, alphaEGqbar[fl99_, fl97_] -> 0, 
+        alphaEGqp[fl99_, fl97_] -> 0, alphaEGqpbar[fl99_, fl97_] -> 0, 
+        alphaEGqtp[fl99_, fl97_] -> 0, alphaEGqtpbar[fl99_, fl97_] -> 0, 
+        alphaEGu[fl99_, fl97_] -> 0, alphaEGubar[fl99_, fl97_] -> 0, 
+        alphaEGup[fl99_, fl97_] -> 0, alphaEGupbar[fl99_, fl97_] -> 0, 
+        alphaEGutp[fl99_, fl97_] -> 0, alphaEGutpbar[fl99_, fl97_] -> 0, 
+        alphaEld[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEle[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaElebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEledqtwo[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaEledqtwobar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaElequtwo[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElequtwobar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaElethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEletwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEletwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEll3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEll3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaElq[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqbar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqde[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethree[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethreebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqthree[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3p[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthree3pbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreebar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthreep[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreepbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEluqe[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqebar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwo[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwobar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEluthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaElutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqd[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqe[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqetwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqetwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqq38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEquqdtwo[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwobar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEqutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEuB[fl97_, fl99_] -> 0, alphaEuBbar[fl97_, fl99_] -> 0, 
+        alphaEud[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8p[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthree8pbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuG[fl97_, fl99_] -> 0, alphaEuGbar[fl97_, fl99_] -> 0, 
+        alphaEuH[fl97_, fl99_] -> 0, alphaEuHbar[fl97_, fl99_] -> 0, 
+        alphaEuu8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuu8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuW[fl97_, fl99_] -> 0, alphaEuWbar[fl97_, fl99_] -> 0, 
+        alphaEWl[fl99_, fl97_] -> 0, alphaEWlbar[fl99_, fl97_] -> 0, 
+        alphaEWlp[fl99_, fl97_] -> 0, alphaEWlpbar[fl99_, fl97_] -> 0, 
+        alphaEWltp[fl99_, fl97_] -> 0, alphaEWltpbar[fl99_, fl97_] -> 0, 
+        alphaEWq[fl99_, fl97_] -> 0, alphaEWqbar[fl99_, fl97_] -> 0, 
+        alphaEWqp[fl99_, fl97_] -> 0, alphaEWqpbar[fl99_, fl97_] -> 0, 
+        alphaEWqtp[fl99_, fl97_] -> 0, alphaEWqtpbar[fl99_, fl97_] -> 0, 
+        alphaKd[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKdbar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKe[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKebar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKl[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKlbar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKq[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKqbar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKu[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKubar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaOdB[fl97_, fl99_] -> 0, alphaOdBbar[fl97_, fl99_] -> 0, 
+        alphaOdd[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOddbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOdG[fl97_, fl99_] -> 0, alphaOdGbar[fl97_, fl99_] -> 0, 
+        alphaOdH[fl97_, fl99_] -> 0, alphaOdHbar[fl97_, fl99_] -> 0, 
+        alphaOdW[fl97_, fl99_] -> 0, alphaOdWbar[fl97_, fl99_] -> 0, 
+        alphaOeB[fl97_, fl99_] -> 0, alphaOeBbar[fl97_, fl99_] -> 0, 
+        alphaOed[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOedbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOee[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeH[fl97_, fl99_] -> 0, alphaOeHbar[fl97_, fl99_] -> 0, 
+        alphaOeu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeW[fl97_, fl99_] -> 0, alphaOeWbar[fl97_, fl99_] -> 0, 
+        alphaOHd[fl99_, fl97_] -> 0, alphaOHdbar[fl99_, fl97_] -> 0, 
+        alphaOHe[fl99_, fl97_] -> 0, alphaOHebar[fl99_, fl97_] -> 0, 
+        alphaOHl1[fl99_, fl97_] -> 0, alphaOHl1bar[fl99_, fl97_] -> 0, 
+        alphaOHl3[fl99_, fl97_] -> 0, alphaOHl3bar[fl99_, fl97_] -> 0, 
+        alphaOHq1[fl99_, fl97_] -> 0, alphaOHq1bar[fl99_, fl97_] -> 0, 
+        alphaOHq3[fl99_, fl97_] -> 0, alphaOHq3bar[fl99_, fl97_] -> 0, 
+        alphaOHu[fl99_, fl97_] -> 0, alphaOHubar[fl99_, fl97_] -> 0, 
+        alphaOHud[fl97_, fl99_] -> 0, alphaOHudbar[fl97_, fl99_] -> 0, 
+        alphaOlambdad[fl97_, fl99_] -> yd[fl97, fl99], 
+        alphaOlambdadbar[fl97_, fl99_] -> ydbar[fl97, fl99], 
+        alphaOlambdae[fl97_, fl99_] -> yl[fl97, fl99], 
+        alphaOlambdaebar[fl97_, fl99_] -> ylbar[fl97, fl99], 
+        alphaOlambdau[fl97_, fl99_] -> yu[fl97, fl99], 
+        alphaOlambdaubar[fl97_, fl99_] -> yubar[fl97, fl99], 
+        alphaOld[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOldbar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOle[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOlebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOledq[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOledqbar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOlequ1[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOlequ1bar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOll[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOllbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOlq1[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq1bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlu[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOlubar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqd1[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd1bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqe[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqq1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqu1[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu1bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOquqd1[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd1bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOuB[fl97_, fl99_] -> 0, alphaOuBbar[fl97_, fl99_] -> 0, 
+        alphaOud1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuG[fl97_, fl99_] -> 0, alphaOuGbar[fl97_, fl99_] -> 0, 
+        alphaOuH[fl97_, fl99_] -> 0, alphaOuHbar[fl97_, fl99_] -> 0, 
+        alphaOuu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuW[fl97_, fl99_] -> 0, alphaOuWbar[fl97_, fl99_] -> 0, 
+        alphaRBd[fl99_, fl97_] -> 0, alphaRBdbar[fl99_, fl97_] -> 0, 
+        alphaRBdp[fl99_, fl97_] -> 0, alphaRBdpbar[fl99_, fl97_] -> 0, 
+        alphaRBdtp[fl99_, fl97_] -> 0, alphaRBdtpbar[fl99_, fl97_] -> 0, 
+        alphaRBe[fl99_, fl97_] -> 0, alphaRBebar[fl99_, fl97_] -> 0, 
+        alphaRBep[fl99_, fl97_] -> 0, alphaRBepbar[fl99_, fl97_] -> 0, 
+        alphaRBetp[fl99_, fl97_] -> 0, alphaRBetpbar[fl99_, fl97_] -> 0, 
+        alphaRBl[fl99_, fl97_] -> 0, alphaRBlbar[fl99_, fl97_] -> 0, 
+        alphaRBlp[fl99_, fl97_] -> 0, alphaRBlpbar[fl99_, fl97_] -> 0, 
+        alphaRBltp[fl99_, fl97_] -> 0, alphaRBltpbar[fl99_, fl97_] -> 0, 
+        alphaRBq[fl99_, fl97_] -> 0, alphaRBqbar[fl99_, fl97_] -> 0, 
+        alphaRBqp[fl99_, fl97_] -> 0, alphaRBqpbar[fl99_, fl97_] -> 0, 
+        alphaRBqtp[fl99_, fl97_] -> 0, alphaRBqtpbar[fl99_, fl97_] -> 0, 
+        alphaRBu[fl99_, fl97_] -> 0, alphaRBubar[fl99_, fl97_] -> 0, 
+        alphaRBup[fl99_, fl97_] -> 0, alphaRBupbar[fl99_, fl97_] -> 0, 
+        alphaRButp[fl99_, fl97_] -> 0, alphaRButpbar[fl99_, fl97_] -> 0, 
+        alphaRdD[fl99_, fl97_] -> 0, alphaRdDbar[fl99_, fl97_] -> 0, 
+        alphaRdHD1[fl97_, fl99_] -> 0, alphaRdHD1bar[fl97_, fl99_] -> 0, 
+        alphaRdHD2[fl97_, fl99_] -> 0, alphaRdHD2bar[fl97_, fl99_] -> 0, 
+        alphaRdHD3[fl97_, fl99_] -> 0, alphaRdHD3bar[fl97_, fl99_] -> 0, 
+        alphaRdHD4[fl97_, fl99_] -> 0, alphaRdHD4bar[fl97_, fl99_] -> 0, 
+        alphaReD[fl99_, fl97_] -> 0, alphaReDbar[fl99_, fl97_] -> 0, 
+        alphaReHD1[fl97_, fl99_] -> 0, alphaReHD1bar[fl97_, fl99_] -> 0, 
+        alphaReHD2[fl97_, fl99_] -> 0, alphaReHD2bar[fl97_, fl99_] -> 0, 
+        alphaReHD3[fl97_, fl99_] -> 0, alphaReHD3bar[fl97_, fl99_] -> 0, 
+        alphaReHD4[fl97_, fl99_] -> 0, alphaReHD4bar[fl97_, fl99_] -> 0, 
+        alphaRGd[fl99_, fl97_] -> 0, alphaRGdbar[fl99_, fl97_] -> 0, 
+        alphaRGdp[fl99_, fl97_] -> 0, alphaRGdpbar[fl99_, fl97_] -> 0, 
+        alphaRGdtp[fl99_, fl97_] -> 0, alphaRGdtpbar[fl99_, fl97_] -> 0, 
+        alphaRGq[fl99_, fl97_] -> 0, alphaRGqbar[fl99_, fl97_] -> 0, 
+        alphaRGqp[fl99_, fl97_] -> 0, alphaRGqpbar[fl99_, fl97_] -> 0, 
+        alphaRGqtp[fl99_, fl97_] -> 0, alphaRGqtpbar[fl99_, fl97_] -> 0, 
+        alphaRGu[fl99_, fl97_] -> 0, alphaRGubar[fl99_, fl97_] -> 0, 
+        alphaRGup[fl99_, fl97_] -> 0, alphaRGupbar[fl99_, fl97_] -> 0, 
+        alphaRGutp[fl99_, fl97_] -> 0, alphaRGutpbar[fl99_, fl97_] -> 0, 
+        alphaRHdp[fl99_, fl97_] -> 0, alphaRHdpbar[fl99_, fl97_] -> 0, 
+        alphaRHdpp[fl99_, fl97_] -> 0, alphaRHdppbar[fl99_, fl97_] -> 0, 
+        alphaRHep[fl99_, fl97_] -> 0, alphaRHepbar[fl99_, fl97_] -> 0, 
+        alphaRHepp[fl99_, fl97_] -> 0, alphaRHeppbar[fl99_, fl97_] -> 0, 
+        alphaRHl1p[fl99_, fl97_] -> 0, alphaRHl1pbar[fl99_, fl97_] -> 0, 
+        alphaRHl1pp[fl99_, fl97_] -> 0, alphaRHl1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHl3p[fl99_, fl97_] -> 0, alphaRHl3pbar[fl99_, fl97_] -> 0, 
+        alphaRHl3pp[fl99_, fl97_] -> 0, alphaRHl3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq1p[fl99_, fl97_] -> 0, alphaRHq1pbar[fl99_, fl97_] -> 0, 
+        alphaRHq1pp[fl99_, fl97_] -> 0, alphaRHq1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq3p[fl99_, fl97_] -> 0, alphaRHq3pbar[fl99_, fl97_] -> 0, 
+        alphaRHq3pp[fl99_, fl97_] -> 0, alphaRHq3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHup[fl99_, fl97_] -> 0, alphaRHupbar[fl99_, fl97_] -> 0, 
+        alphaRHupp[fl99_, fl97_] -> 0, alphaRHuppbar[fl99_, fl97_] -> 0, 
+        alphaRlD[fl99_, fl97_] -> 0, alphaRlDbar[fl99_, fl97_] -> 0, 
+        alphaRqD[fl99_, fl97_] -> 0, alphaRqDbar[fl99_, fl97_] -> 0, 
+        alphaRuD[fl99_, fl97_] -> 0, alphaRuDbar[fl99_, fl97_] -> 0, 
+        alphaRuHD1[fl97_, fl99_] -> 0, alphaRuHD1bar[fl97_, fl99_] -> 0, 
+        alphaRuHD2[fl97_, fl99_] -> 0, alphaRuHD2bar[fl97_, fl99_] -> 0, 
+        alphaRuHD3[fl97_, fl99_] -> 0, alphaRuHD3bar[fl97_, fl99_] -> 0, 
+        alphaRuHD4[fl97_, fl99_] -> 0, alphaRuHD4bar[fl97_, fl99_] -> 0, 
+        alphaRWl[fl99_, fl97_] -> 0, alphaRWlbar[fl99_, fl97_] -> 0, 
+        alphaRWlp[fl99_, fl97_] -> 0, alphaRWlpbar[fl99_, fl97_] -> 0, 
+        alphaRWltp[fl99_, fl97_] -> 0, alphaRWltpbar[fl99_, fl97_] -> 0, 
+        alphaRWq[fl99_, fl97_] -> 0, alphaRWqbar[fl99_, fl97_] -> 0, 
+        alphaRWqp[fl99_, fl97_] -> 0, alphaRWqpbar[fl99_, fl97_] -> 0, 
+        alphaRWqtp[fl99_, fl97_] -> 0, alphaRWqtpbar[fl99_, fl97_] -> 0, 
+        alphaWeinberg[fl97_, fl99_] -> 0, alphaWeinbergbar[fl97_, fl99_] -> 
+         0}, {}}, {{alphaKB -> (5*g1^2*invepsilonbar)/(24*Pi^2) - 
+          (g1^2*Log[MSa^2/\[Mu]^2])/(48*Pi^2) - (3*g1^2*Log[MSb^2/\[Mu]^2])/
+           (16*Pi^2), alphaKG -> 0, alphaKH -> 0, 
+        alphaKW -> (5*g2^2*invepsilonbar)/(24*Pi^2) - 
+          (5*g2^2*Log[MSa^2/\[Mu]^2])/(48*Pi^2) - (5*g2^2*Log[MSb^2/\[Mu]^2])/
+           (48*Pi^2), alphaO3G -> 0, alphaO3Gt -> 0, 
+        alphaO3W -> g2^3/(576*MSa^2*Pi^2) + g2^3/(576*MSb^2*Pi^2), 
+        alphaO3Wt -> 0, alphaOH -> (invepsilonbar*L13*L14bar*L6)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L13*L15bar*L6)/
+           (384*MSa^2*Pi^2) - (Sqrt[15/2]*L1bar*L2*L6)/(64*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*invepsilonbar*L1bar*L2*L6)/(64*MSa^2*Pi^2) + 
+          (invepsilonbar*L13*L14*L6bar)/(384*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L13*L15*L6bar)/(384*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*L1*L2bar*L6bar)/(64*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*invepsilonbar*L1*L2bar*L6bar)/(64*MSa^2*Pi^2) + 
+          (5*L16*L6*L6bar)/(32*Sqrt[2]*MSa^2*Pi^2) + 
+          (5*invepsilonbar*L16*L6*L6bar)/(32*Sqrt[2]*MSa^2*Pi^2) - 
+          (7*L17*L6*L6bar)/(96*Sqrt[2]*MSa^2*Pi^2) - 
+          (7*invepsilonbar*L17*L6*L6bar)/(96*Sqrt[2]*MSa^2*Pi^2) - 
+          (invepsilonbar*L10bar*L6bar*L7)/(192*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L11bar*L6bar*L7)/(192*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*L6bar^2*L7)/(24*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6bar^2*L7)/(48*MSa^2*Pi^2) - 
+          (invepsilonbar*L10*L6*L7bar)/(192*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L11*L6*L7bar)/(192*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*L6^2*L7bar)/(24*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6^2*L7bar)/(48*MSa^2*Pi^2) + 
+          (3*L6*L6bar*L8)/(64*Sqrt[2]*MSa^2*Pi^2) + 
+          (invepsilonbar*L6*L6bar*L8)/(64*Sqrt[2]*MSa^2*Pi^2) + 
+          (L7*L7bar*L8)/(48*Sqrt[2]*MSa^2*Pi^2) + 
+          L8^3/(384*Sqrt[2]*MSa^2*Pi^2) - (invepsilonbar*L10bar*L6*L9)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L11bar*L6*L9)/
+           (384*MSa^2*Pi^2) - (invepsilonbar*L10*L6bar*L9)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L11*L6bar*L9)/
+           (384*MSa^2*Pi^2) + (Sqrt[5/6]*L6*L6bar*L9)/(96*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6*L6bar*L9)/(192*MSa^2*Pi^2) + 
+          (L7*L7bar*L9)/(48*Sqrt[30]*MSa^2*Pi^2) + (L8*L9^2)/
+           (384*Sqrt[2]*MSa^2*Pi^2) + (7*L6*L6bar*lam)/(32*MSa^2*Pi^2) + 
+          (7*invepsilonbar*L6*L6bar*lam)/(32*MSa^2*Pi^2) - 
+          (L1*L18*L1bar*MSa^2)/(64*MSb^4*Pi^2) - (invepsilonbar*L1*L18*L1bar*
+            MSa^2)/(64*MSb^4*Pi^2) + (15*L1*L19*L1bar*MSa^2)/
+           (128*Sqrt[2]*MSb^4*Pi^2) + (15*invepsilonbar*L1*L19*L1bar*MSa^2)/
+           (128*Sqrt[2]*MSb^4*Pi^2) + (5*L1*L1bar*L20*MSa^2)/
+           (128*MSb^4*Pi^2) + (5*invepsilonbar*L1*L1bar*L20*MSa^2)/
+           (128*MSb^4*Pi^2) - (7*L1*L1bar*L21*MSa^2)/(128*Sqrt[2]*MSb^4*
+            Pi^2) - (7*invepsilonbar*L1*L1bar*L21*MSa^2)/(128*Sqrt[2]*MSb^4*
+            Pi^2) + L12^3/(384*Sqrt[2]*MSb^2*Pi^2) + (L12*L13^2)/
+           (384*Sqrt[2]*MSb^2*Pi^2) + (9*L1*L12*L1bar)/(64*Sqrt[2]*MSb^2*
+            Pi^2) + (3*invepsilonbar*L1*L12*L1bar)/(64*Sqrt[2]*MSb^2*Pi^2) + 
+          (Sqrt[15/2]*L1*L13*L1bar)/(32*MSb^2*Pi^2) + 
+          (Sqrt[15/2]*invepsilonbar*L1*L13*L1bar)/(64*MSb^2*Pi^2) + 
+          (15*L1*L1bar*L22)/(32*Sqrt[2]*MSb^2*Pi^2) + 
+          (15*invepsilonbar*L1*L1bar*L22)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (7*L1*L1bar*L23)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (7*invepsilonbar*L1*L1bar*L23)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*L1bar*L2*L6)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*invepsilonbar*L1bar*L2*L6)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*L1*L2bar*L6bar)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*invepsilonbar*L1*L2bar*L6bar)/(64*MSb^2*Pi^2) + 
+          (invepsilonbar*L1bar*L3*L7)/(32*Sqrt[3]*MSb^2*Pi^2) + 
+          (invepsilonbar*L1*L3bar*L7bar)/(32*Sqrt[3]*MSb^2*Pi^2) + 
+          (21*L1*L1bar*lam)/(32*MSb^2*Pi^2) + (21*invepsilonbar*L1*L1bar*lam)/
+           (32*MSb^2*Pi^2) - (L18*L6*L6bar*MSb^2)/(192*MSa^4*Pi^2) - 
+          (invepsilonbar*L18*L6*L6bar*MSb^2)/(192*MSa^4*Pi^2) + 
+          (5*L19*L6*L6bar*MSb^2)/(128*Sqrt[2]*MSa^4*Pi^2) + 
+          (5*invepsilonbar*L19*L6*L6bar*MSb^2)/(128*Sqrt[2]*MSa^4*Pi^2) + 
+          (5*L20*L6*L6bar*MSb^2)/(384*MSa^4*Pi^2) + 
+          (5*invepsilonbar*L20*L6*L6bar*MSb^2)/(384*MSa^4*Pi^2) - 
+          (7*L21*L6*L6bar*MSb^2)/(384*Sqrt[2]*MSa^4*Pi^2) - 
+          (7*invepsilonbar*L21*L6*L6bar*MSb^2)/(384*Sqrt[2]*MSa^4*Pi^2) - 
+          (L12*L2*L2bar*MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L12*L2*L2bar*MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (L13*L2*L2bar*MSa^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (invepsilonbar*L13*L2*L2bar*MSa^2)/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*L8*MSa^2)/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + (invepsilonbar*L2*L2bar*L8*
+            MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*L9*MSa^2)/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L9*MSa^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (L12*L2*L2bar*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (invepsilonbar*L12*L2*L2bar*MSb^2)/(96*Sqrt[2]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L13*L2*L2bar*MSb^2)/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (invepsilonbar*L13*L2*L2bar*MSb^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (L2*L2bar*L8*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L8*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (L2*L2bar*L9*MSb^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (invepsilonbar*L2*L2bar*L9*MSb^2)/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L14*L1bar*L2)/(64*Sqrt[3]*
+            (MSa^2 - MSb^2)*Pi^2) + (invepsilonbar*L14*L1bar*L2)/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + (L1*L14bar*L2bar)/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + (invepsilonbar*L1*L14bar*
+            L2bar)/(64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L12*L2*L2bar)/(96*Sqrt[2]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L13*L2*L2bar)/(96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*L1bar*L2*L6)/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L1bar*L2*L6)/(32*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2bar*L3*L6)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2bar*L3*L6)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*L1*L2bar*L6bar)/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L1*L2bar*L6bar)/(32*(MSa^2 - MSb^2)*
+            Pi^2) - (L2*L3bar*L6bar)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L3bar*L6bar)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L8)/(96*Sqrt[2]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L2bar*L9)/(96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) - 
+          (L14*L1bar*L2*MSa^2)/(64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L14*L1bar*L2*MSa^2)/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (L1*L14bar*L2bar*MSa^2)/
+           (64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L1*L14bar*L2bar*MSa^2)/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*L1bar*L2*L6*MSb^2)/
+           (32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*invepsilonbar*L1bar*
+            L2*L6*MSb^2)/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2bar*L3*L6*MSb^2)/(192*Sqrt[3]*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2bar*L3*L6*MSb^2)/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*L1*L2bar*L6bar*MSb^2)/
+           (32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*invepsilonbar*L1*
+            L2bar*L6bar*MSb^2)/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L3bar*L6bar*MSb^2)/(192*Sqrt[3]*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L3bar*L6bar*MSb^2)/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) - (5*L16*L6*L6bar*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[2]*MSa^2*Pi^2) + (7*L17*L6*L6bar*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*MSa^2*Pi^2) + (L10bar*L6bar*L7*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*MSa^2*Pi^2) + (L11bar*L6bar*L7*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (Sqrt[5/6]*L6bar^2*L7*Log[MSa^2/\[Mu]^2])/
+           (48*MSa^2*Pi^2) + (L10*L6*L7bar*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*MSa^2*Pi^2) + (L11*L6*L7bar*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (Sqrt[5/6]*L6^2*L7bar*Log[MSa^2/\[Mu]^2])/
+           (48*MSa^2*Pi^2) - (L6*L6bar*L8*Log[MSa^2/\[Mu]^2])/
+           (64*Sqrt[2]*MSa^2*Pi^2) + (L10bar*L6*L9*Log[MSa^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L11bar*L6*L9*Log[MSa^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (L10*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L11*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) - (Sqrt[5/6]*L6*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (7*L6*L6bar*lam*Log[MSa^2/\[Mu]^2])/
+           (32*MSa^2*Pi^2) + (L1*L18*L1bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^4*Pi^2) - (15*L1*L19*L1bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (128*Sqrt[2]*MSb^4*Pi^2) - (5*L1*L1bar*L20*MSa^2*
+            Log[MSa^2/\[Mu]^2])/(128*MSb^4*Pi^2) + 
+          (7*L1*L1bar*L21*MSa^2*Log[MSa^2/\[Mu]^2])/(128*Sqrt[2]*MSb^4*
+            Pi^2) + (Sqrt[5/6]*L1bar*L2*L6*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^2*Pi^2) + (Sqrt[5/6]*L1*L2bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^2*Pi^2) - (L1bar*L3*L7*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[3]*MSb^2*Pi^2) - (L1*L3bar*L7bar*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[3]*MSb^2*Pi^2) + (L12*L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (L13*L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*L8*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (L2*L2bar*L9*MSa^2*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (Sqrt[5/6]*L1bar*L2*L6*
+            Log[MSa^2/\[Mu]^2])/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2bar*L3*L6*Log[MSa^2/\[Mu]^2])/(192*Sqrt[3]*(MSa^2 - MSb^2)*
+            Pi^2) - (Sqrt[5/6]*L1*L2bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (32*(MSa^2 - MSb^2)*Pi^2) + (L2*L3bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L2bar*L8*Log[MSa^2/\[Mu]^2])/(96*Sqrt[2]*(MSa^2 - MSb^2)*
+            Pi^2) - (L2*L2bar*L9*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)*Pi^2) + (L14*L1bar*L2*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L1*L14bar*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (L13*L14bar*L6*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L13*L15bar*L6*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (Sqrt[15/2]*L1bar*L2*L6*Log[MSb^2/\[Mu]^2])/
+           (64*MSa^2*Pi^2) - (L13*L14*L6bar*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L13*L15*L6bar*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (Sqrt[15/2]*L1*L2bar*L6bar*Log[MSb^2/\[Mu]^2])/
+           (64*MSa^2*Pi^2) - (3*L1*L12*L1bar*Log[MSb^2/\[Mu]^2])/
+           (64*Sqrt[2]*MSb^2*Pi^2) - (Sqrt[15/2]*L1*L13*L1bar*
+            Log[MSb^2/\[Mu]^2])/(64*MSb^2*Pi^2) - 
+          (15*L1*L1bar*L22*Log[MSb^2/\[Mu]^2])/(32*Sqrt[2]*MSb^2*Pi^2) + 
+          (7*L1*L1bar*L23*Log[MSb^2/\[Mu]^2])/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (21*L1*L1bar*lam*Log[MSb^2/\[Mu]^2])/(32*MSb^2*Pi^2) + 
+          (L18*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(192*MSa^4*Pi^2) - 
+          (5*L19*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(128*Sqrt[2]*MSa^4*
+            Pi^2) - (5*L20*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^4*Pi^2) + (7*L21*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[2]*MSa^4*Pi^2) - (L12*L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (L13*L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*L8*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (L2*L2bar*L9*MSb^2*Log[MSb^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (L14*L1bar*L2*Log[MSb^2/\[Mu]^2])/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (L1*L14bar*L2bar*Log[MSb^2/\[Mu]^2])/(64*Sqrt[3]*(MSa^2 - MSb^2)*
+            Pi^2) - (L12*L2*L2bar*Log[MSb^2/\[Mu]^2])/(96*Sqrt[2]*
+            (MSa^2 - MSb^2)*Pi^2) - (L13*L2*L2bar*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) + (Sqrt[5/6]*L1bar*L2*L6*MSb^2*
+            Log[MSb^2/\[Mu]^2])/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2bar*L3*L6*MSb^2*Log[MSb^2/\[Mu]^2])/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) + (Sqrt[5/6]*L1*L2bar*L6bar*MSb^2*
+            Log[MSb^2/\[Mu]^2])/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2*L3bar*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2), alphaOHB -> 
+         -(g1^2*L8)/(384*Sqrt[2]*MSa^2*Pi^2) - (3*g1^2*L12)/
+           (128*Sqrt[2]*MSb^2*Pi^2), alphaOHBox -> 
+         -(L6*L6bar)/(48*MSa^2*Pi^2) - L8^2/(384*MSa^2*Pi^2) - 
+          L9^2/(1152*MSa^2*Pi^2) - L12^2/(384*MSb^2*Pi^2) - 
+          L13^2/(1152*MSb^2*Pi^2), alphaOHBt -> 0, 
+        alphaOHD -> -(L6*L6bar)/(16*MSa^2*Pi^2) + (L7*L7bar)/
+           (72*MSa^2*Pi^2) - L9^2/(288*MSa^2*Pi^2) - L13^2/(288*MSb^2*Pi^2) + 
+          (3*L1*L1bar)/(16*MSb^2*Pi^2) + (L2*L2bar*MSa^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) + (invepsilonbar*L2*L2bar*MSa^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSb^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) - (invepsilonbar*L2*L2bar*MSb^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSa^4*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*MSb^4*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2), alphaOHG -> 0, alphaOHGt -> 0, 
+        alphaOHW -> (-5*g2^2*L8)/(384*Sqrt[2]*MSa^2*Pi^2) - 
+          (5*g2^2*L12)/(384*Sqrt[2]*MSb^2*Pi^2), alphaOHWB -> 
+         -(Sqrt[5/6]*g1*g2*L9)/(192*MSa^2*Pi^2) - (Sqrt[5/6]*g1*g2*L13)/
+           (64*MSb^2*Pi^2), alphaOHWBt -> 0, alphaOHWt -> 0, 
+        alphaOlambda -> -(invepsilonbar*L12^2)/(64*Pi^2) - 
+          (invepsilonbar*L13^2)/(192*Pi^2) - (3*L1*L1bar)/(16*Pi^2) - 
+          (3*invepsilonbar*L1*L1bar)/(16*Pi^2) - (L6*L6bar)/(16*Pi^2) - 
+          (invepsilonbar*L6*L6bar)/(16*Pi^2) - (invepsilonbar*L7*L7bar)/
+           (24*Pi^2) - (invepsilonbar*L8^2)/(64*Pi^2) - (invepsilonbar*L9^2)/
+           (192*Pi^2) - (L2*L2bar*MSa^2)/(48*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L2bar*MSa^2)/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L2bar*MSb^2)/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L2bar*MSb^2)/(48*(MSa^2 - MSb^2)*Pi^2) - 
+          (L6*L6bar*muH^2)/(16*MSa^2*Pi^2) - (invepsilonbar*L6*L6bar*muH^2)/
+           (16*MSa^2*Pi^2) - (3*L1*L1bar*muH^2)/(16*MSb^2*Pi^2) - 
+          (3*invepsilonbar*L1*L1bar*muH^2)/(16*MSb^2*Pi^2) + 
+          (L6*L6bar*Log[MSa^2/\[Mu]^2])/(16*Pi^2) + 
+          (L7*L7bar*Log[MSa^2/\[Mu]^2])/(24*Pi^2) + (L8^2*Log[MSa^2/\[Mu]^2])/
+           (64*Pi^2) + (L9^2*Log[MSa^2/\[Mu]^2])/(192*Pi^2) + 
+          (L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (L6*L6bar*muH^2*Log[MSa^2/\[Mu]^2])/(16*MSa^2*Pi^2) + 
+          (L12^2*Log[MSb^2/\[Mu]^2])/(64*Pi^2) + (L13^2*Log[MSb^2/\[Mu]^2])/
+           (192*Pi^2) + (3*L1*L1bar*Log[MSb^2/\[Mu]^2])/(16*Pi^2) - 
+          (L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (3*L1*L1bar*muH^2*Log[MSb^2/\[Mu]^2])/(16*MSb^2*Pi^2), 
+        alphaOmuH2 -> (L8*MSa^2)/(8*Sqrt[2]*Pi^2) + (invepsilonbar*L8*MSa^2)/
+           (8*Sqrt[2]*Pi^2) + (L12*MSb^2)/(8*Sqrt[2]*Pi^2) + 
+          (invepsilonbar*L12*MSb^2)/(8*Sqrt[2]*Pi^2) - 
+          (L8*MSa^2*Log[MSa^2/\[Mu]^2])/(8*Sqrt[2]*Pi^2) - 
+          (L12*MSb^2*Log[MSb^2/\[Mu]^2])/(8*Sqrt[2]*Pi^2), 
+        alphaR2B -> g1^2/(480*MSa^2*Pi^2) + (3*g1^2)/(160*MSb^2*Pi^2), 
+        alphaR2G -> 0, alphaR2W -> g2^2/(96*MSa^2*Pi^2) + 
+          g2^2/(96*MSb^2*Pi^2), alphaRBDH -> 0, alphaRDH -> 0, 
+        alphaRHDp -> (5*L6*L6bar)/(48*MSa^2*Pi^2) + (L7*L7bar)/
+           (72*MSa^2*Pi^2) + L9^2/(288*MSa^2*Pi^2) + L13^2/(288*MSb^2*Pi^2) + 
+          (3*L1*L1bar)/(16*MSb^2*Pi^2) + (L2*L2bar*MSa^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) + (invepsilonbar*L2*L2bar*MSa^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSb^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) - (invepsilonbar*L2*L2bar*MSb^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSa^4*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*MSb^4*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2), alphaRHDpp -> 0, alphaRWDH -> 0, 
+        alphaEBd[fl99_, fl97_] -> 0, alphaEBdbar[fl99_, fl97_] -> 0, 
+        alphaEBdp[fl99_, fl97_] -> 0, alphaEBdpbar[fl99_, fl97_] -> 0, 
+        alphaEBdtp[fl99_, fl97_] -> 0, alphaEBdtpbar[fl99_, fl97_] -> 0, 
+        alphaEBe[fl99_, fl97_] -> 0, alphaEBebar[fl99_, fl97_] -> 0, 
+        alphaEBep[fl99_, fl97_] -> 0, alphaEBepbar[fl99_, fl97_] -> 0, 
+        alphaEBetp[fl99_, fl97_] -> 0, alphaEBetpbar[fl99_, fl97_] -> 0, 
+        alphaEBl[fl99_, fl97_] -> 0, alphaEBlbar[fl99_, fl97_] -> 0, 
+        alphaEBlp[fl99_, fl97_] -> 0, alphaEBlpbar[fl99_, fl97_] -> 0, 
+        alphaEBltp[fl99_, fl97_] -> 0, alphaEBltpbar[fl99_, fl97_] -> 0, 
+        alphaEBq[fl99_, fl97_] -> 0, alphaEBqbar[fl99_, fl97_] -> 0, 
+        alphaEBqp[fl99_, fl97_] -> 0, alphaEBqpbar[fl99_, fl97_] -> 0, 
+        alphaEBqtp[fl99_, fl97_] -> 0, alphaEBqtpbar[fl99_, fl97_] -> 0, 
+        alphaEBu[fl99_, fl97_] -> 0, alphaEBubar[fl99_, fl97_] -> 0, 
+        alphaEBup[fl99_, fl97_] -> 0, alphaEBupbar[fl99_, fl97_] -> 0, 
+        alphaEButp[fl99_, fl97_] -> 0, alphaEButpbar[fl99_, fl97_] -> 0, 
+        alphaEcdd[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEced[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcee[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceebar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceu[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceubar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcld[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcle[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcll[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcllbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEclubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqd[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdp[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqe[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedl[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcql[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqq[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqp[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqpbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqup[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupbar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcud[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudqq[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqbar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwo[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwobar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcuelq[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwo[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwobar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuu[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuubar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEdB[fl97_, fl99_] -> 0, alphaEdBbar[fl97_, fl99_] -> 0, 
+        alphaEdd8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdd8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdG[fl97_, fl99_] -> 0, alphaEdGbar[fl97_, fl99_] -> 0, 
+        alphaEdH[fl97_, fl99_] -> 0, alphaEdHbar[fl97_, fl99_] -> 0, 
+        alphaEdW[fl97_, fl99_] -> 0, alphaEdWbar[fl97_, fl99_] -> 0, 
+        alphaEeB[fl97_, fl99_] -> 0, alphaEeBbar[fl97_, fl99_] -> 0, 
+        alphaEed[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEedthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeH[fl97_, fl99_] -> 0, alphaEeHbar[fl97_, fl99_] -> 0, 
+        alphaEeu[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeubar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeuthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeW[fl97_, fl99_] -> 0, alphaEeWbar[fl97_, fl99_] -> 0, 
+        alphaEGd[fl99_, fl97_] -> 0, alphaEGdbar[fl99_, fl97_] -> 0, 
+        alphaEGdp[fl99_, fl97_] -> 0, alphaEGdpbar[fl99_, fl97_] -> 0, 
+        alphaEGdtp[fl99_, fl97_] -> 0, alphaEGdtpbar[fl99_, fl97_] -> 0, 
+        alphaEGq[fl99_, fl97_] -> 0, alphaEGqbar[fl99_, fl97_] -> 0, 
+        alphaEGqp[fl99_, fl97_] -> 0, alphaEGqpbar[fl99_, fl97_] -> 0, 
+        alphaEGqtp[fl99_, fl97_] -> 0, alphaEGqtpbar[fl99_, fl97_] -> 0, 
+        alphaEGu[fl99_, fl97_] -> 0, alphaEGubar[fl99_, fl97_] -> 0, 
+        alphaEGup[fl99_, fl97_] -> 0, alphaEGupbar[fl99_, fl97_] -> 0, 
+        alphaEGutp[fl99_, fl97_] -> 0, alphaEGutpbar[fl99_, fl97_] -> 0, 
+        alphaEld[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEle[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaElebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEledqtwo[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaEledqtwobar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaElequtwo[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElequtwobar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaElethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEletwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEletwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEll3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEll3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaElq[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqbar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqde[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethree[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethreebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqthree[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3p[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthree3pbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreebar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthreep[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreepbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEluqe[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqebar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwo[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwobar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEluthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaElutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqd[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqe[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqetwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqetwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqq38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEquqdtwo[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwobar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEqutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEuB[fl97_, fl99_] -> 0, alphaEuBbar[fl97_, fl99_] -> 0, 
+        alphaEud[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8p[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthree8pbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuG[fl97_, fl99_] -> 0, alphaEuGbar[fl97_, fl99_] -> 0, 
+        alphaEuH[fl97_, fl99_] -> 0, alphaEuHbar[fl97_, fl99_] -> 0, 
+        alphaEuu8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuu8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuW[fl97_, fl99_] -> 0, alphaEuWbar[fl97_, fl99_] -> 0, 
+        alphaEWl[fl99_, fl97_] -> 0, alphaEWlbar[fl99_, fl97_] -> 0, 
+        alphaEWlp[fl99_, fl97_] -> 0, alphaEWlpbar[fl99_, fl97_] -> 0, 
+        alphaEWltp[fl99_, fl97_] -> 0, alphaEWltpbar[fl99_, fl97_] -> 0, 
+        alphaEWq[fl99_, fl97_] -> 0, alphaEWqbar[fl99_, fl97_] -> 0, 
+        alphaEWqp[fl99_, fl97_] -> 0, alphaEWqpbar[fl99_, fl97_] -> 0, 
+        alphaEWqtp[fl99_, fl97_] -> 0, alphaEWqtpbar[fl99_, fl97_] -> 0, 
+        alphaKd[fl99_, fl97_] -> 0, alphaKdbar[fl99_, fl97_] -> 0, 
+        alphaKe[fl99_, fl97_] -> 0, alphaKebar[fl99_, fl97_] -> 0, 
+        alphaKl[fl99_, fl97_] -> 0, alphaKlbar[fl99_, fl97_] -> 0, 
+        alphaKq[fl99_, fl97_] -> 0, alphaKqbar[fl99_, fl97_] -> 0, 
+        alphaKu[fl99_, fl97_] -> 0, alphaKubar[fl99_, fl97_] -> 0, 
+        alphaOdB[fl97_, fl99_] -> 0, alphaOdBbar[fl97_, fl99_] -> 0, 
+        alphaOdd[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOddbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOdG[fl97_, fl99_] -> 0, alphaOdGbar[fl97_, fl99_] -> 0, 
+        alphaOdH[fl97_, fl99_] -> 0, alphaOdHbar[fl97_, fl99_] -> 0, 
+        alphaOdW[fl97_, fl99_] -> 0, alphaOdWbar[fl97_, fl99_] -> 0, 
+        alphaOeB[fl97_, fl99_] -> 0, alphaOeBbar[fl97_, fl99_] -> 0, 
+        alphaOed[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOedbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOee[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeH[fl97_, fl99_] -> 0, alphaOeHbar[fl97_, fl99_] -> 0, 
+        alphaOeu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeW[fl97_, fl99_] -> 0, alphaOeWbar[fl97_, fl99_] -> 0, 
+        alphaOHd[fl99_, fl97_] -> 0, alphaOHdbar[fl99_, fl97_] -> 0, 
+        alphaOHe[fl99_, fl97_] -> 0, alphaOHebar[fl99_, fl97_] -> 0, 
+        alphaOHl1[fl99_, fl97_] -> 0, alphaOHl1bar[fl99_, fl97_] -> 0, 
+        alphaOHl3[fl99_, fl97_] -> 0, alphaOHl3bar[fl99_, fl97_] -> 0, 
+        alphaOHq1[fl99_, fl97_] -> 0, alphaOHq1bar[fl99_, fl97_] -> 0, 
+        alphaOHq3[fl99_, fl97_] -> 0, alphaOHq3bar[fl99_, fl97_] -> 0, 
+        alphaOHu[fl99_, fl97_] -> 0, alphaOHubar[fl99_, fl97_] -> 0, 
+        alphaOHud[fl97_, fl99_] -> 0, alphaOHudbar[fl97_, fl99_] -> 0, 
+        alphaOlambdad[fl97_, fl99_] -> 0, alphaOlambdadbar[fl97_, fl99_] -> 
+         0, alphaOlambdae[fl97_, fl99_] -> 0, 
+        alphaOlambdaebar[fl97_, fl99_] -> 0, alphaOlambdau[fl97_, fl99_] -> 
+         0, alphaOlambdaubar[fl97_, fl99_] -> 0, 
+        alphaOld[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOldbar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOle[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOlebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOledq[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOledqbar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOlequ1[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOlequ1bar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOll[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOllbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOlq1[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq1bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlu[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOlubar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqd1[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd1bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqe[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqq1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqu1[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu1bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOquqd1[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd1bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOuB[fl97_, fl99_] -> 0, alphaOuBbar[fl97_, fl99_] -> 0, 
+        alphaOud1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuG[fl97_, fl99_] -> 0, alphaOuGbar[fl97_, fl99_] -> 0, 
+        alphaOuH[fl97_, fl99_] -> 0, alphaOuHbar[fl97_, fl99_] -> 0, 
+        alphaOuu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuW[fl97_, fl99_] -> 0, alphaOuWbar[fl97_, fl99_] -> 0, 
+        alphaRBd[fl99_, fl97_] -> 0, alphaRBdbar[fl99_, fl97_] -> 0, 
+        alphaRBdp[fl99_, fl97_] -> 0, alphaRBdpbar[fl99_, fl97_] -> 0, 
+        alphaRBdtp[fl99_, fl97_] -> 0, alphaRBdtpbar[fl99_, fl97_] -> 0, 
+        alphaRBe[fl99_, fl97_] -> 0, alphaRBebar[fl99_, fl97_] -> 0, 
+        alphaRBep[fl99_, fl97_] -> 0, alphaRBepbar[fl99_, fl97_] -> 0, 
+        alphaRBetp[fl99_, fl97_] -> 0, alphaRBetpbar[fl99_, fl97_] -> 0, 
+        alphaRBl[fl99_, fl97_] -> 0, alphaRBlbar[fl99_, fl97_] -> 0, 
+        alphaRBlp[fl99_, fl97_] -> 0, alphaRBlpbar[fl99_, fl97_] -> 0, 
+        alphaRBltp[fl99_, fl97_] -> 0, alphaRBltpbar[fl99_, fl97_] -> 0, 
+        alphaRBq[fl99_, fl97_] -> 0, alphaRBqbar[fl99_, fl97_] -> 0, 
+        alphaRBqp[fl99_, fl97_] -> 0, alphaRBqpbar[fl99_, fl97_] -> 0, 
+        alphaRBqtp[fl99_, fl97_] -> 0, alphaRBqtpbar[fl99_, fl97_] -> 0, 
+        alphaRBu[fl99_, fl97_] -> 0, alphaRBubar[fl99_, fl97_] -> 0, 
+        alphaRBup[fl99_, fl97_] -> 0, alphaRBupbar[fl99_, fl97_] -> 0, 
+        alphaRButp[fl99_, fl97_] -> 0, alphaRButpbar[fl99_, fl97_] -> 0, 
+        alphaRdD[fl99_, fl97_] -> 0, alphaRdDbar[fl99_, fl97_] -> 0, 
+        alphaRdHD1[fl97_, fl99_] -> 0, alphaRdHD1bar[fl97_, fl99_] -> 0, 
+        alphaRdHD2[fl97_, fl99_] -> 0, alphaRdHD2bar[fl97_, fl99_] -> 0, 
+        alphaRdHD3[fl97_, fl99_] -> 0, alphaRdHD3bar[fl97_, fl99_] -> 0, 
+        alphaRdHD4[fl97_, fl99_] -> 0, alphaRdHD4bar[fl97_, fl99_] -> 0, 
+        alphaReD[fl99_, fl97_] -> 0, alphaReDbar[fl99_, fl97_] -> 0, 
+        alphaReHD1[fl97_, fl99_] -> 0, alphaReHD1bar[fl97_, fl99_] -> 0, 
+        alphaReHD2[fl97_, fl99_] -> 0, alphaReHD2bar[fl97_, fl99_] -> 0, 
+        alphaReHD3[fl97_, fl99_] -> 0, alphaReHD3bar[fl97_, fl99_] -> 0, 
+        alphaReHD4[fl97_, fl99_] -> 0, alphaReHD4bar[fl97_, fl99_] -> 0, 
+        alphaRGd[fl99_, fl97_] -> 0, alphaRGdbar[fl99_, fl97_] -> 0, 
+        alphaRGdp[fl99_, fl97_] -> 0, alphaRGdpbar[fl99_, fl97_] -> 0, 
+        alphaRGdtp[fl99_, fl97_] -> 0, alphaRGdtpbar[fl99_, fl97_] -> 0, 
+        alphaRGq[fl99_, fl97_] -> 0, alphaRGqbar[fl99_, fl97_] -> 0, 
+        alphaRGqp[fl99_, fl97_] -> 0, alphaRGqpbar[fl99_, fl97_] -> 0, 
+        alphaRGqtp[fl99_, fl97_] -> 0, alphaRGqtpbar[fl99_, fl97_] -> 0, 
+        alphaRGu[fl99_, fl97_] -> 0, alphaRGubar[fl99_, fl97_] -> 0, 
+        alphaRGup[fl99_, fl97_] -> 0, alphaRGupbar[fl99_, fl97_] -> 0, 
+        alphaRGutp[fl99_, fl97_] -> 0, alphaRGutpbar[fl99_, fl97_] -> 0, 
+        alphaRHdp[fl99_, fl97_] -> 0, alphaRHdpbar[fl99_, fl97_] -> 0, 
+        alphaRHdpp[fl99_, fl97_] -> 0, alphaRHdppbar[fl99_, fl97_] -> 0, 
+        alphaRHep[fl99_, fl97_] -> 0, alphaRHepbar[fl99_, fl97_] -> 0, 
+        alphaRHepp[fl99_, fl97_] -> 0, alphaRHeppbar[fl99_, fl97_] -> 0, 
+        alphaRHl1p[fl99_, fl97_] -> 0, alphaRHl1pbar[fl99_, fl97_] -> 0, 
+        alphaRHl1pp[fl99_, fl97_] -> 0, alphaRHl1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHl3p[fl99_, fl97_] -> 0, alphaRHl3pbar[fl99_, fl97_] -> 0, 
+        alphaRHl3pp[fl99_, fl97_] -> 0, alphaRHl3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq1p[fl99_, fl97_] -> 0, alphaRHq1pbar[fl99_, fl97_] -> 0, 
+        alphaRHq1pp[fl99_, fl97_] -> 0, alphaRHq1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq3p[fl99_, fl97_] -> 0, alphaRHq3pbar[fl99_, fl97_] -> 0, 
+        alphaRHq3pp[fl99_, fl97_] -> 0, alphaRHq3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHup[fl99_, fl97_] -> 0, alphaRHupbar[fl99_, fl97_] -> 0, 
+        alphaRHupp[fl99_, fl97_] -> 0, alphaRHuppbar[fl99_, fl97_] -> 0, 
+        alphaRlD[fl99_, fl97_] -> 0, alphaRlDbar[fl99_, fl97_] -> 0, 
+        alphaRqD[fl99_, fl97_] -> 0, alphaRqDbar[fl99_, fl97_] -> 0, 
+        alphaRuD[fl99_, fl97_] -> 0, alphaRuDbar[fl99_, fl97_] -> 0, 
+        alphaRuHD1[fl97_, fl99_] -> 0, alphaRuHD1bar[fl97_, fl99_] -> 0, 
+        alphaRuHD2[fl97_, fl99_] -> 0, alphaRuHD2bar[fl97_, fl99_] -> 0, 
+        alphaRuHD3[fl97_, fl99_] -> 0, alphaRuHD3bar[fl97_, fl99_] -> 0, 
+        alphaRuHD4[fl97_, fl99_] -> 0, alphaRuHD4bar[fl97_, fl99_] -> 0, 
+        alphaRWl[fl99_, fl97_] -> 0, alphaRWlbar[fl99_, fl97_] -> 0, 
+        alphaRWlp[fl99_, fl97_] -> 0, alphaRWlpbar[fl99_, fl97_] -> 0, 
+        alphaRWltp[fl99_, fl97_] -> 0, alphaRWltpbar[fl99_, fl97_] -> 0, 
+        alphaRWq[fl99_, fl97_] -> 0, alphaRWqbar[fl99_, fl97_] -> 0, 
+        alphaRWqp[fl99_, fl97_] -> 0, alphaRWqpbar[fl99_, fl97_] -> 0, 
+        alphaRWqtp[fl99_, fl97_] -> 0, alphaRWqtpbar[fl99_, fl97_] -> 0, 
+        alphaWeinberg[fl97_, fl99_] -> 0, alphaWeinbergbar[fl97_, fl99_] -> 
+         0}, {}}}, {{{alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1, 
+        alphaO3G -> 0, alphaO3Gt -> 0, alphaO3W -> 0, alphaO3Wt -> 0, 
+        alphaOH -> (L6*L6bar)/(12*MSa^2) + (L1*L1bar)/(4*MSb^2), 
+        alphaOHB -> 0, alphaOHBox -> 0, alphaOHBt -> 0, alphaOHD -> 0, 
+        alphaOHG -> 0, alphaOHGt -> 0, alphaOHW -> 0, alphaOHWB -> 0, 
+        alphaOHWBt -> 0, alphaOHWt -> 0, alphaOlambda -> lam, 
+        alphaOmuH2 -> muH^2, alphaR2B -> 0, alphaR2G -> 0, alphaR2W -> 0, 
+        alphaRBDH -> 0, alphaRDH -> 0, alphaRHDp -> 0, alphaRHDpp -> 0, 
+        alphaRWDH -> 0, alphaEBd[fl99_, fl97_] -> 0, 
+        alphaEBdbar[fl99_, fl97_] -> 0, alphaEBdp[fl99_, fl97_] -> 0, 
+        alphaEBdpbar[fl99_, fl97_] -> 0, alphaEBdtp[fl99_, fl97_] -> 0, 
+        alphaEBdtpbar[fl99_, fl97_] -> 0, alphaEBe[fl99_, fl97_] -> 0, 
+        alphaEBebar[fl99_, fl97_] -> 0, alphaEBep[fl99_, fl97_] -> 0, 
+        alphaEBepbar[fl99_, fl97_] -> 0, alphaEBetp[fl99_, fl97_] -> 0, 
+        alphaEBetpbar[fl99_, fl97_] -> 0, alphaEBl[fl99_, fl97_] -> 0, 
+        alphaEBlbar[fl99_, fl97_] -> 0, alphaEBlp[fl99_, fl97_] -> 0, 
+        alphaEBlpbar[fl99_, fl97_] -> 0, alphaEBltp[fl99_, fl97_] -> 0, 
+        alphaEBltpbar[fl99_, fl97_] -> 0, alphaEBq[fl99_, fl97_] -> 0, 
+        alphaEBqbar[fl99_, fl97_] -> 0, alphaEBqp[fl99_, fl97_] -> 0, 
+        alphaEBqpbar[fl99_, fl97_] -> 0, alphaEBqtp[fl99_, fl97_] -> 0, 
+        alphaEBqtpbar[fl99_, fl97_] -> 0, alphaEBu[fl99_, fl97_] -> 0, 
+        alphaEBubar[fl99_, fl97_] -> 0, alphaEBup[fl99_, fl97_] -> 0, 
+        alphaEBupbar[fl99_, fl97_] -> 0, alphaEButp[fl99_, fl97_] -> 0, 
+        alphaEButpbar[fl99_, fl97_] -> 0, alphaEcdd[fl95_, fl97_, fl93_, 
+          fl99_] -> 0, alphaEcddbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEced[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcee[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceebar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceu[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceubar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcld[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcle[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcll[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcllbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEclubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqd[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdp[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqe[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedl[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcql[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqq[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqp[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqpbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqup[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupbar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcud[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudqq[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqbar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwo[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwobar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcuelq[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwo[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwobar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuu[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuubar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEdB[fl97_, fl99_] -> 0, alphaEdBbar[fl97_, fl99_] -> 0, 
+        alphaEdd8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdd8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdG[fl97_, fl99_] -> 0, alphaEdGbar[fl97_, fl99_] -> 0, 
+        alphaEdH[fl97_, fl99_] -> 0, alphaEdHbar[fl97_, fl99_] -> 0, 
+        alphaEdW[fl97_, fl99_] -> 0, alphaEdWbar[fl97_, fl99_] -> 0, 
+        alphaEeB[fl97_, fl99_] -> 0, alphaEeBbar[fl97_, fl99_] -> 0, 
+        alphaEed[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEedthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeH[fl97_, fl99_] -> 0, alphaEeHbar[fl97_, fl99_] -> 0, 
+        alphaEeu[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeubar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeuthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeW[fl97_, fl99_] -> 0, alphaEeWbar[fl97_, fl99_] -> 0, 
+        alphaEGd[fl99_, fl97_] -> 0, alphaEGdbar[fl99_, fl97_] -> 0, 
+        alphaEGdp[fl99_, fl97_] -> 0, alphaEGdpbar[fl99_, fl97_] -> 0, 
+        alphaEGdtp[fl99_, fl97_] -> 0, alphaEGdtpbar[fl99_, fl97_] -> 0, 
+        alphaEGq[fl99_, fl97_] -> 0, alphaEGqbar[fl99_, fl97_] -> 0, 
+        alphaEGqp[fl99_, fl97_] -> 0, alphaEGqpbar[fl99_, fl97_] -> 0, 
+        alphaEGqtp[fl99_, fl97_] -> 0, alphaEGqtpbar[fl99_, fl97_] -> 0, 
+        alphaEGu[fl99_, fl97_] -> 0, alphaEGubar[fl99_, fl97_] -> 0, 
+        alphaEGup[fl99_, fl97_] -> 0, alphaEGupbar[fl99_, fl97_] -> 0, 
+        alphaEGutp[fl99_, fl97_] -> 0, alphaEGutpbar[fl99_, fl97_] -> 0, 
+        alphaEld[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEle[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaElebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEledqtwo[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaEledqtwobar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaElequtwo[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElequtwobar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaElethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEletwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEletwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEll3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEll3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaElq[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqbar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqde[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethree[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethreebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqthree[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3p[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthree3pbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreebar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthreep[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreepbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEluqe[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqebar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwo[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwobar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEluthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaElutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqd[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqe[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqetwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqetwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqq38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEquqdtwo[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwobar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEqutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEuB[fl97_, fl99_] -> 0, alphaEuBbar[fl97_, fl99_] -> 0, 
+        alphaEud[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8p[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthree8pbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuG[fl97_, fl99_] -> 0, alphaEuGbar[fl97_, fl99_] -> 0, 
+        alphaEuH[fl97_, fl99_] -> 0, alphaEuHbar[fl97_, fl99_] -> 0, 
+        alphaEuu8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuu8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuW[fl97_, fl99_] -> 0, alphaEuWbar[fl97_, fl99_] -> 0, 
+        alphaEWl[fl99_, fl97_] -> 0, alphaEWlbar[fl99_, fl97_] -> 0, 
+        alphaEWlp[fl99_, fl97_] -> 0, alphaEWlpbar[fl99_, fl97_] -> 0, 
+        alphaEWltp[fl99_, fl97_] -> 0, alphaEWltpbar[fl99_, fl97_] -> 0, 
+        alphaEWq[fl99_, fl97_] -> 0, alphaEWqbar[fl99_, fl97_] -> 0, 
+        alphaEWqp[fl99_, fl97_] -> 0, alphaEWqpbar[fl99_, fl97_] -> 0, 
+        alphaEWqtp[fl99_, fl97_] -> 0, alphaEWqtpbar[fl99_, fl97_] -> 0, 
+        alphaKd[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKdbar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKe[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKebar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKl[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKlbar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKq[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKqbar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKu[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaKubar[fl99_, fl97_] -> KroneckerDelta[fl97, fl99], 
+        alphaOdB[fl97_, fl99_] -> 0, alphaOdBbar[fl97_, fl99_] -> 0, 
+        alphaOdd[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOddbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOdG[fl97_, fl99_] -> 0, alphaOdGbar[fl97_, fl99_] -> 0, 
+        alphaOdH[fl97_, fl99_] -> 0, alphaOdHbar[fl97_, fl99_] -> 0, 
+        alphaOdW[fl97_, fl99_] -> 0, alphaOdWbar[fl97_, fl99_] -> 0, 
+        alphaOeB[fl97_, fl99_] -> 0, alphaOeBbar[fl97_, fl99_] -> 0, 
+        alphaOed[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOedbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOee[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeH[fl97_, fl99_] -> 0, alphaOeHbar[fl97_, fl99_] -> 0, 
+        alphaOeu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeW[fl97_, fl99_] -> 0, alphaOeWbar[fl97_, fl99_] -> 0, 
+        alphaOHd[fl99_, fl97_] -> 0, alphaOHdbar[fl99_, fl97_] -> 0, 
+        alphaOHe[fl99_, fl97_] -> 0, alphaOHebar[fl99_, fl97_] -> 0, 
+        alphaOHl1[fl99_, fl97_] -> 0, alphaOHl1bar[fl99_, fl97_] -> 0, 
+        alphaOHl3[fl99_, fl97_] -> 0, alphaOHl3bar[fl99_, fl97_] -> 0, 
+        alphaOHq1[fl99_, fl97_] -> 0, alphaOHq1bar[fl99_, fl97_] -> 0, 
+        alphaOHq3[fl99_, fl97_] -> 0, alphaOHq3bar[fl99_, fl97_] -> 0, 
+        alphaOHu[fl99_, fl97_] -> 0, alphaOHubar[fl99_, fl97_] -> 0, 
+        alphaOHud[fl97_, fl99_] -> 0, alphaOHudbar[fl97_, fl99_] -> 0, 
+        alphaOlambdad[fl97_, fl99_] -> yd[fl97, fl99], 
+        alphaOlambdadbar[fl97_, fl99_] -> ydbar[fl97, fl99], 
+        alphaOlambdae[fl97_, fl99_] -> yl[fl97, fl99], 
+        alphaOlambdaebar[fl97_, fl99_] -> ylbar[fl97, fl99], 
+        alphaOlambdau[fl97_, fl99_] -> yu[fl97, fl99], 
+        alphaOlambdaubar[fl97_, fl99_] -> yubar[fl97, fl99], 
+        alphaOld[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOldbar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOle[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOlebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOledq[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOledqbar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOlequ1[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOlequ1bar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOll[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOllbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOlq1[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq1bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlu[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOlubar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqd1[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd1bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqe[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqq1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqu1[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu1bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOquqd1[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd1bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOuB[fl97_, fl99_] -> 0, alphaOuBbar[fl97_, fl99_] -> 0, 
+        alphaOud1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuG[fl97_, fl99_] -> 0, alphaOuGbar[fl97_, fl99_] -> 0, 
+        alphaOuH[fl97_, fl99_] -> 0, alphaOuHbar[fl97_, fl99_] -> 0, 
+        alphaOuu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuW[fl97_, fl99_] -> 0, alphaOuWbar[fl97_, fl99_] -> 0, 
+        alphaRBd[fl99_, fl97_] -> 0, alphaRBdbar[fl99_, fl97_] -> 0, 
+        alphaRBdp[fl99_, fl97_] -> 0, alphaRBdpbar[fl99_, fl97_] -> 0, 
+        alphaRBdtp[fl99_, fl97_] -> 0, alphaRBdtpbar[fl99_, fl97_] -> 0, 
+        alphaRBe[fl99_, fl97_] -> 0, alphaRBebar[fl99_, fl97_] -> 0, 
+        alphaRBep[fl99_, fl97_] -> 0, alphaRBepbar[fl99_, fl97_] -> 0, 
+        alphaRBetp[fl99_, fl97_] -> 0, alphaRBetpbar[fl99_, fl97_] -> 0, 
+        alphaRBl[fl99_, fl97_] -> 0, alphaRBlbar[fl99_, fl97_] -> 0, 
+        alphaRBlp[fl99_, fl97_] -> 0, alphaRBlpbar[fl99_, fl97_] -> 0, 
+        alphaRBltp[fl99_, fl97_] -> 0, alphaRBltpbar[fl99_, fl97_] -> 0, 
+        alphaRBq[fl99_, fl97_] -> 0, alphaRBqbar[fl99_, fl97_] -> 0, 
+        alphaRBqp[fl99_, fl97_] -> 0, alphaRBqpbar[fl99_, fl97_] -> 0, 
+        alphaRBqtp[fl99_, fl97_] -> 0, alphaRBqtpbar[fl99_, fl97_] -> 0, 
+        alphaRBu[fl99_, fl97_] -> 0, alphaRBubar[fl99_, fl97_] -> 0, 
+        alphaRBup[fl99_, fl97_] -> 0, alphaRBupbar[fl99_, fl97_] -> 0, 
+        alphaRButp[fl99_, fl97_] -> 0, alphaRButpbar[fl99_, fl97_] -> 0, 
+        alphaRdD[fl99_, fl97_] -> 0, alphaRdDbar[fl99_, fl97_] -> 0, 
+        alphaRdHD1[fl97_, fl99_] -> 0, alphaRdHD1bar[fl97_, fl99_] -> 0, 
+        alphaRdHD2[fl97_, fl99_] -> 0, alphaRdHD2bar[fl97_, fl99_] -> 0, 
+        alphaRdHD3[fl97_, fl99_] -> 0, alphaRdHD3bar[fl97_, fl99_] -> 0, 
+        alphaRdHD4[fl97_, fl99_] -> 0, alphaRdHD4bar[fl97_, fl99_] -> 0, 
+        alphaReD[fl99_, fl97_] -> 0, alphaReDbar[fl99_, fl97_] -> 0, 
+        alphaReHD1[fl97_, fl99_] -> 0, alphaReHD1bar[fl97_, fl99_] -> 0, 
+        alphaReHD2[fl97_, fl99_] -> 0, alphaReHD2bar[fl97_, fl99_] -> 0, 
+        alphaReHD3[fl97_, fl99_] -> 0, alphaReHD3bar[fl97_, fl99_] -> 0, 
+        alphaReHD4[fl97_, fl99_] -> 0, alphaReHD4bar[fl97_, fl99_] -> 0, 
+        alphaRGd[fl99_, fl97_] -> 0, alphaRGdbar[fl99_, fl97_] -> 0, 
+        alphaRGdp[fl99_, fl97_] -> 0, alphaRGdpbar[fl99_, fl97_] -> 0, 
+        alphaRGdtp[fl99_, fl97_] -> 0, alphaRGdtpbar[fl99_, fl97_] -> 0, 
+        alphaRGq[fl99_, fl97_] -> 0, alphaRGqbar[fl99_, fl97_] -> 0, 
+        alphaRGqp[fl99_, fl97_] -> 0, alphaRGqpbar[fl99_, fl97_] -> 0, 
+        alphaRGqtp[fl99_, fl97_] -> 0, alphaRGqtpbar[fl99_, fl97_] -> 0, 
+        alphaRGu[fl99_, fl97_] -> 0, alphaRGubar[fl99_, fl97_] -> 0, 
+        alphaRGup[fl99_, fl97_] -> 0, alphaRGupbar[fl99_, fl97_] -> 0, 
+        alphaRGutp[fl99_, fl97_] -> 0, alphaRGutpbar[fl99_, fl97_] -> 0, 
+        alphaRHdp[fl99_, fl97_] -> 0, alphaRHdpbar[fl99_, fl97_] -> 0, 
+        alphaRHdpp[fl99_, fl97_] -> 0, alphaRHdppbar[fl99_, fl97_] -> 0, 
+        alphaRHep[fl99_, fl97_] -> 0, alphaRHepbar[fl99_, fl97_] -> 0, 
+        alphaRHepp[fl99_, fl97_] -> 0, alphaRHeppbar[fl99_, fl97_] -> 0, 
+        alphaRHl1p[fl99_, fl97_] -> 0, alphaRHl1pbar[fl99_, fl97_] -> 0, 
+        alphaRHl1pp[fl99_, fl97_] -> 0, alphaRHl1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHl3p[fl99_, fl97_] -> 0, alphaRHl3pbar[fl99_, fl97_] -> 0, 
+        alphaRHl3pp[fl99_, fl97_] -> 0, alphaRHl3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq1p[fl99_, fl97_] -> 0, alphaRHq1pbar[fl99_, fl97_] -> 0, 
+        alphaRHq1pp[fl99_, fl97_] -> 0, alphaRHq1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq3p[fl99_, fl97_] -> 0, alphaRHq3pbar[fl99_, fl97_] -> 0, 
+        alphaRHq3pp[fl99_, fl97_] -> 0, alphaRHq3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHup[fl99_, fl97_] -> 0, alphaRHupbar[fl99_, fl97_] -> 0, 
+        alphaRHupp[fl99_, fl97_] -> 0, alphaRHuppbar[fl99_, fl97_] -> 0, 
+        alphaRlD[fl99_, fl97_] -> 0, alphaRlDbar[fl99_, fl97_] -> 0, 
+        alphaRqD[fl99_, fl97_] -> 0, alphaRqDbar[fl99_, fl97_] -> 0, 
+        alphaRuD[fl99_, fl97_] -> 0, alphaRuDbar[fl99_, fl97_] -> 0, 
+        alphaRuHD1[fl97_, fl99_] -> 0, alphaRuHD1bar[fl97_, fl99_] -> 0, 
+        alphaRuHD2[fl97_, fl99_] -> 0, alphaRuHD2bar[fl97_, fl99_] -> 0, 
+        alphaRuHD3[fl97_, fl99_] -> 0, alphaRuHD3bar[fl97_, fl99_] -> 0, 
+        alphaRuHD4[fl97_, fl99_] -> 0, alphaRuHD4bar[fl97_, fl99_] -> 0, 
+        alphaRWl[fl99_, fl97_] -> 0, alphaRWlbar[fl99_, fl97_] -> 0, 
+        alphaRWlp[fl99_, fl97_] -> 0, alphaRWlpbar[fl99_, fl97_] -> 0, 
+        alphaRWltp[fl99_, fl97_] -> 0, alphaRWltpbar[fl99_, fl97_] -> 0, 
+        alphaRWq[fl99_, fl97_] -> 0, alphaRWqbar[fl99_, fl97_] -> 0, 
+        alphaRWqp[fl99_, fl97_] -> 0, alphaRWqpbar[fl99_, fl97_] -> 0, 
+        alphaRWqtp[fl99_, fl97_] -> 0, alphaRWqtpbar[fl99_, fl97_] -> 0, 
+        alphaWeinberg[fl97_, fl99_] -> 0, alphaWeinbergbar[fl97_, fl99_] -> 
+         0}, {}}, {{alphaKB -> 0, alphaKG -> 0, alphaKH -> 0, alphaKW -> 0, 
+        alphaO3G -> 0, alphaO3Gt -> 0, alphaO3W -> g2^3/(576*MSa^2*Pi^2) + 
+          g2^3/(576*MSb^2*Pi^2), alphaO3Wt -> 0, alphaOH -> 
+         (invepsilonbar*L13*L14bar*L6)/(384*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L13*L15bar*L6)/(384*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*L1bar*L2*L6)/(64*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*invepsilonbar*L1bar*L2*L6)/(64*MSa^2*Pi^2) + 
+          (invepsilonbar*L13*L14*L6bar)/(384*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L13*L15*L6bar)/(384*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*L1*L2bar*L6bar)/(64*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*invepsilonbar*L1*L2bar*L6bar)/(64*MSa^2*Pi^2) + 
+          (5*L16*L6*L6bar)/(32*Sqrt[2]*MSa^2*Pi^2) + 
+          (5*invepsilonbar*L16*L6*L6bar)/(32*Sqrt[2]*MSa^2*Pi^2) - 
+          (7*L17*L6*L6bar)/(96*Sqrt[2]*MSa^2*Pi^2) - 
+          (7*invepsilonbar*L17*L6*L6bar)/(96*Sqrt[2]*MSa^2*Pi^2) - 
+          (invepsilonbar*L10bar*L6bar*L7)/(192*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L11bar*L6bar*L7)/(192*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*L6bar^2*L7)/(24*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6bar^2*L7)/(48*MSa^2*Pi^2) - 
+          (invepsilonbar*L10*L6*L7bar)/(192*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L11*L6*L7bar)/(192*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*L6^2*L7bar)/(24*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6^2*L7bar)/(48*MSa^2*Pi^2) + 
+          (3*L6*L6bar*L8)/(64*Sqrt[2]*MSa^2*Pi^2) + 
+          (invepsilonbar*L6*L6bar*L8)/(64*Sqrt[2]*MSa^2*Pi^2) + 
+          (L7*L7bar*L8)/(48*Sqrt[2]*MSa^2*Pi^2) + 
+          L8^3/(384*Sqrt[2]*MSa^2*Pi^2) - (invepsilonbar*L10bar*L6*L9)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L11bar*L6*L9)/
+           (384*MSa^2*Pi^2) - (invepsilonbar*L10*L6bar*L9)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L11*L6bar*L9)/
+           (384*MSa^2*Pi^2) + (Sqrt[5/6]*L6*L6bar*L9)/(96*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6*L6bar*L9)/(192*MSa^2*Pi^2) + 
+          (L7*L7bar*L9)/(48*Sqrt[30]*MSa^2*Pi^2) + (L8*L9^2)/
+           (384*Sqrt[2]*MSa^2*Pi^2) + (7*L6*L6bar*lam)/(32*MSa^2*Pi^2) + 
+          (7*invepsilonbar*L6*L6bar*lam)/(32*MSa^2*Pi^2) - 
+          (L1*L18*L1bar*MSa^2)/(64*MSb^4*Pi^2) - (invepsilonbar*L1*L18*L1bar*
+            MSa^2)/(64*MSb^4*Pi^2) + (15*L1*L19*L1bar*MSa^2)/
+           (128*Sqrt[2]*MSb^4*Pi^2) + (15*invepsilonbar*L1*L19*L1bar*MSa^2)/
+           (128*Sqrt[2]*MSb^4*Pi^2) + (5*L1*L1bar*L20*MSa^2)/
+           (128*MSb^4*Pi^2) + (5*invepsilonbar*L1*L1bar*L20*MSa^2)/
+           (128*MSb^4*Pi^2) - (7*L1*L1bar*L21*MSa^2)/(128*Sqrt[2]*MSb^4*
+            Pi^2) - (7*invepsilonbar*L1*L1bar*L21*MSa^2)/(128*Sqrt[2]*MSb^4*
+            Pi^2) + L12^3/(384*Sqrt[2]*MSb^2*Pi^2) + (L12*L13^2)/
+           (384*Sqrt[2]*MSb^2*Pi^2) + (9*L1*L12*L1bar)/(64*Sqrt[2]*MSb^2*
+            Pi^2) + (3*invepsilonbar*L1*L12*L1bar)/(64*Sqrt[2]*MSb^2*Pi^2) + 
+          (Sqrt[15/2]*L1*L13*L1bar)/(32*MSb^2*Pi^2) + 
+          (Sqrt[15/2]*invepsilonbar*L1*L13*L1bar)/(64*MSb^2*Pi^2) + 
+          (15*L1*L1bar*L22)/(32*Sqrt[2]*MSb^2*Pi^2) + 
+          (15*invepsilonbar*L1*L1bar*L22)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (7*L1*L1bar*L23)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (7*invepsilonbar*L1*L1bar*L23)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*L1bar*L2*L6)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*invepsilonbar*L1bar*L2*L6)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*L1*L2bar*L6bar)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*invepsilonbar*L1*L2bar*L6bar)/(64*MSb^2*Pi^2) + 
+          (invepsilonbar*L1bar*L3*L7)/(32*Sqrt[3]*MSb^2*Pi^2) + 
+          (invepsilonbar*L1*L3bar*L7bar)/(32*Sqrt[3]*MSb^2*Pi^2) + 
+          (21*L1*L1bar*lam)/(32*MSb^2*Pi^2) + (21*invepsilonbar*L1*L1bar*lam)/
+           (32*MSb^2*Pi^2) - (L18*L6*L6bar*MSb^2)/(192*MSa^4*Pi^2) - 
+          (invepsilonbar*L18*L6*L6bar*MSb^2)/(192*MSa^4*Pi^2) + 
+          (5*L19*L6*L6bar*MSb^2)/(128*Sqrt[2]*MSa^4*Pi^2) + 
+          (5*invepsilonbar*L19*L6*L6bar*MSb^2)/(128*Sqrt[2]*MSa^4*Pi^2) + 
+          (5*L20*L6*L6bar*MSb^2)/(384*MSa^4*Pi^2) + 
+          (5*invepsilonbar*L20*L6*L6bar*MSb^2)/(384*MSa^4*Pi^2) - 
+          (7*L21*L6*L6bar*MSb^2)/(384*Sqrt[2]*MSa^4*Pi^2) - 
+          (7*invepsilonbar*L21*L6*L6bar*MSb^2)/(384*Sqrt[2]*MSa^4*Pi^2) - 
+          (L12*L2*L2bar*MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L12*L2*L2bar*MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (L13*L2*L2bar*MSa^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (invepsilonbar*L13*L2*L2bar*MSa^2)/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*L8*MSa^2)/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + (invepsilonbar*L2*L2bar*L8*
+            MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*L9*MSa^2)/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L9*MSa^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (L12*L2*L2bar*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (invepsilonbar*L12*L2*L2bar*MSb^2)/(96*Sqrt[2]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L13*L2*L2bar*MSb^2)/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (invepsilonbar*L13*L2*L2bar*MSb^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (L2*L2bar*L8*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L8*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (L2*L2bar*L9*MSb^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (invepsilonbar*L2*L2bar*L9*MSb^2)/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L14*L1bar*L2)/(64*Sqrt[3]*
+            (MSa^2 - MSb^2)*Pi^2) + (invepsilonbar*L14*L1bar*L2)/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + (L1*L14bar*L2bar)/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + (invepsilonbar*L1*L14bar*
+            L2bar)/(64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L12*L2*L2bar)/(96*Sqrt[2]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L13*L2*L2bar)/(96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*L1bar*L2*L6)/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L1bar*L2*L6)/(32*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2bar*L3*L6)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2bar*L3*L6)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*L1*L2bar*L6bar)/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L1*L2bar*L6bar)/(32*(MSa^2 - MSb^2)*
+            Pi^2) - (L2*L3bar*L6bar)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L3bar*L6bar)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L8)/(96*Sqrt[2]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L2bar*L9)/(96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) - 
+          (L14*L1bar*L2*MSa^2)/(64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L14*L1bar*L2*MSa^2)/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (L1*L14bar*L2bar*MSa^2)/
+           (64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L1*L14bar*L2bar*MSa^2)/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*L1bar*L2*L6*MSb^2)/
+           (32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*invepsilonbar*L1bar*
+            L2*L6*MSb^2)/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2bar*L3*L6*MSb^2)/(192*Sqrt[3]*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2bar*L3*L6*MSb^2)/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*L1*L2bar*L6bar*MSb^2)/
+           (32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*invepsilonbar*L1*
+            L2bar*L6bar*MSb^2)/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L3bar*L6bar*MSb^2)/(192*Sqrt[3]*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L3bar*L6bar*MSb^2)/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) - (5*L16*L6*L6bar*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[2]*MSa^2*Pi^2) + (7*L17*L6*L6bar*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*MSa^2*Pi^2) + (L10bar*L6bar*L7*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*MSa^2*Pi^2) + (L11bar*L6bar*L7*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (Sqrt[5/6]*L6bar^2*L7*Log[MSa^2/\[Mu]^2])/
+           (48*MSa^2*Pi^2) + (L10*L6*L7bar*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*MSa^2*Pi^2) + (L11*L6*L7bar*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (Sqrt[5/6]*L6^2*L7bar*Log[MSa^2/\[Mu]^2])/
+           (48*MSa^2*Pi^2) - (L6*L6bar*L8*Log[MSa^2/\[Mu]^2])/
+           (64*Sqrt[2]*MSa^2*Pi^2) + (L10bar*L6*L9*Log[MSa^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L11bar*L6*L9*Log[MSa^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (L10*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L11*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) - (Sqrt[5/6]*L6*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (7*L6*L6bar*lam*Log[MSa^2/\[Mu]^2])/
+           (32*MSa^2*Pi^2) + (L1*L18*L1bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^4*Pi^2) - (15*L1*L19*L1bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (128*Sqrt[2]*MSb^4*Pi^2) - (5*L1*L1bar*L20*MSa^2*
+            Log[MSa^2/\[Mu]^2])/(128*MSb^4*Pi^2) + 
+          (7*L1*L1bar*L21*MSa^2*Log[MSa^2/\[Mu]^2])/(128*Sqrt[2]*MSb^4*
+            Pi^2) + (Sqrt[5/6]*L1bar*L2*L6*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^2*Pi^2) + (Sqrt[5/6]*L1*L2bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^2*Pi^2) - (L1bar*L3*L7*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[3]*MSb^2*Pi^2) - (L1*L3bar*L7bar*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[3]*MSb^2*Pi^2) + (L12*L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (L13*L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*L8*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (L2*L2bar*L9*MSa^2*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (Sqrt[5/6]*L1bar*L2*L6*
+            Log[MSa^2/\[Mu]^2])/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2bar*L3*L6*Log[MSa^2/\[Mu]^2])/(192*Sqrt[3]*(MSa^2 - MSb^2)*
+            Pi^2) - (Sqrt[5/6]*L1*L2bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (32*(MSa^2 - MSb^2)*Pi^2) + (L2*L3bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L2bar*L8*Log[MSa^2/\[Mu]^2])/(96*Sqrt[2]*(MSa^2 - MSb^2)*
+            Pi^2) - (L2*L2bar*L9*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)*Pi^2) + (L14*L1bar*L2*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L1*L14bar*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (L13*L14bar*L6*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L13*L15bar*L6*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (Sqrt[15/2]*L1bar*L2*L6*Log[MSb^2/\[Mu]^2])/
+           (64*MSa^2*Pi^2) - (L13*L14*L6bar*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L13*L15*L6bar*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (Sqrt[15/2]*L1*L2bar*L6bar*Log[MSb^2/\[Mu]^2])/
+           (64*MSa^2*Pi^2) - (3*L1*L12*L1bar*Log[MSb^2/\[Mu]^2])/
+           (64*Sqrt[2]*MSb^2*Pi^2) - (Sqrt[15/2]*L1*L13*L1bar*
+            Log[MSb^2/\[Mu]^2])/(64*MSb^2*Pi^2) - 
+          (15*L1*L1bar*L22*Log[MSb^2/\[Mu]^2])/(32*Sqrt[2]*MSb^2*Pi^2) + 
+          (7*L1*L1bar*L23*Log[MSb^2/\[Mu]^2])/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (21*L1*L1bar*lam*Log[MSb^2/\[Mu]^2])/(32*MSb^2*Pi^2) + 
+          (L18*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(192*MSa^4*Pi^2) - 
+          (5*L19*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(128*Sqrt[2]*MSa^4*
+            Pi^2) - (5*L20*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^4*Pi^2) + (7*L21*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[2]*MSa^4*Pi^2) - (L12*L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (L13*L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*L8*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (L2*L2bar*L9*MSb^2*Log[MSb^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (L14*L1bar*L2*Log[MSb^2/\[Mu]^2])/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (L1*L14bar*L2bar*Log[MSb^2/\[Mu]^2])/(64*Sqrt[3]*(MSa^2 - MSb^2)*
+            Pi^2) - (L12*L2*L2bar*Log[MSb^2/\[Mu]^2])/(96*Sqrt[2]*
+            (MSa^2 - MSb^2)*Pi^2) - (L13*L2*L2bar*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) + (Sqrt[5/6]*L1bar*L2*L6*MSb^2*
+            Log[MSb^2/\[Mu]^2])/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2bar*L3*L6*MSb^2*Log[MSb^2/\[Mu]^2])/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) + (Sqrt[5/6]*L1*L2bar*L6bar*MSb^2*
+            Log[MSb^2/\[Mu]^2])/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2*L3bar*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2), alphaOHB -> 
+         -(g1^2*L8)/(384*Sqrt[2]*MSa^2*Pi^2) - (3*g1^2*L12)/
+           (128*Sqrt[2]*MSb^2*Pi^2), alphaOHBox -> 
+         -(L6*L6bar)/(48*MSa^2*Pi^2) - L8^2/(384*MSa^2*Pi^2) - 
+          L9^2/(1152*MSa^2*Pi^2) - L12^2/(384*MSb^2*Pi^2) - 
+          L13^2/(1152*MSb^2*Pi^2), alphaOHBt -> 0, 
+        alphaOHD -> -(L6*L6bar)/(16*MSa^2*Pi^2) + (L7*L7bar)/
+           (72*MSa^2*Pi^2) - L9^2/(288*MSa^2*Pi^2) - L13^2/(288*MSb^2*Pi^2) + 
+          (3*L1*L1bar)/(16*MSb^2*Pi^2) + (L2*L2bar*MSa^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) + (invepsilonbar*L2*L2bar*MSa^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSb^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) - (invepsilonbar*L2*L2bar*MSb^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSa^4*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*MSb^4*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2), alphaOHG -> 0, alphaOHGt -> 0, 
+        alphaOHW -> (-5*g2^2*L8)/(384*Sqrt[2]*MSa^2*Pi^2) - 
+          (5*g2^2*L12)/(384*Sqrt[2]*MSb^2*Pi^2), alphaOHWB -> 
+         -(Sqrt[5/6]*g1*g2*L9)/(192*MSa^2*Pi^2) - (Sqrt[5/6]*g1*g2*L13)/
+           (64*MSb^2*Pi^2), alphaOHWBt -> 0, alphaOHWt -> 0, 
+        alphaOlambda -> -(invepsilonbar*L12^2)/(64*Pi^2) - 
+          (invepsilonbar*L13^2)/(192*Pi^2) - (3*L1*L1bar)/(16*Pi^2) - 
+          (3*invepsilonbar*L1*L1bar)/(16*Pi^2) - (L6*L6bar)/(16*Pi^2) - 
+          (invepsilonbar*L6*L6bar)/(16*Pi^2) - (invepsilonbar*L7*L7bar)/
+           (24*Pi^2) - (invepsilonbar*L8^2)/(64*Pi^2) - (invepsilonbar*L9^2)/
+           (192*Pi^2) - (L2*L2bar*MSa^2)/(48*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L2bar*MSa^2)/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L2bar*MSb^2)/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L2bar*MSb^2)/(48*(MSa^2 - MSb^2)*Pi^2) - 
+          (L6*L6bar*muH^2)/(16*MSa^2*Pi^2) - (invepsilonbar*L6*L6bar*muH^2)/
+           (16*MSa^2*Pi^2) - (3*L1*L1bar*muH^2)/(16*MSb^2*Pi^2) - 
+          (3*invepsilonbar*L1*L1bar*muH^2)/(16*MSb^2*Pi^2) + 
+          (L6*L6bar*Log[MSa^2/\[Mu]^2])/(16*Pi^2) + 
+          (L7*L7bar*Log[MSa^2/\[Mu]^2])/(24*Pi^2) + (L8^2*Log[MSa^2/\[Mu]^2])/
+           (64*Pi^2) + (L9^2*Log[MSa^2/\[Mu]^2])/(192*Pi^2) + 
+          (L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (L6*L6bar*muH^2*Log[MSa^2/\[Mu]^2])/(16*MSa^2*Pi^2) + 
+          (L12^2*Log[MSb^2/\[Mu]^2])/(64*Pi^2) + (L13^2*Log[MSb^2/\[Mu]^2])/
+           (192*Pi^2) + (3*L1*L1bar*Log[MSb^2/\[Mu]^2])/(16*Pi^2) - 
+          (L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (3*L1*L1bar*muH^2*Log[MSb^2/\[Mu]^2])/(16*MSb^2*Pi^2), 
+        alphaOmuH2 -> (L8*MSa^2)/(8*Sqrt[2]*Pi^2) + (invepsilonbar*L8*MSa^2)/
+           (8*Sqrt[2]*Pi^2) + (L12*MSb^2)/(8*Sqrt[2]*Pi^2) + 
+          (invepsilonbar*L12*MSb^2)/(8*Sqrt[2]*Pi^2) - 
+          (L8*MSa^2*Log[MSa^2/\[Mu]^2])/(8*Sqrt[2]*Pi^2) - 
+          (L12*MSb^2*Log[MSb^2/\[Mu]^2])/(8*Sqrt[2]*Pi^2), 
+        alphaR2B -> g1^2/(480*MSa^2*Pi^2) + (3*g1^2)/(160*MSb^2*Pi^2), 
+        alphaR2G -> 0, alphaR2W -> g2^2/(96*MSa^2*Pi^2) + 
+          g2^2/(96*MSb^2*Pi^2), alphaRBDH -> 0, alphaRDH -> 0, 
+        alphaRHDp -> (5*L6*L6bar)/(48*MSa^2*Pi^2) + (L7*L7bar)/
+           (72*MSa^2*Pi^2) + L9^2/(288*MSa^2*Pi^2) + L13^2/(288*MSb^2*Pi^2) + 
+          (3*L1*L1bar)/(16*MSb^2*Pi^2) + (L2*L2bar*MSa^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) + (invepsilonbar*L2*L2bar*MSa^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSb^4)/
+           (16*(MSa^2 - MSb^2)^3*Pi^2) - (invepsilonbar*L2*L2bar*MSb^4)/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) - (L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSa^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (invepsilonbar*L2*L2bar*MSb^2)/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*MSa^4*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*MSb^4*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^3*Pi^2) + (L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (24*(MSa^2 - MSb^2)^2*Pi^2), alphaRHDpp -> 0, alphaRWDH -> 0, 
+        alphaEBd[fl99_, fl97_] -> 0, alphaEBdbar[fl99_, fl97_] -> 0, 
+        alphaEBdp[fl99_, fl97_] -> 0, alphaEBdpbar[fl99_, fl97_] -> 0, 
+        alphaEBdtp[fl99_, fl97_] -> 0, alphaEBdtpbar[fl99_, fl97_] -> 0, 
+        alphaEBe[fl99_, fl97_] -> 0, alphaEBebar[fl99_, fl97_] -> 0, 
+        alphaEBep[fl99_, fl97_] -> 0, alphaEBepbar[fl99_, fl97_] -> 0, 
+        alphaEBetp[fl99_, fl97_] -> 0, alphaEBetpbar[fl99_, fl97_] -> 0, 
+        alphaEBl[fl99_, fl97_] -> 0, alphaEBlbar[fl99_, fl97_] -> 0, 
+        alphaEBlp[fl99_, fl97_] -> 0, alphaEBlpbar[fl99_, fl97_] -> 0, 
+        alphaEBltp[fl99_, fl97_] -> 0, alphaEBltpbar[fl99_, fl97_] -> 0, 
+        alphaEBq[fl99_, fl97_] -> 0, alphaEBqbar[fl99_, fl97_] -> 0, 
+        alphaEBqp[fl99_, fl97_] -> 0, alphaEBqpbar[fl99_, fl97_] -> 0, 
+        alphaEBqtp[fl99_, fl97_] -> 0, alphaEBqtpbar[fl99_, fl97_] -> 0, 
+        alphaEBu[fl99_, fl97_] -> 0, alphaEBubar[fl99_, fl97_] -> 0, 
+        alphaEBup[fl99_, fl97_] -> 0, alphaEBupbar[fl99_, fl97_] -> 0, 
+        alphaEButp[fl99_, fl97_] -> 0, alphaEButpbar[fl99_, fl97_] -> 0, 
+        alphaEcdd[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcddtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEced[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcedtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcee[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceebar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceetwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEceu[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceubar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEceutwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcld[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcldthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcle[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEclethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcll[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcllbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclltwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEclu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEclubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcluthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqd[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdp[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdpthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqdthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqe[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedl[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqedlthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcqethreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcql[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqlptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqltwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcqq[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqp[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqpbar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqptwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqqtwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcqu[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqubar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqup[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupbar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcqupthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthree[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcquthreebar[fl97_, fl93_, fl95_, fl99_] -> 0, 
+        alphaEcud[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudp[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudpbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudptwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudqq[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqbar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwo[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudqqtwobar[fl93_, fl97_, fl95_, fl99_] -> 0, 
+        alphaEcudtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcudtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEcuelq[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwo[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuelqtwobar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEcuu[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuubar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwo[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEcuutwobar[fl95_, fl97_, fl93_, fl99_] -> 0, 
+        alphaEdB[fl97_, fl99_] -> 0, alphaEdBbar[fl97_, fl99_] -> 0, 
+        alphaEdd8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdd8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEddthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEdG[fl97_, fl99_] -> 0, alphaEdGbar[fl97_, fl99_] -> 0, 
+        alphaEdH[fl97_, fl99_] -> 0, alphaEdHbar[fl97_, fl99_] -> 0, 
+        alphaEdW[fl97_, fl99_] -> 0, alphaEdWbar[fl97_, fl99_] -> 0, 
+        alphaEeB[fl97_, fl99_] -> 0, alphaEeBbar[fl97_, fl99_] -> 0, 
+        alphaEed[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEedthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEedthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeethreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeH[fl97_, fl99_] -> 0, alphaEeHbar[fl97_, fl99_] -> 0, 
+        alphaEeu[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeubar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEeuthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeuthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEeW[fl97_, fl99_] -> 0, alphaEeWbar[fl97_, fl99_] -> 0, 
+        alphaEGd[fl99_, fl97_] -> 0, alphaEGdbar[fl99_, fl97_] -> 0, 
+        alphaEGdp[fl99_, fl97_] -> 0, alphaEGdpbar[fl99_, fl97_] -> 0, 
+        alphaEGdtp[fl99_, fl97_] -> 0, alphaEGdtpbar[fl99_, fl97_] -> 0, 
+        alphaEGq[fl99_, fl97_] -> 0, alphaEGqbar[fl99_, fl97_] -> 0, 
+        alphaEGqp[fl99_, fl97_] -> 0, alphaEGqpbar[fl99_, fl97_] -> 0, 
+        alphaEGqtp[fl99_, fl97_] -> 0, alphaEGqtpbar[fl99_, fl97_] -> 0, 
+        alphaEGu[fl99_, fl97_] -> 0, alphaEGubar[fl99_, fl97_] -> 0, 
+        alphaEGup[fl99_, fl97_] -> 0, alphaEGupbar[fl99_, fl97_] -> 0, 
+        alphaEGutp[fl99_, fl97_] -> 0, alphaEGutpbar[fl99_, fl97_] -> 0, 
+        alphaEld[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEldtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEldtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEle[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaElebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEledqtwo[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaEledqtwobar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaElequtwo[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElequtwobar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaElethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaElethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEletwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEletwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEll3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEll3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEllthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaElq[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElq3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqbar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqde[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethree[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqdethreebar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaElqthree[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3bar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthree3p[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthree3pbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreebar[fl99_, fl95_, fl93_, fl97_] -> 0, 
+        alphaElqthreep[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElqthreepbar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaElu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEluqe[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqebar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwo[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluqetwobar[fl97_, fl95_, fl93_, fl99_] -> 0, 
+        alphaEluthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEluthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaElutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaElutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqd[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqd8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdbar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdthree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthree8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdthreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqdtwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwo8bar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqdtwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqe[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqebar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqethree[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqethreebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaEqetwo[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqetwobar[fl95_, fl97_, fl99_, fl93_] -> 0, 
+        alphaEqq38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqq8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree38bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqqthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEqu[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqu8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqubar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEquqdtwo[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwo8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquqdtwobar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaEquthree[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthree8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEquthreebar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaEqutwo[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwo8bar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEqutwobar[fl99_, fl93_, fl95_, fl97_] -> 0, 
+        alphaEuB[fl97_, fl99_] -> 0, alphaEuBbar[fl97_, fl99_] -> 0, 
+        alphaEud[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEud8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudbar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8bar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthree8p[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthree8pbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreebar[fl93_, fl97_, fl99_, fl95_] -> 0, 
+        alphaEudthreep[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEudthreepbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuG[fl97_, fl99_] -> 0, alphaEuGbar[fl97_, fl99_] -> 0, 
+        alphaEuH[fl97_, fl99_] -> 0, alphaEuHbar[fl97_, fl99_] -> 0, 
+        alphaEuu8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuu8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthree8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuuthreebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaEuW[fl97_, fl99_] -> 0, alphaEuWbar[fl97_, fl99_] -> 0, 
+        alphaEWl[fl99_, fl97_] -> 0, alphaEWlbar[fl99_, fl97_] -> 0, 
+        alphaEWlp[fl99_, fl97_] -> 0, alphaEWlpbar[fl99_, fl97_] -> 0, 
+        alphaEWltp[fl99_, fl97_] -> 0, alphaEWltpbar[fl99_, fl97_] -> 0, 
+        alphaEWq[fl99_, fl97_] -> 0, alphaEWqbar[fl99_, fl97_] -> 0, 
+        alphaEWqp[fl99_, fl97_] -> 0, alphaEWqpbar[fl99_, fl97_] -> 0, 
+        alphaEWqtp[fl99_, fl97_] -> 0, alphaEWqtpbar[fl99_, fl97_] -> 0, 
+        alphaKd[fl99_, fl97_] -> 0, alphaKdbar[fl99_, fl97_] -> 0, 
+        alphaKe[fl99_, fl97_] -> 0, alphaKebar[fl99_, fl97_] -> 0, 
+        alphaKl[fl99_, fl97_] -> 0, alphaKlbar[fl99_, fl97_] -> 0, 
+        alphaKq[fl99_, fl97_] -> 0, alphaKqbar[fl99_, fl97_] -> 0, 
+        alphaKu[fl99_, fl97_] -> 0, alphaKubar[fl99_, fl97_] -> 0, 
+        alphaOdB[fl97_, fl99_] -> 0, alphaOdBbar[fl97_, fl99_] -> 0, 
+        alphaOdd[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOddbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOdG[fl97_, fl99_] -> 0, alphaOdGbar[fl97_, fl99_] -> 0, 
+        alphaOdH[fl97_, fl99_] -> 0, alphaOdHbar[fl97_, fl99_] -> 0, 
+        alphaOdW[fl97_, fl99_] -> 0, alphaOdWbar[fl97_, fl99_] -> 0, 
+        alphaOeB[fl97_, fl99_] -> 0, alphaOeBbar[fl97_, fl99_] -> 0, 
+        alphaOed[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOedbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOee[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeebar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeH[fl97_, fl99_] -> 0, alphaOeHbar[fl97_, fl99_] -> 0, 
+        alphaOeu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOeW[fl97_, fl99_] -> 0, alphaOeWbar[fl97_, fl99_] -> 0, 
+        alphaOHd[fl99_, fl97_] -> 0, alphaOHdbar[fl99_, fl97_] -> 0, 
+        alphaOHe[fl99_, fl97_] -> 0, alphaOHebar[fl99_, fl97_] -> 0, 
+        alphaOHl1[fl99_, fl97_] -> 0, alphaOHl1bar[fl99_, fl97_] -> 0, 
+        alphaOHl3[fl99_, fl97_] -> 0, alphaOHl3bar[fl99_, fl97_] -> 0, 
+        alphaOHq1[fl99_, fl97_] -> 0, alphaOHq1bar[fl99_, fl97_] -> 0, 
+        alphaOHq3[fl99_, fl97_] -> 0, alphaOHq3bar[fl99_, fl97_] -> 0, 
+        alphaOHu[fl99_, fl97_] -> 0, alphaOHubar[fl99_, fl97_] -> 0, 
+        alphaOHud[fl97_, fl99_] -> 0, alphaOHudbar[fl97_, fl99_] -> 0, 
+        alphaOlambdad[fl97_, fl99_] -> 0, alphaOlambdadbar[fl97_, fl99_] -> 
+         0, alphaOlambdae[fl97_, fl99_] -> 0, 
+        alphaOlambdaebar[fl97_, fl99_] -> 0, alphaOlambdau[fl97_, fl99_] -> 
+         0, alphaOlambdaubar[fl97_, fl99_] -> 0, 
+        alphaOld[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOldbar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOle[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOlebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOledq[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOledqbar[fl93_, fl99_, fl97_, fl95_] -> 0, 
+        alphaOlequ1[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOlequ1bar[fl97_, fl99_, fl93_, fl95_] -> 0, 
+        alphaOll[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOllbar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOlq1[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq1bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlq3bar[fl99_, fl97_, fl93_, fl95_] -> 0, 
+        alphaOlu[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOlubar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqd1[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd1bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqd8bar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqe[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqebar[fl95_, fl93_, fl99_, fl97_] -> 0, 
+        alphaOqq1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqq3bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOqu1[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu1bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOqu8bar[fl99_, fl97_, fl95_, fl93_] -> 0, 
+        alphaOquqd1[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd1bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOquqd8bar[fl93_, fl95_, fl97_, fl99_] -> 0, 
+        alphaOuB[fl97_, fl99_] -> 0, alphaOuBbar[fl97_, fl99_] -> 0, 
+        alphaOud1[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud1bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOud8bar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuG[fl97_, fl99_] -> 0, alphaOuGbar[fl97_, fl99_] -> 0, 
+        alphaOuH[fl97_, fl99_] -> 0, alphaOuHbar[fl97_, fl99_] -> 0, 
+        alphaOuu[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuubar[fl93_, fl95_, fl99_, fl97_] -> 0, 
+        alphaOuW[fl97_, fl99_] -> 0, alphaOuWbar[fl97_, fl99_] -> 0, 
+        alphaRBd[fl99_, fl97_] -> 0, alphaRBdbar[fl99_, fl97_] -> 0, 
+        alphaRBdp[fl99_, fl97_] -> 0, alphaRBdpbar[fl99_, fl97_] -> 0, 
+        alphaRBdtp[fl99_, fl97_] -> 0, alphaRBdtpbar[fl99_, fl97_] -> 0, 
+        alphaRBe[fl99_, fl97_] -> 0, alphaRBebar[fl99_, fl97_] -> 0, 
+        alphaRBep[fl99_, fl97_] -> 0, alphaRBepbar[fl99_, fl97_] -> 0, 
+        alphaRBetp[fl99_, fl97_] -> 0, alphaRBetpbar[fl99_, fl97_] -> 0, 
+        alphaRBl[fl99_, fl97_] -> 0, alphaRBlbar[fl99_, fl97_] -> 0, 
+        alphaRBlp[fl99_, fl97_] -> 0, alphaRBlpbar[fl99_, fl97_] -> 0, 
+        alphaRBltp[fl99_, fl97_] -> 0, alphaRBltpbar[fl99_, fl97_] -> 0, 
+        alphaRBq[fl99_, fl97_] -> 0, alphaRBqbar[fl99_, fl97_] -> 0, 
+        alphaRBqp[fl99_, fl97_] -> 0, alphaRBqpbar[fl99_, fl97_] -> 0, 
+        alphaRBqtp[fl99_, fl97_] -> 0, alphaRBqtpbar[fl99_, fl97_] -> 0, 
+        alphaRBu[fl99_, fl97_] -> 0, alphaRBubar[fl99_, fl97_] -> 0, 
+        alphaRBup[fl99_, fl97_] -> 0, alphaRBupbar[fl99_, fl97_] -> 0, 
+        alphaRButp[fl99_, fl97_] -> 0, alphaRButpbar[fl99_, fl97_] -> 0, 
+        alphaRdD[fl99_, fl97_] -> 0, alphaRdDbar[fl99_, fl97_] -> 0, 
+        alphaRdHD1[fl97_, fl99_] -> 0, alphaRdHD1bar[fl97_, fl99_] -> 0, 
+        alphaRdHD2[fl97_, fl99_] -> 0, alphaRdHD2bar[fl97_, fl99_] -> 0, 
+        alphaRdHD3[fl97_, fl99_] -> 0, alphaRdHD3bar[fl97_, fl99_] -> 0, 
+        alphaRdHD4[fl97_, fl99_] -> 0, alphaRdHD4bar[fl97_, fl99_] -> 0, 
+        alphaReD[fl99_, fl97_] -> 0, alphaReDbar[fl99_, fl97_] -> 0, 
+        alphaReHD1[fl97_, fl99_] -> 0, alphaReHD1bar[fl97_, fl99_] -> 0, 
+        alphaReHD2[fl97_, fl99_] -> 0, alphaReHD2bar[fl97_, fl99_] -> 0, 
+        alphaReHD3[fl97_, fl99_] -> 0, alphaReHD3bar[fl97_, fl99_] -> 0, 
+        alphaReHD4[fl97_, fl99_] -> 0, alphaReHD4bar[fl97_, fl99_] -> 0, 
+        alphaRGd[fl99_, fl97_] -> 0, alphaRGdbar[fl99_, fl97_] -> 0, 
+        alphaRGdp[fl99_, fl97_] -> 0, alphaRGdpbar[fl99_, fl97_] -> 0, 
+        alphaRGdtp[fl99_, fl97_] -> 0, alphaRGdtpbar[fl99_, fl97_] -> 0, 
+        alphaRGq[fl99_, fl97_] -> 0, alphaRGqbar[fl99_, fl97_] -> 0, 
+        alphaRGqp[fl99_, fl97_] -> 0, alphaRGqpbar[fl99_, fl97_] -> 0, 
+        alphaRGqtp[fl99_, fl97_] -> 0, alphaRGqtpbar[fl99_, fl97_] -> 0, 
+        alphaRGu[fl99_, fl97_] -> 0, alphaRGubar[fl99_, fl97_] -> 0, 
+        alphaRGup[fl99_, fl97_] -> 0, alphaRGupbar[fl99_, fl97_] -> 0, 
+        alphaRGutp[fl99_, fl97_] -> 0, alphaRGutpbar[fl99_, fl97_] -> 0, 
+        alphaRHdp[fl99_, fl97_] -> 0, alphaRHdpbar[fl99_, fl97_] -> 0, 
+        alphaRHdpp[fl99_, fl97_] -> 0, alphaRHdppbar[fl99_, fl97_] -> 0, 
+        alphaRHep[fl99_, fl97_] -> 0, alphaRHepbar[fl99_, fl97_] -> 0, 
+        alphaRHepp[fl99_, fl97_] -> 0, alphaRHeppbar[fl99_, fl97_] -> 0, 
+        alphaRHl1p[fl99_, fl97_] -> 0, alphaRHl1pbar[fl99_, fl97_] -> 0, 
+        alphaRHl1pp[fl99_, fl97_] -> 0, alphaRHl1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHl3p[fl99_, fl97_] -> 0, alphaRHl3pbar[fl99_, fl97_] -> 0, 
+        alphaRHl3pp[fl99_, fl97_] -> 0, alphaRHl3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq1p[fl99_, fl97_] -> 0, alphaRHq1pbar[fl99_, fl97_] -> 0, 
+        alphaRHq1pp[fl99_, fl97_] -> 0, alphaRHq1ppbar[fl99_, fl97_] -> 0, 
+        alphaRHq3p[fl99_, fl97_] -> 0, alphaRHq3pbar[fl99_, fl97_] -> 0, 
+        alphaRHq3pp[fl99_, fl97_] -> 0, alphaRHq3ppbar[fl99_, fl97_] -> 0, 
+        alphaRHup[fl99_, fl97_] -> 0, alphaRHupbar[fl99_, fl97_] -> 0, 
+        alphaRHupp[fl99_, fl97_] -> 0, alphaRHuppbar[fl99_, fl97_] -> 0, 
+        alphaRlD[fl99_, fl97_] -> 0, alphaRlDbar[fl99_, fl97_] -> 0, 
+        alphaRqD[fl99_, fl97_] -> 0, alphaRqDbar[fl99_, fl97_] -> 0, 
+        alphaRuD[fl99_, fl97_] -> 0, alphaRuDbar[fl99_, fl97_] -> 0, 
+        alphaRuHD1[fl97_, fl99_] -> 0, alphaRuHD1bar[fl97_, fl99_] -> 0, 
+        alphaRuHD2[fl97_, fl99_] -> 0, alphaRuHD2bar[fl97_, fl99_] -> 0, 
+        alphaRuHD3[fl97_, fl99_] -> 0, alphaRuHD3bar[fl97_, fl99_] -> 0, 
+        alphaRuHD4[fl97_, fl99_] -> 0, alphaRuHD4bar[fl97_, fl99_] -> 0, 
+        alphaRWl[fl99_, fl97_] -> 0, alphaRWlbar[fl99_, fl97_] -> 0, 
+        alphaRWlp[fl99_, fl97_] -> 0, alphaRWlpbar[fl99_, fl97_] -> 0, 
+        alphaRWltp[fl99_, fl97_] -> 0, alphaRWltpbar[fl99_, fl97_] -> 0, 
+        alphaRWq[fl99_, fl97_] -> 0, alphaRWqbar[fl99_, fl97_] -> 0, 
+        alphaRWqp[fl99_, fl97_] -> 0, alphaRWqpbar[fl99_, fl97_] -> 0, 
+        alphaRWqtp[fl99_, fl97_] -> 0, alphaRWqtpbar[fl99_, fl97_] -> 0, 
+        alphaWeinberg[fl97_, fl99_] -> 0, alphaWeinbergbar[fl97_, fl99_] -> 
+         0}, {}}}, {alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1, 
+      alphaO3G -> 0, alphaO3Gt -> 0, alphaO3W -> 
+       (g2^3*(MSa^2 + MSb^2)*onelooporder)/(576*MSa^2*MSb^2*Pi^2), 
+      alphaO3Wt -> 0, alphaOH -> (L6*L6bar)/(12*MSa^2) + 
+        (L1*L1bar)/(4*MSb^2) + onelooporder*((invepsilonbar*L13*L14bar*L6)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L13*L15bar*L6)/
+           (384*MSa^2*Pi^2) - (Sqrt[15/2]*L1bar*L2*L6)/(64*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*invepsilonbar*L1bar*L2*L6)/(64*MSa^2*Pi^2) + 
+          (invepsilonbar*L13*L14*L6bar)/(384*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L13*L15*L6bar)/(384*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*L1*L2bar*L6bar)/(64*MSa^2*Pi^2) - 
+          (Sqrt[15/2]*invepsilonbar*L1*L2bar*L6bar)/(64*MSa^2*Pi^2) + 
+          (5*L16*L6*L6bar)/(32*Sqrt[2]*MSa^2*Pi^2) + 
+          (5*invepsilonbar*L16*L6*L6bar)/(32*Sqrt[2]*MSa^2*Pi^2) - 
+          (7*L17*L6*L6bar)/(96*Sqrt[2]*MSa^2*Pi^2) - 
+          (7*invepsilonbar*L17*L6*L6bar)/(96*Sqrt[2]*MSa^2*Pi^2) - 
+          (invepsilonbar*L10bar*L6bar*L7)/(192*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L11bar*L6bar*L7)/(192*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*L6bar^2*L7)/(24*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6bar^2*L7)/(48*MSa^2*Pi^2) - 
+          (invepsilonbar*L10*L6*L7bar)/(192*Sqrt[3]*MSa^2*Pi^2) - 
+          (invepsilonbar*L11*L6*L7bar)/(192*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*L6^2*L7bar)/(24*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6^2*L7bar)/(48*MSa^2*Pi^2) + 
+          (3*L6*L6bar*L8)/(64*Sqrt[2]*MSa^2*Pi^2) + 
+          (invepsilonbar*L6*L6bar*L8)/(64*Sqrt[2]*MSa^2*Pi^2) + 
+          (L7*L7bar*L8)/(48*Sqrt[2]*MSa^2*Pi^2) + 
+          L8^3/(384*Sqrt[2]*MSa^2*Pi^2) - (invepsilonbar*L10bar*L6*L9)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L11bar*L6*L9)/
+           (384*MSa^2*Pi^2) - (invepsilonbar*L10*L6bar*L9)/
+           (384*Sqrt[3]*MSa^2*Pi^2) - (invepsilonbar*L11*L6bar*L9)/
+           (384*MSa^2*Pi^2) + (Sqrt[5/6]*L6*L6bar*L9)/(96*MSa^2*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L6*L6bar*L9)/(192*MSa^2*Pi^2) + 
+          (L7*L7bar*L9)/(48*Sqrt[30]*MSa^2*Pi^2) + (L8*L9^2)/
+           (384*Sqrt[2]*MSa^2*Pi^2) + (7*L6*L6bar*lam)/(32*MSa^2*Pi^2) + 
+          (7*invepsilonbar*L6*L6bar*lam)/(32*MSa^2*Pi^2) - 
+          (L1*L18*L1bar*MSa^2)/(64*MSb^4*Pi^2) - (invepsilonbar*L1*L18*L1bar*
+            MSa^2)/(64*MSb^4*Pi^2) + (15*L1*L19*L1bar*MSa^2)/
+           (128*Sqrt[2]*MSb^4*Pi^2) + (15*invepsilonbar*L1*L19*L1bar*MSa^2)/
+           (128*Sqrt[2]*MSb^4*Pi^2) + (5*L1*L1bar*L20*MSa^2)/
+           (128*MSb^4*Pi^2) + (5*invepsilonbar*L1*L1bar*L20*MSa^2)/
+           (128*MSb^4*Pi^2) - (7*L1*L1bar*L21*MSa^2)/(128*Sqrt[2]*MSb^4*
+            Pi^2) - (7*invepsilonbar*L1*L1bar*L21*MSa^2)/(128*Sqrt[2]*MSb^4*
+            Pi^2) + L12^3/(384*Sqrt[2]*MSb^2*Pi^2) + (L12*L13^2)/
+           (384*Sqrt[2]*MSb^2*Pi^2) + (9*L1*L12*L1bar)/(64*Sqrt[2]*MSb^2*
+            Pi^2) + (3*invepsilonbar*L1*L12*L1bar)/(64*Sqrt[2]*MSb^2*Pi^2) + 
+          (Sqrt[15/2]*L1*L13*L1bar)/(32*MSb^2*Pi^2) + 
+          (Sqrt[15/2]*invepsilonbar*L1*L13*L1bar)/(64*MSb^2*Pi^2) + 
+          (15*L1*L1bar*L22)/(32*Sqrt[2]*MSb^2*Pi^2) + 
+          (15*invepsilonbar*L1*L1bar*L22)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (7*L1*L1bar*L23)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (7*invepsilonbar*L1*L1bar*L23)/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*L1bar*L2*L6)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*invepsilonbar*L1bar*L2*L6)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*L1*L2bar*L6bar)/(64*MSb^2*Pi^2) - 
+          (Sqrt[5/6]*invepsilonbar*L1*L2bar*L6bar)/(64*MSb^2*Pi^2) + 
+          (invepsilonbar*L1bar*L3*L7)/(32*Sqrt[3]*MSb^2*Pi^2) + 
+          (invepsilonbar*L1*L3bar*L7bar)/(32*Sqrt[3]*MSb^2*Pi^2) + 
+          (21*L1*L1bar*lam)/(32*MSb^2*Pi^2) + (21*invepsilonbar*L1*L1bar*lam)/
+           (32*MSb^2*Pi^2) - (L18*L6*L6bar*MSb^2)/(192*MSa^4*Pi^2) - 
+          (invepsilonbar*L18*L6*L6bar*MSb^2)/(192*MSa^4*Pi^2) + 
+          (5*L19*L6*L6bar*MSb^2)/(128*Sqrt[2]*MSa^4*Pi^2) + 
+          (5*invepsilonbar*L19*L6*L6bar*MSb^2)/(128*Sqrt[2]*MSa^4*Pi^2) + 
+          (5*L20*L6*L6bar*MSb^2)/(384*MSa^4*Pi^2) + 
+          (5*invepsilonbar*L20*L6*L6bar*MSb^2)/(384*MSa^4*Pi^2) - 
+          (7*L21*L6*L6bar*MSb^2)/(384*Sqrt[2]*MSa^4*Pi^2) - 
+          (7*invepsilonbar*L21*L6*L6bar*MSb^2)/(384*Sqrt[2]*MSa^4*Pi^2) - 
+          (L12*L2*L2bar*MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L12*L2*L2bar*MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (L13*L2*L2bar*MSa^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (invepsilonbar*L13*L2*L2bar*MSa^2)/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*L8*MSa^2)/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + (invepsilonbar*L2*L2bar*L8*
+            MSa^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*L9*MSa^2)/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L9*MSa^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (L12*L2*L2bar*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (invepsilonbar*L12*L2*L2bar*MSb^2)/(96*Sqrt[2]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L13*L2*L2bar*MSb^2)/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (invepsilonbar*L13*L2*L2bar*MSb^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) - (L2*L2bar*L8*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L8*MSb^2)/(96*Sqrt[2]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (L2*L2bar*L9*MSb^2)/(96*Sqrt[30]*(MSa^2 - MSb^2)^2*
+            Pi^2) + (invepsilonbar*L2*L2bar*L9*MSb^2)/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L14*L1bar*L2)/(64*Sqrt[3]*
+            (MSa^2 - MSb^2)*Pi^2) + (invepsilonbar*L14*L1bar*L2)/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + (L1*L14bar*L2bar)/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + (invepsilonbar*L1*L14bar*
+            L2bar)/(64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L12*L2*L2bar)/(96*Sqrt[2]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L13*L2*L2bar)/(96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*L1bar*L2*L6)/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L1bar*L2*L6)/(32*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2bar*L3*L6)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2bar*L3*L6)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*L1*L2bar*L6bar)/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (Sqrt[5/6]*invepsilonbar*L1*L2bar*L6bar)/(32*(MSa^2 - MSb^2)*
+            Pi^2) - (L2*L3bar*L6bar)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L3bar*L6bar)/(192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L2bar*L8)/(96*Sqrt[2]*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L2bar*L9)/(96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) - 
+          (L14*L1bar*L2*MSa^2)/(64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L14*L1bar*L2*MSa^2)/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (L1*L14bar*L2bar*MSa^2)/
+           (64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L1*L14bar*L2bar*MSa^2)/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*L1bar*L2*L6*MSb^2)/
+           (32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*invepsilonbar*L1bar*
+            L2*L6*MSb^2)/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2bar*L3*L6*MSb^2)/(192*Sqrt[3]*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2bar*L3*L6*MSb^2)/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*L1*L2bar*L6bar*MSb^2)/
+           (32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - (Sqrt[5/6]*invepsilonbar*L1*
+            L2bar*L6bar*MSb^2)/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L3bar*L6bar*MSb^2)/(192*Sqrt[3]*MSa^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L3bar*L6bar*MSb^2)/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) - (g2^4*lam*(MSa^2 + MSb^2))/
+           (96*MSa^2*MSb^2*Pi^2) - (5*L16*L6*L6bar*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[2]*MSa^2*Pi^2) + (7*L17*L6*L6bar*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*MSa^2*Pi^2) + (L10bar*L6bar*L7*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*MSa^2*Pi^2) + (L11bar*L6bar*L7*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (Sqrt[5/6]*L6bar^2*L7*Log[MSa^2/\[Mu]^2])/
+           (48*MSa^2*Pi^2) + (L10*L6*L7bar*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*MSa^2*Pi^2) + (L11*L6*L7bar*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (Sqrt[5/6]*L6^2*L7bar*Log[MSa^2/\[Mu]^2])/
+           (48*MSa^2*Pi^2) - (L6*L6bar*L8*Log[MSa^2/\[Mu]^2])/
+           (64*Sqrt[2]*MSa^2*Pi^2) + (L10bar*L6*L9*Log[MSa^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L11bar*L6*L9*Log[MSa^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (L10*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L11*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) - (Sqrt[5/6]*L6*L6bar*L9*Log[MSa^2/\[Mu]^2])/
+           (192*MSa^2*Pi^2) - (7*L6*L6bar*lam*Log[MSa^2/\[Mu]^2])/
+           (32*MSa^2*Pi^2) + (L1*L18*L1bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^4*Pi^2) - (15*L1*L19*L1bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (128*Sqrt[2]*MSb^4*Pi^2) - (5*L1*L1bar*L20*MSa^2*
+            Log[MSa^2/\[Mu]^2])/(128*MSb^4*Pi^2) + 
+          (7*L1*L1bar*L21*MSa^2*Log[MSa^2/\[Mu]^2])/(128*Sqrt[2]*MSb^4*
+            Pi^2) + (Sqrt[5/6]*L1bar*L2*L6*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^2*Pi^2) + (Sqrt[5/6]*L1*L2bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (64*MSb^2*Pi^2) - (L1bar*L3*L7*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[3]*MSb^2*Pi^2) - (L1*L3bar*L7bar*Log[MSa^2/\[Mu]^2])/
+           (32*Sqrt[3]*MSb^2*Pi^2) + (L12*L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (L13*L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (L2*L2bar*L8*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) + 
+          (L2*L2bar*L9*MSa^2*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (Sqrt[5/6]*L1bar*L2*L6*
+            Log[MSa^2/\[Mu]^2])/(32*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2bar*L3*L6*Log[MSa^2/\[Mu]^2])/(192*Sqrt[3]*(MSa^2 - MSb^2)*
+            Pi^2) - (Sqrt[5/6]*L1*L2bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (32*(MSa^2 - MSb^2)*Pi^2) + (L2*L3bar*L6bar*Log[MSa^2/\[Mu]^2])/
+           (192*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L2bar*L8*Log[MSa^2/\[Mu]^2])/(96*Sqrt[2]*(MSa^2 - MSb^2)*
+            Pi^2) - (L2*L2bar*L9*Log[MSa^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)*Pi^2) + (L14*L1bar*L2*MSa^2*Log[MSa^2/\[Mu]^2])/
+           (64*Sqrt[3]*MSb^2*(MSa^2 - MSb^2)*Pi^2) + 
+          (L1*L14bar*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(64*Sqrt[3]*MSb^2*
+            (MSa^2 - MSb^2)*Pi^2) - (L13*L14bar*L6*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L13*L15bar*L6*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (Sqrt[15/2]*L1bar*L2*L6*Log[MSb^2/\[Mu]^2])/
+           (64*MSa^2*Pi^2) - (L13*L14*L6bar*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[3]*MSa^2*Pi^2) + (L13*L15*L6bar*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^2*Pi^2) + (Sqrt[15/2]*L1*L2bar*L6bar*Log[MSb^2/\[Mu]^2])/
+           (64*MSa^2*Pi^2) - (3*L1*L12*L1bar*Log[MSb^2/\[Mu]^2])/
+           (64*Sqrt[2]*MSb^2*Pi^2) - (Sqrt[15/2]*L1*L13*L1bar*
+            Log[MSb^2/\[Mu]^2])/(64*MSb^2*Pi^2) - 
+          (15*L1*L1bar*L22*Log[MSb^2/\[Mu]^2])/(32*Sqrt[2]*MSb^2*Pi^2) + 
+          (7*L1*L1bar*L23*Log[MSb^2/\[Mu]^2])/(32*Sqrt[2]*MSb^2*Pi^2) - 
+          (21*L1*L1bar*lam*Log[MSb^2/\[Mu]^2])/(32*MSb^2*Pi^2) + 
+          (L18*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(192*MSa^4*Pi^2) - 
+          (5*L19*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(128*Sqrt[2]*MSa^4*
+            Pi^2) - (5*L20*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (384*MSa^4*Pi^2) + (7*L21*L6*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (384*Sqrt[2]*MSa^4*Pi^2) - (L12*L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (L13*L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) + (L2*L2bar*L8*MSb^2*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[2]*(MSa^2 - MSb^2)^2*Pi^2) - 
+          (L2*L2bar*L9*MSb^2*Log[MSb^2/\[Mu]^2])/(96*Sqrt[30]*
+            (MSa^2 - MSb^2)^2*Pi^2) - (L14*L1bar*L2*Log[MSb^2/\[Mu]^2])/
+           (64*Sqrt[3]*(MSa^2 - MSb^2)*Pi^2) - 
+          (L1*L14bar*L2bar*Log[MSb^2/\[Mu]^2])/(64*Sqrt[3]*(MSa^2 - MSb^2)*
+            Pi^2) - (L12*L2*L2bar*Log[MSb^2/\[Mu]^2])/(96*Sqrt[2]*
+            (MSa^2 - MSb^2)*Pi^2) - (L13*L2*L2bar*Log[MSb^2/\[Mu]^2])/
+           (96*Sqrt[30]*(MSa^2 - MSb^2)*Pi^2) + (Sqrt[5/6]*L1bar*L2*L6*MSb^2*
+            Log[MSb^2/\[Mu]^2])/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2bar*L3*L6*MSb^2*Log[MSb^2/\[Mu]^2])/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) + (Sqrt[5/6]*L1*L2bar*L6bar*MSb^2*
+            Log[MSb^2/\[Mu]^2])/(32*MSa^2*(MSa^2 - MSb^2)*Pi^2) - 
+          (L2*L3bar*L6bar*MSb^2*Log[MSb^2/\[Mu]^2])/(192*Sqrt[3]*MSa^2*
+            (MSa^2 - MSb^2)*Pi^2) + (lam*(L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 
+             3*L13^2*MSa^6*MSb^2 - 162*L1*L1bar*MSa^6*MSb^2 + 
+             6*L2*L2bar*MSa^6*MSb^2 + 30*L6*L6bar*MSa^6*MSb^2 + 
+             4*L7*L7bar*MSa^6*MSb^2 + L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*
+              MSb^4 + 162*L1*L1bar*MSa^4*MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 
+             12*L7*L7bar*MSa^4*MSb^4 - 3*L9^2*MSa^4*MSb^4 - 
+             L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*MSb^6 - 6*L2*L2bar*MSa^2*
+              MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 12*L7*L7bar*MSa^2*MSb^6 + 
+             3*L9^2*MSa^2*MSb^6 - 30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - 
+             L9^2*MSb^8 - 12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 
+             12*L2*L2bar*MSa^4*MSb^4*Log[MSb^2/\[Mu]^2]))/(144*MSa^2*MSb^2*
+            (MSa^2 - MSb^2)^3*Pi^2)), alphaOHB -> 
+       -(g1^2*(9*L12*MSa^2 + L8*MSb^2)*onelooporder)/(384*Sqrt[2]*MSa^2*MSb^2*
+         Pi^2), alphaOHBox -> onelooporder*(-(g2^4*(MSa^2 + MSb^2))/
+          (256*MSa^2*MSb^2*Pi^2) - (g1^4*(9*MSa^2 + MSb^2))/
+          (3840*MSa^2*MSb^2*Pi^2) + (-3*L12^2*MSa^2 - L13^2*MSa^2 - 
+           24*L6*L6bar*MSb^2 - 3*L8^2*MSb^2 - L9^2*MSb^2)/
+          (1152*MSa^2*MSb^2*Pi^2) + (L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 
+           3*L13^2*MSa^6*MSb^2 - 162*L1*L1bar*MSa^6*MSb^2 + 
+           6*L2*L2bar*MSa^6*MSb^2 + 30*L6*L6bar*MSa^6*MSb^2 + 
+           4*L7*L7bar*MSa^6*MSb^2 + L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 
+           162*L1*L1bar*MSa^4*MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 
+           12*L7*L7bar*MSa^4*MSb^4 - 3*L9^2*MSa^4*MSb^4 - L13^2*MSa^2*MSb^6 - 
+           54*L1*L1bar*MSa^2*MSb^6 - 6*L2*L2bar*MSa^2*MSb^6 + 
+           90*L6*L6bar*MSa^2*MSb^6 + 12*L7*L7bar*MSa^2*MSb^6 + 
+           3*L9^2*MSa^2*MSb^6 - 30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - 
+           L9^2*MSb^8 - 12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 
+           12*L2*L2bar*MSa^4*MSb^4*Log[MSb^2/\[Mu]^2])/(576*MSa^2*MSb^2*
+           (MSa^2 - MSb^2)^3*Pi^2)), alphaOHBt -> 0, 
+      alphaOHD -> onelooporder*(-(g1^4*(9*MSa^2 + MSb^2))/
+          (960*MSa^2*MSb^2*Pi^2) + (-(L13^2*MSa^8) + 54*L1*L1bar*MSa^8 + 
+           3*L13^2*MSa^6*MSb^2 - 162*L1*L1bar*MSa^6*MSb^2 + 
+           6*L2*L2bar*MSa^6*MSb^2 - 18*L6*L6bar*MSa^6*MSb^2 + 
+           4*L7*L7bar*MSa^6*MSb^2 - L9^2*MSa^6*MSb^2 - 3*L13^2*MSa^4*MSb^4 + 
+           162*L1*L1bar*MSa^4*MSb^4 + 54*L6*L6bar*MSa^4*MSb^4 - 
+           12*L7*L7bar*MSa^4*MSb^4 + 3*L9^2*MSa^4*MSb^4 + L13^2*MSa^2*MSb^6 - 
+           54*L1*L1bar*MSa^2*MSb^6 - 6*L2*L2bar*MSa^2*MSb^6 - 
+           54*L6*L6bar*MSa^2*MSb^6 + 12*L7*L7bar*MSa^2*MSb^6 - 
+           3*L9^2*MSa^2*MSb^6 + 18*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 + 
+           L9^2*MSb^8 - 12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 
+           12*L2*L2bar*MSa^4*MSb^4*Log[MSb^2/\[Mu]^2])/(288*MSa^2*MSb^2*
+           (MSa^2 - MSb^2)^3*Pi^2)), alphaOHG -> 0, alphaOHGt -> 0, 
+      alphaOHW -> (-5*g2^2*(L12*MSa^2 + L8*MSb^2)*onelooporder)/
+        (384*Sqrt[2]*MSa^2*MSb^2*Pi^2), alphaOHWB -> 
+       -(Sqrt[5/6]*g1*g2*(3*L13*MSa^2 + L9*MSb^2)*onelooporder)/
+        (192*MSa^2*MSb^2*Pi^2), alphaOHWBt -> 0, alphaOHWt -> 0, 
+      alphaOlambda -> lam + onelooporder*(-(invepsilonbar*L12^2)/(64*Pi^2) - 
+          (invepsilonbar*L13^2)/(192*Pi^2) - (3*L1*L1bar)/(16*Pi^2) - 
+          (3*invepsilonbar*L1*L1bar)/(16*Pi^2) - (L6*L6bar)/(16*Pi^2) - 
+          (invepsilonbar*L6*L6bar)/(16*Pi^2) - (invepsilonbar*L7*L7bar)/
+           (24*Pi^2) - (invepsilonbar*L8^2)/(64*Pi^2) - (invepsilonbar*L9^2)/
+           (192*Pi^2) - (L2*L2bar*MSa^2)/(48*(MSa^2 - MSb^2)*Pi^2) - 
+          (invepsilonbar*L2*L2bar*MSa^2)/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (L2*L2bar*MSb^2)/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (invepsilonbar*L2*L2bar*MSb^2)/(48*(MSa^2 - MSb^2)*Pi^2) - 
+          (L6*L6bar*muH^2)/(16*MSa^2*Pi^2) - (invepsilonbar*L6*L6bar*muH^2)/
+           (16*MSa^2*Pi^2) - (3*L1*L1bar*muH^2)/(16*MSb^2*Pi^2) - 
+          (3*invepsilonbar*L1*L1bar*muH^2)/(16*MSb^2*Pi^2) + 
+          (g2^4*(MSa^2 + MSb^2)*muH^2)/(192*MSa^2*MSb^2*Pi^2) + 
+          (L6*L6bar*Log[MSa^2/\[Mu]^2])/(16*Pi^2) + 
+          (L7*L7bar*Log[MSa^2/\[Mu]^2])/(24*Pi^2) + (L8^2*Log[MSa^2/\[Mu]^2])/
+           (64*Pi^2) + (L9^2*Log[MSa^2/\[Mu]^2])/(192*Pi^2) + 
+          (L2*L2bar*MSa^2*Log[MSa^2/\[Mu]^2])/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (L6*L6bar*muH^2*Log[MSa^2/\[Mu]^2])/(16*MSa^2*Pi^2) + 
+          (L12^2*Log[MSb^2/\[Mu]^2])/(64*Pi^2) + (L13^2*Log[MSb^2/\[Mu]^2])/
+           (192*Pi^2) + (3*L1*L1bar*Log[MSb^2/\[Mu]^2])/(16*Pi^2) - 
+          (L2*L2bar*MSb^2*Log[MSb^2/\[Mu]^2])/(48*(MSa^2 - MSb^2)*Pi^2) + 
+          (3*L1*L1bar*muH^2*Log[MSb^2/\[Mu]^2])/(16*MSb^2*Pi^2) - 
+          (muH^2*(L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 3*L13^2*MSa^6*MSb^2 - 
+             162*L1*L1bar*MSa^6*MSb^2 + 6*L2*L2bar*MSa^6*MSb^2 + 
+             30*L6*L6bar*MSa^6*MSb^2 + 4*L7*L7bar*MSa^6*MSb^2 + 
+             L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 162*L1*L1bar*MSa^4*
+              MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 12*L7*L7bar*MSa^4*MSb^4 - 
+             3*L9^2*MSa^4*MSb^4 - L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*
+              MSb^6 - 6*L2*L2bar*MSa^2*MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 
+             12*L7*L7bar*MSa^2*MSb^6 + 3*L9^2*MSa^2*MSb^6 - 
+             30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - L9^2*MSb^8 - 
+             12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 12*L2*L2bar*MSa^4*
+              MSb^4*Log[MSb^2/\[Mu]^2]))/(288*MSa^2*MSb^2*(MSa^2 - MSb^2)^3*
+            Pi^2)), alphaOmuH2 -> muH^2 + 
+        (onelooporder*(Sqrt[2]*L8*MSa^2 + Sqrt[2]*invepsilonbar*L8*MSa^2 + 
+           Sqrt[2]*L12*MSb^2 + Sqrt[2]*invepsilonbar*L12*MSb^2 - 
+           Sqrt[2]*L8*MSa^2*Log[MSa^2/\[Mu]^2] - Sqrt[2]*L12*MSb^2*
+            Log[MSb^2/\[Mu]^2]))/(16*Pi^2), alphaKd[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKdbar[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKe[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKebar[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKl[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKlbar[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKq[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKqbar[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKu[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaKubar[mif1_, mif2_] -> 
+       KroneckerDelta[mif1, mif2], alphaOddbar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(8640*MSa^2*MSb^2*Pi^2), 
+      alphaOeebar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(960*MSa^2*MSb^2*Pi^2), 
+      alphaOHdbar[mif1_, mif2_] -> (g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+         KroneckerDelta[mif1, mif2])/(2880*MSa^2*MSb^2*Pi^2), 
+      alphaOHebar[mif1_, mif2_] -> (g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+         KroneckerDelta[mif1, mif2])/(960*MSa^2*MSb^2*Pi^2), 
+      alphaOHl1bar[mif1_, mif2_] -> (g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+         KroneckerDelta[mif1, mif2])/(1920*MSa^2*MSb^2*Pi^2), 
+      alphaOHl3bar[mif1_, mif2_] -> -(g2^4*(MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(384*MSa^2*MSb^2*Pi^2), 
+      alphaOHq1bar[mif1_, mif2_] -> -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(5760*MSa^2*MSb^2*Pi^2), 
+      alphaOHq3bar[mif1_, mif2_] -> -(g2^4*(MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(384*MSa^2*MSb^2*Pi^2), 
+      alphaOHubar[mif1_, mif2_] -> -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(1440*MSa^2*MSb^2*Pi^2), 
+      alphaOllbar[mif1_, mif2_, mif3_, mif4_] -> 2*onelooporder*
+        (-(g2^4*(MSa^2 + MSb^2)*KroneckerDelta[mif1, mif4]*
+            KroneckerDelta[mif2, mif3])/(768*MSa^2*MSb^2*Pi^2) + 
+         (g2^4*(MSa^2 + MSb^2)*KroneckerDelta[mif1, mif2]*
+           KroneckerDelta[mif3, mif4])/(1536*MSa^2*MSb^2*Pi^2) - 
+         (g1^4*(9*MSa^2 + MSb^2)*KroneckerDelta[mif1, mif2]*
+           KroneckerDelta[mif3, mif4])/(7680*MSa^2*MSb^2*Pi^2)), 
+      alphaOuubar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(2160*MSa^2*MSb^2*Pi^2), 
+      alphaWeinberg[mif1_, mif2_] -> 0, alphaWeinbergbar[mif1_, mif2_] -> 0, 
+      alphaOdB[mif1_, mif2_] -> 0, alphaOdBbar[mif1_, mif2_] -> 0, 
+      alphaOdd[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(8640*MSa^2*MSb^2*Pi^2), 
+      alphaOdG[mif1_, mif2_] -> 0, alphaOdGbar[mif1_, mif2_] -> 0, 
+      alphaOdH[mif1_, mif2_] -> onelooporder*
+        (-(g2^4*(MSa^2 + MSb^2)*yd[mif1, mif2])/(384*MSa^2*MSb^2*Pi^2) + 
+         ((L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 3*L13^2*MSa^6*MSb^2 - 
+            162*L1*L1bar*MSa^6*MSb^2 + 6*L2*L2bar*MSa^6*MSb^2 + 
+            30*L6*L6bar*MSa^6*MSb^2 + 4*L7*L7bar*MSa^6*MSb^2 + 
+            L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 162*L1*L1bar*MSa^4*
+             MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 12*L7*L7bar*MSa^4*MSb^4 - 
+            3*L9^2*MSa^4*MSb^4 - L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*
+             MSb^6 - 6*L2*L2bar*MSa^2*MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 
+            12*L7*L7bar*MSa^2*MSb^6 + 3*L9^2*MSa^2*MSb^6 - 
+            30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - L9^2*MSb^8 - 
+            12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 12*L2*L2bar*MSa^4*
+             MSb^4*Log[MSb^2/\[Mu]^2])*yd[mif1, mif2])/(576*MSa^2*MSb^2*
+           (MSa^2 - MSb^2)^3*Pi^2)), alphaOdHbar[mif1_, mif2_] -> 
+       onelooporder*(-(g2^4*(MSa^2 + MSb^2)*ydbar[mif1, mif2])/
+          (384*MSa^2*MSb^2*Pi^2) + ((L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 
+            3*L13^2*MSa^6*MSb^2 - 162*L1*L1bar*MSa^6*MSb^2 + 
+            6*L2*L2bar*MSa^6*MSb^2 + 30*L6*L6bar*MSa^6*MSb^2 + 
+            4*L7*L7bar*MSa^6*MSb^2 + L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 
+            162*L1*L1bar*MSa^4*MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 
+            12*L7*L7bar*MSa^4*MSb^4 - 3*L9^2*MSa^4*MSb^4 - 
+            L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*MSb^6 - 6*L2*L2bar*MSa^2*
+             MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 12*L7*L7bar*MSa^2*MSb^6 + 
+            3*L9^2*MSa^2*MSb^6 - 30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - 
+            L9^2*MSb^8 - 12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 
+            12*L2*L2bar*MSa^4*MSb^4*Log[MSb^2/\[Mu]^2])*ydbar[mif1, mif2])/
+          (576*MSa^2*MSb^2*(MSa^2 - MSb^2)^3*Pi^2)), 
+      alphaOdW[mif1_, mif2_] -> 0, alphaOdWbar[mif1_, mif2_] -> 0, 
+      alphaOeB[mif1_, mif2_] -> 0, alphaOeBbar[mif1_, mif2_] -> 0, 
+      alphaOed[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(1440*MSa^2*MSb^2*Pi^2), 
+      alphaOedbar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(1440*MSa^2*MSb^2*Pi^2), 
+      alphaOee[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(960*MSa^2*MSb^2*Pi^2), 
+      alphaOeH[mif1_, mif2_] -> onelooporder*
+        (-(g2^4*(MSa^2 + MSb^2)*yl[mif1, mif2])/(384*MSa^2*MSb^2*Pi^2) + 
+         ((L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 3*L13^2*MSa^6*MSb^2 - 
+            162*L1*L1bar*MSa^6*MSb^2 + 6*L2*L2bar*MSa^6*MSb^2 + 
+            30*L6*L6bar*MSa^6*MSb^2 + 4*L7*L7bar*MSa^6*MSb^2 + 
+            L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 162*L1*L1bar*MSa^4*
+             MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 12*L7*L7bar*MSa^4*MSb^4 - 
+            3*L9^2*MSa^4*MSb^4 - L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*
+             MSb^6 - 6*L2*L2bar*MSa^2*MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 
+            12*L7*L7bar*MSa^2*MSb^6 + 3*L9^2*MSa^2*MSb^6 - 
+            30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - L9^2*MSb^8 - 
+            12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 12*L2*L2bar*MSa^4*
+             MSb^4*Log[MSb^2/\[Mu]^2])*yl[mif1, mif2])/(576*MSa^2*MSb^2*
+           (MSa^2 - MSb^2)^3*Pi^2)), alphaOeHbar[mif1_, mif2_] -> 
+       onelooporder*(-(g2^4*(MSa^2 + MSb^2)*ylbar[mif1, mif2])/
+          (384*MSa^2*MSb^2*Pi^2) + ((L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 
+            3*L13^2*MSa^6*MSb^2 - 162*L1*L1bar*MSa^6*MSb^2 + 
+            6*L2*L2bar*MSa^6*MSb^2 + 30*L6*L6bar*MSa^6*MSb^2 + 
+            4*L7*L7bar*MSa^6*MSb^2 + L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 
+            162*L1*L1bar*MSa^4*MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 
+            12*L7*L7bar*MSa^4*MSb^4 - 3*L9^2*MSa^4*MSb^4 - 
+            L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*MSb^6 - 6*L2*L2bar*MSa^2*
+             MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 12*L7*L7bar*MSa^2*MSb^6 + 
+            3*L9^2*MSa^2*MSb^6 - 30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - 
+            L9^2*MSb^8 - 12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 
+            12*L2*L2bar*MSa^4*MSb^4*Log[MSb^2/\[Mu]^2])*ylbar[mif1, mif2])/
+          (576*MSa^2*MSb^2*(MSa^2 - MSb^2)^3*Pi^2)), 
+      alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(720*MSa^2*MSb^2*Pi^2), 
+      alphaOeubar[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(720*MSa^2*MSb^2*Pi^2), 
+      alphaOeW[mif1_, mif2_] -> 0, alphaOeWbar[mif1_, mif2_] -> 0, 
+      alphaOHd[mif1_, mif2_] -> (g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+         KroneckerDelta[mif1, mif2])/(2880*MSa^2*MSb^2*Pi^2), 
+      alphaOHe[mif1_, mif2_] -> (g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+         KroneckerDelta[mif1, mif2])/(960*MSa^2*MSb^2*Pi^2), 
+      alphaOHl1[mif1_, mif2_] -> (g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+         KroneckerDelta[mif1, mif2])/(1920*MSa^2*MSb^2*Pi^2), 
+      alphaOHl3[mif1_, mif2_] -> -(g2^4*(MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(384*MSa^2*MSb^2*Pi^2), 
+      alphaOHq1[mif1_, mif2_] -> -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(5760*MSa^2*MSb^2*Pi^2), 
+      alphaOHq3[mif1_, mif2_] -> -(g2^4*(MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(384*MSa^2*MSb^2*Pi^2), 
+      alphaOHu[mif1_, mif2_] -> -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*
+          KroneckerDelta[mif1, mif2])/(1440*MSa^2*MSb^2*Pi^2), 
+      alphaOHud[mif1_, mif2_] -> 0, alphaOHudbar[mif1_, mif2_] -> 0, 
+      alphaOld[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(2880*MSa^2*MSb^2*Pi^2), 
+      alphaOldbar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(2880*MSa^2*MSb^2*Pi^2), 
+      alphaOle[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(960*MSa^2*MSb^2*Pi^2), 
+      alphaOlebar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(960*MSa^2*MSb^2*Pi^2), 
+      alphaOledq[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOledqbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOlequ1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOlequ1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOlequ3[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOlequ3bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOll[mif1_, mif2_, mif3_, mif4_] -> 2*onelooporder*
+        (-(g2^4*(MSa^2 + MSb^2)*KroneckerDelta[mif1, mif4]*
+            KroneckerDelta[mif2, mif3])/(768*MSa^2*MSb^2*Pi^2) + 
+         (g2^4*(MSa^2 + MSb^2)*KroneckerDelta[mif1, mif2]*
+           KroneckerDelta[mif3, mif4])/(1536*MSa^2*MSb^2*Pi^2) - 
+         (g1^4*(9*MSa^2 + MSb^2)*KroneckerDelta[mif1, mif2]*
+           KroneckerDelta[mif3, mif4])/(7680*MSa^2*MSb^2*Pi^2)), 
+      alphaOlq1[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(5760*MSa^2*MSb^2*Pi^2), 
+      alphaOlq1bar[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(5760*MSa^2*MSb^2*Pi^2), 
+      alphaOlq3[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g2^4*(MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(384*MSa^2*MSb^2*Pi^2), 
+      alphaOlq3bar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g2^4*(MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(384*MSa^2*MSb^2*Pi^2), 
+      alphaOlu[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(1440*MSa^2*MSb^2*Pi^2), 
+      alphaOlubar[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(1440*MSa^2*MSb^2*Pi^2), 
+      alphaOqd1[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(8640*MSa^2*MSb^2*Pi^2), 
+      alphaOqd1bar[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(8640*MSa^2*MSb^2*Pi^2), 
+      alphaOqd8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOqd8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOqe[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(2880*MSa^2*MSb^2*Pi^2), 
+      alphaOqebar[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(2880*MSa^2*MSb^2*Pi^2), 
+      alphaOqq1[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(34560*MSa^2*MSb^2*Pi^2), 
+      alphaOqq1bar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(34560*MSa^2*MSb^2*Pi^2), 
+      alphaOqq3[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g2^4*(MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(768*MSa^2*MSb^2*Pi^2), 
+      alphaOqq3bar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g2^4*(MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(768*MSa^2*MSb^2*Pi^2), 
+      alphaOqu1[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(4320*MSa^2*MSb^2*Pi^2), 
+      alphaOqu1bar[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(4320*MSa^2*MSb^2*Pi^2), 
+      alphaOqu8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOqu8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOquqd1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOquqd1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOquqd8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOquqd8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOuB[mif1_, mif2_] -> 0, alphaOuBbar[mif1_, mif2_] -> 0, 
+      alphaOud1[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(2160*MSa^2*MSb^2*Pi^2), 
+      alphaOud1bar[mif1_, mif2_, mif3_, mif4_] -> 
+       (g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+         KroneckerDelta[mif3, mif4])/(2160*MSa^2*MSb^2*Pi^2), 
+      alphaOud8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOud8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+      alphaOuG[mif1_, mif2_] -> 0, alphaOuGbar[mif1_, mif2_] -> 0, 
+      alphaOuH[mif1_, mif2_] -> onelooporder*
+        (-(g2^4*(MSa^2 + MSb^2)*yu[mif1, mif2])/(384*MSa^2*MSb^2*Pi^2) + 
+         ((L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 3*L13^2*MSa^6*MSb^2 - 
+            162*L1*L1bar*MSa^6*MSb^2 + 6*L2*L2bar*MSa^6*MSb^2 + 
+            30*L6*L6bar*MSa^6*MSb^2 + 4*L7*L7bar*MSa^6*MSb^2 + 
+            L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 162*L1*L1bar*MSa^4*
+             MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 12*L7*L7bar*MSa^4*MSb^4 - 
+            3*L9^2*MSa^4*MSb^4 - L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*
+             MSb^6 - 6*L2*L2bar*MSa^2*MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 
+            12*L7*L7bar*MSa^2*MSb^6 + 3*L9^2*MSa^2*MSb^6 - 
+            30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - L9^2*MSb^8 - 
+            12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 12*L2*L2bar*MSa^4*
+             MSb^4*Log[MSb^2/\[Mu]^2])*yu[mif1, mif2])/(576*MSa^2*MSb^2*
+           (MSa^2 - MSb^2)^3*Pi^2)), alphaOuHbar[mif1_, mif2_] -> 
+       onelooporder*(-(g2^4*(MSa^2 + MSb^2)*yubar[mif1, mif2])/
+          (384*MSa^2*MSb^2*Pi^2) + ((L13^2*MSa^8 + 54*L1*L1bar*MSa^8 - 
+            3*L13^2*MSa^6*MSb^2 - 162*L1*L1bar*MSa^6*MSb^2 + 
+            6*L2*L2bar*MSa^6*MSb^2 + 30*L6*L6bar*MSa^6*MSb^2 + 
+            4*L7*L7bar*MSa^6*MSb^2 + L9^2*MSa^6*MSb^2 + 3*L13^2*MSa^4*MSb^4 + 
+            162*L1*L1bar*MSa^4*MSb^4 - 90*L6*L6bar*MSa^4*MSb^4 - 
+            12*L7*L7bar*MSa^4*MSb^4 - 3*L9^2*MSa^4*MSb^4 - 
+            L13^2*MSa^2*MSb^6 - 54*L1*L1bar*MSa^2*MSb^6 - 6*L2*L2bar*MSa^2*
+             MSb^6 + 90*L6*L6bar*MSa^2*MSb^6 + 12*L7*L7bar*MSa^2*MSb^6 + 
+            3*L9^2*MSa^2*MSb^6 - 30*L6*L6bar*MSb^8 - 4*L7*L7bar*MSb^8 - 
+            L9^2*MSb^8 - 12*L2*L2bar*MSa^4*MSb^4*Log[MSa^2/\[Mu]^2] + 
+            12*L2*L2bar*MSa^4*MSb^4*Log[MSb^2/\[Mu]^2])*yubar[mif1, mif2])/
+          (576*MSa^2*MSb^2*(MSa^2 - MSb^2)^3*Pi^2)), 
+      alphaOuu[mif1_, mif2_, mif3_, mif4_] -> 
+       -(g1^4*(9*MSa^2 + MSb^2)*onelooporder*KroneckerDelta[mif1, mif2]*
+          KroneckerDelta[mif3, mif4])/(2160*MSa^2*MSb^2*Pi^2), 
+      alphaOuW[mif1_, mif2_] -> 0, alphaOuWbar[mif1_, mif2_] -> 0, 
+      alphaOlambdad[mif1_, mif2_] -> yd[mif1, mif2], 
+      alphaOlambdadbar[mif1_, mif2_] -> ydbar[mif1, mif2], 
+      alphaOlambdae[mif1_, mif2_] -> yl[mif1, mif2], 
+      alphaOlambdaebar[mif1_, mif2_] -> ylbar[mif1, mif2], 
+      alphaOlambdau[mif1_, mif2_] -> yu[mif1, mif2], 
+      alphaOlambdaubar[mif1_, mif2_] -> yubar[mif1, mif2]}, 
+     {g1 -> g1*(1 + (onelooporder*((5*g1^2*invepsilonbar)/(24*Pi^2) - 
+            (g1^2*Log[MSa^2/\[Mu]^2])/(48*Pi^2) - (3*g1^2*Log[MSb^2/\[Mu]^2])/
+             (16*Pi^2)))/2), 
+      g2 -> g2*(1 + (onelooporder*((5*g2^2*invepsilonbar)/(24*Pi^2) - 
+            (5*g2^2*Log[MSa^2/\[Mu]^2])/(48*Pi^2) - 
+            (5*g2^2*Log[MSb^2/\[Mu]^2])/(48*Pi^2)))/2), g3 -> g3}}
