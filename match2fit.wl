@@ -37,7 +37,7 @@ An example of how to set them, using their default value is, {\"UVFlavourAssumpt
 Begin["`Private`"];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Utility functions*)
 
 
@@ -148,9 +148,33 @@ massReemp={Symbol[SymbolName[m]]->massInt};
 If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
 ];
 {dicTotal,massString,massReemp}]
+(*/// New function to be modified and tested. ///*)
+massHandlerCusto[matchResFile_,mass_,looplevel_,flaUVassum_]:=Block[{dicTotal,preVarsUV,massString,massInt,massIntList,massReemp,looporderset},
+looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
+If[Length[mass]>1,
+{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+(*preVarsUV stores the names of the recognised UV masses.*)
+massString=StringRiffle[ToString/@IntegerPart/@mass,""];
+If[Length[mass]<Length[preVarsUV],
+massInt=mass[[-1]];
+massIntList=Nest[Append[#,massInt]&,mass,Length[preVarsUV]-Length[mass]];
+massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->massIntList[[j]],{j,1,Length[preVarsUV]}];
+,
+massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->mass[[j]],{j,1,Length[preVarsUV]}];
+];
+If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->Min[mass]}]];
+(*/// End of section for multiple masses ///*)
+,
+massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
+massString=ToString[massInt];
+dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+massReemp={Symbol[SymbolName[m]]->massInt};
+If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
+];
+{dicTotal,massString,massReemp}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*MMEFT conventions*)
 
 
@@ -165,7 +189,7 @@ replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[g1, SM],Symbol[
 ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SMEFiT conventions*)
 
 
@@ -916,21 +940,29 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 (*Run card printing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV scan run card printing*)
 
 
-dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel"]:=Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,
+dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False"]:=Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,
 str1,indWCzero,ind1,invarsUV,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel},
 (*Load the dictionary with matching results*)
 (*preVarsUV=Piecewise[{{parametersListFromMatchingResult[matchResFile],varsUVinp=={}}},varsUVinp]; (*// Will be useful for the masses //*)*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
+If[degenMass=="True",
+{dicTotal,massString,massReemp}=massHandlerCusto[matchResFile,mass,looplevel,flaUVassum];
+,
 {dicTotal,massString,massReemp}=massHandler[matchResFile,mass,looplevel,flaUVassum];
-(*For now, the invariatns computation is limited to tree-level*)
+];
+(*For now, the invariants computation is limited to tree-level*)
 If[MemberQ[{0,"tree","Tree"},looplevel],
 dicInvar=dicTotal;massReempInvar=massReemp;
 ,
+If[degenMass=="True",
+{dicInvar,massReempInvar}=massHandlerCusto[matchResFile,mass,0,flaUVassum][[{1,3}]];
+,
 {dicInvar,massReempInvar}=massHandler[matchResFile,mass,0,flaUVassum][[{1,3}]];
+];
 ];
 varsUV=DeleteDuplicates[Variables[dicTotal[[;;,2]]/.massReemp]];
 (*Get simpler names for the UV variables. *)
@@ -977,7 +1009,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*WC scan run card printing*)
 
 
@@ -1241,7 +1273,7 @@ If[listProblems!={},Print["The matching was completed but problems were reported
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV parameters recognition*)
 
 
@@ -1276,13 +1308,13 @@ flavourSymChecker[matchResFile_,OptionsPattern[]]:=flavourSymCheckerBack[matchRe
 flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile,OptionValue["UVFlavourAssumption"]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*From matching result to run card*)
 
 
-Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel"};
+Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False"};
 (*Options[matchResToWCscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel"};*)
-matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]
+matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"]]
 (*matchResToWCscanCard[matchResFile_,mass_,OptionsPattern[]]:=dictPrinterWCscanV2[matchResFile,mass,parametersListFromMatchingResult[matchResFile],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]*)
 
 
