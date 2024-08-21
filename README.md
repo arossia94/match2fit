@@ -31,3 +31,9 @@ If you use this package and/or the UV capabilities of SMEFiT in a scientific pub
 >
 > [https://arxiv.org/abs/2309.04523](https://inspirehep.net/literature/2696156)
 
+# Acknowledgements
+
+This work has been supported by the European Research Council (ERC) under the European Union’s Horizon 2020 research
+and innovation programme (Grant agreement No. 949451) and by a Royal Society University
+Research Fellowship through grant URF/R1/201553.
+The author thanks the support, encouragement and discussions with  M. Chala, T. Giani, J. ter Hoeve, G. Magni, F. Maltoni, L. Mantani, K. Mimasu, Y. Oda, J. Pagès, J. Rojo, J. Santiago, C. Severi, A. Thomsen, and E. Vryonidou.
