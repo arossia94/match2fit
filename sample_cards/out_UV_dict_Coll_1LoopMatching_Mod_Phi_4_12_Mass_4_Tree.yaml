@@ -1,0 +1,71 @@
+# UV dictionary with WCs in terms of UV variables
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV Collection : 1LoopMatching
+UV model : Phi_4_12
+Model name : Phi_4_12
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV couplings : [lamPhi]
+UV masses : [MSa]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Loop level of the results : Tree
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Setting of the UV mass in TeV:
+m : 4 # TeV
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Expressions for all the WCs in SMEFiT basis
+cpG : [{lamPhi: [0.,0]}]
+cpB : [{lamPhi: [0.,0]}]
+cpW : [{lamPhi: [0.,0]}]
+cpWB : [{lamPhi: [0.,0]}]
+cpd : [{lamPhi: [0.,0]}]
+cpD : [{lamPhi: [0.,0]}]
+cWWW : [{lamPhi: [0.,0]}]
+cpqMi : [{lamPhi: [0.,0]}]
+cpQM : [{lamPhi: [0.,0]}]
+c3pq : [{lamPhi: [0.,0]}]
+c3pQ3 : [{lamPhi: [0.,0]}]
+cpl1 : [{lamPhi: [0.,0]}]
+cpl2 : [{lamPhi: [0.,0]}]
+cpl3 : [{lamPhi: [0.,0]}]
+c3pl1 : [{lamPhi: [0.,0]}]
+c3pl2 : [{lamPhi: [0.,0]}]
+c3pl3 : [{lamPhi: [0.,0]}]
+cpui : [{lamPhi: [0.,0]}]
+cpdi : [{lamPhi: [0.,0]}]
+cpt : [{lamPhi: [0.,0]}]
+cpe : [{lamPhi: [0.,0]}]
+cpmu : [{lamPhi: [0.,0]}]
+cpta : [{lamPhi: [0.,0]}]
+c81qq : [{lamPhi: [0.,0]}]
+c11qq : [{lamPhi: [0.,0]}]
+c83qq : [{lamPhi: [0.,0]}]
+c13qq : [{lamPhi: [0.,0]}]
+c8qt : [{lamPhi: [0.,0]}]
+c1qt : [{lamPhi: [0.,0]}]
+c8ut : [{lamPhi: [0.,0]}]
+c1ut : [{lamPhi: [0.,0]}]
+c8qu : [{lamPhi: [0.,0]}]
+c1qu : [{lamPhi: [0.,0]}]
+c8dt : [{lamPhi: [0.,0]}]
+c1dt : [{lamPhi: [0.,0]}]
+c8qd : [{lamPhi: [0.,0]}]
+c1qd : [{lamPhi: [0.,0]}]
+cQQ1 : [{lamPhi: [0.,0]}]
+cQQ8 : [{lamPhi: [0.,0]}]
+cQt1 : [{lamPhi: [0.,0]}]
+cQt8 : [{lamPhi: [0.,0]}]
+ctt1 : [{lamPhi: [0.,0]}]
+cll : [{lamPhi: [0.,0]}]
+cll1111 : [{lamPhi: [0.,0]}]
+cbp : [{lamPhi: [0.,0]}]
+ctp : [{lamPhi: [0.,0]}]
+ctG : [{lamPhi: [0.,0]}]
+ccp : [{lamPhi: [0.,0]}]
+ctap : [{lamPhi: [0.,0]}]
+ctW : [{lamPhi: [0.,0]}]
+ctZ : [{lamPhi: [0.,0]}]
+cp : [{lamPhi: [0.020833333333333332,2]}]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Miscellaneous information
+# Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult_EW_Quad_Y12.dat
+# Export date: Thu 10 Oct 2024 14:42:57

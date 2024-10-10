@@ -1,0 +1,21 @@
+# UV dictionary with WCs in terms of UV variables
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV Collection : 1LoopMatching
+UV model : Phi_4_12_32_custo
+Model name : Phi_4_12_32_custo
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV couplings : [L12, L8, wwC\[CurlyPhi]B]
+UV masses : [MSa, MSb]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Loop level of the results : 1Loop
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Setting of the UV mass in TeV:
+m : 4 # TeV
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Expressions for all the WCs in SMEFiT basis
+StringJoin[0,  : [{L12: [{0, 1},0],L8: [1,0],wwC\[CurlyPhi]B: [1,0]},{L12: [{0},1],L8: [1,0],wwC\[CurlyPhi]B: [1,0]},{L12: [{-1.4949707816768683e-6},1],L8: [1,0],wwC\[CurlyPhi]B: [1,1]},{L12: [{-0.000013454737035091816},1],L8: [1,1],wwC\[CurlyPhi]B: [1,0]},{L12: [{0},1],L8: [1,1],wwC\[CurlyPhi]B: [1,1]}]]
+StringJoin[0,  : [{L12: [{L1 -> 1.1547005383792517*lamPhi},0],L8: [1,0],wwC\[CurlyPhi]B: [1,0]},{L12: [{L2 -> 0.},1],L8: [1,0],wwC\[CurlyPhi]B: [1,0]},{L12: [{L3 -> 0.},2],L8: [1,0],wwC\[CurlyPhi]B: [1,0]},{L12: [{L4 -> 0.},3],L8: [1,0],wwC\[CurlyPhi]B: [1,0]},{L12: [{L5 -> 0.},4],L8: [1,0],wwC\[CurlyPhi]B: [1,0]},{L12: [{L6 -> 2.*lamPhi},5],L8: [1,0],wwC\[CurlyPhi]B: [1,0]}]]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Miscellaneous information
+# Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult_EW_Quad_Y_12_32_Custo.dat
+# Export date: Thu 10 Oct 2024 14:26:41
