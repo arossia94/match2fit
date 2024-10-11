@@ -11,7 +11,7 @@ The User's Manual is included as a PDF file. Alternatively, a continuously evolv
 # Usage
 See the User's Manual and the PackageTester notebook for usage examples.
 
-The runcards can be parsed into the SMEFiT format with [this script](https://github.com/LHCfitNikhef/smefit_release/blob/smefit_uv/runcards/uv_models/write_runcards.py).
+The runcards can be parsed into the SMEFiT format with [this script](https://github.com/LHCfitNikhef/smefit_release/blob/FCC_Feas_Rep/runcards/uv_models/write_runcards.py).
 
 Examples of the usage of this package can be found in the following scientific publications:
  - J. ter Hoeve et al, "The Automation of SMEFT-Assisted Constraints on UV-Complete Models" [arXiv:2309.04523, JHEP 01 (2024) 179](https://inspirehep.net/literature/2696156)
