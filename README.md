@@ -16,6 +16,7 @@ The runcards can be parsed into the SMEFiT format with [this script](https://git
 Examples of the usage of this package can be found in the following scientific publications:
  - J. ter Hoeve et al, "The Automation of SMEFT-Assisted Constraints on UV-Complete Models" [arXiv:2309.04523, JHEP 01 (2024) 179](https://inspirehep.net/literature/2696156)
  - E. Celada et al, "Mapping the SMEFT at High-Energy Colliders: from LEP and the (HL-)LHC to the FCC-ee" [arXiv:2404.12809](https://inspirehep.net/literature/2779255)
+ - ECFA reports
 
 # Citation
 
@@ -30,4 +31,3 @@ If you use this package and/or the UV capabilities of SMEFiT in a scientific pub
 > Published in: JHEP 01 (2024), 179
 >
 > [https://arxiv.org/abs/2309.04523](https://inspirehep.net/literature/2696156)
-
