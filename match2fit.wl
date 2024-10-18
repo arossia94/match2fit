@@ -4,16 +4,16 @@ BeginPackage["match2fit`"];
 
 
 ":Name: match2fit"
-":Version: 1.9"
+":Version: 1.95"
 ":Author: Alejo N. Rossia"
-":Affiliation: Department of Physics and Astronomy, The University of Manchester."
+":Affiliation: The University of Manchester, Universitat degli Studi di Padova, INFN Sezione di Padova."
 
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
-Print["Version: 1.9"];
-Print["Date: 10/04/2024"];
+Print["Version: 1.95"];
+Print["Date: 18/10/2024"];
 Print["Author: Alejo N. Rossia"];
-Print["Affiliations: The University of Manchester"];
+Print["Affiliations: The University of Manchester, Universitat degli Studi di Padova, INFN Sezione di Padova"];
 
 
 matcher::usage = "matcher[directory,model,looporder] takes the file model.fr in directory and related files and performs the matching of SM+model to the SMEFT at looporder level.";

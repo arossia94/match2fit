@@ -27,4 +27,11 @@ SetDirectory[NotebookDirectory[]]
 <<match2fit`
 
 
+(* ::Input::Initialization:: *)
+realDiagSMYukas={yu[i_,j_]:>KroneckerDelta[i,j]*(KroneckerDelta[j,1]yu[1,1]+KroneckerDelta[j,2]yu[2,2]+KroneckerDelta[j,3]yu[3,3]),yd[i_,j_]:>(KroneckerDelta[j,1]*KroneckerDelta[i,1]*yd[1,1]+KroneckerDelta[j,2]*KroneckerDelta[i,2]*yd[2,2]+KroneckerDelta[j,3]*KroneckerDelta[i,3]*yd[3,3]),yl[i_,j_]:>KroneckerDelta[i,j]*(KroneckerDelta[j,1]yl[1,1]+KroneckerDelta[j,2]yl[2,2]+KroneckerDelta[j,3]yl[3,3]),
+yubar[i_,j_]:>KroneckerDelta[i,j]*(KroneckerDelta[j,1]yu[1,1]+KroneckerDelta[j,2]yu[2,2]+KroneckerDelta[j,3]yu[3,3]),
+ydbar[i_,j_]:>KroneckerDelta[i,j]*(KroneckerDelta[j,1]yd[1,1]+KroneckerDelta[j,2]yd[2,2]+KroneckerDelta[j,3]yd[3,3]),
+ylbar[i_,j_]:>KroneckerDelta[i,j]*(KroneckerDelta[j,1]yl[1,1]+KroneckerDelta[j,2]yl[2,2]+KroneckerDelta[j,3]yl[3,3])};
+
+
 
