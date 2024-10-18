@@ -4,16 +4,16 @@ BeginPackage["match2fit`"];
 
 
 ":Name: match2fit"
-":Version: 1.9"
+":Version: 1.95"
 ":Author: Alejo N. Rossia"
-":Affiliation: Department of Physics and Astronomy, The University of Manchester."
+":Affiliation: The University of Manchester, Universitat degli Studi di Padova, INFN Sezione di Padova."
 
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
-Print["Version: 1.9"];
-Print["Date: 10/04/2024"];
+Print["Version: 1.95"];
+Print["Date: 18/10/2024"];
 Print["Author: Alejo N. Rossia"];
-Print["Affiliations: The University of Manchester"];
+Print["Affiliations: The University of Manchester, Universitat degli Studi di Padova, INFN Sezione di Padova"];
 
 
 matcher::usage = "matcher[directory,model,looporder] takes the file model.fr in directory and related files and performs the matching of SM+model to the SMEFT at looporder level.";
@@ -37,12 +37,12 @@ An example of how to set them, using their default value is, {\"UVFlavourAssumpt
 Begin["`Private`"];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Utility functions*)
 
 
 (*/// Function that defines convenient aliases for the WCs to print ///*)
-printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},{"c11qq",ToString[x]=="wwCQq11"},{"c83qq",ToString[x]=="wwCQq38"},{"c13qq",ToString[x]=="wwCQq31"},{"c8qt",ToString[x]=="wwCtq8"},{"c1qt",ToString[x]=="wwCtq1"},{"c8ut",ToString[x]=="wwCtu8"},{"c1ut",ToString[x]=="wwCtu1"},{"c8qu",ToString[x]=="wwCQu8"},{"c1qu",ToString[x]=="wwCQu1"},{"c8dt",ToString[x]=="wwCtd8"},{"c1dt",ToString[x]=="wwCtd1"},{"c8qd",ToString[x]=="wwCQd8"},{"c1qd",ToString[x]=="wwCQd1"},{"cQQ1",ToString[x]=="wwCQQ1"},{"cQQ8",ToString[x]=="wwCQQ8"},{"cQt1",ToString[x]=="wwCQt1"},{"cQt8",ToString[x]=="wwCQt8"},{"ctt1",ToString[x]=="wwCtt1"},{"cll",ToString[x]=="wwCll"},{"cll1111",ToString[x]=="wwCll1111"},{"cbp",ToString[x]=="wwCb\[CurlyPhi]"},{"ctp",ToString[x]=="wwCt\[CurlyPhi]"},{"ctG",ToString[x]=="wwCtG"},{"ccp",ToString[x]=="wwCc\[CurlyPhi]"},{"ctap",ToString[x]=="wwC\[Tau]\[CurlyPhi]"},{"ctW",ToString[x]=="wwCtW"},{"ctZ",ToString[x]=="wwCtZ"},{"c3pQ3",ToString[x]=="wwC\[CurlyPhi]Q3"},{"cpQM",ToString[x]=="wwC\[CurlyPhi]Qm"},{"cpt",ToString[x]=="wwC\[CurlyPhi]t"},{"cpl1",ToString[x]=="wwC\[CurlyPhi]l11"},{"c3pl1",ToString[x]=="wwC\[CurlyPhi]l31"},{"cpl2",ToString[x]=="wwC\[CurlyPhi]l12"},{"c3pl2",ToString[x]=="wwC\[CurlyPhi]l32"},{"cpl3",ToString[x]=="wwC\[CurlyPhi]l13"},{"c3pl3",ToString[x]=="wwC\[CurlyPhi]l33"},{"cpe",ToString[x]=="wwC\[CurlyPhi]e"},{"cpmu",ToString[x]=="wwC\[CurlyPhi]\[Mu]"},{"cpta",ToString[x]=="wwC\[CurlyPhi]\[Tau]"},{"c3pq",ToString[x]=="wwC\[CurlyPhi]q3"},{"cpqMi",ToString[x]=="wwC\[CurlyPhi]qm"},{"cpui",ToString[x]=="wwC\[CurlyPhi]ui"},{"cpdi",ToString[x]=="wwC\[CurlyPhi]di"},{"cpG",ToString[x]=="wwC\[CurlyPhi]G"},{"cpB",ToString[x]=="wwC\[CurlyPhi]B"},{"cpW",ToString[x]=="wwC\[CurlyPhi]W"},{"cpd",ToString[x]=="wwC\[CurlyPhi]d"},{"cpWB",ToString[x]=="wwC\[CurlyPhi]WB"},{"cpD",ToString[x]=="wwC\[CurlyPhi]D"},{"cWWW",ToString[x]=="wwCWWW"}}];
+printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},{"c11qq",ToString[x]=="wwCQq11"},{"c83qq",ToString[x]=="wwCQq38"},{"c13qq",ToString[x]=="wwCQq31"},{"c8qt",ToString[x]=="wwCtq8"},{"c1qt",ToString[x]=="wwCtq1"},{"c8ut",ToString[x]=="wwCtu8"},{"c1ut",ToString[x]=="wwCtu1"},{"c8qu",ToString[x]=="wwCQu8"},{"c1qu",ToString[x]=="wwCQu1"},{"c8dt",ToString[x]=="wwCtd8"},{"c1dt",ToString[x]=="wwCtd1"},{"c8qd",ToString[x]=="wwCQd8"},{"c1qd",ToString[x]=="wwCQd1"},{"cQQ1",ToString[x]=="wwCQQ1"},{"cQQ8",ToString[x]=="wwCQQ8"},{"cQt1",ToString[x]=="wwCQt1"},{"cQt8",ToString[x]=="wwCQt8"},{"ctt1",ToString[x]=="wwCtt1"},{"cll",ToString[x]=="wwCll"},{"cll1111",ToString[x]=="wwCll1111"},{"cbp",ToString[x]=="wwCb\[CurlyPhi]"},{"ctp",ToString[x]=="wwCt\[CurlyPhi]"},{"ctG",ToString[x]=="wwCtG"},{"ccp",ToString[x]=="wwCc\[CurlyPhi]"},{"ctap",ToString[x]=="wwC\[Tau]\[CurlyPhi]"},{"ctW",ToString[x]=="wwCtW"},{"ctZ",ToString[x]=="wwCtZ"},{"c3pQ3",ToString[x]=="wwC\[CurlyPhi]Q3"},{"cpQM",ToString[x]=="wwC\[CurlyPhi]Qm"},{"cpt",ToString[x]=="wwC\[CurlyPhi]t"},{"cpl1",ToString[x]=="wwC\[CurlyPhi]l11"},{"c3pl1",ToString[x]=="wwC\[CurlyPhi]l31"},{"cpl2",ToString[x]=="wwC\[CurlyPhi]l12"},{"c3pl2",ToString[x]=="wwC\[CurlyPhi]l32"},{"cpl3",ToString[x]=="wwC\[CurlyPhi]l13"},{"c3pl3",ToString[x]=="wwC\[CurlyPhi]l33"},{"cpe",ToString[x]=="wwC\[CurlyPhi]e"},{"cpmu",ToString[x]=="wwC\[CurlyPhi]\[Mu]"},{"cpta",ToString[x]=="wwC\[CurlyPhi]\[Tau]"},{"c3pq",ToString[x]=="wwC\[CurlyPhi]q3"},{"cpqMi",ToString[x]=="wwC\[CurlyPhi]qm"},{"cpui",ToString[x]=="wwC\[CurlyPhi]ui"},{"cpdi",ToString[x]=="wwC\[CurlyPhi]di"},{"cpG",ToString[x]=="wwC\[CurlyPhi]G"},{"cpB",ToString[x]=="wwC\[CurlyPhi]B"},{"cpW",ToString[x]=="wwC\[CurlyPhi]W"},{"cpd",ToString[x]=="wwC\[CurlyPhi]d"},{"cpWB",ToString[x]=="wwC\[CurlyPhi]WB"},{"cpD",ToString[x]=="wwC\[CurlyPhi]D"},{"cWWW",ToString[x]=="wwCWWW"},{"cp",ToString[x]=="wwC\[CurlyPhi]"}}];
 (*Original function taken from: https://mathematica.stackexchange.com/a/250929 *)
 Clear[EinsteinSum]
 EinsteinSum[a__==b__]:=EinsteinSum[a]==EinsteinSum[b]
@@ -148,6 +148,30 @@ massReemp={Symbol[SymbolName[m]]->massInt};
 If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
 ];
 {dicTotal,massString,massReemp}]
+(*/// New function to be modified and tested. ///*)
+massHandlerCusto[matchResFile_,mass_,looplevel_,flaUVassum_]:=Block[{dicTotal,preVarsUV,massString,massInt,massIntList,massReemp,looporderset},
+looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
+If[Length[mass]>1,
+{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+(*preVarsUV stores the names of the recognised UV masses.*)
+massString=StringRiffle[ToString/@IntegerPart/@mass,""];
+If[Length[mass]<Length[preVarsUV],
+massInt=mass[[-1]];
+massIntList=Nest[Append[#,massInt]&,mass,Length[preVarsUV]-Length[mass]];
+massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->massIntList[[j]],{j,1,Length[preVarsUV]}];
+,
+massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->mass[[j]],{j,1,Length[preVarsUV]}];
+];
+If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->Min[mass]}]];
+(*/// End of section for multiple masses ///*)
+,
+massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
+massString=ToString[massInt];
+dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+massReemp={Symbol[SymbolName[m]]->massInt};
+If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
+];
+{dicTotal,massString,massReemp}]
 
 
 (* ::Section:: *)
@@ -170,7 +194,7 @@ ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[
 
 
 (*/// SMEFiT basis ///*)
-requiredWCsmeftsimBasisNonEval:={{"WC SMEFiT","WC Warsaw"},{Symbol[SymbolName[wwC\[CurlyPhi]G]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]G]]]},{Symbol[SymbolName[wwC\[CurlyPhi]B]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]B]]]},{Symbol[SymbolName[wwC\[CurlyPhi]W]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]W]]]},{Symbol[SymbolName[wwC\[CurlyPhi]WB]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]WB]]]},{Symbol[SymbolName[wwC\[CurlyPhi]d]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]Sq]]]},{Symbol[SymbolName[wwC\[CurlyPhi]D]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]D]]]},{Symbol[SymbolName[wwCWWW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[W]]]},{Symbol[SymbolName[wwC\[CurlyPhi]qm]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q1]]][2,2]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]Qm]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]q3]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]Q3]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]l11]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]][1,1]},{Symbol[SymbolName[wwC\[CurlyPhi]l12]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]l13]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]l31]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L3]]][1,1]},{Symbol[SymbolName[wwC\[CurlyPhi]l32]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L3]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]l33]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L3]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]ui]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]u]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]di]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]d]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]t]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]u]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]e]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]e]]][1,1]},{Symbol[SymbolName[wwC\[CurlyPhi]\[Mu]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]e]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]\[Tau]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]e]]][3,3]},{Symbol[SymbolName[wwCQq18]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]+3Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCQq11]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,1,3,3]+(1/6)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]+(1/2)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCQq38]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCQq31]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,1,3,3]+(1/6)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]-(1/6)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCtq8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][1,1,3,3]},{Symbol[SymbolName[wwCtq1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]][1,1,3,3]},{Symbol[SymbolName[wwCtu8]],2*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][1,3,3,1]},{Symbol[SymbolName[wwCtu1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][1,1,3,3]+(1/3)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][1,3,3,1]},{Symbol[SymbolName[wwCQu8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][3,3,1,1]},{Symbol[SymbolName[wwCQu1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]][3,3,1,1]},{Symbol[SymbolName[wwCtd8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ud8]]][3,3,3,3]},{Symbol[SymbolName[wwCtd1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ud1]]][3,3,3,3]},{Symbol[SymbolName[wwCQd8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd8]]][3,3,3,3]},{Symbol[SymbolName[wwCQd1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd1]]][3,3,3,3]},{Symbol[SymbolName[wwCQQ1]],2Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][3,3,3,3]-(2/3)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][3,3,3,3]},{Symbol[SymbolName[wwCQQ8]],8Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][3,3,3,3]},{Symbol[SymbolName[wwCQt1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]][3,3,3,3]},{Symbol[SymbolName[wwCQt8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][3,3,3,3]},{Symbol[SymbolName[wwCtt1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][3,3,3,3]},{Symbol[SymbolName[wwCll]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,2,2,1]},{Symbol[SymbolName[wwCll1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,1,1,1]},{Symbol[SymbolName[wwCb\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[d\[Phi]]]][3,3]},{Symbol[SymbolName[wwCt\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][3,3]},{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},{Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},{Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},{Symbol[SymbolName[wwCtZ]],-Symbol[SymbolName[sW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]+Symbol[SymbolName[cW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]}};
+requiredWCsmeftsimBasisNonEval:={{"WC SMEFiT","WC Warsaw"},{Symbol[SymbolName[wwC\[CurlyPhi]G]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]G]]]},{Symbol[SymbolName[wwC\[CurlyPhi]B]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]B]]]},{Symbol[SymbolName[wwC\[CurlyPhi]W]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]W]]]},{Symbol[SymbolName[wwC\[CurlyPhi]WB]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]WB]]]},{Symbol[SymbolName[wwC\[CurlyPhi]d]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]Sq]]]},{Symbol[SymbolName[wwC\[CurlyPhi]D]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]D]]]},{Symbol[SymbolName[wwCWWW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[W]]]},{Symbol[SymbolName[wwC\[CurlyPhi]qm]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q1]]][2,2]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]Qm]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]q3]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]Q3]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]l11]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]][1,1]},{Symbol[SymbolName[wwC\[CurlyPhi]l12]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]l13]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]l31]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L3]]][1,1]},{Symbol[SymbolName[wwC\[CurlyPhi]l32]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L3]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]l33]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L3]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]ui]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]u]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]di]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]d]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]t]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]u]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]e]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]e]]][1,1]},{Symbol[SymbolName[wwC\[CurlyPhi]\[Mu]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]e]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]\[Tau]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]e]]][3,3]},{Symbol[SymbolName[wwCQq18]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]+3Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCQq11]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,1,3,3]+(1/6)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]+(1/2)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCQq38]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCQq31]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,1,3,3]+(1/6)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][1,3,3,1]-(1/6)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][1,3,3,1]},{Symbol[SymbolName[wwCtq8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][1,1,3,3]},{Symbol[SymbolName[wwCtq1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]][1,1,3,3]},{Symbol[SymbolName[wwCtu8]],2*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][1,3,3,1]},{Symbol[SymbolName[wwCtu1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][1,1,3,3]+(1/3)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][1,3,3,1]},{Symbol[SymbolName[wwCQu8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][3,3,1,1]},{Symbol[SymbolName[wwCQu1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]][3,3,1,1]},{Symbol[SymbolName[wwCtd8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ud8]]][3,3,3,3]},{Symbol[SymbolName[wwCtd1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ud1]]][3,3,3,3]},{Symbol[SymbolName[wwCQd8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd8]]][3,3,3,3]},{Symbol[SymbolName[wwCQd1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd1]]][3,3,3,3]},{Symbol[SymbolName[wwCQQ1]],2Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq1]]][3,3,3,3]-(2/3)Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][3,3,3,3]},{Symbol[SymbolName[wwCQQ8]],8Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qq3]]][3,3,3,3]},{Symbol[SymbolName[wwCQt1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]][3,3,3,3]},{Symbol[SymbolName[wwCQt8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][3,3,3,3]},{Symbol[SymbolName[wwCtt1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][3,3,3,3]},{Symbol[SymbolName[wwCll]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,2,2,1]},{Symbol[SymbolName[wwCll1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,1,1,1]},{Symbol[SymbolName[wwCb\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[d\[Phi]]]][3,3]},{Symbol[SymbolName[wwCt\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][3,3]},{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},{Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},{Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},{Symbol[SymbolName[wwCtZ]],-Symbol[SymbolName[sW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]+Symbol[SymbolName[cW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]]]]}};
 vanishBviolation={Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]]->0};
 
 
@@ -297,7 +321,7 @@ Subscript[wwC, quqd1],Subscript[wwC, quqd8],Subscript[wwC, lequ1],Subscript[wwC,
 
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Assumption checker*)
 
 
@@ -323,7 +347,7 @@ Print["First WC for which the conditions are not satisfied: "<>ToString[Standard
 ];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Flavour solver*)
 
 
@@ -552,7 +576,7 @@ y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Dictionary*)
 
 
@@ -916,21 +940,29 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 (*Run card printing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV scan run card printing*)
 
 
-dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel"]:=Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,
+dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False"]:=Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,
 str1,indWCzero,ind1,invarsUV,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel},
 (*Load the dictionary with matching results*)
 (*preVarsUV=Piecewise[{{parametersListFromMatchingResult[matchResFile],varsUVinp=={}}},varsUVinp]; (*// Will be useful for the masses //*)*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
+If[degenMass=="True",
+{dicTotal,massString,massReemp}=massHandlerCusto[matchResFile,mass,looplevel,flaUVassum];
+,
 {dicTotal,massString,massReemp}=massHandler[matchResFile,mass,looplevel,flaUVassum];
-(*For now, the invariatns computation is limited to tree-level*)
+];
+(*For now, the invariants computation is limited to tree-level*)
 If[MemberQ[{0,"tree","Tree"},looplevel],
 dicInvar=dicTotal;massReempInvar=massReemp;
 ,
+If[degenMass=="True",
+{dicInvar,massReempInvar}=massHandlerCusto[matchResFile,mass,0,flaUVassum][[{1,3}]];
+,
 {dicInvar,massReempInvar}=massHandler[matchResFile,mass,0,flaUVassum][[{1,3}]];
+];
 ];
 varsUV=DeleteDuplicates[Variables[dicTotal[[;;,2]]/.massReemp]];
 (*Get simpler names for the UV variables. *)
@@ -977,7 +1009,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*WC scan run card printing*)
 
 
@@ -1241,7 +1273,7 @@ If[listProblems!={},Print["The matching was completed but problems were reported
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV parameters recognition*)
 
 
@@ -1276,13 +1308,13 @@ flavourSymChecker[matchResFile_,OptionsPattern[]]:=flavourSymCheckerBack[matchRe
 flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile,OptionValue["UVFlavourAssumption"]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*From matching result to run card*)
 
 
-Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel"};
+Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False"};
 (*Options[matchResToWCscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel"};*)
-matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]
+matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"]]
 (*matchResToWCscanCard[matchResFile_,mass_,OptionsPattern[]]:=dictPrinterWCscanV2[matchResFile,mass,parametersListFromMatchingResult[matchResFile],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]*)
 
 
