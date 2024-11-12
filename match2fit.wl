@@ -74,6 +74,9 @@ findLowestExponent[row_]:=Block[{ret,n},ret=0;n=1;While[ret==0&&n<=1000,If[Membe
 writeStrBlock[varsUV_][elem_,index_]:=Block[{tab},tab=Table[ToString[CForm[varsUV[[i]]]]<>": ["<>Piecewise[{{StringReplace[ToString[InputForm[elem]],"*^"->"e"],i==1}},"1"]<>","<>ToString[index[[i]]-1]<>"]"<>Piecewise[{{",",i<Length[varsUV]}},""],{i,1,Length[varsUV]}];
 "{"<>StringJoin[tab]<>"}"]
 (**)
+writeTabBlock[varsUV_][elem_,index_]:=Block[{tab},tab=Table[{ToString[CForm[varsUV[[i]]]],Piecewise[{{StringReplace[ToString[InputForm[elem]],"*^"->"e"],i==1}},"1"],ToString[index[[i]]-1]},{i,1,Length[varsUV]}];
+tab]
+(**)
 reCastString[term_]:=Block[{temp},temp=StringSplit[StringSplit[StringTrim[term,{"{","}"}],","],":"];
 ToExpression[Table[Join[StringReplace[StringTrim[temp[[2*i-1]],{" [","]"}],"J"->"I"],StringReplace[StringTrim[temp[[2*i]],{"[","]"}],"J"->"I"]],{i,1,Length[temp]/2}]]];
 (**)
@@ -205,7 +208,13 @@ ret=Flatten[Table[{ToExpression[ToString[UVcoups[[j]]]<>"[a_]:>ToExpression[\""<
 ret]
 
 
-(* ::Subsection::Closed:: *)
+(*/// Dataset on smefit_database/main/theory. If there is no Internet connection, it defaults to the datasets available there on 12/11/2024. ///*)
+datasetSMEFiT=Piecewise[
+{{StringReplace[Select[Import["https://github.com/LHCfitNikhef/smefit_database/tree/main/theory","Hyperlinks"],(StringFreeQ[#,"_loew_"]&&StringMatchQ[#,"*.json"])&],{"https://github.com/LHCfitNikhef/smefit_database/blob/main/theory/"->"",".json"->""}],$NetworkConnected}}
+,{"ATLAS_CMS_SSinc_RunI","ATLAS_CMS_tt_AC_8TeV","ATLAS_ggF_13TeV_2015","ATLAS_ggF_13TeV_2015_proj","ATLAS_ggF_ZZ_13TeV","ATLAS_ggF_ZZ_13TeV_proj","ATLAS_hh_runII_13TeV","ATLAS_SSinc_RunII","ATLAS_SSinc_RunII_proj","ATLAS_STXS_runII_13TeV","ATLAS_STXS_runII_13TeV_uncor","ATLAS_STXS_runII_13TeV_uncor_proj","ATLAS_t_sch_13TeV_inc","ATLAS_t_sch_13TeV_inc_proj","ATLAS_t_sch_8TeV","ATLAS_tt_13TeV_asy_2022","ATLAS_tt_13TeV_asy_2022_uncor","ATLAS_tt_13TeV_asy_2022_uncor_proj","ATLAS_tt_13TeV_ljets_2016_Mtt","ATLAS_tt_13TeV_ljets_2016_Mtt_proj","ATLAS_tt_8TeV_dilep_Mtt","ATLAS_tt_8TeV_ljets_Mtt","ATLAS_tta_8TeV","ATLAS_tt_AC_13TeV","ATLAS_ttbb_13TeV_2016","ATLAS_ttbb_13TeV_2016_proj","ATLAS_t_tch_13TeV_inc","ATLAS_t_tch_13TeV_inc_proj","ATLAS_t_tch_8TeV_diff_Yt","ATLAS_tttt_13TeV_2023","ATLAS_tttt_13TeV_2023_proj","ATLAS_tttt_13TeV_run2","ATLAS_tttt_13TeV_run2_proj","ATLAS_tttt_13TeV_slep_inc","ATLAS_tttt_13TeV_slep_inc_proj","ATLAS_ttW_13TeV_2016","ATLAS_ttW_13TeV_2016_proj","ATLAS_ttW_13TeV","ATLAS_ttW_8TeV","ATLAS_ttZ_13TeV_2016","ATLAS_ttZ_13TeV","ATLAS_ttZ_13TeV_pTZ","ATLAS_ttZ_13TeV_pTZ_uncor","ATLAS_ttZ_13TeV_pTZ_uncor_proj","ATLAS_ttZ_8TeV","ATLAS_tW_13TeV_inc","ATLAS_tW_13TeV_inc_proj","ATLAS_tW_8TeV_inc","ATLAS_tW_slep_8TeV_inc","ATLAS_tZ_13TeV_inc","ATLAS_tZ_13TeV_run2_inc","ATLAS_tZ_13TeV_run2_inc_proj","ATLAS_Whel_13TeV","ATLAS_Whel_13TeV_uncor","ATLAS_Whel_13TeV_uncor_proj","ATLAS_WhelF_8TeV","ATLAS_WH_Hbb_13TeV","ATLAS_WH_Hbb_13TeV_proj","ATLAS_WW_13TeV_2016_memu","ATLAS_WW_13TeV_2016_memu_proj","ATLAS_WZ_13TeV_2016_mTWZ","ATLAS_WZ_13TeV_2016_mTWZ_proj","ATLAS_ZH_Hbb_13TeV","ATLAS_ZH_Hbb_13TeV_proj","CEPC_161_ww_leptonic_optim_obs","CEPC_161_ww_semilep_optim_obs","CEPC_240_ww_leptonic_optim_obs","CEPC_240_ww_semilep_optim_obs","CEPC_365_tt_optim_obs","CEPC_365_ww_leptonic_optim_obs","CEPC_365_ww_semilep_optim_obs","CEPC_alphaEW","CEPC_bb_240GeV","CEPC_bb_365GeV","CEPC_bb_Afb_240GeV","CEPC_bb_Afb_365GeV","CEPC_Brw_161GeV","CEPC_Brw_240GeV","CEPC_Brw_365GeV","CEPC_cc_240GeV","CEPC_cc_365GeV","CEPC_cc_Afb_240GeV","CEPC_cc_Afb_365GeV","CEPC_ee_240GeV","CEPC_ee_365GeV","CEPC_ee_Afb_240GeV","CEPC_ee_Afb_365GeV","CEPC_mumu_240GeV","CEPC_mumu_365GeV","CEPC_mumu_Afb_240GeV","CEPC_mumu_Afb_365GeV","CEPC_tautau_240GeV","CEPC_tautau_365GeV","CEPC_tautau_Afb_240GeV","CEPC_tautau_Afb_365GeV","CEPC_vvh_aa_365GeV","CEPC_vvh_bb_240GeV","CEPC_vvh_bb_365GeV","CEPC_vvh_cc_365GeV","CEPC_vvh_gg_365GeV","CEPC_vvh_tautau_365GeV","CEPC_vvh_WW_365GeV","CEPC_vvh_ZZ_365GeV","CEPC_ww_161GeV","CEPC_ww_240GeV","CEPC_ww_365GeV","CEPC_Wwidth","CEPC_Zdata","CEPC_zh_240GeV","CEPC_zh_365GeV","CEPC_zh_aa_240GeV","CEPC_zh_aa_365GeV","CEPC_zh_aZ_240GeV","CEPC_zh_bb_240GeV","CEPC_zh_bb_365GeV","CEPC_zh_cc_240GeV","CEPC_zh_cc_365GeV","CEPC_zh_gg_240GeV","CEPC_zh_gg_365GeV","CEPC_zh_tautau_240GeV","CEPC_zh_tautau_365GeV","CEPC_zh_WW_240GeV","CEPC_zh_WW_365GeV","CEPC_zh_ZZ_240GeV","CEPC_zh_ZZ_365GeV","CMS_ggF_aa_13TeV","CMS_ggF_aa_13TeV_proj","CMS_H_13TeV_2015_pTH","CMS_H_13TeV_2015_pTH_proj","CMS_SSinc_RunII","CMS_SSinc_RunII_proj","CMS_t_sch_8TeV","CMS_tt_13TeV_asy","CMS_tt_13TeV_asy_proj","CMS_tt_13TeV_dilep_2015_Mtt","CMS_tt_13TeV_dilep_2016_Mtt","CMS_tt_13TeV_dilep_2016_Mtt_proj","CMS_tt_13TeV_ljets_2015_Mtt","CMS_tt_13TeV_ljets_2016_Mtt","CMS_tt_13TeV_ljets_inc","CMS_tt_13TeV_ljets_inc_proj","CMS_tt_13TeV_Mtt","CMS_tt_13TeV_Mtt_proj","CMS_tt2D_8TeV_dilep_MttYtt","CMS_tt_8TeV_ljets_Ytt","CMS_tta_8TeV","CMS_ttbb_13TeV_2016","CMS_ttbb_13TeV_2016_proj","CMS_ttbb_13TeV_dilepton_inc","CMS_ttbb_13TeV_dilepton_inc_proj","CMS_ttbb_13TeV","CMS_ttbb_13TeV_ljets_inc","CMS_ttbb_13TeV_ljets_inc_proj","CMS_t_tch_13TeV_2016_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt_proj","CMS_t_tch_13TeV_inc","CMS_t_tch_8TeV_diff_Yt","CMS_t_tch_8TeV_inc","CMS_tttt_13TeV_2023","CMS_tttt_13TeV_2023_proj","CMS_tttt_13TeV","CMS_tttt_13TeV_run2","CMS_tttt_13TeV_run2_proj","CMS_tttt_13TeV_slep_inc","CMS_tttt_13TeV_slep_inc_proj","CMS_ttW_13TeV","CMS_ttW_13TeV_proj","CMS_ttW_8TeV","CMS_ttZ_13TeV","CMS_ttZ_13TeV_pTZ","CMS_ttZ_13TeV_pTZ_proj","CMS_ttZ_8TeV","CMS_tW_13TeV_inc","CMS_tW_13TeV_inc_proj","CMS_tW_13TeV_slep_inc","CMS_tW_13TeV_slep_inc_proj","CMS_tW_8TeV_inc","CMS_tZ_13TeV_2016_inc","CMS_tZ_13TeV_2016_inc_proj","CMS_tZ_13TeV_inc","CMS_tZ_13TeV_pTt","CMS_tZ_13TeV_pTt_uncor","CMS_tZ_13TeV_pTt_uncor_proj","CMS_WhelF_8TeV","CMS_WZ_13TeV_2016_pTZ","CMS_WZ_13TeV_2016_pTZ_proj","CMS_WZ_13TeV_2022_pTZ","CMS_WZ_13TeV_2022_pTZ_proj","FCCee_161_ww_leptonic_optim_obs","FCCee_161_ww_semilep_optim_obs","FCCee_240_ww_leptonic_optim_obs","FCCee_240_ww_semilep_optim_obs","FCCee_365_tt_optim_obs","FCCee_365_ww_leptonic_optim_obs","FCCee_365_ww_semilep_optim_obs","FCCee_alphaEW","FCCee_bb_240GeV","FCCee_bb_365GeV","FCCee_bb_Afb_240GeV","FCCee_bb_Afb_365GeV","FCCee_Brw_161GeV","FCCee_Brw_240GeV","FCCee_Brw_365GeV","FCCee_cc_240GeV","FCCee_cc_365GeV","FCCee_cc_Afb_240GeV","FCCee_cc_Afb_365GeV","FCCee_ee_240GeV","FCCee_ee_365GeV","FCCee_ee_Afb_240GeV","FCCee_ee_Afb_365GeV","FCCee_mumu_240GeV","FCCee_mumu_365GeV","FCCee_mumu_Afb_240GeV","FCCee_mumu_Afb_365GeV","FCCee_tautau_240GeV","FCCee_tautau_365GeV","FCCee_tautau_Afb_240GeV","FCCee_tautau_Afb_365GeV","FCCee_vvh_240GeV","FCCee_vvh_365GeV","FCCee_vvh_aa_365GeV","FCCee_vvh_bb_240GeV","FCCee_vvh_bb_365GeV","FCCee_vvh_cc_365GeV","FCCee_vvh_gg_365GeV","FCCee_vvh_tautau_365GeV","FCCee_vvh_WW_365GeV","FCCee_vvh_ZZ_365GeV","FCCee_ww_161GeV","FCCee_ww_240GeV","FCCee_ww_365GeV","FCCee_Wwidth","FCCee_Zdata","FCCee_zh_240GeV","FCCee_zh_365GeV","FCCee_zh_aa_240GeV","FCCee_zh_aa_365GeV","FCCee_zh_aZ_240GeV","FCCee_zh_bb_240GeV","FCCee_zh_bb_365GeV","FCCee_zh_cc_240GeV","FCCee_zh_cc_365GeV","FCCee_zh_gg_240GeV","FCCee_zh_gg_365GeV","FCCee_zh_tautau_240GeV","FCCee_zh_tautau_365GeV","FCCee_zh_WW_240GeV","FCCee_zh_WW_365GeV","FCCee_zh_ZZ_240GeV","FCCee_zh_ZZ_365GeV","LEP1_EWPOs_2006","LEP_alphaEW","LEP_Bhabha_2013","LEP_Brw_2013","LEP_eeWW_182GeV","LEP_eeWW_189GeV","LEP_eeWW_198GeV","LEP_eeWW_206GeV","LHC_HH_14TeV"}];
+
+
+(* ::Subsection:: *)
 (*Flavour assumptions*)
 
 
@@ -944,10 +953,9 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 (*UV scan run card printing*)
 
 
-dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False"]:=Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,
-str1,indWCzero,ind1,invarsUV,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel},
+dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal"]:=
+Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,invarsUV,sumTerm,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3},
 (*Load the dictionary with matching results*)
-(*preVarsUV=Piecewise[{{parametersListFromMatchingResult[matchResFile],varsUVinp=={}}},varsUVinp]; (*// Will be useful for the masses //*)*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
 If[degenMass=="True",
 {dicTotal,massString,massReemp}=massHandlerCusto[matchResFile,mass,looplevel,flaUVassum];
@@ -973,6 +981,61 @@ varsUV=varsUV/.simpleUVnames;
 (*Print the card*)
 orderlabel=Piecewise[{{"Tree",looplevel==0||looplevel=="tree"||looplevel=="Tree"}},"1Loop"];
 If[Length[varsUV]>0,
+If[outFormat=="SMEFiT",
+(*/// Printing the card in the SMEFiT format.///*)
+str1=OpenWrite[NotebookDirectory[]<>"//SMEFiT_runcard_"<>collection<>"_Mod_"<>ToString[model]<>"_Mass_"<>massString<>"_"<>orderlabel<>".yaml"];
+WriteLine[str1,"Model name: "<>ToString[model]];
+WriteLine[str1,"UV Collection: "<>collection];
+WriteLine[str1,"UV model: "<>ToString[model]];
+WriteLine[str1,"coefficients:"];
+For[ind1=1,ind1<=Length[dicTotal],ind1++, (*/// ind1 runs over all the WCs. ///*)
+(*/// Decompose each WC in a polynomial of the UV couplings. ///*)
+coeffList=CoefficientList[dicTotal[[ind1,2]],varsUV];
+(*/// Skip the WCs that are zero. ///*)
+If[coeffList=={}||coeffList=={{0.`}},Continue[];];
+(*/// Convert the format of the list of terms. ///*)
+termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],CoefficientList[N[dicTotal[[ind1,2]]],varsUV],{Length[varsUV]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
+WriteLine[str1,"  O"<>StringDrop[printNameWCs[dicTotal[[ind1,1]]],1]<>":"];
+WriteLine[str1,"    constrain:"];
+For[ind2=1,ind2<=Length[termList],ind2++,
+(*/// ind2 runs over the terms in the sum that makes up the WC. ///*)
+sumTerm=termList[[ind2]];
+If[Length[varsUV]>2,sumTerm=Flatten[sumTerm,Length[varsUV]-2]];
+If[Length[varsUV]==1,sumTerm={sumTerm};];
+For[ind3=1,ind3<=Length[varsUV],ind3++,
+(*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
+If[ind3==1,
+WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
+WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
+WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
+Continue[];];
+If[sumTerm[[ind3,3]]!="0",
+WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
+WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
+WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
+];
+];
+];
+WriteLine[str1,"    max: 100"];
+WriteLine[str1,"    min: -100"];
+];
+(*///UV coupling printing. ///*)
+For[ind1=1,ind1<=Length[varsUV],ind1++,
+WriteLine[str1,"  "<>ToString[varsUV[[ind1]]]<>":"];
+WriteLine[str1,"    min: -100"];
+WriteLine[str1,"    max: 100"];
+];
+WriteLine[str1,"data_path: /path/to/smefit_database/commondata_projections_L0"];
+WriteLine[str1,"datasets:"];
+For[ind1=1,ind1<=Length[datasetSMEFiT],ind1++,
+WriteLine[str1,"- "<>datasetSMEFiT[[ind1]]];
+];
+WriteLine[str1,"frac_remain: 0.001\nlepsilon: 0.001\nnlive: 1000\norder: NLO\nresult_path: /path/to/your/results/"];
+WriteLine[str1,"target_evidence_unc: 0.5\ntarget_post_unc: 0.5\ntheory_path: /path/to/smefit_database/theory"];
+WriteLine[str1,"use_quad: true\nuse_t0: false\nuse_theory_covmat: true\nuv_couplings: true"];
+Close[str1]
+,
+(*/// Printing the scan card in the pseudo-SMEFiT Universal format. ///*)
 str1=OpenWrite[NotebookDirectory[]<>"//out_UV_dict_Coll_"<>collection<>"_Mod_"<>ToString[model]<>"_Mass_"<>massString<>"_"<>orderlabel<>".yaml"];
 WriteLine[str1,"# UV dictionary with WCs in terms of UV variables"];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
@@ -987,10 +1050,6 @@ WriteLine[str1,"# Loop level of the results : "<>orderlabel];
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Setting of the UV mass in TeV:"];
 WriteLine[str1,"m : "<>ToString[mass]<>" # TeV"];
-(*WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Free UV couplings :"];
-For[indFree=1,indFree<=Length[varsUV],indFree++,
-WriteLine[str1,ToString[InputForm[CForm[varsUV[[indFree]]]]]<>": {min: -100.0, max: 100.0}"]];*)
 WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Expressions for all the WCs in SMEFiT basis"];
 For[ind1=1,ind1<=Length[dicTotal],ind1++,
@@ -1000,7 +1059,8 @@ WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
 WriteLine[str1,"# Miscellaneous information"];
 WriteLine[str1,"# Matching results address: "<>matchResFile];
 WriteLine[str1,"# Export date: "<>DateString[]];
-Close[str1];
+Close[str1];];
+(*/// Printing the UV invariants. ///*);
 {invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar/.simpleUVnames)]];
 zeroWCs=Select[dicInvar,(#[[2]]==0)&][[;;,1]];
 nonZeroWCs=Select[dicInvar,(FreeQ[zeroWCs,#[[1]]])&];
@@ -1009,169 +1069,17 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
-(*WC scan run card printing*)
+ 
 
 
-(*/// Discarded function. ///*)
-(*
-dictPrinterWCscanV2[matchResFile_,mass_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel"]:=Block[{dictionary,zeroWCs,nonZeroWCs,varsUV,indexNonZeroWCs,monoList,monoBase,nonZeroWCsMonoBase,relSolWCs,unrelWCs,ldWCs,defSignList,posPosWCs,posNegWCs,relMatWCs,
-indepRelWCs,listRelWCs,WCstoElim,indElim,inspectRow,linearBase,nonZeroCols,flagWC,indCol,dependWC,nonZeroLIWCs,tabMultRel,findMultRel,listMultRel,varsMultRel,relExp,numFact,numFactRel,flagMultRel,str1,indWCzero,indWCnonzero,indWCunrel,indWCrel,indWCpos,indWCneg,indRel,indWCnonzeroLI,
-reempLDWCs,WCstoElimMult,WCstoElimMultStr,WCstoElimMultRelOrig,posToElim,flagElimCoeff,rowReduced,lowestExp,posLowestExp,wcToElim,dictioFinal,inverRelUV,tabMultRelRed,posSquareds,preVarsUV,numSquareds,invarsUV,indexSquareds,entangledRows,entangledVars,relatedRows,indEntRows,indRelRows,
-indUVcoup,listInvarsUVoutForm,nonZeroLIWCsMonoBase,monoWCsBase,reempNonZeroLIWCs,massString,massReemp,dictioFinalFull,solDictioFinal,wCsDictioFinal,multRelWCs,reempNamesRelev,tabSquareds,indUnusedWCs,usedWCs,nonZeroElems,unusedWCs,reempWCsMultRel,provExp,simpleUVnames,indFree,namePosWCs,nameNegWCs,reempWCsMultRelSimp},
-preVarsUV=Piecewise[{{parametersListFromMatchingResult[matchResFile],varsUVinp=={}}},varsUVinp];
-(*dictionary=dictionaryToPrint[matchResFile]/.{Symbol[SymbolName[onelooporder]]->0}/.flaUVassum;*)
-{dictionary,massString,massReemp}=massHandler[matchResFile,mass,flaUVassum];
-massReemp=Rationalize[massReemp];
-varsUV=DeleteDuplicates[Variables[dictionary[[;;,2]]/.massReemp]];
-(*Get simpler names for the UV variables. *)
-simpleUVnames=simplifyUVcoupNames[Replace[varsUV,{a_[b__]:>a},1]];
-(*Apply them*)
-dictionary=dictionary/.simpleUVnames;
-varsUV=varsUV/.simpleUVnames;
-(*// Part that receives the dictionary and determines which WCs have to be set to zero and which ones not //*)
-zeroWCs=Select[dictionary,(#[[2]]==0)&][[;;,1]];
-nonZeroWCs=Chop[Rationalize[Select[dictionary,(FreeQ[zeroWCs,#[[1]]])&]]/.massReemp];
-reempWCsMultRel={};
-WCstoElimMult={};
-If[Length[nonZeroWCs]>0,
-(*// Part that receives the expression for the couplings and determines  how many of them are non-zero //*)
-If[Length[nonZeroWCs]>1,indexNonZeroWCs=Table[k,{k,1,Length[nonZeroWCs]}];
-(*// Decompose the WCs in the base of monomials to find linear relations. //*)
-monoList=DeleteDuplicates[Flatten[MonomialList[nonZeroWCs[[;;,2]]/.massReemp]]];
-monoBase=DeleteDuplicates[monoList,(wcVarDecomp[#1]==wcVarDecomp[#2])&];
-monoBase=Table[Rationalize[monoBase[[k]]]/FactorTermsList[Rationalize[monoBase[[k]]]][[1]],{k,1,Length[monoBase]}];
-nonZeroWCsMonoBase=Table[Coefficient[nonZeroWCs[[j,2]]/.massReemp,monoBase[[i]]],{j,1,Length[nonZeroWCs]},{i,1,Length[monoBase]}];
-relSolWCs=Table[Quiet[Solve[nonZeroWCsMonoBase[[i]]==Sum[\[Alpha][i,j]*nonZeroWCsMonoBase[[j]],{j,DeleteCases[indexNonZeroWCs,i]}],Table[\[Alpha][i,j],{j,DeleteCases[indexNonZeroWCs,i]}]]],{i,1,Length[nonZeroWCs]}];
-unrelWCs=Select[nonZeroWCs[[;;,1]],(relSolWCs[[Position[nonZeroWCs[[;;,1]],#][[1,1]]]]=={})&];
-ldWCs=Select[nonZeroWCs[[;;,1]],(FreeQ[unrelWCs,#])&];
-If[Length[unrelWCs]<Length[nonZeroWCs],
-relMatWCs=Table[Piecewise[{{-1,i==j}},\[Alpha][i,j]],{i,1,Length[nonZeroWCs]},{j,1,Length[nonZeroWCs]}]/.Flatten[relSolWCs]/.{\[Alpha][_,_]->0};
-indepRelWCs=Select[RowReduce[relMatWCs],(#!=0*UnitVector[Length[nonZeroWCs],1]&&FreeQ[Table[UnitVector[Length[nonZeroWCs],i],{i,1,Length[nonZeroWCs]}],#])&];
-listRelWCs=Table[Sum[indepRelWCs[[i,j]]*nonZeroWCs[[j,1]],{j,1,Length[nonZeroWCs]}]==0,{i,1,Length[indepRelWCs]}];
-WCstoElim={};
-For[indElim=1,indElim<=Length[indepRelWCs],indElim++,
-inspectRow=indepRelWCs[[-indElim]];
-nonZeroElems=Select[inspectRow,UnsameQ[#,0]&];
-nonZeroCols=Table[Position[inspectRow,nonZeroElems[[i]]][[1,1]],{i,1,Length[nonZeroElems]}];
-flagWC=1;
-indCol=1;
-While[flagWC==1&&indCol<=Length[nonZeroCols],
-dependWC=nonZeroWCs[[nonZeroCols[[-indCol]],1]];
-If[FreeQ[WCstoElim,dependWC],
-AppendTo[WCstoElim,{dependWC,nonZeroCols[[-indCol]]}];
-flagWC=0;,
-indCol+=1;];];];
-nonZeroLIWCs=Delete[nonZeroWCs,Table[{WCstoElim[[k,2]]},{k,1,Length[WCstoElim]}]];
-reempLDWCs=Solve[listRelWCs,WCstoElim[[;;,1]]][[1]];,
-nonZeroLIWCs=nonZeroWCs];
-(*// Rotate to a base of pseudo-WCs that agree with the monomials//*)
-If[Length[monoBase]==Length[nonZeroLIWCs],
-nonZeroLIWCsMonoBase=Table[Coefficient[nonZeroLIWCs[[j,2]],monoBase[[i]]],{j,1,Length[nonZeroLIWCs]},{i,1,Length[monoBase]}];
-monoWCsBase=Inverse[nonZeroLIWCsMonoBase] . nonZeroLIWCs[[;;,1]];,
-monoWCsBase=nonZeroLIWCs[[;;,1]];
-Print["WARNING: The base of LI WCs doesn't match in dimensions the one of monomials, hence the rotation can't be done properly."]];
-(*// Part that detects additional non-linear relations among WCs //*)
-Module[{pseudoWC},
-tabMultRel=Table[Exponent[monoBase[[i]],varsUV[[j]]],{i,1,Length[monoBase]},{j,1,Length[varsUV]}];
-If[MatrixRank[tabMultRel]<Length[monoBase],
-findMultRel=Quiet[Solve[tabMultRel[[1]]*0==Sum[\[Alpha][j]*tabMultRel[[j]],{j,1,Length[tabMultRel]}],Table[\[Alpha][k],{k,1,Length[tabMultRel]}]]];
-listMultRel=Table[\[Alpha][i],{i,1,Length[tabMultRel]}]/.findMultRel;
-varsMultRel=Variables[listMultRel];
-relExp=Flatten[Table[listMultRel/.Table[varsMultRel[[i]]->If[i==j,1,0],{i,1,Length[varsMultRel]}],{j,1,Length[varsMultRel]}],1];
-If[Length[varsMultRel]!=Length[monoBase]-MatrixRank[tabMultRel],Print["There's something wrong, there might be additional multip. relations."]];
-(*/// Assume pseudoWC[i] = monoWCsBase[[i]] ///*)
-multRelWCs=Table[Product[pseudoWC[i]^(relExp[[j,i]]),{i,1,Length[monoWCsBase]}],{j,1,Length[relExp]}];
-flagMultRel=1;,flagMultRel=0;];
-(*// Algorithm to pick WCs to eliminate, i.e. that will be dependent quantities, from the multiplicative relations. //*)
-WCstoElimMult={};
-WCstoElimMultRelOrig={};
-If[flagMultRel==1,
-For[indElim=1,indElim<=Length[relExp],indElim++,
-inspectRow=relExp[[-indElim]];
-posToElim={};
-flagElimCoeff=0;
-While[flagElimCoeff==0 && Length[posToElim]<Length[inspectRow],
-rowReduced=Delete[inspectRow,posToElim];
-lowestExp=findLowestExponent[rowReduced];
-posLowestExp=Position[inspectRow,lowestExp][[1,1]];
-wcToElim=pseudoWC[posLowestExp];
-If[MemberQ[WCstoElimMult,wcToElim],
-AppendTo[posToElim,posLowestExp];,
-AppendTo[WCstoElimMult,wcToElim];
-AppendTo[WCstoElimMultRelOrig,-indElim];
-flagElimCoeff=1;];];];];
-(*// Replacements for the WCs to be eliminated from mult. relations. //*)
-reempWCsMultRel=Table[Solve[1==multRelWCs[[WCstoElimMultRelOrig[[k]]]],WCstoElimMult[[k]]][[1,1]],{k,1,Length[WCstoElimMult]}];
-reempWCsMultRelSimp=reempWCsMultRel/.Table[pseudoWC[i]->monoWCsBase[[i]],{i,1,Length[monoWCsBase]}];
-reempWCsMultRelSimp=Simplify[Solve[Table[reempWCsMultRelSimp[[i,1]]==reempWCsMultRelSimp[[i,2]],{i,1,Length[reempWCsMultRelSimp]}],Select[Variables[reempWCsMultRelSimp[[;;,1]]],(StringMatchQ[SymbolName[#],"ww*"])&]][[1]],{Symbol[SymbolName[m]]>0}];
-(*// Defining dictionary with the WCs to be fitted. //*)
-(*// Adding step to take out overall numerical factors from the rotation //*)
-dictioFinal=Table[monoWCsBase[[i]],{i,Select[Table[k,{k,1,Length[monoWCsBase]}],(!MemberQ[WCstoElimMult/.{a_[b_]:>b},#])&]}];
-wCsDictioFinal=DeleteDuplicates[DeleteCases[Variables[dictioFinal],Symbol[SymbolName[m]]]];
-reempNonZeroLIWCs=Table[nonZeroLIWCs[[i,1]]->nonZeroLIWCs[[i,2]],{i,1,Length[nonZeroLIWCs]}];
-solDictioFinal=Quiet[Solve[Table[dictioFinal[[i]]==(dictioFinal[[i]]/.reempNonZeroLIWCs),{i,1,Length[dictioFinal]}],wCsDictioFinal]];
-dictioFinalFull=Table[{wCsDictioFinal[[i]],wCsDictioFinal[[i]]/.solDictioFinal[[1]]},{i,1,Length[wCsDictioFinal]}];];
-{invarsUV,inverRelUV}=computeInvariants1L[Chop[(dictionary/.massReemp)]];
-,
-invarsUV=Piecewise[{{nonZeroWCs[[1,2]]*mass^2,Length[varsUV]>1}},varsUV];
-tabSquareds=Flatten[Table[Exponent[nonZeroWCs[[i,2]],varsUV[[j]]],{i,1,Length[nonZeroWCs]},{j,1,Length[varsUV]}]];
-If[MemberQ[tabSquareds,2]&&Length[varsUV]==1,
-invarsUV={Abs[varsUV[[Position[tabSquareds,2][[1,1]]]]]};,
-invarsUV={mass^2*nonZeroWCs[[1,2]]};];
-inverRelUV=Piecewise[{{Solve[Join[Table[nonZeroWCs[[i,1]]==nonZeroWCs[[i,2]],{i,1,Length[nonZeroWCs]}]],varsUV],Length[varsUV]==1}},{{AA->AA}}];
-dictioFinalFull=nonZeroWCs;
-dictioFinal=dictioFinalFull[[;;,1]];
-unrelWCs=nonZeroWCs[[;;,1]];
-];
-defSignList=Table[testSign[nonZeroWCs[[i,2]]/.massReemp],{i,1,Length[nonZeroWCs]}];
-posPosWCs=Flatten[Position[defSignList,"Pos"]];
-posNegWCs=Flatten[Position[defSignList,"Neg"]];
-];
-linearBase=nonZeroLIWCs[[;;,1]](*Join[dictioFinal,WCstoElimMult]*);
-reempNamesRelev=Table[nonZeroWCs[[i,1]]->ToExpression[printNameWCs[nonZeroWCs[[i,1]]]],{i,1,Length[nonZeroWCs]}];
-namePosWCs=Piecewise[{{nonZeroWCs[[posPosWCs,1]],Length[posPosWCs]>0}},{}];
-nameNegWCs=Piecewise[{{nonZeroWCs[[posNegWCs,1]],Length[posNegWCs]>0}},{}];
-invarFilePrinter[model,collection,0,massString,invarsUV,inverRelUV/.massReemp,reempNamesRelev];
-str1=OpenWrite[NotebookDirectory[]<>"//dict_WC_scan_Coll_"<>collection<>"_Mod_"<>model<>"_Mass_"<>massString<>"_Tree"<>".yaml"];
-WriteLine[str1,"# UV dictionary for WC scan. Tree-level matching."];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"UV Collection : "<>collection];
-WriteLine[str1,"UV model : "<>model];
-WriteLine[str1,"Model name : "<>model];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Loop level of the results : "<>ToString[0(*loop*)]];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Setting of the UV mass in TeV:"];
-WriteLine[str1,"m : "<>ToString[mass]<>" TeV"];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Free coefficients"];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-If[Length[dictioFinal]>0,
-For[indFree=1,indFree<=Length[dictioFinal],indFree++,
-WriteLine[str1,printNameWCs[dictioFinalFull[[indFree,1]]]<>": "<>Piecewise[{{"{min: 0.0, max: 100.0}",MemberQ[namePosWCs,dictioFinalFull[[indFree,1]]]},{"{min: -100.0, max: 0.0}",MemberQ[nameNegWCs,dictioFinalFull[[indFree,1]]]}},"{min: -100.0, max: 100.0}"]]];];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Constrained coefficients"];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-If[Length[nonZeroWCs]>0,
-If[Length[unrelWCs]<Length[nonZeroWCs],If[Length[indepRelWCs]>0,For[indWCrel=1,indWCrel<=Length[WCstoElim[[;;,1]]],indWCrel++,
-provExp=Flatten[MapIndexed[writeStrBlock[linearBase],CoefficientList[N[WCstoElim[[indWCrel,1]]/.reempLDWCs/.massReemp],linearBase],{Length[linearBase]}]];
-WriteLine[str1,printNameWCs[WCstoElim[[indWCrel,1]]]<>":\n\t constrain: ["<>StringRiffle[DeleteCases[Table[reempMultRelPrint[provExp[[l]],dictioFinalFull[[;;,1]],reempWCsMultRelSimp,reempNamesRelev],{l,1,Length[provExp]}],(a_/;(reCastString[a][[1,2]]==0))],","]<>"]"];]];];
-,WriteLine[str1," "];];
-If[Length[nonZeroWCs]>0&&Length[WCstoElimMult]>0,
-For[indRel=1,indRel<=Length[WCstoElimMult],indRel++,
-WriteLine[str1,printNameWCs[reempWCsMultRelSimp[[indRel,1]]]<>":\n\t constrain: ["<>printMultRelNew[reempWCsMultRelSimp[[indRel]],dictioFinalFull[[;;,1]],reempNamesRelev]<>"]"];]];
-For[indWCzero=1,indWCzero<=Length[zeroWCs],indWCzero++,
-WriteLine[str1,printNameWCs[zeroWCs[[indWCzero]]]<>":\n\t constrain: true\n\t value: 0.0"];];
-WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
-WriteLine[str1,"# Miscellaneous information"];
-WriteLine[str1,"# Tree-level results address: "<>matchResFile];
-WriteLine[str1,"# Export date: "<>DateString[]];
-Close[str1];]
-*)
+(* ::Subsection:: *)
+(*Mass Scan printing*)
 
 
-(* ::Subsection::Closed:: *)
+dictPrinterUVmass[];
+
+
+(* ::Subsection:: *)
 (*Invariant printing*)
 
 
@@ -1209,7 +1117,7 @@ Close[str2];]
 (*Public functions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV to EFT matching*)
 
 
@@ -1273,7 +1181,7 @@ If[listProblems!={},Print["The matching was completed but problems were reported
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV parameters recognition*)
 
 
@@ -1312,28 +1220,19 @@ flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile
 (*From matching result to run card*)
 
 
-Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False"};
-(*Options[matchResToWCscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel"};*)
-matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"]]
-(*matchResToWCscanCard[matchResFile_,mass_,OptionsPattern[]]:=dictPrinterWCscanV2[matchResFile,mass,parametersListFromMatchingResult[matchResFile],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"]]*)
+Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False","OutputFormat"->"Universal"};
+matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]]
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*From model to run card*)
 
 
-Options[modelToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection"};
+Options[modelToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","OutputFormat"->"Universal"};
 modelToUVscanCard[directory_,model_,mass_,looplevel_,OptionsPattern[]]:=Block[{direct},
 matcher[directory,model,looplevel];
 If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
-dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList[directory,"T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model];]
-
-
-(*Options[modelToWCscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection"};
-modelToWCscanCard[directory_,model_,mass_,OptionsPattern[]]:=Block[{direct},
-matcher[directory,model];
-If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
-dictPrinterWCscanV2[direct<>model<>"_MM/MatchingResult.dat",mass,parametersList["~/Music/","T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model];]*)
+dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList[directory,"T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,Not[DuplicateFreeQ[mass]],OptionValue["OutputFormat"]];]
 
 
 (* ::Section::Closed:: *)
