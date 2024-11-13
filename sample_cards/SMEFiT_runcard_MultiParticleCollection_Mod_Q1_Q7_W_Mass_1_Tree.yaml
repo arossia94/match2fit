@@ -1,0 +1,326 @@
+Model name: Q1_Q7_W
+UV Collection: MultiParticleCollection
+UV model: Q1_Q7_W
+coefficients:
+  Opd:
+    constrain:
+    - gWtiH:
+      - -0.375
+      - 2
+    max: 100
+    min: -100
+  OpQM:
+    constrain:
+    max: 100
+    min: -100
+  O3pQ3:
+    constrain:
+    max: 100
+    min: -100
+  O3pl1:
+    constrain:
+    - gWtiH:
+      - -0.25
+      - 1
+      gWLf11:
+      - 1
+      - 1
+    max: 100
+    min: -100
+  O3pl2:
+    constrain:
+    max: 100
+    min: -100
+  O3pl3:
+    constrain:
+    max: 100
+    min: -100
+  Opt:
+    constrain:
+    max: 100
+    min: -100
+  OQQ1:
+    constrain:
+    max: 100
+    min: -100
+  OQQ8:
+    constrain:
+    max: 100
+    min: -100
+  Oll:
+    constrain:
+    max: 100
+    min: -100
+  Oll1111:
+    constrain:
+    - gWtiH:
+      - -0.125
+      - 0
+      gWLf11:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Obp:
+    constrain:
+    - gWtiH:
+      - -0.006002165432052166
+      - 2
+    max: 100
+    min: -100
+  Otp:
+    constrain:
+    - gWtiH:
+      - -0.2480703588615627
+      - 2
+    max: 100
+    min: -100
+  Otap:
+    constrain:
+    - gWtiH:
+      - -0.0025559460452279554
+      - 2
+    max: 100
+    min: -100
+  Op:
+    constrain:
+    - gWtiH:
+      - -0.12938347743146458
+      - 2
+    max: 100
+    min: -100
+  gWtiH:
+    min: -100
+    max: 100
+  gWLf11:
+    min: -100
+    max: 100
+  gWLf22:
+    min: -100
+    max: 100
+  gWLf33:
+    min: -100
+    max: 100
+  gWqf33:
+    min: -100
+    max: 100
+  lamQ1uf3:
+    min: -100
+    max: 100
+  lamQ7f33:
+    min: -100
+    max: 100
+data_path: /path/to/smefit_database/commondata_projections_L0
+datasets:
+- ATLAS_CMS_SSinc_RunI
+- ATLAS_CMS_SSinc_RunI
+- ATLAS_CMS_tt_AC_8TeV
+- ATLAS_CMS_tt_AC_8TeV
+- ATLAS_SSinc_RunII
+- ATLAS_SSinc_RunII
+- ATLAS_SSinc_RunII_proj
+- ATLAS_SSinc_RunII_proj
+- ATLAS_STXS_runII_13TeV
+- ATLAS_STXS_runII_13TeV
+- ATLAS_STXS_runII_13TeV_uncor
+- ATLAS_STXS_runII_13TeV_uncor
+- ATLAS_STXS_runII_13TeV_uncor_proj
+- ATLAS_STXS_runII_13TeV_uncor_proj
+- ATLAS_WH_Hbb_13TeV
+- ATLAS_WH_Hbb_13TeV
+- ATLAS_WH_Hbb_13TeV_proj
+- ATLAS_WH_Hbb_13TeV_proj
+- ATLAS_WW_13TeV_2016_memu
+- ATLAS_WW_13TeV_2016_memu
+- ATLAS_WW_13TeV_2016_memu_proj
+- ATLAS_WW_13TeV_2016_memu_proj
+- ATLAS_WZ_13TeV_2016_mTWZ
+- ATLAS_WZ_13TeV_2016_mTWZ
+- ATLAS_WZ_13TeV_2016_mTWZ_proj
+- ATLAS_WZ_13TeV_2016_mTWZ_proj
+- ATLAS_WhelF_8TeV
+- ATLAS_WhelF_8TeV
+- ATLAS_Whel_13TeV
+- ATLAS_Whel_13TeV
+- ATLAS_Whel_13TeV_uncor
+- ATLAS_Whel_13TeV_uncor
+- ATLAS_Whel_13TeV_uncor_proj
+- ATLAS_Whel_13TeV_uncor_proj
+- ATLAS_ZH_Hbb_13TeV
+- ATLAS_ZH_Hbb_13TeV
+- ATLAS_ZH_Hbb_13TeV_proj
+- ATLAS_ZH_Hbb_13TeV_proj
+- ATLAS_ggF_13TeV_2015
+- ATLAS_ggF_13TeV_2015
+- ATLAS_ggF_13TeV_2015_proj
+- ATLAS_ggF_13TeV_2015_proj
+- ATLAS_ggF_ZZ_13TeV
+- ATLAS_ggF_ZZ_13TeV
+- ATLAS_ggF_ZZ_13TeV_proj
+- ATLAS_ggF_ZZ_13TeV_proj
+- ATLAS_hh_runII_13TeV
+- ATLAS_hh_runII_13TeV
+- ATLAS_tW_13TeV_inc
+- ATLAS_tW_13TeV_inc
+- ATLAS_tW_13TeV_inc_proj
+- ATLAS_tW_13TeV_inc_proj
+- ATLAS_tW_8TeV_inc
+- ATLAS_tW_8TeV_inc
+- ATLAS_tW_slep_8TeV_inc
+- ATLAS_tW_slep_8TeV_inc
+- ATLAS_tZ_13TeV_inc
+- ATLAS_tZ_13TeV_inc
+- ATLAS_tZ_13TeV_run2_inc
+- ATLAS_tZ_13TeV_run2_inc
+- ATLAS_tZ_13TeV_run2_inc_proj
+- ATLAS_tZ_13TeV_run2_inc_proj
+- ATLAS_t_sch_13TeV_inc
+- ATLAS_t_sch_13TeV_inc
+- ATLAS_t_sch_13TeV_inc_proj
+- ATLAS_t_sch_13TeV_inc_proj
+- ATLAS_t_sch_8TeV
+- ATLAS_t_sch_8TeV
+- ATLAS_t_tch_13TeV_inc
+- ATLAS_t_tch_13TeV_inc
+- ATLAS_t_tch_13TeV_inc_proj
+- ATLAS_t_tch_13TeV_inc_proj
+- ATLAS_t_tch_8TeV_diff_Yt
+- ATLAS_t_tch_8TeV_diff_Yt
+- ATLAS_ttW_13TeV
+- ATLAS_ttW_13TeV
+- ATLAS_ttW_13TeV_2016
+- ATLAS_ttW_13TeV_2016
+- ATLAS_ttW_13TeV_2016_proj
+- ATLAS_ttW_13TeV_2016_proj
+- ATLAS_ttW_8TeV
+- ATLAS_ttW_8TeV
+- ATLAS_ttZ_13TeV
+- ATLAS_ttZ_13TeV
+- ATLAS_ttZ_13TeV_2016
+- ATLAS_ttZ_13TeV_2016
+- ATLAS_ttZ_13TeV_pTZ
+- ATLAS_ttZ_13TeV_pTZ
+- ATLAS_ttZ_13TeV_pTZ_uncor
+- ATLAS_ttZ_13TeV_pTZ_uncor
+- ATLAS_ttZ_13TeV_pTZ_uncor_proj
+- ATLAS_ttZ_13TeV_pTZ_uncor_proj
+- ATLAS_ttZ_8TeV
+- ATLAS_ttZ_8TeV
+- ATLAS_tt_13TeV_asy_2022
+- ATLAS_tt_13TeV_asy_2022
+- ATLAS_tt_13TeV_asy_2022_uncor
+- ATLAS_tt_13TeV_asy_2022_uncor
+- ATLAS_tt_13TeV_asy_2022_uncor_proj
+- ATLAS_tt_13TeV_asy_2022_uncor_proj
+- ATLAS_tt_13TeV_ljets_2016_Mtt
+- ATLAS_tt_13TeV_ljets_2016_Mtt
+- ATLAS_tt_13TeV_ljets_2016_Mtt_proj
+- ATLAS_tt_13TeV_ljets_2016_Mtt_proj
+- ATLAS_tt_8TeV_dilep_Mtt
+- ATLAS_tt_8TeV_dilep_Mtt
+- ATLAS_tt_8TeV_ljets_Mtt
+- ATLAS_tt_8TeV_ljets_Mtt
+- ATLAS_tt_AC_13TeV
+- ATLAS_tt_AC_13TeV
+- ATLAS_tta_8TeV
+- ATLAS_tta_8TeV
+- ATLAS_ttbb_13TeV_2016
+- ATLAS_ttbb_13TeV_2016
+- ATLAS_ttbb_13TeV_2016_proj
+- ATLAS_ttbb_13TeV_2016_proj
+- ATLAS_tttt_13TeV_2023
+- ATLAS_tttt_13TeV_2023
+- ATLAS_tttt_13TeV_2023_proj
+- ATLAS_tttt_13TeV_2023_proj
+- ATLAS_tttt_13TeV_run2
+- ATLAS_tttt_13TeV_run2
+- ATLAS_tttt_13TeV_run2_proj
+- ATLAS_tttt_13TeV_run2_proj
+- ATLAS_tttt_13TeV_slep_inc
+- ATLAS_tttt_13TeV_slep_inc
+- ATLAS_tttt_13TeV_slep_inc_proj
+- ATLAS_tttt_13TeV_slep_inc_proj
+- CEPC_161_ww_leptonic_optim_obs
+- CEPC_161_ww_leptonic_optim_obs
+- CEPC_161_ww_semilep_optim_obs
+- CEPC_161_ww_semilep_optim_obs
+- CEPC_240_ww_leptonic_optim_obs
+- CEPC_240_ww_leptonic_optim_obs
+- CEPC_240_ww_semilep_optim_obs
+- CEPC_240_ww_semilep_optim_obs
+- CEPC_365_tt_optim_obs
+- CEPC_365_tt_optim_obs
+- CEPC_365_ww_leptonic_optim_obs
+- CEPC_365_ww_leptonic_optim_obs
+- CEPC_365_ww_semilep_optim_obs
+- CEPC_365_ww_semilep_optim_obs
+- CEPC_Brw_161GeV
+- CEPC_Brw_161GeV
+- CEPC_Brw_240GeV
+- CEPC_Brw_240GeV
+- CEPC_Brw_365GeV
+- CEPC_Brw_365GeV
+- CEPC_Wwidth
+- CEPC_Wwidth
+- CEPC_Zdata
+- CEPC_Zdata
+- CEPC_alphaEW
+- CEPC_alphaEW
+- CEPC_bb_240GeV
+- CEPC_bb_240GeV
+- CEPC_bb_365GeV
+- CEPC_bb_365GeV
+- CEPC_bb_Afb_240GeV
+- CEPC_bb_Afb_240GeV
+- CEPC_bb_Afb_365GeV
+- CEPC_bb_Afb_365GeV
+- CEPC_cc_240GeV
+- CEPC_cc_240GeV
+- CEPC_cc_365GeV
+- CEPC_cc_365GeV
+- CEPC_cc_Afb_240GeV
+- CEPC_cc_Afb_240GeV
+- CEPC_cc_Afb_365GeV
+- CEPC_cc_Afb_365GeV
+- CEPC_ee_240GeV
+- CEPC_ee_240GeV
+- CEPC_ee_365GeV
+- CEPC_ee_365GeV
+- CEPC_ee_Afb_240GeV
+- CEPC_ee_Afb_240GeV
+- CEPC_ee_Afb_365GeV
+- CEPC_ee_Afb_365GeV
+- CEPC_mumu_240GeV
+- CEPC_mumu_240GeV
+- CEPC_mumu_365GeV
+- CEPC_mumu_365GeV
+- CEPC_mumu_Afb_240GeV
+- CEPC_mumu_Afb_240GeV
+- CEPC_mumu_Afb_365GeV
+- CEPC_mumu_Afb_365GeV
+- CEPC_tautau_240GeV
+- CEPC_tautau_240GeV
+- CEPC_tautau_365GeV
+- CEPC_tautau_365GeV
+- CEPC_tautau_Afb_240GeV
+- CEPC_tautau_Afb_240GeV
+- CEPC_tautau_Afb_365GeV
+- CEPC_tautau_Afb_365GeV
+- CEPC_vvh_WW_365GeV
+- CEPC_vvh_WW_365GeV
+- CEPC_vvh_ZZ_365GeV
+- CEPC_vvh_ZZ_365GeV
+- CEPC_vvh_aa_365GeV
+- CEPC_vvh_aa_365GeV
+frac_remain: 0.001
+lepsilon: 0.001
+nlive: 1000
+order: NLO
+result_path: /path/to/your/results/
+target_evidence_unc: 0.5
+target_post_unc: 0.5
+theory_path: /path/to/smefit_database/theory
+use_quad: true
+use_t0: false
+use_theory_covmat: true
+uv_couplings: true
