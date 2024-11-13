@@ -24,6 +24,7 @@ matchResToUVscanCard::usage = "matchResToUVscanCard[matchResFile,mass,looporder,
 prints the run card for a fit on the UV couplings and the card that defines the corresponding UV invariants. It also takes mandatorily a value for the mass of the UV particles which is applied only 
 when producing the run cards. The looporder argument indicates at which loop level the results must be read. It is inconsequential if the source file contains tree-level results only. The OptionalArguments 
 are \"UVFlavourAssumption\", \"Collection\" and \"Model\". An example of how to set them, using their default values is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\",\"Model\"->\"UserModel\"}.";
+matchResToMasScanCard::usage = "For Mass Scans, under development.";
 flavourSymChecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to a fulfilment of the flavour symmetry. It treats the SM yukawas symbolically with the notation used in the matchResFile."
 flavourSolver::usage = "flavourSolver[matchResFile, OptionalArguments] reads the file matchResFile and solves for the UV couplings and SM yukawas such that the WCs fulfill the SMEFiT flavour symmetry. It returns all the possible solutions it finds. 
@@ -74,7 +75,13 @@ findLowestExponent[row_]:=Block[{ret,n},ret=0;n=1;While[ret==0&&n<=1000,If[Membe
 writeStrBlock[varsUV_][elem_,index_]:=Block[{tab},tab=Table[ToString[CForm[varsUV[[i]]]]<>": ["<>Piecewise[{{StringReplace[ToString[InputForm[elem]],"*^"->"e"],i==1}},"1"]<>","<>ToString[index[[i]]-1]<>"]"<>Piecewise[{{",",i<Length[varsUV]}},""],{i,1,Length[varsUV]}];
 "{"<>StringJoin[tab]<>"}"]
 (**)
+writeStrBlockMass[varsUV_][elem_,index_]:=Block[{tab},tab=Table[StringDrop[ToString[CForm[varsUV[[i]]]],3]<>": ["<>Piecewise[{{StringReplace[ToString[InputForm[elem]],"*^"->"e"],i==1}},"1"]<>","<>ToString[-(index[[i]]-1)]<>"]"<>Piecewise[{{",",i<Length[varsUV]}},""],{i,1,Length[varsUV]}];
+"{"<>StringJoin[tab]<>"}"]
+(**)
 writeTabBlock[varsUV_][elem_,index_]:=Block[{tab},tab=Table[{ToString[CForm[varsUV[[i]]]],Piecewise[{{StringReplace[ToString[InputForm[elem]],"*^"->"e"],i==1}},"1"],ToString[index[[i]]-1]},{i,1,Length[varsUV]}];
+tab]
+(**)
+writeTabBlockMass[varsUV_][elem_,index_]:=Block[{tab},tab=Table[{StringDrop[ToString[CForm[varsUV[[i]]]],3],Piecewise[{{StringReplace[ToString[InputForm[elem]],"*^"->"e"],i==1}},"1"],ToString[-(index[[i]]-1)]},{i,1,Length[varsUV]}];
 tab]
 (**)
 reCastString[term_]:=Block[{temp},temp=StringSplit[StringSplit[StringTrim[term,{"{","}"}],","],":"];
@@ -177,7 +184,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 {dicTotal,massString,massReemp}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*MMEFT conventions*)
 
 
@@ -192,7 +199,7 @@ replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[g1, SM],Symbol[
 ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SMEFiT conventions*)
 
 
@@ -214,7 +221,7 @@ datasetSMEFiT=Piecewise[
 ,{"ATLAS_CMS_SSinc_RunI","ATLAS_CMS_tt_AC_8TeV","ATLAS_ggF_13TeV_2015","ATLAS_ggF_13TeV_2015_proj","ATLAS_ggF_ZZ_13TeV","ATLAS_ggF_ZZ_13TeV_proj","ATLAS_hh_runII_13TeV","ATLAS_SSinc_RunII","ATLAS_SSinc_RunII_proj","ATLAS_STXS_runII_13TeV","ATLAS_STXS_runII_13TeV_uncor","ATLAS_STXS_runII_13TeV_uncor_proj","ATLAS_t_sch_13TeV_inc","ATLAS_t_sch_13TeV_inc_proj","ATLAS_t_sch_8TeV","ATLAS_tt_13TeV_asy_2022","ATLAS_tt_13TeV_asy_2022_uncor","ATLAS_tt_13TeV_asy_2022_uncor_proj","ATLAS_tt_13TeV_ljets_2016_Mtt","ATLAS_tt_13TeV_ljets_2016_Mtt_proj","ATLAS_tt_8TeV_dilep_Mtt","ATLAS_tt_8TeV_ljets_Mtt","ATLAS_tta_8TeV","ATLAS_tt_AC_13TeV","ATLAS_ttbb_13TeV_2016","ATLAS_ttbb_13TeV_2016_proj","ATLAS_t_tch_13TeV_inc","ATLAS_t_tch_13TeV_inc_proj","ATLAS_t_tch_8TeV_diff_Yt","ATLAS_tttt_13TeV_2023","ATLAS_tttt_13TeV_2023_proj","ATLAS_tttt_13TeV_run2","ATLAS_tttt_13TeV_run2_proj","ATLAS_tttt_13TeV_slep_inc","ATLAS_tttt_13TeV_slep_inc_proj","ATLAS_ttW_13TeV_2016","ATLAS_ttW_13TeV_2016_proj","ATLAS_ttW_13TeV","ATLAS_ttW_8TeV","ATLAS_ttZ_13TeV_2016","ATLAS_ttZ_13TeV","ATLAS_ttZ_13TeV_pTZ","ATLAS_ttZ_13TeV_pTZ_uncor","ATLAS_ttZ_13TeV_pTZ_uncor_proj","ATLAS_ttZ_8TeV","ATLAS_tW_13TeV_inc","ATLAS_tW_13TeV_inc_proj","ATLAS_tW_8TeV_inc","ATLAS_tW_slep_8TeV_inc","ATLAS_tZ_13TeV_inc","ATLAS_tZ_13TeV_run2_inc","ATLAS_tZ_13TeV_run2_inc_proj","ATLAS_Whel_13TeV","ATLAS_Whel_13TeV_uncor","ATLAS_Whel_13TeV_uncor_proj","ATLAS_WhelF_8TeV","ATLAS_WH_Hbb_13TeV","ATLAS_WH_Hbb_13TeV_proj","ATLAS_WW_13TeV_2016_memu","ATLAS_WW_13TeV_2016_memu_proj","ATLAS_WZ_13TeV_2016_mTWZ","ATLAS_WZ_13TeV_2016_mTWZ_proj","ATLAS_ZH_Hbb_13TeV","ATLAS_ZH_Hbb_13TeV_proj","CEPC_161_ww_leptonic_optim_obs","CEPC_161_ww_semilep_optim_obs","CEPC_240_ww_leptonic_optim_obs","CEPC_240_ww_semilep_optim_obs","CEPC_365_tt_optim_obs","CEPC_365_ww_leptonic_optim_obs","CEPC_365_ww_semilep_optim_obs","CEPC_alphaEW","CEPC_bb_240GeV","CEPC_bb_365GeV","CEPC_bb_Afb_240GeV","CEPC_bb_Afb_365GeV","CEPC_Brw_161GeV","CEPC_Brw_240GeV","CEPC_Brw_365GeV","CEPC_cc_240GeV","CEPC_cc_365GeV","CEPC_cc_Afb_240GeV","CEPC_cc_Afb_365GeV","CEPC_ee_240GeV","CEPC_ee_365GeV","CEPC_ee_Afb_240GeV","CEPC_ee_Afb_365GeV","CEPC_mumu_240GeV","CEPC_mumu_365GeV","CEPC_mumu_Afb_240GeV","CEPC_mumu_Afb_365GeV","CEPC_tautau_240GeV","CEPC_tautau_365GeV","CEPC_tautau_Afb_240GeV","CEPC_tautau_Afb_365GeV","CEPC_vvh_aa_365GeV","CEPC_vvh_bb_240GeV","CEPC_vvh_bb_365GeV","CEPC_vvh_cc_365GeV","CEPC_vvh_gg_365GeV","CEPC_vvh_tautau_365GeV","CEPC_vvh_WW_365GeV","CEPC_vvh_ZZ_365GeV","CEPC_ww_161GeV","CEPC_ww_240GeV","CEPC_ww_365GeV","CEPC_Wwidth","CEPC_Zdata","CEPC_zh_240GeV","CEPC_zh_365GeV","CEPC_zh_aa_240GeV","CEPC_zh_aa_365GeV","CEPC_zh_aZ_240GeV","CEPC_zh_bb_240GeV","CEPC_zh_bb_365GeV","CEPC_zh_cc_240GeV","CEPC_zh_cc_365GeV","CEPC_zh_gg_240GeV","CEPC_zh_gg_365GeV","CEPC_zh_tautau_240GeV","CEPC_zh_tautau_365GeV","CEPC_zh_WW_240GeV","CEPC_zh_WW_365GeV","CEPC_zh_ZZ_240GeV","CEPC_zh_ZZ_365GeV","CMS_ggF_aa_13TeV","CMS_ggF_aa_13TeV_proj","CMS_H_13TeV_2015_pTH","CMS_H_13TeV_2015_pTH_proj","CMS_SSinc_RunII","CMS_SSinc_RunII_proj","CMS_t_sch_8TeV","CMS_tt_13TeV_asy","CMS_tt_13TeV_asy_proj","CMS_tt_13TeV_dilep_2015_Mtt","CMS_tt_13TeV_dilep_2016_Mtt","CMS_tt_13TeV_dilep_2016_Mtt_proj","CMS_tt_13TeV_ljets_2015_Mtt","CMS_tt_13TeV_ljets_2016_Mtt","CMS_tt_13TeV_ljets_inc","CMS_tt_13TeV_ljets_inc_proj","CMS_tt_13TeV_Mtt","CMS_tt_13TeV_Mtt_proj","CMS_tt2D_8TeV_dilep_MttYtt","CMS_tt_8TeV_ljets_Ytt","CMS_tta_8TeV","CMS_ttbb_13TeV_2016","CMS_ttbb_13TeV_2016_proj","CMS_ttbb_13TeV_dilepton_inc","CMS_ttbb_13TeV_dilepton_inc_proj","CMS_ttbb_13TeV","CMS_ttbb_13TeV_ljets_inc","CMS_ttbb_13TeV_ljets_inc_proj","CMS_t_tch_13TeV_2016_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt_proj","CMS_t_tch_13TeV_inc","CMS_t_tch_8TeV_diff_Yt","CMS_t_tch_8TeV_inc","CMS_tttt_13TeV_2023","CMS_tttt_13TeV_2023_proj","CMS_tttt_13TeV","CMS_tttt_13TeV_run2","CMS_tttt_13TeV_run2_proj","CMS_tttt_13TeV_slep_inc","CMS_tttt_13TeV_slep_inc_proj","CMS_ttW_13TeV","CMS_ttW_13TeV_proj","CMS_ttW_8TeV","CMS_ttZ_13TeV","CMS_ttZ_13TeV_pTZ","CMS_ttZ_13TeV_pTZ_proj","CMS_ttZ_8TeV","CMS_tW_13TeV_inc","CMS_tW_13TeV_inc_proj","CMS_tW_13TeV_slep_inc","CMS_tW_13TeV_slep_inc_proj","CMS_tW_8TeV_inc","CMS_tZ_13TeV_2016_inc","CMS_tZ_13TeV_2016_inc_proj","CMS_tZ_13TeV_inc","CMS_tZ_13TeV_pTt","CMS_tZ_13TeV_pTt_uncor","CMS_tZ_13TeV_pTt_uncor_proj","CMS_WhelF_8TeV","CMS_WZ_13TeV_2016_pTZ","CMS_WZ_13TeV_2016_pTZ_proj","CMS_WZ_13TeV_2022_pTZ","CMS_WZ_13TeV_2022_pTZ_proj","FCCee_161_ww_leptonic_optim_obs","FCCee_161_ww_semilep_optim_obs","FCCee_240_ww_leptonic_optim_obs","FCCee_240_ww_semilep_optim_obs","FCCee_365_tt_optim_obs","FCCee_365_ww_leptonic_optim_obs","FCCee_365_ww_semilep_optim_obs","FCCee_alphaEW","FCCee_bb_240GeV","FCCee_bb_365GeV","FCCee_bb_Afb_240GeV","FCCee_bb_Afb_365GeV","FCCee_Brw_161GeV","FCCee_Brw_240GeV","FCCee_Brw_365GeV","FCCee_cc_240GeV","FCCee_cc_365GeV","FCCee_cc_Afb_240GeV","FCCee_cc_Afb_365GeV","FCCee_ee_240GeV","FCCee_ee_365GeV","FCCee_ee_Afb_240GeV","FCCee_ee_Afb_365GeV","FCCee_mumu_240GeV","FCCee_mumu_365GeV","FCCee_mumu_Afb_240GeV","FCCee_mumu_Afb_365GeV","FCCee_tautau_240GeV","FCCee_tautau_365GeV","FCCee_tautau_Afb_240GeV","FCCee_tautau_Afb_365GeV","FCCee_vvh_240GeV","FCCee_vvh_365GeV","FCCee_vvh_aa_365GeV","FCCee_vvh_bb_240GeV","FCCee_vvh_bb_365GeV","FCCee_vvh_cc_365GeV","FCCee_vvh_gg_365GeV","FCCee_vvh_tautau_365GeV","FCCee_vvh_WW_365GeV","FCCee_vvh_ZZ_365GeV","FCCee_ww_161GeV","FCCee_ww_240GeV","FCCee_ww_365GeV","FCCee_Wwidth","FCCee_Zdata","FCCee_zh_240GeV","FCCee_zh_365GeV","FCCee_zh_aa_240GeV","FCCee_zh_aa_365GeV","FCCee_zh_aZ_240GeV","FCCee_zh_bb_240GeV","FCCee_zh_bb_365GeV","FCCee_zh_cc_240GeV","FCCee_zh_cc_365GeV","FCCee_zh_gg_240GeV","FCCee_zh_gg_365GeV","FCCee_zh_tautau_240GeV","FCCee_zh_tautau_365GeV","FCCee_zh_WW_240GeV","FCCee_zh_WW_365GeV","FCCee_zh_ZZ_240GeV","FCCee_zh_ZZ_365GeV","LEP1_EWPOs_2006","LEP_alphaEW","LEP_Bhabha_2013","LEP_Brw_2013","LEP_eeWW_182GeV","LEP_eeWW_189GeV","LEP_eeWW_198GeV","LEP_eeWW_206GeV","LHC_HH_14TeV"}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Flavour assumptions*)
 
 
@@ -581,7 +588,7 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Dictionary and invariant computing*)
 
 
@@ -994,7 +1001,7 @@ coeffList=CoefficientList[dicTotal[[ind1,2]],varsUV];
 (*/// Skip the WCs that are zero. ///*)
 If[coeffList=={}||coeffList=={{0.`}},Continue[];];
 (*/// Convert the format of the list of terms. ///*)
-termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],CoefficientList[N[dicTotal[[ind1,2]]],varsUV],{Length[varsUV]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
+termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],coeffList,{Length[varsUV]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
 WriteLine[str1,"  O"<>StringDrop[printNameWCs[dicTotal[[ind1,1]]],1]<>":"];
 WriteLine[str1,"    constrain:"];
 For[ind2=1,ind2<=Length[termList],ind2++,
@@ -1030,7 +1037,20 @@ WriteLine[str1,"datasets:"];
 For[ind1=1,ind1<=Length[datasetSMEFiT],ind1++,
 WriteLine[str1,"- "<>datasetSMEFiT[[ind1]]];
 ];
-WriteLine[str1,"frac_remain: 0.001\nlepsilon: 0.001\nnlive: 1000\norder: NLO\nresult_path: /path/to/your/results/"];
+WriteLine[str1,"external_chi2:"];
+WriteLine[str1,"  OptimalWW161:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 161.00"];
+WriteLine[str1,"  OptimalWW240:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 240.00"];
+WriteLine[str1,"  OptimalWW365:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 365.00"];
+WriteLine[str1,"  Optimaltt:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 365.00"];
+WriteLine[str1,"maxiter: 10000\nfrac_remain: 0.001\nlepsilon: 0.001\nnlive: 1000\norder: NLO\nresult_path: /path/to/your/results/"];
 WriteLine[str1,"target_evidence_unc: 0.5\ntarget_post_unc: 0.5\ntheory_path: /path/to/smefit_database/theory"];
 WriteLine[str1,"use_quad: true\nuse_t0: false\nuse_theory_covmat: true\nuv_couplings: true"];
 Close[str1]
@@ -1069,17 +1089,133 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
- 
-
-
 (* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
-dictPrinterUVmass[];
+dictPrinterUVmass[matchResFile_,UVcoup_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal"]:=
+Block[{indFree,massString,dicTotal,invertMassesNames,dicInvar,invertMasses,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,massNames,invarsUV,sumTerm,inverRelUV,evalUVcoup,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3},
+(*Load the dictionary with matching results*)
+preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
+{dicTotal,massString,massReemp}=massHandler[matchResFile,1,looplevel,flaUVassum];
+(*/// Remove logs by force. This is easy to justify for one mass, but it is clearly an approximation for several masses.  ///*)
+dicTotal=dicTotal/.{Log[a_]:>0};
+(*/// Get the UV couplings. ///*);
+varsUV=DeleteDuplicates[Variables[dicTotal[[;;,2]]/.massReemp]];
+(*/// Get the mass names. ///*)
+massNames=DeleteCases[massReemp[[;;,1]],Symbol[SymbolName[\[Mu]]]];
+(*///Replacement to get polynomials in the inverse of the masses. ///*)
+invertMassesNames=Table[Symbol["inv"<>SymbolName[massNames[[i]]]],{i,1,Length[massNames]}];
+invertMasses=Table[massNames[[i]]->1/invertMassesNames[[i]],{i,1,Length[massNames]}];
+(*/// Replacement list to evaluate UV couplings. ///*)
+evalUVcoup=Table[varsUV[[i]]->UVcoup,{i,1,Length[varsUV]}];
+(*/// Apply them. ///*)
+dicTotal=(Chop[(dicTotal/.evalUVcoup)])/.invertMasses;
+(*Print the card*)
+orderlabel=Piecewise[{{"Tree",looplevel==0||looplevel=="tree"||looplevel=="Tree"}},"1Loop"];
+If[Length[invertMassesNames]>0,
+If[outFormat=="SMEFiT",
+(*/// Printing the card in the SMEFiT format.///*)
+str1=OpenWrite[NotebookDirectory[]<>"//SMEFiT_runcard_MassScan_"<>collection<>"_Mod_"<>ToString[model]<>"_UVcoup_"<>ToString[UVcoup]<>"_"<>orderlabel<>".yaml"];
+WriteLine[str1,"Model name: "<>ToString[model]];
+WriteLine[str1,"UV Collection: "<>collection];
+WriteLine[str1,"UV model: "<>ToString[model]];
+WriteLine[str1,"coefficients:"];
+For[ind1=1,ind1<=Length[dicTotal],ind1++, (*/// ind1 runs over all the WCs. ///*)
+(*/// Decompose each WC in a polynomial of the UV couplings. ///*)
+coeffList=N[CoefficientList[dicTotal[[ind1,2]]/.invertMasses,invertMassesNames]];
+(*/// Skip the WCs that are zero. ///*)
+If[coeffList=={}||coeffList=={{0.`}},Continue[];];
+(*/// Convert the format of the list of terms. ///*)
+termList=Select[Flatten[MapIndexed[writeTabBlockMass[invertMassesNames],coeffList,{Length[invertMassesNames]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
+WriteLine[str1,"  O"<>StringDrop[printNameWCs[dicTotal[[ind1,1]]],1]<>":"];
+WriteLine[str1,"    constrain:"];
+For[ind2=1,ind2<=Length[termList],ind2++,
+(*/// ind2 runs over the terms in the sum that makes up the WC. ///*)
+sumTerm=termList[[ind2]];
+If[Length[invertMassesNames]>2,sumTerm=Flatten[sumTerm,Length[invertMassesNames]-2]];
+If[Length[invertMassesNames]==1,sumTerm={sumTerm};];
+For[ind3=1,ind3<=Length[invertMassesNames],ind3++,
+(*/// ind3 runs over all the UV masses that can appear in a monomial in each term of the sum. ///*)
+If[ind3==1,
+WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
+WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
+WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
+Continue[];];
+If[sumTerm[[ind3,3]]!="0",
+WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
+WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
+WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
+];
+];
+];
+WriteLine[str1,"    max: 100"];
+WriteLine[str1,"    min: -100"];
+];
+(*///UV masses printing. ///*)
+For[ind1=1,ind1<=Length[massNames],ind1++,
+WriteLine[str1,"  "<>ToString[massNames[[ind1]]]<>":"];
+WriteLine[str1,"    min: 0"];
+WriteLine[str1,"    max: 500"];
+];
+WriteLine[str1,"data_path: /path/to/smefit_database/commondata_projections_L0"];
+WriteLine[str1,"datasets:"];
+For[ind1=1,ind1<=Length[datasetSMEFiT],ind1++,
+WriteLine[str1,"- "<>datasetSMEFiT[[ind1]]];
+];
+WriteLine[str1,"external_chi2:"];
+WriteLine[str1,"  OptimalWW161:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 161.00"];
+WriteLine[str1,"  OptimalWW240:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 240.00"];
+WriteLine[str1,"  OptimalWW365:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 365.00"];
+WriteLine[str1,"  Optimaltt:"];
+WriteLine[str1,"    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py"];
+WriteLine[str1,"    scale: 365.00"];
+WriteLine[str1,"maxiter: 10000\nfrac_remain: 0.001\nlepsilon: 0.001\nnlive: 1000\norder: NLO\nresult_path: /path/to/your/results/"];
+WriteLine[str1,"target_evidence_unc: 0.5\ntarget_post_unc: 0.5\ntheory_path: /path/to/smefit_database/theory"];
+WriteLine[str1,"use_quad: true\nuse_t0: false\nuse_theory_covmat: true\nuv_couplings: true"];
+Close[str1]
+,
+(*/// Printing the scan card in the pseudo-SMEFiT Universal format. ///*)
+str1=OpenWrite[NotebookDirectory[]<>"//out_UV_MasScan_dict_Coll_"<>collection<>"_Mod_"<>ToString[model]<>"_Mass_"<>massString<>"_"<>orderlabel<>".yaml"];
+WriteLine[str1,"# UV dictionary with WCs in terms of UV masses"];
+WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
+WriteLine[str1,"UV Collection : "<>collection];
+WriteLine[str1,"UV model : "<>model];
+WriteLine[str1,"Model name : "<>model];
+WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
+WriteLine[str1,"Fixed couplings : "<>StringReplace[ToString[InputForm[Table[CForm[varsUV[[k]]],{k,1,Length[varsUV]}]]],{"{"->"[","}"->"]","*^"->"e"}]];
+WriteLine[str1,"UV couplings : "<>StringReplace[ToString[InputForm[Table[CForm[preVarsUV[[k]]],{k,1,Length[preVarsUV]}]]],{"{"->"[","}"->"]","*^"->"e"}]];
+WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
+WriteLine[str1,"UV couplings value: "<>ToString[UVcoup]];
+WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
+WriteLine[str1,"# Loop level of the results : "<>orderlabel];
+WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
+WriteLine[str1,"# Expressions for all the WCs in SMEFiT basis"];
+For[ind1=1,ind1<=Length[dicTotal],ind1++,
+WriteLine[str1,printNameWCs[dicTotal[[ind1,1]]]<>" : "<>"["<>StringRiffle[funcRemoveZeros[Flatten[MapIndexed[writeStrBlockMass[invertMassesNames],CoefficientList[N[dicTotal[[ind1,2]]]/.invertMasses,invertMassesNames],{Length[invertMassesNames]}]]],","]<>"]"]
+];
+WriteLine[str1,"# ~~~~~~~~~~~~~~~~~~~~~~"];
+WriteLine[str1,"# Miscellaneous information"];
+WriteLine[str1,"# Matching results address: "<>matchResFile];
+WriteLine[str1,"# Export date: "<>DateString[]];
+Close[str1];];
+(*/// Printing the UV invariants. ///*);
+(*/// Disabled for Mass scans at the moment. ///*)
+(*{invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar/.simpleUVnames)]];
+zeroWCs=Select[dicInvar,(#[[2]]==0)&][[;;,1]];
+nonZeroWCs=Select[dicInvar,(FreeQ[zeroWCs,#[[1]]])&];
+reempNamesRelev=Table[nonZeroWCs[[i,1]]->ToExpression[printNameWCs[nonZeroWCs[[i,1]]]],{i,1,Length[nonZeroWCs]}];
+invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reempNamesRelev];*)
+];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Invariant printing*)
 
 
@@ -1220,8 +1356,24 @@ flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile
 (*From matching result to run card*)
 
 
+(* ::Subsubsection:: *)
+(*UV scan*)
+
+
 Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False","OutputFormat"->"Universal"};
 matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]]
+
+
+(* ::Subsubsection:: *)
+(*Mass scan*)
+
+
+Options[matchResToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False","OutputFormat"->"Universal"};
+matchResToMasScanCard[matchResFile_,UVcoup_,looplevel_,OptionsPattern[]]:=dictPrinterUVmass[matchResFile,UVcoup,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]]
+
+
+(* ::Input:: *)
+(*\[DoubleDot]*)
 
 
 (* ::Subsection:: *)
