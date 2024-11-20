@@ -199,7 +199,7 @@ replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[g1, SM],Symbol[
 ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SMEFiT conventions*)
 
 
@@ -1053,6 +1053,7 @@ WriteLine[str1,"    scale: 365.00"];
 WriteLine[str1,"maxiter: 10000\nfrac_remain: 0.001\nlepsilon: 0.001\nnlive: 1000\norder: NLO\nresult_path: /path/to/your/results/"];
 WriteLine[str1,"target_evidence_unc: 0.5\ntarget_post_unc: 0.5\ntheory_path: /path/to/smefit_database/theory"];
 WriteLine[str1,"use_quad: true\nuse_t0: false\nuse_theory_covmat: true\nuv_couplings: true"];
+WriteLine[str1,"rge:\n init_scale: "<>ToString[(Min[massReemp[[;;,2]]]*1000.0)]<>"\n obs_scale: dynamic\n smeft_accuracy: integrate\n yukawa: top\n adm_QCD: False"];
 Close[str1]
 ,
 (*/// Printing the scan card in the pseudo-SMEFiT Universal format. ///*)
@@ -1089,7 +1090,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Mass Scan printing*)
 
 
@@ -1179,6 +1180,7 @@ WriteLine[str1,"    scale: 365.00"];
 WriteLine[str1,"maxiter: 10000\nfrac_remain: 0.001\nlepsilon: 0.001\nnlive: 1000\norder: NLO\nresult_path: /path/to/your/results/"];
 WriteLine[str1,"target_evidence_unc: 0.5\ntarget_post_unc: 0.5\ntheory_path: /path/to/smefit_database/theory"];
 WriteLine[str1,"use_quad: true\nuse_t0: false\nuse_theory_covmat: true\nuv_couplings: true"];
+WriteLine[str1,"rge:\n init_scale: 4000.0\n obs_scale: dynamic\n smeft_accuracy: integrate\n yukawa: top\n adm_QCD: False"];
 Close[str1]
 ,
 (*/// Printing the scan card in the pseudo-SMEFiT Universal format. ///*)
