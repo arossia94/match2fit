@@ -33,6 +33,7 @@ modelToUVscanCard::usage = "modelToUVscanCard[directory,model,mass,looporder,Opt
 the \), runs MMEFT to add that model to the SM and match it onto SMEFT at looporder level, reads the results and prints the run card for a fit on the UV couplings and the card that defines the corresponding UV invariants.
 It also takes mandatorily a value for the mass of the UV particles which is applied only when producing the run cards. The OptionalArguments are \"UVFlavourAssumption\" and \"Collection\". 
 An example of how to set them, using their default value is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\"}.";
+dictionaryToPrint::usage = "TEST ONLY"
 
 
 Begin["`Private`"];
@@ -153,7 +154,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 ,
 massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
 massString=ToString[massInt];
-dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum/.{};
 massReemp={Symbol[SymbolName[m]]->massInt};
 If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
 ];
@@ -184,7 +185,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 {dicTotal,massString,massReemp}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*MMEFT conventions*)
 
 
@@ -537,7 +538,7 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SM numerical inputs*)
 
 
@@ -588,31 +589,43 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Dictionary*)
 
 
-dictionaryToPrint[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassDegen,dictProv,looporderset},file=Get[matchResFile];
+dictionaryToPrint[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassDegen,oh2Reemp,reempMuH2,dictProv,looporderset,oh4Reemp,reempLam},file=Get[matchResFile];
 looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
 uvparams=parametersListFromMatchingResult[matchResFile,looplevel];
 reempUVreal=Table[ToExpression[ToString[j]<>"bar"]->j,{j,uvparams[[2]]}];
 reempMassDegen=Table[j->Symbol[SymbolName[m]],{j,uvparams[[1]]}];
 dictProv=requiredWCsmeftsimBasisNonEval[[2;;-1]]/.(file[[3]]/.reempMMtoWarsaw/.vanishBviolation)/.file[[4]]/.renormReemp/.leviCivitaConvention;
-dictProv=dictProv/.{Symbol[SymbolName[onelooporder]]->looporderset}/.reempUVreal/.reempMassDegen;
+(*/// Replacement to move away the modifications to the Higgs potential. ///*);
+oh4Reemp=Symbol[SymbolName[alphaOlambda]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassDegen;
+reempLam={Symbol[SymbolName[lam]]->Symbol[SymbolName[lam]]-(oh4Reemp-Symbol[SymbolName[lam]])};
+(*/// Same replacement for the Higgs quadratic piece. ///*);
+oh2Reemp=Symbol[SymbolName[alphaOmuH2]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassDegen;
+reempMuH2={Symbol[SymbolName[muH\.b2]]->Symbol[SymbolName[muH\.b2]]-(oh2Reemp-Symbol[SymbolName[muH\.b2]])};
+dictProv=Normal[Series[dictProv/.reempUVreal/.reempMassDegen/.reempLam/.reempMuH2,{Symbol[SymbolName[onelooporder]],0,looporderset}]]/.{Symbol[SymbolName[onelooporder]]->looporderset};
 dictProv=ParallelTable[{dictProv[[i,1]],EinsteinSum[dictProv[[i,2]]]},{i,1,Length[dictProv]},DistributedContexts -> {"match2fit`Private`"}];
 dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMakerEFT;
 dictProv];
-dictionaryToPrintMultiPart[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassNoDegen,dictProv,looporderset},file=Get[matchResFile];
+dictionaryToPrintMultiPart[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassNoDegen,dictProv,looporderset,oh4Reemp,reempLam,oh2Reemp,reempMuH2},file=Get[matchResFile];
 looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
 uvparams=parametersListFromMatchingResult[matchResFile,looplevel];
 reempUVreal=Table[ToExpression[ToString[j]<>"bar"]->j,{j,uvparams[[2]]}];
 reempMassNoDegen=Table[uvparams[[1]][[j]]->Symbol[SymbolName[m]<>ToString[j]],{j,1,Length[uvparams[[1]]]}];
 dictProv=requiredWCsmeftsimBasisNonEval[[2;;-1]]/.(file[[3]]/.reempMMtoWarsaw/.vanishBviolation)/.file[[4]]/.renormReemp/.leviCivitaConvention;
-dictProv=dictProv/.{Symbol[SymbolName[onelooporder]]->looporderset}/.reempUVreal/.reempMassNoDegen;
+(*/// Replacement to move away the modifications to the Higgs potential. ///*);
+oh4Reemp=Symbol[SymbolName[alphaOlambda]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassNoDegen;
+reempLam={Symbol[SymbolName[lam]]->Symbol[SymbolName[lam]]-(oh4Reemp-Symbol[SymbolName[lam]])};
+(*/// Same replacement for the Higgs quadratic piece. ///*);
+oh2Reemp=Symbol[SymbolName[alphaOmuH2]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassNoDegen;
+reempMuH2={Symbol[SymbolName[muH\.b2]]->Symbol[SymbolName[muH\.b2]]-(oh2Reemp-Symbol[SymbolName[muH\.b2]])};
+dictProv=Normal[Series[dictProv/.reempUVreal/.reempMassNoDegen/.reempLam/.reempMuH2,{Symbol[SymbolName[onelooporder]],0,looporderset}]]/.{Symbol[SymbolName[onelooporder]]->looporderset};
 dictProv=ParallelTable[{dictProv[[i,1]],EinsteinSum[dictProv[[i,2]]]},{i,1,Length[dictProv]},DistributedContexts -> {"match2fit`Private`"}];
 dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMakerEFT;
 {dictProv,uvparams[[1]]}];
@@ -1090,7 +1103,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
