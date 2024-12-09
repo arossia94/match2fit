@@ -34,12 +34,14 @@ the \), runs MMEFT to add that model to the SM and match it onto SMEFT at loopor
 It also takes mandatorily a value for the mass of the UV particles which is applied only when producing the run cards. The OptionalArguments are \"UVFlavourAssumption\" and \"Collection\". 
 An example of how to set them, using their default value is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\"}.";
 dictionaryToPrint::usage = "TEST ONLY"
+reempMuH2::usage="TEST ONLY"
+reempLamH4::usage="TEST ONLY"
 
 
 Begin["`Private`"];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Utility functions*)
 
 
@@ -198,6 +200,36 @@ listWCsMatchMakerEFT:={alphaKB,alphaKW,alphaKG,alphaKq[mif1_,mif2_],alphaKl[mif1
 reempMMtoWarsaw:={Symbol[SymbolName[alphaWeinberg]]->Subscript[Symbol[SymbolName[wwC]], 5],Symbol[SymbolName[alphaOll]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]],Symbol[SymbolName[alphaOqq1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ qq1]]],Symbol[SymbolName[alphaOqq3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ qq3]]],Symbol[SymbolName[alphaOlq1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]],Symbol[SymbolName[alphaOlq3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]],Symbol[SymbolName[alphaOee]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]],Symbol[SymbolName[alphaOdd]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[dd]]],Symbol[SymbolName[alphaOuu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]],Symbol[SymbolName[alphaOed]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ed]]],Symbol[SymbolName[alphaOeu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eu]]],Symbol[SymbolName[alphaOud1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ud1]]],Symbol[SymbolName[alphaOud8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ud8]]],Symbol[SymbolName[alphaOle]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]],Symbol[SymbolName[alphaOld]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]],Symbol[SymbolName[alphaOlu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]],Symbol[SymbolName[alphaOqe]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]],Symbol[SymbolName[alphaOqu1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu1]]],Symbol[SymbolName[alphaOqu8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]],Symbol[SymbolName[alphaOqd1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd1]]],Symbol[SymbolName[alphaOqd8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qd8]]],Symbol[SymbolName[alphaOledq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ ledq]]],Symbol[SymbolName[alphaOquqd1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ quqd1]]],Symbol[SymbolName[alphaOquqd8]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ quqd8]]],Symbol[SymbolName[alphaOlequ1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lequ1]]],Symbol[SymbolName[alphaOlequ3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ lequ3]]],Symbol[SymbolName[alphaOduq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ duq]]],Symbol[SymbolName[alphaOqqu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]],Symbol[SymbolName[alphaOqqq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]],Symbol[SymbolName[alphaOduu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]],Symbol[SymbolName[alphaO3W]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[W]]],Symbol[SymbolName[alphaO3Wt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ Wtil]]],Symbol[SymbolName[alphaO3G]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[G]]],Symbol[SymbolName[alphaO3Gt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ Gtil]]],Symbol[SymbolName[alphaOH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]]]],Symbol[SymbolName[alphaOHD]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]D]]],Symbol[SymbolName[alphaOHBox]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Sq]]],Symbol[SymbolName[alphaOHB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]B]]],Symbol[SymbolName[alphaOHBt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Btil]]],Symbol[SymbolName[alphaOHW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]W]]],Symbol[SymbolName[alphaOHWt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Wtil]]],Symbol[SymbolName[alphaOHWB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]WB]]],Symbol[SymbolName[alphaOHWBt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]WBtil]]],Symbol[SymbolName[alphaOHG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]G]]],Symbol[SymbolName[alphaOHGt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]Gtil]]],Symbol[SymbolName[alphaOeH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ e\[Phi]]]],Symbol[SymbolName[alphaOdH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ d\[Phi]]]],Symbol[SymbolName[alphaOuH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ u\[Phi]]]],Symbol[SymbolName[alphaOeB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eB]]],Symbol[SymbolName[alphaOeW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eW]]],Symbol[SymbolName[alphaOdB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ dB]]],Symbol[SymbolName[alphaOuB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]],Symbol[SymbolName[alphaOuW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ uW]]],Symbol[SymbolName[alphaOdW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[dW]]],Symbol[SymbolName[alphaOdG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ dG]]],Symbol[SymbolName[alphaOuG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ uG]]],Symbol[SymbolName[alphaOHl1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]],Symbol[SymbolName[alphaOHl3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]L3]]],Symbol[SymbolName[alphaOHq1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]q1]]],Symbol[SymbolName[alphaOHq3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]q3]]],Symbol[SymbolName[alphaOHe]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]e]]],Symbol[SymbolName[alphaOHd]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]d]]],Symbol[SymbolName[alphaOHu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]u]]],Symbol[SymbolName[alphaOHud]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]ud]]],Symbol[SymbolName[alphaOlambda]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]4]]],Symbol[SymbolName[alphaOlambdad]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[d]]],Symbol[SymbolName[alphaOlambdae]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[e]]],Symbol[SymbolName[alphaOlambdau]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[u]]]};
 replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[g1, SM],Symbol[SymbolName[g2]]->Subscript[g2,SM],Symbol[SymbolName[g3]]->Subscript[g3,SM],Symbol[SymbolName[yu]][a_,b_]->y[u][a,b],Symbol[SymbolName[yubar]][a_,b_]->Conjugate[y[u][a,b]],Symbol[SymbolName[yd]][a_,b_]->y[d][a,b],Symbol[SymbolName[ydbar]][a_,b_]->Conjugate[y[d][a,b]],Symbol[SymbolName[yl]][a_,b_]->y[e][a,b],Symbol[SymbolName[ylbar]][a_,b_]->Conjugate[y[e][a,b]],Symbol[SymbolName[lam]]->\[Lambda]\[Phi],Symbol[SymbolName[muH]]->I*Rationalize[mSM[h]/Sqrt[2.]]};
 ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
+(*/// Function to move all the corrections to \[Mu]\.b2 to the dimension-6 WCs via coupling redefinitions. ///*)
+reempMuH2[resMMEFT_]:=Module[{simpExp,x,ret,solutions},
+simpExp=Symbol[SymbolName[alphaOmuH2]]/.resMMEFT/.renormReemp/.{Symbol[SymbolName[muH]]->Sqrt[x]};
+solutions=Solve[Symbol[SymbolName[muH]]^2==simpExp,x];
+If[Length[solutions]==0 ||Length[solutions]>2,Print["WARNING: something is going wrong in computing the replacement of \[Mu]\.b2"];
+ret={Symbol[SymbolName[muH]]->0}];
+If[Length[solutions]==1,
+ret={Symbol[SymbolName[muH]]->Sqrt[Normal[Series[solutions[[1,1,2]],{onelooporder,0,1}]]]}];
+If[Length[solutions]==2,
+If[SeriesCoefficient[solutions[[1,1,2]],{onelooporder,0,-1}]==0,
+ret={Symbol[SymbolName[muH]]->Sqrt[Normal[Series[solutions[[1,1,2]],{onelooporder,0,1}]]]};,
+ret={Symbol[SymbolName[muH]]->Sqrt[Normal[Series[solutions[[2,1,2]],{onelooporder,0,1}]]]}
+];
+];
+ret]
+(*/// Function to move all the corrections to \[Lambda] to the dimension-6 WCs via coupling redefinitions. ///*)
+reempLamH4[resMMEFT_]:=Module[{simpExp,x,ret,solutions},
+simpExp=Symbol[SymbolName[alphaOlambda]]/.resMMEFT/.renormReemp/.{Symbol[SymbolName[lam]]->x};
+solutions=Solve[Symbol[SymbolName[lam]]==simpExp,x];
+If[Length[solutions]==0 ||Length[solutions]>2,Print["WARNING: something is going wrong in computing the replacement of \[Lambda]"];
+ret={Symbol[SymbolName[lam]]->0}];
+If[Length[solutions]==1,
+ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[1,1,2]],{onelooporder,0,1}]]}];
+If[Length[solutions]==2,
+If[SeriesCoefficient[solutions[[1,1,2]],{onelooporder,0,-1}]==0,
+ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[1,1,2]],{onelooporder,0,1}]]};,
+ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[2,1,2]],{onelooporder,0,1}]]}
+];
+];
+ret]
 
 
 (* ::Section:: *)
@@ -597,35 +629,31 @@ y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2
 (*Dictionary*)
 
 
-dictionaryToPrint[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassDegen,oh2Reemp,reempMuH2,dictProv,looporderset,oh4Reemp,reempLam},file=Get[matchResFile];
+dictionaryToPrint[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassDegen,reempmuh2,dictProv,looporderset,oh4Reemp,reempLam},file=Get[matchResFile];
 looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
 uvparams=parametersListFromMatchingResult[matchResFile,looplevel];
 reempUVreal=Table[ToExpression[ToString[j]<>"bar"]->j,{j,uvparams[[2]]}];
 reempMassDegen=Table[j->Symbol[SymbolName[m]],{j,uvparams[[1]]}];
 dictProv=requiredWCsmeftsimBasisNonEval[[2;;-1]]/.(file[[3]]/.reempMMtoWarsaw/.vanishBviolation)/.file[[4]]/.renormReemp/.leviCivitaConvention;
 (*/// Replacement to move away the modifications to the Higgs potential. ///*);
-oh4Reemp=Symbol[SymbolName[alphaOlambda]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassDegen;
-reempLam={Symbol[SymbolName[lam]]->Symbol[SymbolName[lam]]-(oh4Reemp-Symbol[SymbolName[lam]])};
+reempLam=reempLamH4[file[[3]]];
 (*/// Same replacement for the Higgs quadratic piece. ///*);
-oh2Reemp=Symbol[SymbolName[alphaOmuH2]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassDegen;
-reempMuH2={Symbol[SymbolName[muH\.b2]]->Symbol[SymbolName[muH\.b2]]-(oh2Reemp-Symbol[SymbolName[muH\.b2]])};
-dictProv=Normal[Series[dictProv/.reempUVreal/.reempMassDegen/.reempLam/.reempMuH2,{Symbol[SymbolName[onelooporder]],0,looporderset}]]/.{Symbol[SymbolName[onelooporder]]->looporderset};
+reempmuh2=reempMuH2[file[[3]]];
+dictProv=Normal[Series[dictProv/.reempUVreal/.reempLam/.reempmuh2/.reempMassDegen,{Symbol[SymbolName[onelooporder]],0,looporderset}]]/.{Symbol[SymbolName[onelooporder]]->looporderset};
 dictProv=ParallelTable[{dictProv[[i,1]],EinsteinSum[dictProv[[i,2]]]},{i,1,Length[dictProv]},DistributedContexts -> {"match2fit`Private`"}];
 dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMakerEFT;
 dictProv];
-dictionaryToPrintMultiPart[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassNoDegen,dictProv,looporderset,oh4Reemp,reempLam,oh2Reemp,reempMuH2},file=Get[matchResFile];
+dictionaryToPrintMultiPart[matchResFile_,looplevel_]:=Module[{file,uvparams,reempUVreal,reempMassNoDegen,dictProv,looporderset,reempLam,reempmuh2},file=Get[matchResFile];
 looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
 uvparams=parametersListFromMatchingResult[matchResFile,looplevel];
 reempUVreal=Table[ToExpression[ToString[j]<>"bar"]->j,{j,uvparams[[2]]}];
 reempMassNoDegen=Table[uvparams[[1]][[j]]->Symbol[SymbolName[m]<>ToString[j]],{j,1,Length[uvparams[[1]]]}];
 dictProv=requiredWCsmeftsimBasisNonEval[[2;;-1]]/.(file[[3]]/.reempMMtoWarsaw/.vanishBviolation)/.file[[4]]/.renormReemp/.leviCivitaConvention;
 (*/// Replacement to move away the modifications to the Higgs potential. ///*);
-oh4Reemp=Symbol[SymbolName[alphaOlambda]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassNoDegen;
-reempLam={Symbol[SymbolName[lam]]->Symbol[SymbolName[lam]]-(oh4Reemp-Symbol[SymbolName[lam]])};
+reempLam=reempLamH4[file[[3]]];
 (*/// Same replacement for the Higgs quadratic piece. ///*);
-oh2Reemp=Symbol[SymbolName[alphaOmuH2]]/.(file[[3]])/.file[[4]]/.renormReemp/.leviCivitaConvention/.reempUVreal/.reempMassNoDegen;
-reempMuH2={Symbol[SymbolName[muH\.b2]]->Symbol[SymbolName[muH\.b2]]-(oh2Reemp-Symbol[SymbolName[muH\.b2]])};
-dictProv=Normal[Series[dictProv/.reempUVreal/.reempMassNoDegen/.reempLam/.reempMuH2,{Symbol[SymbolName[onelooporder]],0,looporderset}]]/.{Symbol[SymbolName[onelooporder]]->looporderset};
+reempmuh2=reempMuH2[file[[3]]];
+dictProv=Normal[Series[dictProv/.reempUVreal/.reempLam/.reempmuh2/.reempMassNoDegen,{Symbol[SymbolName[onelooporder]],0,looporderset}]]/.{Symbol[SymbolName[onelooporder]]->looporderset};
 dictProv=ParallelTable[{dictProv[[i,1]],EinsteinSum[dictProv[[i,2]]]},{i,1,Length[dictProv]},DistributedContexts -> {"match2fit`Private`"}];
 dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMakerEFT;
 {dictProv,uvparams[[1]]}];
