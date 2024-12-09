@@ -1195,8 +1195,8 @@ WriteLine[str1,"    min: -100"];
 ];
 (*///UV masses printing. ///*)
 For[ind1=1,ind1<=Length[massNames],ind1++,
-WriteLine[str1,"    is_mass: true"];
 WriteLine[str1,"  "<>ToString[massNames[[ind1]]]<>":"];
+WriteLine[str1,"    is_mass: true"];
 WriteLine[str1,"    min: 0.1"];
 WriteLine[str1,"    max: 300"];
 ];
