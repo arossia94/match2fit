@@ -1,0 +1,93 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "Xi_1";
+
+
+FeynmanGauge = True;
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+S[667]=={ClassName->Sa,
+SelfConjugate->False,
+QuantumNumbers->{Y-> 1},
+Indices->{Index[SU2W]},
+FullName->"heavy",
+Mass->MSa,
+Width->0}};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+  
+MSa== { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+ TS11=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+L1=={
+ParameterType->Internal,
+ComplexParameter->True},
+ TS21=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2W], Index[SU2D], Index[SU2W]},
+ComplexParameter->True},
+ TS22=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2W], Index[SU2D], Index[SU2W]},
+ComplexParameter->True},
+L2=={
+ParameterType->Internal,
+ComplexParameter->False},
+L3=={
+ParameterType->Internal,
+ComplexParameter->False},
+ TS31=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2W], Index[SU2W], Index[SU2W]},
+ComplexParameter->True},
+ TS33=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2W], Index[SU2W], Index[SU2W]},
+ComplexParameter->True},
+L4=={
+ParameterType->Internal,
+ComplexParameter->False},
+L5=={
+ParameterType->Internal,
+ComplexParameter->False},
+ TS41=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2W]},
+ComplexParameter->True},
+L6=={
+ParameterType->Internal,
+Indices-> {Index[Generation],Index[Generation]},
+ComplexParameter->True}};
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+
+LHeavy := Block[{mu,ii,cc,nn}, DC[Sa[nn], mu]*DC[Sabar[nn], mu] + MSa^2 Sabar[nn] Sa[nn] ]/.gotoBFM;
+
+ LNP:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L1 Sabar[ss0] Phi[ss1] Phi[ss2] TS11[ss0, ss1, ss2] + L6[ff0,ff1] CC[LLbar[sp1,ss0,ff0]].LL[sp1,ss1,ff1] Sa[ss2] TS41[ss0, ss1, ss2]];
+
+ LNPH:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L2 Phibar[ss0] Sabar[ss1] Phi[ss2] Sa[ss3] TS21[ss0, ss1, ss2, ss3] (* + L3 Phibar[ss0] Sabar[ss1] Phi[ss2] Sa[ss3] TS22[ss0, ss1, ss2, ss3] *) + L4 Sabar[ss0] Sabar[ss1] Sa[ss2] Sa[ss3] TS31[ss0, ss1, ss2, ss3] + L5 Sabar[ss0] Sabar[ss1] Sa[ss2] Sa[ss3] TS33[ss0, ss1, ss2, ss3] ];
+
+Ltot := LSM + LHeavy + LNP + HC[LNP] + LNPH;
