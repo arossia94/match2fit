@@ -156,7 +156,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 ,
 massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
 massString=ToString[massInt];
-dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum/.{};
+dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
 massReemp={Symbol[SymbolName[m]]->massInt};
 If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
 ];
