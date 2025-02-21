@@ -233,7 +233,7 @@ ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[2,1,2]],{onelooporder,0,1
 ret]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SMEFiT conventions*)
 
 
@@ -569,7 +569,7 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SM numerical inputs*)
 
 
@@ -620,11 +620,11 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Dictionary*)
 
 
@@ -1038,9 +1038,9 @@ WriteLine[str1,"coefficients:"];
 For[ind1=1,ind1<=Length[dicTotal],ind1++, (*/// ind1 runs over all the WCs. ///*)
 (*/// Decompose each WC in a polynomial of the UV couplings. ///*)
 Print[N[dicTotal[[ind1]]]];
-Print[Length[N[dicTotal[[ind1,2]]]]];
 (*// THe 0. is added to recognize monomials with divisions right, as with length 1 //*);
-coeffList=Table[funcTermPol[0.+N[dicTotal[[ind1,2]]],varsUV],{i,1,Length[0.+N[dicTotal[[ind1,2]]]]}];
+coeffList=Piecewise[{{{Flatten[{N[dicTotal[[ind1,2]]],Table[0,{i,1,Length[varsUV]}]}]},Length[N[dicTotal[[ind1,2]]]]==0}},
+Select[Table[funcTermPol[(0.+N[dicTotal[[ind1,2]]])[[i]],varsUV],{i,1,Length[0.+N[dicTotal[[ind1,2]]]]}],(#[[1]]!=0)&]];
 Print[coeffList];
 (*/// coeffList=N[CoefficientList[dicTotal[[ind1,2]],varsUV]]; DEPRECATED ///*)
 (*/// Skip the WCs that are zero. ///*)
@@ -1048,7 +1048,8 @@ If[coeffList=={}||coeffList=={{0.`}},Continue[];];
 (*/// Convert the format of the list of terms. ///*)
 (*/// 
 termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],coeffList,{Length[varsUV]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
-DEPRECATED ///*)
+DEPRECATED 
+///*)
 WriteLine[str1,"  O"<>StringDrop[printNameWCs[dicTotal[[ind1,1]]],1]<>":"];
 WriteLine[str1,"    constrain:"];
 For[ind2=1,ind2<=Length[coeffList],ind2++,
@@ -1059,7 +1060,7 @@ For[ind3=1,ind3<=Length[varsUV],ind3++,
 (*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
 If[ind3==1,
 WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>ToString[CForm[varsUV[[ind3]]]]<>":"];
-WriteLine[str1,"      - "<>ToString[CForm[sumTerm[[1]]]]];
+WriteLine[str1,"      - "<>ToString[CForm[N[sumTerm[[1]],10]]]];
 WriteLine[str1,"      - "<>ToString[CForm[sumTerm[[ind3+1]]]]];
 Continue[];];
 If[sumTerm[[ind3+1]]!=0,
@@ -1138,7 +1139,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Mass Scan printing*)
 
 
@@ -1267,7 +1268,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Invariant printing*)
 
 
@@ -1301,7 +1302,7 @@ WriteLine[str2,"\treturn "<>StringReplace[ToString[FortranForm[invarsUV[[indInva
 Close[str2];]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Public functions*)
 
 

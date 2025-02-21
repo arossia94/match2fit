@@ -67,5 +67,5 @@ ctZ : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
 cp : [{lamvarphi: [0.015625,2],yVarphiuf33: [1,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
-# Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult_Varphi_oneloop.dat
-# Export date: Fri 24 Jan 2025 10:46:03
+# Matching results address: /home/alejorossia/match2fit//sample_results/MatchingResult_Varphi_oneloop.dat
+# Export date: Fri 21 Feb 2025 17:41:58
