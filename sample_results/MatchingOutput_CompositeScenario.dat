@@ -1,0 +1,135 @@
+{{}, {}, {alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1, 
+  alphaO3G -> -(g3^3/(gSt^2*mSt^2)), alphaO3Gt -> 0, 
+  alphaO3W -> -(g2^3/(gSt^2*mSt^2)), alphaO3Wt -> 0, 
+  alphaOH -> -(((g2^4 - 4*g2^2*gSt^2 + gSt^4)*lam)/(gSt^2*mSt^2)), 
+  alphaOHB -> (3*g1^2)/(4*mSt^2), alphaOHBox -> 
+   -(4*g1^4*g2*Pi^2 + 12*g2^5*Pi^2 - 8*g1^3*gSt^2*Pi^2 - 
+      8*g1^2*g2*gSt^2*Pi^2 - 48*g2^3*gSt^2*Pi^2 + 16*g2*gSt^4*Pi^2 + 
+      g2*gSt^2*yu[3, 3]^4)/(32*g2*gSt^2*mSt^2*Pi^2), alphaOHBt -> 0, 
+  alphaOHD -> (8*g1^2 + (8*g1^3)/g2 - (4*g1^4)/gSt^2 - yu[3, 3]^4/Pi^2)/
+    (8*mSt^2), alphaOHG -> g3^2/mSt^2, alphaOHGt -> 0, 
+  alphaOHW -> -g2^2/(4*mSt^2), alphaOHWB -> -(g1*g2)/(2*mSt^2), 
+  alphaOHWBt -> 0, alphaOHWt -> 0, alphaOlambda -> lam, alphaOmuH2 -> muH^2, 
+  alphaKd[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKdbar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKe[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKebar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKl[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKlbar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKq[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKqbar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKu[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaKubar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaOddbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOeebar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOHdbar[mif1_, mif2_] -> (g1^2*(g1^2*g2 - g1*gSt^2 - g2*gSt^2))/
+    (6*g2*gSt^2*mSt^2), alphaOHebar[mif1_, mif2_] -> 
+   (g1^2*(g1^2*g2 - g1*gSt^2 - g2*gSt^2))/(2*g2*gSt^2*mSt^2), 
+  alphaOHl1bar[mif1_, mif2_] -> (g1^2*(g1^2*g2 - g1*gSt^2 - g2*gSt^2)*
+     (KroneckerDelta[1, mif1]*KroneckerDelta[1, mif2] + 
+      KroneckerDelta[2, mif1]*KroneckerDelta[2, mif2] + 
+      KroneckerDelta[3, mif1]*KroneckerDelta[3, mif2])*
+     KroneckerDelta[mif1, mif2])/(4*g2*gSt^2*mSt^2), 
+  alphaOHl3bar[mif1_, mif2_] -> 
+   -((g2^4 - 2*g2^2*gSt^2)*(KroneckerDelta[1, mif1]*KroneckerDelta[1, mif2] + 
+       KroneckerDelta[2, mif1]*KroneckerDelta[2, mif2] + 
+       KroneckerDelta[3, mif1]*KroneckerDelta[3, mif2])*
+      KroneckerDelta[mif1, mif2])/(4*gSt^2*mSt^2), 
+  alphaOHq1bar[mif1_, mif2_] -> (g1^2*(-(g1^2*g2) + g1*gSt^2 + g2*gSt^2)*
+     KroneckerDelta[mif1, mif2])/(12*g2*gSt^2*mSt^2), 
+  alphaOHq3bar[mif1_, mif2_] -> 
+   -((g2^4 - 2*g2^2*gSt^2)*KroneckerDelta[mif1, mif2])/(4*gSt^2*mSt^2), 
+  alphaOHubar[mif1_, mif2_] -> (g1^2*(-(g1^2*g2) + g1*gSt^2 + g2*gSt^2)*
+     KroneckerDelta[mif1, mif2])/(3*g2*gSt^2*mSt^2), 
+  alphaOllbar[mif1_, mif2_, mif3_, mif4_] -> 
+   -(KroneckerDelta[1, mif1]*KroneckerDelta[2, mif3]*
+      (2*g2^4*KroneckerDelta[1, mif4]*KroneckerDelta[2, mif2] + 
+       (g1^4 - g2^4)*KroneckerDelta[1, mif2]*KroneckerDelta[2, mif4]))/
+    (4*gSt^2*mSt^2), alphaOuubar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaWeinberg[mif1_, mif2_] -> 0, alphaWeinbergbar[mif1_, mif2_] -> 0, 
+  alphaOdB[mif1_, mif2_] -> 0, alphaOdBbar[mif1_, mif2_] -> 0, 
+  alphaOdd[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOdG[mif1_, mif2_] -> 0, 
+  alphaOdGbar[mif1_, mif2_] -> 0, alphaOdH[mif1_, mif2_] -> 
+   ((-g2^4 + 2*g2^2*gSt^2 + 2*gSt^4)*KroneckerDelta[3, mif1]*
+     KroneckerDelta[3, mif2]*yd[3, 3])/(2*gSt^2*mSt^2), 
+  alphaOdHbar[mif1_, mif2_] -> ((-g2^4 + 2*g2^2*gSt^2 + 2*gSt^4)*
+     KroneckerDelta[3, mif1]*KroneckerDelta[3, mif2]*yd[3, 3])/
+    (2*gSt^2*mSt^2), alphaOdW[mif1_, mif2_] -> 0, 
+  alphaOdWbar[mif1_, mif2_] -> 0, alphaOeB[mif1_, mif2_] -> 0, 
+  alphaOeBbar[mif1_, mif2_] -> 0, alphaOed[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOedbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOee[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeH[mif1_, mif2_] -> 
+   ((-g2^4 + 2*g2^2*gSt^2 + 2*gSt^4)*KroneckerDelta[3, mif1]*
+     KroneckerDelta[3, mif2]*yl[3, 3])/(2*gSt^2*mSt^2), 
+  alphaOeHbar[mif1_, mif2_] -> ((-g2^4 + 2*g2^2*gSt^2 + 2*gSt^4)*
+     KroneckerDelta[3, mif1]*KroneckerDelta[3, mif2]*yl[3, 3])/
+    (2*gSt^2*mSt^2), alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOeubar[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeW[mif1_, mif2_] -> 0, 
+  alphaOeWbar[mif1_, mif2_] -> 0, alphaOHd[mif1_, mif2_] -> 
+   (g1^2*(g1^2*g2 - g1*gSt^2 - g2*gSt^2)*KroneckerDelta[mif1, mif2])/
+    (6*g2*gSt^2*mSt^2), alphaOHe[mif1_, mif2_] -> 
+   (g1^2*(g1^2*g2 - g1*gSt^2 - g2*gSt^2)*KroneckerDelta[mif1, mif2])/
+    (2*g2*gSt^2*mSt^2), alphaOHl1[mif1_, mif2_] -> 
+   (g1^2*(g1^2*g2 - g1*gSt^2 - g2*gSt^2)*KroneckerDelta[mif1, mif2])/
+    (4*g2*gSt^2*mSt^2), alphaOHl3[mif1_, mif2_] -> 
+   -((g2^4 - 2*g2^2*gSt^2)*KroneckerDelta[mif1, mif2])/(4*gSt^2*mSt^2), 
+  alphaOHq1[mif1_, mif2_] -> (g1^2*(-(g1^2*g2) + g1*gSt^2 + g2*gSt^2)*
+     KroneckerDelta[mif1, mif2])/(12*g2*gSt^2*mSt^2), 
+  alphaOHq3[mif1_, mif2_] -> 
+   -((g2^4 - 2*g2^2*gSt^2)*KroneckerDelta[mif1, mif2])/(4*gSt^2*mSt^2), 
+  alphaOHu[mif1_, mif2_] -> (g1^2*(-(g1^2*g2) + g1*gSt^2 + g2*gSt^2)*
+     KroneckerDelta[mif1, mif2])/(3*g2*gSt^2*mSt^2), 
+  alphaOHud[mif1_, mif2_] -> 0, alphaOHudbar[mif1_, mif2_] -> 0, 
+  alphaOld[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOldbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOle[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlebar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOledq[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOledqbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlequ1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlequ1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlequ3[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlequ3bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOll[mif1_, mif2_, mif3_, mif4_] -> 
+   -(KroneckerDelta[1, mif1]*KroneckerDelta[2, mif3]*
+      (2*g2^4*KroneckerDelta[1, mif4]*KroneckerDelta[2, mif2] + 
+       (g1^4 - g2^4)*KroneckerDelta[1, mif2]*KroneckerDelta[2, mif4]))/
+    (4*gSt^2*mSt^2), alphaOlq1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlq1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlq3[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlq3bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlu[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOlubar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqd1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqd1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqd8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqd8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqe[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqebar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqq1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqq1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqq3[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqq3bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqu1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqu1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqu8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOqu8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOquqd1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOquqd1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOquqd8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOquqd8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOuB[mif1_, mif2_] -> 0, alphaOuBbar[mif1_, mif2_] -> 0, 
+  alphaOud1[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOud1bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOud8[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOud8bar[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOuG[mif1_, mif2_] -> 0, 
+  alphaOuGbar[mif1_, mif2_] -> 0, alphaOuH[mif1_, mif2_] -> 0, 
+  alphaOuHbar[mif1_, mif2_] -> 0, alphaOuu[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOuW[mif1_, mif2_] -> 0, alphaOuWbar[mif1_, mif2_] -> 0, 
+  alphaOlambdad[mif1_, mif2_] -> yd[mif1, mif2], 
+  alphaOlambdadbar[mif1_, mif2_] -> ydbar[mif1, mif2], 
+  alphaOlambdae[mif1_, mif2_] -> yl[mif1, mif2], 
+  alphaOlambdaebar[mif1_, mif2_] -> ylbar[mif1, mif2], 
+  alphaOlambdau[mif1_, mif2_] -> yu[mif1, mif2], 
+  alphaOlambdaubar[mif1_, mif2_] -> yubar[mif1, mif2]}, 
+ {g1 -> g1, g2 -> g2, g3 -> g3}}

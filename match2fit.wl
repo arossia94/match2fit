@@ -33,15 +33,12 @@ modelToUVscanCard::usage = "modelToUVscanCard[directory,model,mass,looporder,Opt
 the \), runs MMEFT to add that model to the SM and match it onto SMEFT at looporder level, reads the results and prints the run card for a fit on the UV couplings and the card that defines the corresponding UV invariants.
 It also takes mandatorily a value for the mass of the UV particles which is applied only when producing the run cards. The OptionalArguments are \"UVFlavourAssumption\" and \"Collection\". 
 An example of how to set them, using their default value is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\"}.";
-(*dictionaryToPrint::usage = "TEST ONLY"
-reempMuH2::usage="TEST ONLY"
-reempLamH4::usage="TEST ONLY"*)
 
 
 Begin["`Private`"];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Utility functions*)
 
 
@@ -185,6 +182,10 @@ massReemp={Symbol[SymbolName[m]]->massInt};
 If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
 ];
 {dicTotal,massString,massReemp}]
+(*/// New function for WC with negative powers of UV couplings ///*)
+funcTermPol[term_,varUV_]:=Block[{expo},
+expo=Exponent[term,varUV];
+{Piecewise[{{Coefficient[term,varUV[[1]],0],Total[Abs[expo]]==0}},Coefficient[term,Product[varUV[[i]]^expo[[i]],{i,1,Length[varUV]}],1]],expo}//Flatten]
 
 
 (* ::Section::Closed:: *)
@@ -1036,38 +1037,45 @@ WriteLine[str1,"UV model: "<>ToString[model]];
 WriteLine[str1,"coefficients:"];
 For[ind1=1,ind1<=Length[dicTotal],ind1++, (*/// ind1 runs over all the WCs. ///*)
 (*/// Decompose each WC in a polynomial of the UV couplings. ///*)
-coeffList=N[CoefficientList[dicTotal[[ind1,2]],varsUV]];
+Print[N[dicTotal[[ind1]]]];
+Print[Length[N[dicTotal[[ind1,2]]]]];
+(*// THe 0. is added to recognize monomials with divisions right, as with length 1 //*);
+coeffList=Table[funcTermPol[0.+N[dicTotal[[ind1,2]]],varsUV],{i,1,Length[0.+N[dicTotal[[ind1,2]]]]}];
+Print[coeffList];
+(*/// coeffList=N[CoefficientList[dicTotal[[ind1,2]],varsUV]]; DEPRECATED ///*)
 (*/// Skip the WCs that are zero. ///*)
 If[coeffList=={}||coeffList=={{0.`}},Continue[];];
 (*/// Convert the format of the list of terms. ///*)
+(*/// 
 termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],coeffList,{Length[varsUV]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
+DEPRECATED ///*)
 WriteLine[str1,"  O"<>StringDrop[printNameWCs[dicTotal[[ind1,1]]],1]<>":"];
 WriteLine[str1,"    constrain:"];
-For[ind2=1,ind2<=Length[termList],ind2++,
+For[ind2=1,ind2<=Length[coeffList],ind2++,
 (*/// ind2 runs over the terms in the sum that makes up the WC. ///*)
-sumTerm=termList[[ind2]];
-If[Length[varsUV]>2,sumTerm=Flatten[sumTerm,Length[varsUV]-2]];
-If[Length[varsUV]==1,sumTerm={sumTerm};];
+(*/// Modified from here for negative powers. ///*)
+sumTerm=coeffList[[ind2]];
 For[ind3=1,ind3<=Length[varsUV],ind3++,
 (*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
 If[ind3==1,
-WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
-WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
-WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
+WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>ToString[CForm[varsUV[[ind3]]]]<>":"];
+WriteLine[str1,"      - "<>ToString[CForm[sumTerm[[1]]]]];
+WriteLine[str1,"      - "<>ToString[CForm[sumTerm[[ind3+1]]]]];
 Continue[];];
-If[sumTerm[[ind3,3]]!="0",
-WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
-WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
-WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
+If[sumTerm[[ind3+1]]!=0,
+WriteLine[str1,"      "<>ToString[CForm[varsUV[[ind3]]]]<>":"];
+WriteLine[str1,"      - 1.0"];
+WriteLine[str1,"      - "<>ToString[CForm[sumTerm[[ind3+1]]]]];
 ];
 ];
 ];
 WriteLine[str1,"    max: 100"];
 WriteLine[str1,"    min: -100"];
 ];
+(*/// Mod for negative powers ends here. ///*)
 (*///UV coupling printing. ///*)
 For[ind1=1,ind1<=Length[varsUV],ind1++,
-WriteLine[str1,"  "<>ToString[varsUV[[ind1]]]<>":"];
+WriteLine[str1,"  "<>ToString[CForm[varsUV[[ind1]]]]<>":"];
 WriteLine[str1,"    min: -100"];
 WriteLine[str1,"    max: 100"];
 ];
