@@ -1,0 +1,991 @@
+Model name: CompositeHiggs
+UV Collection: FutureColliders
+UV model: CompositeHiggs
+coefficients:
+  OpG:
+    constrain:
+    - gSt:
+      - 0.001889764152337942
+      - 0
+    max: 100
+    min: -100
+  OpB:
+    constrain:
+    - gSt:
+      - 0.00012264330789845895
+      - 0
+    max: 100
+    min: -100
+  OpW:
+    constrain:
+    - gSt:
+      - -0.00013593262788411155
+      - 0
+    max: 100
+    min: -100
+  OpWB:
+    constrain:
+    - gSt:
+      - -0.00014909159213958708
+      - 0
+    max: 100
+    min: -100
+  Opd:
+    constrain:
+    - gSt:
+      - 0.0008749807919180364
+      - 0
+    - gSt:
+      - -0.00008953954635593251
+      - -2
+    - gSt:
+      - -0.0006377551020408163
+      - 2
+    max: 100
+    min: -100
+  OpD:
+    constrain:
+    - gSt:
+      - 0.0002375400984534688
+      - 0
+    - gSt:
+      - -0.000010482171273124039
+      - -2
+    max: 100
+    min: -100
+  OWWW:
+    constrain:
+    - gSt:
+      - -0.00035500427886910664
+      - -2
+    max: 100
+    min: -100
+  OpqMi:
+    constrain:
+    - gSt:
+      - -0.00025076512161698874
+      - 0
+    - gSt:
+      - 0.00005619897381291367
+      - -2
+    max: 100
+    min: -100
+  OpQM:
+    constrain:
+    - gSt:
+      - -0.00025076512161698874
+      - 0
+    - gSt:
+      - 0.00005619897381291367
+      - -2
+    max: 100
+    min: -100
+  O3pq:
+    constrain:
+    - gSt:
+      - 0.0002718652557682231
+      - 0
+    - gSt:
+      - -0.00005794600235843434
+      - -2
+    max: 100
+    min: -100
+  O3pQ3:
+    constrain:
+    - gSt:
+      - 0.0002718652557682231
+      - 0
+    - gSt:
+      - -0.00005794600235843434
+      - -2
+    max: 100
+    min: -100
+  Opl1:
+    constrain:
+    - gSt:
+      - -0.00006330040245370306
+      - 0
+    - gSt:
+      - 5.2410856365620196e-6
+      - -2
+    max: 100
+    min: -100
+  Opl2:
+    constrain:
+    - gSt:
+      - -0.00006330040245370306
+      - 0
+    - gSt:
+      - 5.2410856365620196e-6
+      - -2
+    max: 100
+    min: -100
+  Opl3:
+    constrain:
+    - gSt:
+      - -0.00006330040245370306
+      - 0
+    - gSt:
+      - 5.2410856365620196e-6
+      - -2
+    max: 100
+    min: -100
+  O3pl1:
+    constrain:
+    - gSt:
+      - 0.0002718652557682231
+      - 0
+    - gSt:
+      - -0.00005794600235843434
+      - -2
+    max: 100
+    min: -100
+  O3pl2:
+    constrain:
+    - gSt:
+      - 0.0002718652557682231
+      - 0
+    - gSt:
+      - -0.00005794600235843434
+      - -2
+    max: 100
+    min: -100
+  O3pl3:
+    constrain:
+    - gSt:
+      - 0.0002718652557682231
+      - 0
+    - gSt:
+      - -0.00005794600235843434
+      - -2
+    max: 100
+    min: -100
+  Opui:
+    constrain:
+    - gSt:
+      - 0.00008440053660493741
+      - 0
+    - gSt:
+      - -6.9881141820826925e-6
+      - -2
+    max: 100
+    min: -100
+  Opdi:
+    constrain:
+    - gSt:
+      - -0.000042200268302468705
+      - 0
+    - gSt:
+      - 3.4940570910413462e-6
+      - -2
+    max: 100
+    min: -100
+  Opt:
+    constrain:
+    - gSt:
+      - 0.00008440053660493741
+      - 0
+    - gSt:
+      - -6.9881141820826925e-6
+      - -2
+    max: 100
+    min: -100
+  Ope:
+    constrain:
+    - gSt:
+      - -0.00012660080490740612
+      - 0
+    - gSt:
+      - 0.000010482171273124039
+      - -2
+    max: 100
+    min: -100
+  Opmu:
+    constrain:
+    - gSt:
+      - -0.00012660080490740612
+      - 0
+    - gSt:
+      - 0.000010482171273124039
+      - -2
+    max: 100
+    min: -100
+  Opta:
+    constrain:
+    - gSt:
+      - -0.00012660080490740612
+      - 0
+    - gSt:
+      - 0.000010482171273124039
+      - -2
+    max: 100
+    min: -100
+  O81qq:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O11qq:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O83qq:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O13qq:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O8qt:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O1qt:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O8ut:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O1ut:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O8qu:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O1qu:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O8dt:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O1dt:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O8qd:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  O1qd:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  OQQ1:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  OQQ8:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  OQt1:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  OQt8:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  Ott1:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  Oll:
+    constrain:
+    - gSt:
+      - -0.00011589200471686868
+      - -2
+    max: 100
+    min: -100
+  Oll1111:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  Obp:
+    constrain:
+    - gSt:
+      - 0.000013054241922784395
+      - 0
+    - gSt:
+      - -2.7824119382512636e-6
+      - -2
+    - gSt:
+      - 0.000030623293020674315
+      - 2
+    max: 100
+    min: -100
+  Otp:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  OtG:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  Ocp:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  Otap:
+    constrain:
+    - gSt:
+      - 5.558983402525412e-6
+      - 0
+    - gSt:
+      - -1.1848548445184805e-6
+      - -2
+    - gSt:
+      - 0.000013040541047081405
+      - 2
+    max: 100
+    min: -100
+  OtW:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  OtZ:
+    constrain:
+    - gSt:
+      - 0.
+      - 0
+    max: 100
+    min: -100
+  Op:
+    constrain:
+    - gSt:
+      - 0.0002813989774726979
+      - 0
+    - gSt:
+      - -0.000029989021153544333
+      - -2
+    - gSt:
+      - -0.0001650299457033987
+      - 2
+    max: 100
+    min: -100
+  gSt:
+    min: -100
+    max: 100
+data_path: /path/to/smefit_database/commondata_projections_L0
+datasets:
+- name: ATLAS_CMS_SSinc_RunI
+  order: NLO_QCD
+- name: ATLAS_CMS_tt_AC_8TeV
+  order: NLO_QCD
+- name: ATLAS_ggF_13TeV_2015
+  order: NLO_QCD
+- name: ATLAS_ggF_13TeV_2015_proj
+  order: NLO_QCD
+- name: ATLAS_ggF_ZZ_13TeV
+  order: NLO_QCD
+- name: ATLAS_ggF_ZZ_13TeV_proj
+  order: NLO_QCD
+- name: ATLAS_hh_runII_13TeV
+  order: NLO_QCD
+- name: ATLAS_SSinc_RunII
+  order: NLO_QCD
+- name: ATLAS_SSinc_RunII_proj
+  order: NLO_QCD
+- name: ATLAS_STXS_runII_13TeV
+  order: NLO_QCD
+- name: ATLAS_STXS_runII_13TeV_uncor
+  order: NLO_QCD
+- name: ATLAS_STXS_runII_13TeV_uncor_proj
+  order: NLO_QCD
+- name: ATLAS_t_sch_13TeV_inc
+  order: NLO_QCD
+- name: ATLAS_t_sch_13TeV_inc_proj
+  order: NLO_QCD
+- name: ATLAS_t_sch_8TeV
+  order: NLO_QCD
+- name: ATLAS_tt_13TeV_asy_2022
+  order: NLO_QCD
+- name: ATLAS_tt_13TeV_asy_2022_uncor
+  order: NLO_QCD
+- name: ATLAS_tt_13TeV_asy_2022_uncor_proj
+  order: NLO_QCD
+- name: ATLAS_tt_13TeV_ljets_2016_Mtt
+  order: NLO_QCD
+- name: ATLAS_tt_13TeV_ljets_2016_Mtt_proj
+  order: NLO_QCD
+- name: ATLAS_tt_8TeV_dilep_Mtt
+  order: NLO_QCD
+- name: ATLAS_tt_8TeV_ljets_Mtt
+  order: NLO_QCD
+- name: ATLAS_tta_8TeV
+  order: NLO_QCD
+- name: ATLAS_tt_AC_13TeV
+  order: NLO_QCD
+- name: ATLAS_ttbb_13TeV_2016
+  order: NLO_QCD
+- name: ATLAS_ttbb_13TeV_2016_proj
+  order: NLO_QCD
+- name: ATLAS_t_tch_13TeV_inc
+  order: NLO_QCD
+- name: ATLAS_t_tch_13TeV_inc_proj
+  order: NLO_QCD
+- name: ATLAS_t_tch_8TeV_diff_Yt
+  order: NLO_QCD
+- name: ATLAS_tttt_13TeV_2023
+  order: NLO_QCD
+- name: ATLAS_tttt_13TeV_2023_proj
+  order: NLO_QCD
+- name: ATLAS_tttt_13TeV_run2
+  order: NLO_QCD
+- name: ATLAS_tttt_13TeV_run2_proj
+  order: NLO_QCD
+- name: ATLAS_tttt_13TeV_slep_inc
+  order: NLO_QCD
+- name: ATLAS_tttt_13TeV_slep_inc_proj
+  order: NLO_QCD
+- name: ATLAS_ttW_13TeV_2016
+  order: NLO_QCD
+- name: ATLAS_ttW_13TeV_2016_proj
+  order: NLO_QCD
+- name: ATLAS_ttW_13TeV
+  order: NLO_QCD
+- name: ATLAS_ttW_8TeV
+  order: NLO_QCD
+- name: ATLAS_ttZ_13TeV_2016
+  order: NLO_QCD
+- name: ATLAS_ttZ_13TeV
+  order: NLO_QCD
+- name: ATLAS_ttZ_13TeV_pTZ
+  order: NLO_QCD
+- name: ATLAS_ttZ_13TeV_pTZ_uncor
+  order: NLO_QCD
+- name: ATLAS_ttZ_13TeV_pTZ_uncor_proj
+  order: NLO_QCD
+- name: ATLAS_ttZ_8TeV
+  order: NLO_QCD
+- name: ATLAS_tW_13TeV_inc
+  order: NLO_QCD
+- name: ATLAS_tW_13TeV_inc_proj
+  order: NLO_QCD
+- name: ATLAS_tW_8TeV_inc
+  order: NLO_QCD
+- name: ATLAS_tW_slep_8TeV_inc
+  order: NLO_QCD
+- name: ATLAS_tZ_13TeV_inc
+  order: NLO_QCD
+- name: ATLAS_tZ_13TeV_run2_inc
+  order: NLO_QCD
+- name: ATLAS_tZ_13TeV_run2_inc_proj
+  order: NLO_QCD
+- name: ATLAS_Whel_13TeV
+  order: NLO_QCD
+- name: ATLAS_Whel_13TeV_uncor
+  order: NLO_QCD
+- name: ATLAS_Whel_13TeV_uncor_proj
+  order: NLO_QCD
+- name: ATLAS_WhelF_8TeV
+  order: NLO_QCD
+- name: ATLAS_WH_Hbb_13TeV
+  order: NLO_QCD
+- name: ATLAS_WH_Hbb_13TeV_proj
+  order: NLO_QCD
+- name: ATLAS_WW_13TeV_2016_memu
+  order: NLO_QCD
+- name: ATLAS_WW_13TeV_2016_memu_proj
+  order: NLO_QCD
+- name: ATLAS_WZ_13TeV_2016_mTWZ
+  order: NLO_QCD
+- name: ATLAS_WZ_13TeV_2016_mTWZ_proj
+  order: NLO_QCD
+- name: ATLAS_ZH_Hbb_13TeV
+  order: NLO_QCD
+- name: ATLAS_ZH_Hbb_13TeV_proj
+  order: NLO_QCD
+- name: CEPC_161_ww_leptonic_optim_obs
+  order: LO
+- name: CEPC_161_ww_semilep_optim_obs
+  order: LO
+- name: CEPC_240_ww_leptonic_optim_obs
+  order: LO
+- name: CEPC_240_ww_semilep_optim_obs
+  order: LO
+- name: CEPC_365_tt_optim_obs
+  order: LO
+- name: CEPC_365_ww_leptonic_optim_obs
+  order: LO
+- name: CEPC_365_ww_semilep_optim_obs
+  order: LO
+- name: CEPC_alphaEW
+  order: LO
+- name: CEPC_bb_240GeV
+  order: LO
+- name: CEPC_bb_365GeV
+  order: LO
+- name: CEPC_bb_Afb_240GeV
+  order: LO
+- name: CEPC_bb_Afb_365GeV
+  order: LO
+- name: CEPC_Brw_161GeV
+  order: LO
+- name: CEPC_Brw_240GeV
+  order: LO
+- name: CEPC_Brw_365GeV
+  order: LO
+- name: CEPC_cc_240GeV
+  order: LO
+- name: CEPC_cc_365GeV
+  order: LO
+- name: CEPC_cc_Afb_240GeV
+  order: LO
+- name: CEPC_cc_Afb_365GeV
+  order: LO
+- name: CEPC_ee_240GeV
+  order: LO
+- name: CEPC_ee_365GeV
+  order: LO
+- name: CEPC_ee_Afb_240GeV
+  order: LO
+- name: CEPC_ee_Afb_365GeV
+  order: LO
+- name: CEPC_mumu_240GeV
+  order: LO
+- name: CEPC_mumu_365GeV
+  order: LO
+- name: CEPC_mumu_Afb_240GeV
+  order: LO
+- name: CEPC_mumu_Afb_365GeV
+  order: LO
+- name: CEPC_tautau_240GeV
+  order: LO
+- name: CEPC_tautau_365GeV
+  order: LO
+- name: CEPC_tautau_Afb_240GeV
+  order: LO
+- name: CEPC_tautau_Afb_365GeV
+  order: LO
+- name: CEPC_vvh_aa_365GeV
+  order: LO
+- name: CEPC_vvh_bb_240GeV
+  order: LO
+- name: CEPC_vvh_bb_365GeV
+  order: LO
+- name: CEPC_vvh_cc_365GeV
+  order: LO
+- name: CEPC_vvh_gg_365GeV
+  order: LO
+- name: CEPC_vvh_tautau_365GeV
+  order: LO
+- name: CEPC_vvh_WW_365GeV
+  order: LO
+- name: CEPC_vvh_ZZ_365GeV
+  order: LO
+- name: CEPC_ww_161GeV
+  order: LO
+- name: CEPC_ww_240GeV
+  order: LO
+- name: CEPC_ww_365GeV
+  order: LO
+- name: CEPC_Wwidth
+  order: LO
+- name: CEPC_Zdata
+  order: LO
+- name: CEPC_zh_240GeV
+  order: NLO_EW
+- name: CEPC_zh_365GeV
+  order: NLO_EW
+- name: CEPC_zh_aa_240GeV
+  order: NLO_EW
+- name: CEPC_zh_aa_365GeV
+  order: NLO_EW
+- name: CEPC_zh_aZ_240GeV
+  order: NLO_EW
+- name: CEPC_zh_bb_240GeV
+  order: NLO_EW
+- name: CEPC_zh_bb_365GeV
+  order: NLO_EW
+- name: CEPC_zh_cc_240GeV
+  order: NLO_EW
+- name: CEPC_zh_cc_365GeV
+  order: NLO_EW
+- name: CEPC_zh_gg_240GeV
+  order: NLO_EW
+- name: CEPC_zh_gg_365GeV
+  order: NLO_EW
+- name: CEPC_zh_tautau_240GeV
+  order: NLO_EW
+- name: CEPC_zh_tautau_365GeV
+  order: NLO_EW
+- name: CEPC_zh_WW_240GeV
+  order: NLO_EW
+- name: CEPC_zh_WW_365GeV
+  order: NLO_EW
+- name: CEPC_zh_ZZ_240GeV
+  order: NLO_EW
+- name: CEPC_zh_ZZ_365GeV
+  order: NLO_EW
+- name: CMS_ggF_aa_13TeV
+  order: NLO_QCD
+- name: CMS_ggF_aa_13TeV_proj
+  order: NLO_QCD
+- name: CMS_H_13TeV_2015_pTH
+  order: NLO_QCD
+- name: CMS_H_13TeV_2015_pTH_proj
+  order: NLO_QCD
+- name: CMS_SSinc_RunII
+  order: NLO_QCD
+- name: CMS_SSinc_RunII_proj
+  order: NLO_QCD
+- name: CMS_t_sch_8TeV
+  order: NLO_QCD
+- name: CMS_tt_13TeV_asy
+  order: NLO_QCD
+- name: CMS_tt_13TeV_asy_proj
+  order: NLO_QCD
+- name: CMS_tt_13TeV_dilep_2015_Mtt
+  order: NLO_QCD
+- name: CMS_tt_13TeV_dilep_2016_Mtt
+  order: NLO_QCD
+- name: CMS_tt_13TeV_dilep_2016_Mtt_proj
+  order: NLO_QCD
+- name: CMS_tt_13TeV_ljets_2015_Mtt
+  order: NLO_QCD
+- name: CMS_tt_13TeV_ljets_2016_Mtt
+  order: NLO_QCD
+- name: CMS_tt_13TeV_ljets_inc
+  order: NLO_QCD
+- name: CMS_tt_13TeV_ljets_inc_proj
+  order: NLO_QCD
+- name: CMS_tt_13TeV_Mtt
+  order: NLO_QCD
+- name: CMS_tt_13TeV_Mtt_proj
+  order: NLO_QCD
+- name: CMS_tt2D_8TeV_dilep_MttYtt
+  order: NLO_QCD
+- name: CMS_tt_8TeV_ljets_Ytt
+  order: NLO_QCD
+- name: CMS_tta_8TeV
+  order: NLO_QCD
+- name: CMS_ttbb_13TeV_2016
+  order: NLO_QCD
+- name: CMS_ttbb_13TeV_2016_proj
+  order: NLO_QCD
+- name: CMS_ttbb_13TeV_dilepton_inc
+  order: NLO_QCD
+- name: CMS_ttbb_13TeV_dilepton_inc_proj
+  order: NLO_QCD
+- name: CMS_ttbb_13TeV
+  order: NLO_QCD
+- name: CMS_ttbb_13TeV_ljets_inc
+  order: NLO_QCD
+- name: CMS_ttbb_13TeV_ljets_inc_proj
+  order: NLO_QCD
+- name: CMS_t_tch_13TeV_2016_diff_Yt
+  order: NLO_QCD
+- name: CMS_t_tch_13TeV_2019_diff_Yt
+  order: NLO_QCD
+- name: CMS_t_tch_13TeV_2019_diff_Yt_proj
+  order: NLO_QCD
+- name: CMS_t_tch_13TeV_inc
+  order: NLO_QCD
+- name: CMS_t_tch_8TeV_diff_Yt
+  order: NLO_QCD
+- name: CMS_t_tch_8TeV_inc
+  order: NLO_QCD
+- name: CMS_tttt_13TeV_2023
+  order: NLO_QCD
+- name: CMS_tttt_13TeV_2023_proj
+  order: NLO_QCD
+- name: CMS_tttt_13TeV
+  order: NLO_QCD
+- name: CMS_tttt_13TeV_run2
+  order: NLO_QCD
+- name: CMS_tttt_13TeV_run2_proj
+  order: NLO_QCD
+- name: CMS_tttt_13TeV_slep_inc
+  order: NLO_QCD
+- name: CMS_tttt_13TeV_slep_inc_proj
+  order: NLO_QCD
+- name: CMS_ttW_13TeV
+  order: NLO_QCD
+- name: CMS_ttW_13TeV_proj
+  order: NLO_QCD
+- name: CMS_ttW_8TeV
+  order: NLO_QCD
+- name: CMS_ttZ_13TeV
+  order: NLO_QCD
+- name: CMS_ttZ_13TeV_pTZ
+  order: NLO_QCD
+- name: CMS_ttZ_13TeV_pTZ_proj
+  order: NLO_QCD
+- name: CMS_ttZ_8TeV
+  order: NLO_QCD
+- name: CMS_tW_13TeV_inc
+  order: NLO_QCD
+- name: CMS_tW_13TeV_inc_proj
+  order: NLO_QCD
+- name: CMS_tW_13TeV_slep_inc
+  order: NLO_QCD
+- name: CMS_tW_13TeV_slep_inc_proj
+  order: NLO_QCD
+- name: CMS_tW_8TeV_inc
+  order: NLO_QCD
+- name: CMS_tZ_13TeV_2016_inc
+  order: NLO_QCD
+- name: CMS_tZ_13TeV_2016_inc_proj
+  order: NLO_QCD
+- name: CMS_tZ_13TeV_inc
+  order: NLO_QCD
+- name: CMS_tZ_13TeV_pTt
+  order: NLO_QCD
+- name: CMS_tZ_13TeV_pTt_uncor
+  order: NLO_QCD
+- name: CMS_tZ_13TeV_pTt_uncor_proj
+  order: NLO_QCD
+- name: CMS_WhelF_8TeV
+  order: NLO_QCD
+- name: CMS_WZ_13TeV_2016_pTZ
+  order: NLO_QCD
+- name: CMS_WZ_13TeV_2016_pTZ_proj
+  order: NLO_QCD
+- name: CMS_WZ_13TeV_2022_pTZ
+  order: NLO_QCD
+- name: CMS_WZ_13TeV_2022_pTZ_proj
+  order: NLO_QCD
+- name: FCCee_alphaEW
+  order: LO
+- name: FCCee_bb_240GeV
+  order: LO
+- name: FCCee_bb_365GeV
+  order: LO
+- name: FCCee_bb_Afb_240GeV
+  order: LO
+- name: FCCee_bb_Afb_365GeV
+  order: LO
+- name: FCCee_Brw_161GeV
+  order: LO
+- name: FCCee_Brw_240GeV
+  order: LO
+- name: FCCee_Brw_365GeV
+  order: LO
+- name: FCCee_cc_240GeV
+  order: LO
+- name: FCCee_cc_365GeV
+  order: LO
+- name: FCCee_cc_Afb_240GeV
+  order: LO
+- name: FCCee_cc_Afb_365GeV
+  order: LO
+- name: FCCee_ee_240GeV
+  order: LO
+- name: FCCee_ee_365GeV
+  order: LO
+- name: FCCee_ee_Afb_240GeV
+  order: LO
+- name: FCCee_ee_Afb_365GeV
+  order: LO
+- name: FCCee_mumu_240GeV
+  order: LO
+- name: FCCee_mumu_365GeV
+  order: LO
+- name: FCCee_mumu_Afb_240GeV
+  order: LO
+- name: FCCee_mumu_Afb_365GeV
+  order: LO
+- name: FCCee_tautau_240GeV
+  order: LO
+- name: FCCee_tautau_365GeV
+  order: LO
+- name: FCCee_tautau_Afb_240GeV
+  order: LO
+- name: FCCee_tautau_Afb_365GeV
+  order: LO
+- name: FCCee_vvh_240GeV
+  order: LO
+- name: FCCee_vvh_365GeV
+  order: LO
+- name: FCCee_vvh_aa_365GeV
+  order: LO
+- name: FCCee_vvh_bb_240GeV
+  order: LO
+- name: FCCee_vvh_bb_365GeV
+  order: LO
+- name: FCCee_vvh_cc_365GeV
+  order: LO
+- name: FCCee_vvh_gg_365GeV
+  order: LO
+- name: FCCee_vvh_tautau_365GeV
+  order: LO
+- name: FCCee_vvh_WW_365GeV
+  order: LO
+- name: FCCee_vvh_ZZ_365GeV
+  order: LO
+- name: FCCee_ww_161GeV
+  order: LO
+- name: FCCee_ww_240GeV
+  order: LO
+- name: FCCee_ww_365GeV
+  order: LO
+- name: FCCee_Wwidth
+  order: LO
+- name: FCCee_Zdata
+  order: LO
+- name: FCCee_zh_240GeV
+  order: NLO_EW
+- name: FCCee_zh_365GeV
+  order: NLO_EW
+- name: FCCee_zh_aa_240GeV
+  order: NLO_EW
+- name: FCCee_zh_aa_365GeV
+  order: NLO_EW
+- name: FCCee_zh_aZ_240GeV
+  order: NLO_EW
+- name: FCCee_zh_bb_240GeV
+  order: NLO_EW
+- name: FCCee_zh_bb_365GeV
+  order: NLO_EW
+- name: FCCee_zh_cc_240GeV
+  order: NLO_EW
+- name: FCCee_zh_cc_365GeV
+  order: NLO_EW
+- name: FCCee_zh_gg_240GeV
+  order: NLO_EW
+- name: FCCee_zh_gg_365GeV
+  order: NLO_EW
+- name: FCCee_zh_tautau_240GeV
+  order: NLO_EW
+- name: FCCee_zh_tautau_365GeV
+  order: NLO_EW
+- name: FCCee_zh_WW_240GeV
+  order: NLO_EW
+- name: FCCee_zh_WW_365GeV
+  order: NLO_EW
+- name: FCCee_zh_ZZ_240GeV
+  order: NLO_EW
+- name: FCCee_zh_ZZ_365GeV
+  order: NLO_EW
+- name: HLLHC_tt_13TeV_asy
+  order: NLO_QCD
+- name: HLLHC_tt_13TeV_Mtt
+  order: NLO_QCD
+- name: LEP1_EWPOs_2006
+  order: LO
+- name: LEP_alphaEW
+  order: LO
+- name: LEP_Bhabha_2013
+  order: LO
+- name: LEP_Brw_2013
+  order: LO
+- name: LEP_eeWW_182GeV
+  order: LO
+- name: LEP_eeWW_189GeV
+  order: LO
+- name: LEP_eeWW_198GeV
+  order: LO
+- name: LEP_eeWW_206GeV
+  order: LO
+- name: LHC_HH_14TeV
+  order: NLO_QCD
+external_chi2:
+  OptimalWW161:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 161.00
+  OptimalWW240:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 240.00
+  OptimalWW365:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+  Optimaltt:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+maxiter: 10000
+frac_remain: 0.001
+lepsilon: 0.001
+nlive: 1000
+result_path: /path/to/your/results/
+target_evidence_unc: 0.5
+target_post_unc: 0.5
+theory_path: /path/to/smefit_database/theory
+use_quad: true
+use_t0: false
+use_theory_covmat: true
+uv_couplings: true
+rge:
+ init_scale: 28000.
+ obs_scale: dynamic
+ smeft_accuracy: integrate
+ yukawa: top
+ adm_QCD: False

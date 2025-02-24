@@ -1037,11 +1037,11 @@ WriteLine[str1,"UV model: "<>ToString[model]];
 WriteLine[str1,"coefficients:"];
 For[ind1=1,ind1<=Length[dicTotal],ind1++, (*/// ind1 runs over all the WCs. ///*)
 (*/// Decompose each WC in a polynomial of the UV couplings. ///*)
-Print[N[dicTotal[[ind1]]]];
-(*// THe 0. is added to recognize monomials with divisions right, as with length 1 //*);
+(*Print[N[dicTotal[[ind1]]]];*)
+(*// The 0. is added to recognize monomials with divisions right, as with length 1 //*)
 coeffList=Piecewise[{{{Flatten[{N[dicTotal[[ind1,2]]],Table[0,{i,1,Length[varsUV]}]}]},Length[N[dicTotal[[ind1,2]]]]==0}},
 Select[Table[funcTermPol[(0.+N[dicTotal[[ind1,2]]])[[i]],varsUV],{i,1,Length[0.+N[dicTotal[[ind1,2]]]]}],(#[[1]]!=0)&]];
-Print[coeffList];
+(*Print[coeffList];*)
 (*/// coeffList=N[CoefficientList[dicTotal[[ind1,2]],varsUV]]; DEPRECATED ///*)
 (*/// Skip the WCs that are zero. ///*)
 If[coeffList=={}||coeffList=={{0.`}},Continue[];];
@@ -1131,11 +1131,11 @@ WriteLine[str1,"# Matching results address: "<>matchResFile];
 WriteLine[str1,"# Export date: "<>DateString[]];
 Close[str1];];
 (*/// Printing the UV invariants. ///*);
-{invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar/.simpleUVnames)]];
+(*{invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar/.simpleUVnames)]];
 zeroWCs=Select[dicInvar,(#[[2]]==0)&][[;;,1]];
 nonZeroWCs=Select[dicInvar,(FreeQ[zeroWCs,#[[1]]])&];
 reempNamesRelev=Table[nonZeroWCs[[i,1]]->ToExpression[printNameWCs[nonZeroWCs[[i,1]]]],{i,1,Length[nonZeroWCs]}];
-invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reempNamesRelev];
+invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reempNamesRelev];*)
 ];];
 
 
