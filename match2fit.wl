@@ -1037,7 +1037,6 @@ WriteLine[str1,"UV model: "<>ToString[model]];
 WriteLine[str1,"coefficients:"];
 For[ind1=1,ind1<=Length[dicTotal],ind1++, (*/// ind1 runs over all the WCs. ///*)
 (*/// Decompose each WC in a polynomial of the UV couplings. ///*)
-Print[N[dicTotal[[ind1]]]];
 (*// The 0. is added to recognize monomials with divisions right, as with length 1 //*)
 coeffList=Piecewise[{{{Flatten[{N[dicTotal[[ind1,2]]],Table[0,{i,1,Length[varsUV]}]}]},Length[N[dicTotal[[ind1,2]]]]==0}},
 Select[Table[funcTermPol[(0.+N[dicTotal[[ind1,2]]])[[i]],varsUV],{i,1,Length[0.+N[dicTotal[[ind1,2]]]]}],(#[[1]]!=0)&]];
