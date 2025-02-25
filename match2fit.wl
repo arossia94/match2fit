@@ -4,14 +4,14 @@ BeginPackage["match2fit`"];
 
 
 ":Name: match2fit"
-":Version: 1.95"
+":Version: 1.96"
 ":Author: Alejo N. Rossia"
 ":Affiliation: The University of Manchester, Universitat degli Studi di Padova, INFN Sezione di Padova."
 
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
-Print["Version: 1.95"];
-Print["Date: 18/10/2024"];
+Print["Version: 1.96"];
+Print["Date: 25/02/2024"];
 Print["Author: Alejo N. Rossia"];
 Print["Affiliations: The University of Manchester, Universita degli Studi di Padova, INFN Sezione di Padova"];
 
