@@ -1043,7 +1043,7 @@ Select[Table[funcTermPol[(0.+N[dicTotal[[ind1,2]]])[[i]],varsUV],{i,1,Length[0.+
 (*Print[coeffList];*)
 (*/// coeffList=N[CoefficientList[dicTotal[[ind1,2]],varsUV]]; DEPRECATED ///*)
 (*/// Skip the WCs that are zero. ///*)
-If[coeffList=={}||coeffList=={{0.`}},Continue[];];
+If[coeffList=={}||coeffList=={{0.`,0}},Continue[];];
 (*/// Convert the format of the list of terms. ///*)
 (*/// 
 termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],coeffList,{Length[varsUV]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
