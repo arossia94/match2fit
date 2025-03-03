@@ -15,7 +15,10 @@ The runcards can be parsed into the SMEFiT format with [this script](https://git
 
 Examples of the usage of this package can be found in the following scientific publications:
  - J. ter Hoeve et al, "The Automation of SMEFT-Assisted Constraints on UV-Complete Models" [arXiv:2309.04523, JHEP 01 (2024) 179](https://inspirehep.net/literature/2696156)
- - E. Celada et al, "Mapping the SMEFT at High-Energy Colliders: from LEP and the (HL-)LHC to the FCC-ee" [arXiv:2404.12809](https://inspirehep.net/literature/2779255)
+ - E. Celada et al, "Mapping the SMEFT at High-Energy Colliders: from LEP and the (HL-)LHC to the FCC-ee" [arXiv:2404.12809, JHEP 09 (2024) 091](https://inspirehep.net/literature/2779255)
+ - The ECFA Higgs/Electroweak/Top Factory Study 
+ - FCC Feasibility Report
+ - J. ter Hoeve et al, "Connecting Scales: RGE Effects in the SMEFT at the LHC and Future Colliders" [arXiv:2502.20453](https://inspirehep.net/literature/2895783)
 
 # Citation
 
