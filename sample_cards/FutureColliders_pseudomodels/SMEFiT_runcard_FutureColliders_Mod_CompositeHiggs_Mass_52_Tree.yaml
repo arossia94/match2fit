@@ -240,6 +240,19 @@ coefficients:
       - 2
     max: 100
     min: -100
+  Otp:
+    constrain:
+    - gSt:
+      - 0.00015643284574959852
+      - 0
+    - gSt:
+      - -0.000033342466006288225
+      - -2
+    - gSt:
+      - 0.0003669679864816016
+      - 2
+    max: 100
+    min: -100
   Otap:
     constrain:
     - gSt:
