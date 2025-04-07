@@ -1,10 +1,10 @@
 # UV dictionary with WCs in terms of UV masses
 # ~~~~~~~~~~~~~~~~~~~~~~
-UV Collection : Granada
+UV Collection : 1LoopMatching
 UV model : Varphi
 Model name : Varphi
 # ~~~~~~~~~~~~~~~~~~~~~~
-Fixed couplings : [lamVarphi, yVarphiuf33]
+Fixed couplings : [lamvarphi, yVarphiuf33]
 UV couplings : [Mvarphi]
 # ~~~~~~~~~~~~~~~~~~~~~~
 UV couplings value: 1
@@ -16,7 +16,7 @@ cpG : [{m: [0.,0]}]
 cpB : [{m: [0.,0]}]
 cpW : [{m: [0.,0]}]
 cpWB : [{m: [0.,0]}]
-cpd : [{m: [0.009506269972938491,-2]}]
+cpd : [{m: [-0.009506269972938491,-2]}]
 cpD : [{m: [-8.673539004366214e-7,-2]}]
 cWWW : [{m: [4.895842313673639e-6,-2]}]
 cpqMi : [{m: [4.6502196794041456e-6,-2]}]
@@ -64,7 +64,12 @@ ctap : [{m: [0.00006469384887486835,-2]}]
 ctW : [{m: [-0.0016239676930544272,-2]}]
 ctZ : [{m: [-0.0005011207226640796,-2]}]
 cp : [{m: [1.0278547535783276,-2]}]
+cQe : [{m: [0.00026339055234179075,-2]}]
+cQl31 : [{m: [0.00003269799260878696,-2]}]
+cQlM1 : [{m: [0.00009899728356210842,-2]}]
+ctl1 : [{m: [0.00003816415513004992,-2]}]
+cte : [{m: [0.00007632831026009984,-2]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
-# Matching results address: /home/alejorossia/match2fit//sample_results/MatchingResult_Varphi_oneloop.dat
-# Export date: Wed 13 Nov 2024 16:05:20
+# Matching results address: C:\Users\alejo\OneDrive\Documentos\match2fit\/sample_results/MatchingResult_Varphi_oneloop.dat
+# Export date: Mon 7 Apr 2025 10:44:47

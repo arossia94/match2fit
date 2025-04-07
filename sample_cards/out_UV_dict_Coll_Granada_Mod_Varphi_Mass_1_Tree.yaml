@@ -1,0 +1,76 @@
+# UV dictionary with WCs in terms of UV variables
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV Collection : Granada
+UV model : Varphi
+Model name : Varphi
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV couplings : [lamVarphi, yVarphiuf33]
+UV masses : [Mvarphi]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Loop level of the results : Tree
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Setting of the UV mass in TeV:
+m : 1 # TeV
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Expressions for all the WCs in SMEFiT basis
+cpG : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpB : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpW : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpWB : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpd : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpD : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cWWW : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpqMi : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpQM : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c3pq : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c3pQ3 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpl1 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpl2 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpl3 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c3pl1 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c3pl2 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c3pl3 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpui : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpdi : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpt : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpe : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpmu : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpta : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c81qq : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c11qq : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c83qq : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c13qq : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c8qt : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c1qt : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c8ut : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c1ut : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c8qu : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c1qu : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c8dt : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c1dt : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c8qd : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+c1qd : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cQQ1 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cQQ8 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cQt1 : [{lamVarphi: [-0.16666666666666666,0],yVarphiuf33: [1,2]}]
+cQt8 : [{lamVarphi: [-1.,0],yVarphiuf33: [1,2]}]
+ctt1 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cll : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cll1111 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cbp : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+ctp : [{lamVarphi: [-1.,1],yVarphiuf33: [1,1]}]
+ctG : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+ccp : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+ctap : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+ctW : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+ctZ : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cp : [{lamVarphi: [1,2],yVarphiuf33: [1,0]}]
+cQe : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cQl31 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cQlM1 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+ctl1 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cte : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Miscellaneous information
+# Matching results address: C:\Users\alejo\OneDrive\Documentos\match2fit\/sample_results/MatchingResult_Varphi_oneloop.dat
+# Export date: Mon 7 Apr 2025 10:07:55

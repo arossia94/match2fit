@@ -5,6 +5,6 @@ MODEL_SPECS = dict(id="Phi_4_12_32_custo", collection="1LoopMatching", mass=4, p
 
 
 def inv1(results):
-	lamPhi = results.lamPhi
-	return np.abs(lamPhi)
+	MonomialList[{Indeterminate, Indeterminate, Indeterminate, Indeterminate, Indeterminate, Indeterminate, Indeterminate}] = results.MonomialList[{Indeterminate, Indeterminate, Indeterminate, Indeterminate, Indeterminate, Indeterminate, Indeterminate}]
+	return np.abs(MonomialList(List(Indeterminate,Indeterminate,Indeterminate,Indeterminate,Indeterminate,Indeterminate,Indeterminate)))
 

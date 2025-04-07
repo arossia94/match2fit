@@ -1,10 +1,10 @@
 # UV dictionary with WCs in terms of UV masses
 # ~~~~~~~~~~~~~~~~~~~~~~
-UV Collection : Granada
+UV Collection : 1LoopMatching
 UV model : Varphi
 Model name : Varphi
 # ~~~~~~~~~~~~~~~~~~~~~~
-Fixed couplings : [lamVarphi, yVarphiuf33]
+Fixed couplings : [lamvarphi, yVarphiuf33]
 UV couplings : [Mvarphi]
 # ~~~~~~~~~~~~~~~~~~~~~~
 UV couplings value: 1
@@ -64,7 +64,12 @@ ctap : [{m: [0.,0]}]
 ctW : [{m: [0.,0]}]
 ctZ : [{m: [0.,0]}]
 cp : [{m: [1,-2]}]
+cQe : [{m: [0.,0]}]
+cQl31 : [{m: [0.,0]}]
+cQlM1 : [{m: [0.,0]}]
+ctl1 : [{m: [0.,0]}]
+cte : [{m: [0.,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
-# Matching results address: /home/alejorossia/match2fit//sample_results/MatchingResult_Varphi_oneloop.dat
-# Export date: Wed 13 Nov 2024 15:22:02
+# Matching results address: C:\Users\alejo\OneDrive\Documentos\match2fit\/sample_results/MatchingResult_Varphi_oneloop.dat
+# Export date: Mon 7 Apr 2025 10:44:48

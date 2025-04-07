@@ -65,7 +65,12 @@ ctap : [{lamPhi: [0.,0]}]
 ctW : [{lamPhi: [0.,0]}]
 ctZ : [{lamPhi: [0.,0]}]
 cp : [{lamPhi: [0.041666666666666664,2]}]
+cQe : [{lamPhi: [0.,0]}]
+cQl31 : [{lamPhi: [0.,0]}]
+cQlM1 : [{lamPhi: [0.,0]}]
+ctl1 : [{lamPhi: [0.,0]}]
+cte : [{lamPhi: [0.,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
-# Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult_EW_Quad_Y_12_32_CustoDegen.dat
-# Export date: Thu 10 Oct 2024 14:37:46
+# Matching results address: C:\Users\alejo\OneDrive\Documentos\match2fit\/sample_results/MatchingResult_EW_Quad_Y_12_32_CustoDegen.dat
+# Export date: Mon 7 Apr 2025 10:11:43
