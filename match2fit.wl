@@ -6,7 +6,7 @@ BeginPackage["match2fit`"];
 ":Name: match2fit"
 ":Version: 1.99"
 ":Author: Alejo N. Rossia"
-":Affiliation: Department of Physics and Astronomy, The University of Manchester."
+":Affiliation: Universit\[AGrave] degli Studi di Padova e INFN Sezione di Padova."
 
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
@@ -41,7 +41,7 @@ reempLamH4::usage="TEST ONLY"*)
 Begin["`Private`"];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Utility functions*)
 
 
@@ -250,7 +250,7 @@ ret]
 (*/// SMEFiT basis ///*)
 requiredWCsmeftsimBasisNonEval:={{"WC SMEFiT","WC Warsaw"},{Symbol[SymbolName[wwC\[CurlyPhi]G]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]G]]]},{Symbol[SymbolName[wwC\[CurlyPhi]B]],
 Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]B]]]},{Symbol[SymbolName[wwC\[CurlyPhi]W]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]W]]]},{Symbol[SymbolName[wwC\[CurlyPhi]WB]],
-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]WB]]]},{Symbol[SymbolName[wwC\[CurlyPhi]d]],-1.0*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]Sq]]]},{Symbol[SymbolName[wwC\[CurlyPhi]D]],
+Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]WB]]]},{Symbol[SymbolName[wwC\[CurlyPhi]d]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]Sq]]]},{Symbol[SymbolName[wwC\[CurlyPhi]D]],
 Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]D]]]},{Symbol[SymbolName[wwCWWW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[W]]]},{Symbol[SymbolName[wwC\[CurlyPhi]qm]],
 Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q1]]][2,2]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][2,2]},{Symbol[SymbolName[wwC\[CurlyPhi]Qm]],Subscript[Symbol[SymbolName[wwC]],
 Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][3,3]},{Symbol[SymbolName[wwC\[CurlyPhi]q3]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]q3]]][2,2]},
