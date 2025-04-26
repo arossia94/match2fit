@@ -1,313 +1,562 @@
-Model name: Phi_4_12
-UV Collection: 1LoopMatching
-UV model: Phi_4_12
+Model name: T1matched
+UV Collection: 1Loop
+UV model: T1matched
 coefficients:
+  OpG:
+    constrain:
+    - lambdaT13:
+      - 0.0035183189607252115
+      - 2
+    max: 100
+    min: -100
+  OpB:
+    constrain:
+    - lambdaT13:
+      - -0.000025370495457587212
+      - 2
+    max: 100
+    min: -100
+  OpW:
+    constrain:
+    - lambdaT13:
+      - 0.0017715334425829677
+      - 2
+    max: 100
+    min: -100
+  OpWB:
+    constrain:
+    - lambdaT13:
+      - -0.0001850501731871194
+      - 2
+    max: 100
+    min: -100
   OpBox:
     constrain:
-    - lamPhi:
-      - -4.522209805773249e-6
+    - lambdaT13:
+      - -0.0006939175430464218
       - 0
-    - lamPhi:
-      - 0.0007915717472057639
+    - lambdaT13:
+      - -0.007472114461256568
       - 2
+    - lambdaT13:
+      - -0.01424829144970375
+      - 4
     max: 100
     min: -100
   OpD:
     constrain:
-    - lamPhi:
-      - -1.0841923755457767e-7
+    - lambdaT13:
+      - -0.000013877662406985942
       - 0
-    - lamPhi:
-      - -0.0015831434944115277
+    - lambdaT13:
+      - -0.025400674253126025
       - 2
+    - lambdaT13:
+      - -0.0338396921930464
+      - 4
     max: 100
     min: -100
   OWWW:
     constrain:
-    - lamPhi:
-      - 3.059901446046023e-6
+    - lambdaT13:
+      - -0.00011750021552816729
       - 0
     max: 100
     min: -100
   OpqMi:
     constrain:
-    - lamPhi:
-      - 2.9786667913306405e-6
+    - lambdaT13:
+      - 0.000457985807895286
       - 0
+    - lambdaT13:
+      - -0.250586666966808
+      - 2
+    - lambdaT13:
+      - 0.01094114781198583
+      - 4
     max: 100
     min: -100
   OpQM:
     constrain:
-    - lamPhi:
-      - 2.9786667913306405e-6
+    - lambdaT13:
+      - 0.000457985807895286
       - 0
+    - lambdaT13:
+      - -0.25409305131648574
+      - 2
+    - lambdaT13:
+      - 0.01094114781198583
+      - 4
     max: 100
     min: -100
   O3pq:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
+    - lambdaT13:
+      - -0.00046029875162978363
       - 0
+    - lambdaT13:
+      - 0.06340622153009044
+      - 2
+    - lambdaT13:
+      - -0.0031805460607996993
+      - 4
     max: 100
     min: -100
   O3pQ3:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
+    - lambdaT13:
+      - -0.00046029875162978363
       - 0
+    - lambdaT13:
+      - 0.06515895743043733
+      - 2
+    - lambdaT13:
+      - -0.0031805460607996993
+      - 4
     max: 100
     min: -100
   Opl1:
     constrain:
-    - lamPhi:
-      - 5.4209618777288834e-8
+    - lambdaT13:
+      - 6.938831203492971e-6
       - 0
+    - lambdaT13:
+      - -0.00007611148637276166
+      - 2
     max: 100
     min: -100
   Opl2:
     constrain:
-    - lamPhi:
-      - 5.4209618777288834e-8
+    - lambdaT13:
+      - 6.938831203492971e-6
       - 0
+    - lambdaT13:
+      - -0.00007611148637276166
+      - 2
     max: 100
     min: -100
   Opl3:
     constrain:
-    - lamPhi:
-      - 5.4209618777288834e-8
+    - lambdaT13:
+      - 6.938831203492971e-6
       - 0
+    - lambdaT13:
+      - -0.00007611148637276166
+      - 2
     max: 100
     min: -100
   O3pl1:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
+    - lambdaT13:
+      - -0.00046029875162978363
       - 0
+    - lambdaT13:
+      - 0.0017715334425829677
+      - 2
     max: 100
     min: -100
   O3pl2:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
+    - lambdaT13:
+      - -0.00046029875162978363
       - 0
+    - lambdaT13:
+      - 0.0017715334425829677
+      - 2
     max: 100
     min: -100
   O3pl3:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
+    - lambdaT13:
+      - -0.00046029875162978363
       - 0
+    - lambdaT13:
+      - 0.0017715334425829677
+      - 2
     max: 100
     min: -100
   Opui:
     constrain:
-    - lamPhi:
-      - -7.227949170305177e-8
+    - lambdaT13:
+      - -9.251774937990627e-6
       - 0
+    - lambdaT13:
+      - 0.00010148198183034885
+      - 2
     max: 100
     min: -100
   Opdi:
     constrain:
-    - lamPhi:
-      - 3.613974585152589e-8
+    - lambdaT13:
+      - 4.625887468995314e-6
       - 0
+    - lambdaT13:
+      - -0.000050740990915174424
+      - 2
     max: 100
     min: -100
   Opt:
     constrain:
-    - lamPhi:
-      - -7.227949170305177e-8
+    - lambdaT13:
+      - -9.251774937990627e-6
       - 0
+    - lambdaT13:
+      - -0.003600664744534802
+      - 2
     max: 100
     min: -100
   Ope:
     constrain:
-    - lamPhi:
-      - 1.0841923755457767e-7
+    - lambdaT13:
+      - 0.000013877662406985942
       - 0
+    - lambdaT13:
+      - -0.00015222297274552333
+      - 2
     max: 100
     min: -100
   Opmu:
     constrain:
-    - lamPhi:
-      - 1.0841923755457767e-7
+    - lambdaT13:
+      - 0.000013877662406985942
       - 0
+    - lambdaT13:
+      - -0.00015222297274552333
+      - 2
     max: 100
     min: -100
   Opta:
     constrain:
-    - lamPhi:
-      - 1.0841923755457767e-7
+    - lambdaT13:
+      - 0.000013877662406985942
       - 0
+    - lambdaT13:
+      - -0.00015222297274552333
+      - 2
+    max: 100
+    min: -100
+  O81qq:
+    constrain:
+    - lambdaT13:
+      - -0.002780082
+      - 0
+    - lambdaT13:
+      - 0.0013682351513931378
+      - 2
+    - lambdaT13:
+      - -0.00029683940520216145
+      - 4
     max: 100
     min: -100
   O11qq:
     constrain:
-    - lamPhi:
-      - -3.0116454876271576e-9
+    - lambdaT13:
+      - -3.8549062241627617e-7
       - 0
+    - lambdaT13:
+      - -0.00046023718545887276
+      - 2
+    - lambdaT13:
+      - -0.00027210278810198133
+      - 4
+    max: 100
+    min: -100
+  O83qq:
+    constrain:
+    - lambdaT13:
+      - -0.00019789293680144097
+      - 4
     max: 100
     min: -100
   O13qq:
     constrain:
-    - lamPhi:
-      - -1.4983683321282016e-6
+    - lambdaT13:
+      - -0.00023014937581489182
       - 0
+    - lambdaT13:
+      - 0.00003655433770421713
+      - 2
+    - lambdaT13:
+      - -0.00005771877323375362
+      - 4
+    max: 100
+    min: -100
+  O8qt:
+    constrain:
+    - lambdaT13:
+      - -0.005560164
+      - 0
+    - lambdaT13:
+      - 0.0013682351513931378
+      - 2
     max: 100
     min: -100
   O1qt:
     constrain:
-    - lamPhi:
-      - -2.409316390101726e-8
+    - lambdaT13:
+      - -3.0839249793302093e-6
+      - 0
+    - lambdaT13:
+      - 0.001665321539219261
+      - 2
+    max: 100
+    min: -100
+  O8ut:
+    constrain:
+    - lambdaT13:
+      - -0.002780082
       - 0
     max: 100
     min: -100
   O1ut:
     constrain:
-    - lamPhi:
-      - -4.818632780203452e-8
+    - lambdaT13:
+      - -6.167849958660419e-6
       - 0
+    max: 100
+    min: -100
+  O8qu:
+    constrain:
+    - lambdaT13:
+      - -0.005560164
+      - 0
+    - lambdaT13:
+      - 0.0013682351513931378
+      - 2
     max: 100
     min: -100
   O1qu:
     constrain:
-    - lamPhi:
-      - -2.409316390101726e-8
+    - lambdaT13:
+      - -3.0839249793302093e-6
+      - 0
+    - lambdaT13:
+      - -0.00008832691011159994
+      - 2
+    max: 100
+    min: -100
+  O8dt:
+    constrain:
+    - lambdaT13:
+      - -0.005560164
       - 0
     max: 100
     min: -100
   O1dt:
     constrain:
-    - lamPhi:
-      - 4.818632780203452e-8
+    - lambdaT13:
+      - 6.167849958660419e-6
       - 0
+    max: 100
+    min: -100
+  O8qd:
+    constrain:
+    - lambdaT13:
+      - -0.005560164
+      - 0
+    - lambdaT13:
+      - 0.0013600222105373799
+      - 2
     max: 100
     min: -100
   O1qd:
     constrain:
-    - lamPhi:
-      - 1.204658195050863e-8
+    - lambdaT13:
+      - 1.5419624896651047e-6
       - 0
+    - lambdaT13:
+      - 0.000041768013972870594
+      - 2
     max: 100
     min: -100
   OQQ1:
     constrain:
-    - lamPhi:
-      - 9.928889304435468e-7
+    - lambdaT13:
+      - 0.0001526619359650953
       - 0
+    - lambdaT13:
+      - -0.0017236728970859566
+      - 2
+    - lambdaT13:
+      - -0.0004287680297364554
+      - 4
     max: 100
     min: -100
   OQQ8:
     constrain:
-    - lamPhi:
-      - -0.000011986946657025613
+    - lambdaT13:
+      - -0.007401359006519135
       - 0
+    - lambdaT13:
+      - 0.001859121626461459
+      - 2
+    - lambdaT13:
+      - -0.00019789293680144097
+      - 4
     max: 100
     min: -100
   OQt1:
     constrain:
-    - lamPhi:
-      - -2.409316390101726e-8
+    - lambdaT13:
+      - -3.0839249793302093e-6
       - 0
+    - lambdaT13:
+      - -0.0014522757040356029
+      - 2
+    max: 100
+    min: -100
+  OQt8:
+    constrain:
+    - lambdaT13:
+      - -0.005560164
+      - 0
+    - lambdaT13:
+      - -0.017337348308136047
+      - 2
     max: 100
     min: -100
   Ott1:
     constrain:
-    - lamPhi:
-      - -4.818632780203452e-8
+    - lambdaT13:
+      - -0.0009328618499586604
       - 0
     max: 100
     min: -100
   Oll:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
+    - lambdaT13:
+      - -0.00046029875162978363
       - 0
     max: 100
     min: -100
   Oll1111:
     constrain:
-    - lamPhi:
-      - -1.525473141516846e-6
+    - lambdaT13:
+      - -0.0002336187914166383
       - 0
     max: 100
     min: -100
   Obp:
     constrain:
-    - lamPhi:
-      - -7.194763686065241e-8
+    - lambdaT13:
+      - -0.000011051157021796214
       - 0
-    - lamPhi:
-      - 0.00003167429718711714
+    - lambdaT13:
+      - 0.0029263976966598087
       - 2
+    - lambdaT13:
+      - -0.0007065719935499706
+      - 4
     max: 100
     min: -100
   Otp:
     constrain:
-    - lamPhi:
-      - -2.9736061588627538e-6
+    - lambdaT13:
+      - -0.00045674590600131904
       - 0
-    - lamPhi:
-      - 0.0013091032492933868
+    - lambdaT13:
+      - 0.2576710877213222
+      - 2
+    - lambdaT13:
+      - -0.045712145430854535
+      - 4
+    max: 100
+    min: -100
+  OtG:
+    constrain:
+    - lambdaT13:
+      - 0.0016731120783798807
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-    - lamPhi:
-      - -3.0637988902383085e-8
+    - lambdaT13:
+      - -4.705995095406042e-6
       - 0
-    - lamPhi:
-      - 0.0000134880978452317
+    - lambdaT13:
+      - -9.805776400010253e-6
+      - 2
+    - lambdaT13:
+      - -0.00023671611718381635
+      - 4
+    max: 100
+    min: -100
+  OtW:
+    constrain:
+    - lambdaT13:
+      - 0.0003846239273023644
+      - 2
+    max: 100
+    min: -100
+  OtZ:
+    constrain:
+    - lambdaT13:
+      - -0.00009280013382668142
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-    - lamPhi:
-      - -1.5509128422714434e-6
+    - lambdaT13:
+      - -0.00023822021257289373
       - 0
-    - lamPhi:
-      - 0.022233022838963085
+    - lambdaT13:
+      - -0.01986838502552373
       - 2
+    - lambdaT13:
+      - 0.016079773940793768
+      - 4
+    - lambdaT13:
+      - 0.024043991821375076
+      - 6
     max: 100
     min: -100
   OQe:
     constrain:
-    - lamPhi:
-      - 3.613974585152589e-8
+    - lambdaT13:
+      - 4.625887468995314e-6
       - 0
+    - lambdaT13:
+      - 0.0001324903651673999
+      - 2
     max: 100
     min: -100
   OQl31:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
+    - lambdaT13:
+      - -0.00046029875162978363
       - 0
+    - lambdaT13:
+      - 0.00018277725994903635
+      - 2
     max: 100
     min: -100
   OQlM1:
     constrain:
-    - lamPhi:
-      - 3.014806537182166e-6
+    - lambdaT13:
+      - 0.00046261169536428127
       - 0
+    - lambdaT13:
+      - -0.0001165320773653364
+      - 2
     max: 100
     min: -100
   Otl1:
     constrain:
-    - lamPhi:
-      - 7.227949170305177e-8
+    - lambdaT13:
+      - 9.251774937990627e-6
       - 0
     max: 100
     min: -100
   Ote:
     constrain:
-    - lamPhi:
-      - 1.4455898340610355e-7
+    - lambdaT13:
+      - 0.000018503549875981254
       - 0
     max: 100
     min: -100
-  lamPhi:
+  lambdaT13:
     min: -100
     max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
@@ -850,7 +1099,7 @@ use_t0: false
 use_theory_covmat: true
 uv_couplings: true
 rge:
- init_scale: 4000.
+ init_scale: 1000.
  obs_scale: dynamic
  smeft_accuracy: integrate
  yukawa: top

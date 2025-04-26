@@ -17,7 +17,7 @@ cpG : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cpB : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cpW : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cpWB : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
-cpd : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cpBox : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cpD : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cWWW : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cpqMi : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
@@ -72,5 +72,5 @@ ctl1 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cte : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
-# Matching results address: C:\Users\alejo\OneDrive\Documentos\match2fit\/sample_results/MatchingResult_Varphi_oneloop.dat
-# Export date: Mon 7 Apr 2025 10:07:55
+# Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult_Varphi_oneloop.dat
+# Export date: Sat 26 Apr 2025 10:08:27

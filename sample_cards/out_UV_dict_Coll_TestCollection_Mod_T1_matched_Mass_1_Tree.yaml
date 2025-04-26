@@ -1,0 +1,76 @@
+# UV dictionary with WCs in terms of UV variables
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV Collection : TestCollection
+UV model : T1_matched
+Model name : T1_matched
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV couplings : [lambdaT13]
+UV masses : [MT1]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Loop level of the results : Tree
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Setting of the UV mass in TeV:
+m : 1 # TeV
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Expressions for all the WCs in SMEFiT basis
+cpG : [{lambdaT13: [0.,0]}]
+cpB : [{lambdaT13: [0.,0]}]
+cpW : [{lambdaT13: [0.,0]}]
+cpWB : [{lambdaT13: [0.,0]}]
+cpBox : [{lambdaT13: [0.,0]}]
+cpD : [{lambdaT13: [0.,0]}]
+cWWW : [{lambdaT13: [0.,0]}]
+cpqMi : [{lambdaT13: [-0.25,2]}]
+cpQM : [{lambdaT13: [-0.25,2]}]
+c3pq : [{lambdaT13: [0.0625,2]}]
+c3pQ3 : [{lambdaT13: [0.0625,2]}]
+cpl1 : [{lambdaT13: [0.,0]}]
+cpl2 : [{lambdaT13: [0.,0]}]
+cpl3 : [{lambdaT13: [0.,0]}]
+c3pl1 : [{lambdaT13: [0.,0]}]
+c3pl2 : [{lambdaT13: [0.,0]}]
+c3pl3 : [{lambdaT13: [0.,0]}]
+cpui : [{lambdaT13: [0.,0]}]
+cpdi : [{lambdaT13: [0.,0]}]
+cpt : [{lambdaT13: [0.,0]}]
+cpe : [{lambdaT13: [0.,0]}]
+cpmu : [{lambdaT13: [0.,0]}]
+cpta : [{lambdaT13: [0.,0]}]
+c81qq : [{lambdaT13: [0.,0]}]
+c11qq : [{lambdaT13: [0.,0]}]
+c83qq : [{lambdaT13: [0.,0]}]
+c13qq : [{lambdaT13: [0.,0]}]
+c8qt : [{lambdaT13: [0.,0]}]
+c1qt : [{lambdaT13: [0.,0]}]
+c8ut : [{lambdaT13: [0.,0]}]
+c1ut : [{lambdaT13: [0.,0]}]
+c8qu : [{lambdaT13: [0.,0]}]
+c1qu : [{lambdaT13: [0.,0]}]
+c8dt : [{lambdaT13: [0.,0]}]
+c1dt : [{lambdaT13: [0.,0]}]
+c8qd : [{lambdaT13: [0.,0]}]
+c1qd : [{lambdaT13: [0.,0]}]
+cQQ1 : [{lambdaT13: [0.,0]}]
+cQQ8 : [{lambdaT13: [0.,0]}]
+cQt1 : [{lambdaT13: [0.,0]}]
+cQt8 : [{lambdaT13: [0.,0]}]
+ctt1 : [{lambdaT13: [0.,0]}]
+cll : [{lambdaT13: [0.,0]}]
+cll1111 : [{lambdaT13: [0.,0]}]
+cbp : [{lambdaT13: [0.003001082716026083,2]}]
+ctp : [{lambdaT13: [0.2480703588615627,2]}]
+ctG : [{lambdaT13: [0.,0]}]
+ccp : [{lambdaT13: [0.,0]}]
+ctap : [{lambdaT13: [0.,0]}]
+ctW : [{lambdaT13: [0.,0]}]
+ctZ : [{lambdaT13: [0.,0]}]
+cp : [{lambdaT13: [0.,0]}]
+cQe : [{lambdaT13: [0.,0]}]
+cQl31 : [{lambdaT13: [0.,0]}]
+cQlM1 : [{lambdaT13: [0.,0]}]
+ctl1 : [{lambdaT13: [0.,0]}]
+cte : [{lambdaT13: [0.,0]}]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Miscellaneous information
+# Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult.dat
+# Export date: Sat 26 Apr 2025 10:18:41

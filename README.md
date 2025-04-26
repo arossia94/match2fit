@@ -20,7 +20,7 @@ Examples of the usage of this package can be found in the following scientific p
  - FCC Feasibility Report
  - J. ter Hoeve, Alejo N. Rossia, et al, "Connecting Scales: RGE Effects in the SMEFT at the LHC and Future Colliders" [arXiv:2502.20453](https://inspirehep.net/literature/2895783)
  - J. ter Hoeve, Alejo N. Rossia, et al, "The Higgs trilinear coupling in the SMEFT at the HL-LHC and the FCC-ee" [arxiv:2504.05974](https://inspirehep.net/literature/2909430)
-
+ 
 # Citation
 
 If you use this package and/or the UV capabilities of SMEFiT in a scientific publication, please cite

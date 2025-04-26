@@ -1,8 +1,8 @@
 # UV dictionary with WCs in terms of UV variables
 # ~~~~~~~~~~~~~~~~~~~~~~
 UV Collection : MultiParticleCollection
-UV model : Q1_Q7_W_NoDegen
-Model name : Q1_Q7_W_NoDegen
+UV model : Q1_Q7_W
+Model name : Q1_Q7_W
 # ~~~~~~~~~~~~~~~~~~~~~~
 UV couplings : [gWtiH, gWLf11, gWLf22, gWLf33, gWqf33, lamQ1uf3, lamQ7f33]
 UV masses : [MQ1, MQ7, MWti]
@@ -10,29 +10,29 @@ UV masses : [MQ1, MQ7, MWti]
 # Loop level of the results : Tree
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Setting of the UV mass in TeV:
-m : {3., 4.5, 2.5} # TeV
+m : 1 # TeV
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Expressions for all the WCs in SMEFiT basis
 cpG : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpB : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpW : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpWB : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cpBox : [{gWtiH: [-0.06,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cpBox : [{gWtiH: [-0.375,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpD : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cWWW : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpqMi : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cpQM : [{gWtiH: [0.04,1],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cpQM : [{gWtiH: [0.25,1],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 c3pq : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-c3pQ3 : [{gWtiH: [-0.04,1],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+c3pQ3 : [{gWtiH: [-0.25,1],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpl1 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpl2 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpl3 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-c3pl1 : [{gWtiH: [-0.04,1],gWLf11: [1,1],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-c3pl2 : [{gWtiH: [-0.04,1],gWLf11: [1,0],gWLf22: [1,1],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-c3pl3 : [{gWtiH: [-0.04,1],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,1],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+c3pl1 : [{gWtiH: [-0.25,1],gWLf11: [1,1],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+c3pl2 : [{gWtiH: [-0.25,1],gWLf11: [1,0],gWLf22: [1,1],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+c3pl3 : [{gWtiH: [-0.25,1],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,1],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpui : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpdi : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cpt : [{gWtiH: [0.024691358024691357,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,2]},{gWtiH: [-0.05555555555555555,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,2],lamQ7f33: [1,0]}]
+cpt : [{gWtiH: [0.5,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,2]},{gWtiH: [-0.5,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,2],lamQ7f33: [1,0]}]
 cpe : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpmu : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cpta : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
@@ -50,27 +50,27 @@ c8dt : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],l
 c1dt : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 c8qd : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 c1qd : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cQQ1 : [{gWtiH: [0.013333333333333332,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,2],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cQQ8 : [{gWtiH: [-0.16,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,2],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cQQ1 : [{gWtiH: [0.08333333333333333,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,2],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cQQ8 : [{gWtiH: [-1.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,2],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cQt1 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cQt8 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctt1 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cll : [{gWtiH: [-0.04,0],gWLf11: [1,1],gWLf22: [1,1],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cll1111 : [{gWtiH: [-0.02,0],gWLf11: [1,2],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cbp : [{gWtiH: [-0.0009603464691283466,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-ctp : [{gWtiH: [0.02450077618385805,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,2]},{gWtiH: [0.0551267464136806,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,2],lamQ7f33: [1,0]},{gWtiH: [-0.03969125741785003,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cll : [{gWtiH: [-0.25,0],gWLf11: [1,1],gWLf22: [1,1],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cll1111 : [{gWtiH: [-0.125,0],gWLf11: [1,2],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cbp : [{gWtiH: [-0.006002165432052166,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+ctp : [{gWtiH: [0.4961407177231255,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,2]},{gWtiH: [0.4961407177231255,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,2],lamQ7f33: [1,0]},{gWtiH: [-0.2480703588615627,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctG : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ccp : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-ctap : [{gWtiH: [-0.00040895136723647296,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+ctap : [{gWtiH: [-0.0025559460452279554,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctW : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctZ : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cp : [{gWtiH: [-0.020701356389034333,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]},{gWtiH: [-0.00010040039999999999,4],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cp : [{gWtiH: [-0.12938347743146458,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]},{gWtiH: [-0.003921890625,4],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cQe : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cQl31 : [{gWtiH: [-0.04,0],gWLf11: [1,1],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cQlM1 : [{gWtiH: [0.04,0],gWLf11: [1,1],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cQl31 : [{gWtiH: [-0.25,0],gWLf11: [1,1],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cQlM1 : [{gWtiH: [0.25,0],gWLf11: [1,1],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctl1 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cte : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
 # Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult_multiparticle_treelevel.dat
-# Export date: Sat 26 Apr 2025 10:08:48
+# Export date: Sat 26 Apr 2025 10:08:51
