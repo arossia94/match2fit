@@ -2,10 +2,10 @@ Model name: Phi_4_12_32_custoDegen
 UV Collection: 1LoopMatching
 UV model: Phi_4_12_32_custoDegen
 coefficients:
-  Opd:
+  OpBox:
     constrain:
     - lamPhi:
-      - -9.26125808665566e-6
+      - -9.261258086655654e-6
       - 0
     - lamPhi:
       - 0.0015831434944115277
@@ -22,35 +22,35 @@ coefficients:
   OWWW:
     constrain:
     - lamPhi:
-      - 6.119802892092048e-6
+      - 6.119802892092046e-6
       - 0
     max: 100
     min: -100
   OpqMi:
     constrain:
     - lamPhi:
-      - 5.812774599255183e-6
+      - 5.8127745992551775e-6
       - 0
     max: 100
     min: -100
   OpQM:
     constrain:
     - lamPhi:
-      - 5.812774599255183e-6
+      - 5.8127745992551775e-6
       - 0
     max: 100
     min: -100
   O3pq:
     constrain:
     - lamPhi:
-      - -5.993473328512812e-6
+      - -5.9934733285128066e-6
       - 0
     max: 100
     min: -100
   O3pQ3:
     constrain:
     - lamPhi:
-      - -5.993473328512812e-6
+      - -5.9934733285128066e-6
       - 0
     max: 100
     min: -100
@@ -78,21 +78,21 @@ coefficients:
   O3pl1:
     constrain:
     - lamPhi:
-      - -5.993473328512812e-6
+      - -5.9934733285128066e-6
       - 0
     max: 100
     min: -100
   O3pl2:
     constrain:
     - lamPhi:
-      - -5.993473328512812e-6
+      - -5.9934733285128066e-6
       - 0
     max: 100
     min: -100
   O3pl3:
     constrain:
     - lamPhi:
-      - -5.993473328512812e-6
+      - -5.9934733285128066e-6
       - 0
     max: 100
     min: -100
@@ -148,7 +148,7 @@ coefficients:
   O13qq:
     constrain:
     - lamPhi:
-      - -2.996736664256406e-6
+      - -2.9967366642564033e-6
       - 0
     max: 100
     min: -100
@@ -190,14 +190,14 @@ coefficients:
   OQQ1:
     constrain:
     - lamPhi:
-      - 1.9375915330850607e-6
+      - 1.937591533085059e-6
       - 0
     max: 100
     min: -100
   OQQ8:
     constrain:
     - lamPhi:
-      - -0.000023973893314051247
+      - -0.000023973893314051226
       - 0
     max: 100
     min: -100
@@ -218,21 +218,21 @@ coefficients:
   Oll:
     constrain:
     - lamPhi:
-      - -5.993473328512812e-6
+      - -5.9934733285128066e-6
       - 0
     max: 100
     min: -100
   Oll1111:
     constrain:
     - lamPhi:
-      - -3.26778475814285e-6
+      - -3.2677847581428473e-6
       - 0
     max: 100
     min: -100
   Obp:
     constrain:
     - lamPhi:
-      - -1.4389527372130495e-7
+      - -1.4389527372130482e-7
       - 0
     - lamPhi:
       - 0.00005067887549938742
@@ -242,7 +242,7 @@ coefficients:
   Otp:
     constrain:
     - lamPhi:
-      - -5.947212317725513e-6
+      - -5.9472123177255075e-6
       - 0
     - lamPhi:
       - 0.0020945651988694193
@@ -252,7 +252,7 @@ coefficients:
   Otap:
     constrain:
     - lamPhi:
-      - -6.127597780476622e-8
+      - -6.127597780476617e-8
       - 0
     - lamPhi:
       - 0.000021580956552370722
@@ -262,7 +262,7 @@ coefficients:
   Op:
     constrain:
     - lamPhi:
-      - -3.1018256845428885e-6
+      - -3.101825684542887e-6
       - 0
     - lamPhi:
       - 0.04419293553048622
@@ -279,14 +279,14 @@ coefficients:
   OQl31:
     constrain:
     - lamPhi:
-      - -5.993473328512812e-6
+      - -5.9934733285128066e-6
       - 0
     max: 100
     min: -100
   OQlM1:
     constrain:
     - lamPhi:
-      - 6.174172057770441e-6
+      - 6.174172057770436e-6
       - 0
     max: 100
     min: -100
