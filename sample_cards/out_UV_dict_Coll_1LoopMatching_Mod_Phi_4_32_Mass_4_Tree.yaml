@@ -17,7 +17,7 @@ cpG : [{lamPhi: [0.,0]}]
 cpB : [{lamPhi: [0.,0]}]
 cpW : [{lamPhi: [0.,0]}]
 cpWB : [{lamPhi: [0.,0]}]
-cpd : [{lamPhi: [0.,0]}]
+cpBox : [{lamPhi: [0.,0]}]
 cpD : [{lamPhi: [0.,0]}]
 cWWW : [{lamPhi: [0.,0]}]
 cpqMi : [{lamPhi: [0.,0]}]
@@ -72,5 +72,5 @@ ctl1 : [{lamPhi: [0.,0]}]
 cte : [{lamPhi: [0.,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
-# Matching results address: C:\Users\alejo\OneDrive\Documentos\match2fit\/sample_results/MatchingResult_EW_Quad_Y32.dat
-# Export date: Mon 7 Apr 2025 10:11:12
+# Matching results address: D:\Users\Alejo\Documents\GitHub\match2fit\/sample_results/MatchingResult_EW_Quad_Y32.dat
+# Export date: Sat 26 Apr 2025 10:18:43
