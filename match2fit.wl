@@ -47,13 +47,21 @@ Begin["`Private`"];
 
 (*/// Function that defines convenient aliases for the WCs to print ///*)
 printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},{"c11qq",ToString[x]=="wwCQq11"},{"c83qq",ToString[x]=="wwCQq38"},{"c13qq",ToString[x]=="wwCQq31"},{"c8qt",ToString[x]=="wwCtq8"},{"c1qt",ToString[x]=="wwCtq1"},{"c8ut",ToString[x]=="wwCtu8"},{"c1ut",ToString[x]=="wwCtu1"},{"c8qu",ToString[x]=="wwCQu8"},{"c1qu",ToString[x]=="wwCQu1"},{"c8dt",ToString[x]=="wwCtd8"},{"c1dt",ToString[x]=="wwCtd1"},{"c8qd",ToString[x]=="wwCQd8"},{"c1qd",ToString[x]=="wwCQd1"},{"cQQ1",ToString[x]=="wwCQQ1"},{"cQQ8",ToString[x]=="wwCQQ8"},{"cQt1",ToString[x]=="wwCQt1"},{"cQt8",ToString[x]=="wwCQt8"},{"ctt1",ToString[x]=="wwCtt1"},{"cll",ToString[x]=="wwCll"},{"cll1111",ToString[x]=="wwCll1111"},{"cbp",ToString[x]=="wwCb\[CurlyPhi]"},{"ctp",ToString[x]=="wwCt\[CurlyPhi]"},{"ctG",ToString[x]=="wwCtG"},{"ccp",ToString[x]=="wwCc\[CurlyPhi]"},{"ctap",ToString[x]=="wwC\[Tau]\[CurlyPhi]"},{"ctW",ToString[x]=="wwCtW"},{"ctZ",ToString[x]=="wwCtZ"},{"c3pQ3",ToString[x]=="wwC\[CurlyPhi]Q3"},{"cpQM",ToString[x]=="wwC\[CurlyPhi]Qm"},{"cpt",ToString[x]=="wwC\[CurlyPhi]t"},{"cpl1",ToString[x]=="wwC\[CurlyPhi]l11"},{"c3pl1",ToString[x]=="wwC\[CurlyPhi]l31"},{"cpl2",ToString[x]=="wwC\[CurlyPhi]l12"},{"c3pl2",ToString[x]=="wwC\[CurlyPhi]l32"},{"cpl3",ToString[x]=="wwC\[CurlyPhi]l13"},{"c3pl3",ToString[x]=="wwC\[CurlyPhi]l33"},{"cpe",ToString[x]=="wwC\[CurlyPhi]e"},{"cpmu",ToString[x]=="wwC\[CurlyPhi]\[Mu]"},{"cpta",ToString[x]=="wwC\[CurlyPhi]\[Tau]"},{"c3pq",ToString[x]=="wwC\[CurlyPhi]q3"},{"cpqMi",ToString[x]=="wwC\[CurlyPhi]qm"},{"cpui",ToString[x]=="wwC\[CurlyPhi]ui"},{"cpdi",ToString[x]=="wwC\[CurlyPhi]di"},{"cpG",ToString[x]=="wwC\[CurlyPhi]G"},{"cpB",ToString[x]=="wwC\[CurlyPhi]B"},{"cpW",ToString[x]=="wwC\[CurlyPhi]W"},{"cpBox",ToString[x]=="wwC\[CurlyPhi]Box"},{"cpWB",ToString[x]=="wwC\[CurlyPhi]WB"},{"cpD",ToString[x]=="wwC\[CurlyPhi]D"},{"cWWW",ToString[x]=="wwCWWW"},
-{"cp",ToString[x]=="wwC\[CurlyPhi]"},{"cQe",ToString[x]=="wwCQe"},
+{"cp",ToString[x]=="wwC\[CurlyPhi]"},
+{"cQe",ToString[x]=="wwCQe"},
 {"cQl31",ToString[x]=="wwCQl31"},
 {"cQlM1",ToString[x]=="wwCQlM1"},
 {"ctl1",ToString[x]=="wwCtl1"},
 {"cte",ToString[x]=="wwCte"},
 {"cqlM1",ToString[x]=="wwCqlM1"},
-{"cql31",ToString[x]=="wwCql31"}
+{"cql31",ToString[x]=="wwCql31"},
+{"clu",ToString[x]=="wwClu"},
+{"cld",ToString[x]=="wwCld"},
+{"clb",ToString[x]=="wwClb"},
+{"cqe",ToString[x]=="wwCqe"},
+{"ceu",ToString[x]=="wwCeu"},
+{"ced",ToString[x]=="wwCed"},
+{"ceb",ToString[x]=="wwCeb"}
 }];
 (*Original function taken from: https://mathematica.stackexchange.com/a/250929 *)
 Clear[EinsteinSum]
@@ -289,6 +297,13 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCte]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][1,1,3,3]},
 {Symbol[SymbolName[wwCql31]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][1,1,1,1]},
 {Symbol[SymbolName[wwCqlM1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][1,1,1,1]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][1,1,1,1]}
+{Symbol[SymbolName[wwCqe]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][1,1,1,1]},
+{Symbol[SymbolName[wwClb]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][1,1,3,3]},
+{Symbol[SymbolName[wwClu]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][1,1,1,1]},
+{Symbol[SymbolName[wwCld]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][1,1,1,1]},
+{Symbol[SymbolName[wwCeu]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][1,1,1,1]},
+{Symbol[SymbolName[wwCed]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ed]]][1,1,1,1]},
+{Symbol[SymbolName[wwCeb]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eb]]][1,1,3,3]}
 };
 vanishBviolation={Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]]->0};
 
