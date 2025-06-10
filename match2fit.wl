@@ -203,7 +203,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 {dicTotal,massString,massReemp}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*MMEFT conventions*)
 
 
@@ -303,7 +303,7 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCld]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][1,1,1,1]},
 {Symbol[SymbolName[wwCeu]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][1,1,1,1]},
 {Symbol[SymbolName[wwCed]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ed]]][1,1,1,1]},
-{Symbol[SymbolName[wwCeb]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eb]]][1,1,3,3]}
+{Symbol[SymbolName[wwCeb]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ed]]][1,1,3,3]}
 };
 vanishBviolation={Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]]->0};
 
