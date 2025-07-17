@@ -1,0 +1,29 @@
+{{}, {}, {alphaKG -> 1, alphaKH -> 1, alphaKW -> 1, alphaO3G -> 0, 
+  alphaO3Gt -> 0, alphaO3W -> 0, alphaO3Wt -> 0, alphaOH -> 0, alphaOHB -> 0, 
+  alphaOHBox -> 0, alphaOHBt -> 0, alphaOHD -> 0, alphaOHG -> 0, 
+  alphaOHGt -> 0, alphaOHW -> 0, alphaOHWB -> 0, alphaOHWBt -> 0, 
+  alphaOHWt -> 0, alphaOlambda -> \[Lambda]\[Phi], 
+  alphaOmuH2 -> Subscript[\[Mu], \[Phi]]^2, alphaKd[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKdbar[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKe[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKebar[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKl[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKlbar[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKq[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKqbar[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKu[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaKubar[mif1_, mif2_] -> 
+   KroneckerDelta[mif1, mif2], alphaOddbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOeebar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaOHdbar[mif1_, mif2_] -> 0, alphaOHebar[mif1_, mif2_] -> 0, 
+  alphaOHl1bar[mif1_, mif2_] -> 0, alphaOHl3bar[mif1_, mif2_] -> 0, 
+  alphaOHq1bar[mif1_, mif2_] -> 0, alphaOHq3bar[mif1_, mif2_] -> 0, 
+  alphaOHubar[mif1_, mif2_] -> 0, alphaOllbar[mif1_, mif2_, mif3_, mif4_] -> 
+   (yS1fmif1mif3*yS1fmif2mif4)/Conjugate[m]^2, 
+  alphaOuubar[mif1_, mif2_, mif3_, mif4_] -> 0, 
+  alphaWeinberg[mif1_, mif2_] -> 0, alphaWeinbergbar[mif1_, mif2_] -> 0, 
+  alphaOdB[mif1_, mif2_] -> 0, alphaOdBbar[mif1_, mif2_] -> 0, 
+  alphaOdd[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOdG[mif1_, mif2_] -> 0, 
+  alphaOdGbar[mif1_, mif2_] -> 0, alphaOdH[mif1_, mif2_] -> 0, 
+  alphaOdHbar[mif1_, mif2_] -> 0, alphaOdW[mif1_, mif2_] -> 0, 
+  alphaOdWbar[mif1_, mif2_] -> 0}}
