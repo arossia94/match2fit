@@ -39,10 +39,8 @@
   alphaOedbar[mif1_, mif2_, mif3_, mif4_] -> 
    -(Conjugate[gBdf[mif3, mif4]*gBef[mif1, mif2]]/m^2), 
   alphaOee[mif1_, mif2_, mif3_, mif4_] -> 
-   -1/2*(gBef[mif1, mif2]*gBef[mif3, mif4])/m^2, 
-  alphaOeH[mif1_, mif2_] -> Subscript[wC, e\[Phi]][mif1, mif2, mif3, mif4], 
-  alphaOeHbar[mif1_, mif2_] -> Conjugate[Subscript[wC, e\[Phi]][mif1, mif2, 
-     mif3, mif4]], alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 
+   -1/2*(gBef[mif1, mif2]*gBef[mif3, mif4])/m^2, alphaOeH[mif1_, mif2_] -> 0, 
+  alphaOeHbar[mif1_, mif2_] -> 0, alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBef[mif1, mif2]*gBuf[mif3, mif4])/m^2), 
   alphaOeubar[mif1_, mif2_, mif3_, mif4_] -> 
    -(Conjugate[gBef[mif1, mif2]*gBuf[mif3, mif4]]/m^2), 

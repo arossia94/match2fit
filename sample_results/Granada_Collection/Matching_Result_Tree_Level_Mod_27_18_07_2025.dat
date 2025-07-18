@@ -67,21 +67,26 @@
   alphaOdB[mif1_, mif2_] -> 0, alphaOdBbar[mif1_, mif2_] -> 0, 
   alphaOdd[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOdG[mif1_, mif2_] -> 0, 
   alphaOdGbar[mif1_, mif2_] -> 0, alphaOdH[mif1_, mif2_] -> 
-   (Conjugate[Sqrt[1 - gammaL1^2/m^2]*ySM[d][mif1, mif2]]*
+   (Conjugate[Sqrt[1 - gammaL1^2/m^2]*yd[mif1, mif2]]*
      (-1/2*(gammaL1^2*h1L1)/m^4 - (I*Im[gammaL1^2*h3L1])/m^4 + 
       (gammaL1^2*gL1W*Subscript[g2, SM])/(2*m^4)))/(1 - gammaL1^2/m^2)^(3/2), 
   alphaOdHbar[mif1_, mif2_] -> Sqrt[1 - gammaL1^2/m^2]*
     Conjugate[(1 - gammaL1^2/m^2)^(-3/2)]*
     (Conjugate[-1/2*(gammaL1^2*h1L1)/m^4 + (gammaL1^2*gL1W*Subscript[g2, SM])/
-        (2*m^4)] + (I*Im[gammaL1^2*h3L1])/m^4)*ySM[d][mif1, mif2], 
+        (2*m^4)] + (I*Im[gammaL1^2*h3L1])/m^4)*yd[mif1, mif2], 
   alphaOdW[mif1_, mif2_] -> 0, alphaOdWbar[mif1_, mif2_] -> 0, 
   alphaOeB[mif1_, mif2_] -> 0, alphaOeBbar[mif1_, mif2_] -> 0, 
   alphaOed[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOedbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOee[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeH[mif1_, mif2_] -> 
-   Subscript[wC, e\[Phi]][mif1, mif2, mif3, mif4], 
-  alphaOeHbar[mif1_, mif2_] -> Conjugate[Subscript[wC, e\[Phi]][mif1, mif2, 
-     mif3, mif4]], alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 0, 
+   (Conjugate[Sqrt[1 - gammaL1^2/m^2]*yl[mif1, mif2]]*
+     (-1/2*(gammaL1^2*h1L1)/m^4 - (I*Im[gammaL1^2*h3L1])/m^4 + 
+      (gammaL1^2*gL1W*Subscript[g2, SM])/(2*m^4)))/(1 - gammaL1^2/m^2)^(3/2), 
+  alphaOeHbar[mif1_, mif2_] -> Sqrt[1 - gammaL1^2/m^2]*
+    Conjugate[(1 - gammaL1^2/m^2)^(-3/2)]*
+    (Conjugate[-1/2*(gammaL1^2*h1L1)/m^4 + (gammaL1^2*gL1W*Subscript[g2, SM])/
+        (2*m^4)] + (I*Im[gammaL1^2*h3L1])/m^4)*yl[mif1, mif2], 
+  alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOeubar[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeW[mif1_, mif2_] -> 0, 
   alphaOeWbar[mif1_, mif2_] -> 0, alphaOHd[mif1_, mif2_] -> 
    -1/6*(gammaL1^2*gL1B*KroneckerDelta[mif1, mif2]*Subscript[g1, SM])/
@@ -139,13 +144,13 @@
   alphaOud8[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOud8bar[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOuG[mif1_, mif2_] -> 0, 
   alphaOuGbar[mif1_, mif2_] -> 0, alphaOuH[mif1_, mif2_] -> 
-   (Conjugate[Sqrt[1 - gammaL1^2/m^2]*ySM[u][mif1, mif2]]*
+   (Conjugate[Sqrt[1 - gammaL1^2/m^2]*yu[mif1, mif2]]*
      (-1/2*(gammaL1^2*h1L1)/m^4 - (I*Im[gammaL1^2*h3L1])/m^4 + 
       (gammaL1^2*gL1W*Subscript[g2, SM])/(2*m^4)))/(1 - gammaL1^2/m^2)^(3/2), 
   alphaOuHbar[mif1_, mif2_] -> Sqrt[1 - gammaL1^2/m^2]*
     Conjugate[(1 - gammaL1^2/m^2)^(-3/2)]*
     (Conjugate[-1/2*(gammaL1^2*h1L1)/m^4 + (gammaL1^2*gL1W*Subscript[g2, SM])/
-        (2*m^4)] + (I*Im[gammaL1^2*h3L1])/m^4)*ySM[u][mif1, mif2], 
+        (2*m^4)] + (I*Im[gammaL1^2*h3L1])/m^4)*yu[mif1, mif2], 
   alphaOuu[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOuW[mif1_, mif2_] -> 0, 
   alphaOuWbar[mif1_, mif2_] -> 0, alphaOlambdad[mif1_, mif2_] -> 
    yd[mif1, mif2], alphaOlambdadbar[mif1_, mif2_] -> 

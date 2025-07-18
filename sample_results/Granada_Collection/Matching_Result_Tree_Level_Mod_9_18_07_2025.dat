@@ -28,10 +28,8 @@
   alphaOdWbar[mif1_, mif2_] -> 0, alphaOeB[mif1_, mif2_] -> 0, 
   alphaOeBbar[mif1_, mif2_] -> 0, alphaOed[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOedbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
-  alphaOee[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeH[mif1_, mif2_] -> 
-   Subscript[wC, e\[Phi]][mif1, mif2, mif3, mif4], 
-  alphaOeHbar[mif1_, mif2_] -> Conjugate[Subscript[wC, e\[Phi]][mif1, mif2, 
-     mif3, mif4]], alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 
+  alphaOee[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeH[mif1_, mif2_] -> 0, 
+  alphaOeHbar[mif1_, mif2_] -> 0, alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 
    (yomega1edf[mif2, mif4]*yomega1euf[mif1, mif3])/(2*m^2), 
   alphaOeubar[mif1_, mif2_, mif3_, mif4_] -> 
    (Conjugate[yomega1edf[mif2, mif4]]*yomega1euf[mif1, mif3])/(2*m^2), 

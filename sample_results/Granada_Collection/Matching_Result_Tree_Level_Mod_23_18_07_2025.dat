@@ -26,16 +26,16 @@
   alphaOdB[mif1_, mif2_] -> 0, alphaOdBbar[mif1_, mif2_] -> 0, 
   alphaOdd[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOdG[mif1_, mif2_] -> 0, 
   alphaOdGbar[mif1_, mif2_] -> 0, alphaOdH[mif1_, mif2_] -> 
-   -1/8*(gW1H^2*Conjugate[ySM[d][mif1, mif2]])/m^2, 
-  alphaOdHbar[mif1_, mif2_] -> -1/8*(gW1H^2*ySM[d][mif1, mif2])/m^2, 
+   -1/8*(gW1H^2*Conjugate[yd[mif1, mif2]])/m^2, 
+  alphaOdHbar[mif1_, mif2_] -> -1/8*(gW1H^2*yd[mif1, mif2])/m^2, 
   alphaOdW[mif1_, mif2_] -> 0, alphaOdWbar[mif1_, mif2_] -> 0, 
   alphaOeB[mif1_, mif2_] -> 0, alphaOeBbar[mif1_, mif2_] -> 0, 
   alphaOed[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOedbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOee[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeH[mif1_, mif2_] -> 
-   Subscript[wC, e\[Phi]][mif1, mif2, mif3, mif4], 
-  alphaOeHbar[mif1_, mif2_] -> Conjugate[Subscript[wC, e\[Phi]][mif1, mif2, 
-     mif3, mif4]], alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 0, 
+   -1/8*(gW1H^2*Conjugate[yl[mif1, mif2]])/m^2, 
+  alphaOeHbar[mif1_, mif2_] -> -1/8*(gW1H^2*yl[mif1, mif2])/m^2, 
+  alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOeubar[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOeW[mif1_, mif2_] -> 0, 
   alphaOeWbar[mif1_, mif2_] -> 0, alphaOHd[mif1_, mif2_] -> 0, 
   alphaOHe[mif1_, mif2_] -> 0, alphaOHl1[mif1_, mif2_] -> 0, 
@@ -83,8 +83,8 @@
   alphaOud8[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOud8bar[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOuG[mif1_, mif2_] -> 0, 
   alphaOuGbar[mif1_, mif2_] -> 0, alphaOuH[mif1_, mif2_] -> 
-   -1/8*(gW1H^2*Conjugate[ySM[u][mif1, mif2]])/m^2, 
-  alphaOuHbar[mif1_, mif2_] -> -1/8*(gW1H^2*ySM[u][mif1, mif2])/m^2, 
+   -1/8*(gW1H^2*Conjugate[yu[mif1, mif2]])/m^2, 
+  alphaOuHbar[mif1_, mif2_] -> -1/8*(gW1H^2*yu[mif1, mif2])/m^2, 
   alphaOuu[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOuW[mif1_, mif2_] -> 0, 
   alphaOuWbar[mif1_, mif2_] -> 0, alphaOlambdad[mif1_, mif2_] -> 
    yd[mif1, mif2], alphaOlambdadbar[mif1_, mif2_] -> 
