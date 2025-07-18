@@ -1,0 +1,84 @@
+# UV dictionary with WCs in terms of UV variables
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV Collection : Granada
+UV model : test_47
+Model name : test_47
+# ~~~~~~~~~~~~~~~~~~~~~~
+UV couplings : [ConjugateySM(d)(3,3), ConjugateySM(u)(3,3), lamT1f3, Subscript(wC,e\[Phi])(3,3,mif3,mif4)]
+UV masses : [m]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Loop level of the results : Tree
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Setting of the UV mass in TeV:
+m : 1 # TeV
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Expressions for all the WCs in SMEFiT basis
+cpG : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpB : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpW : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpWB : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpBox : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpD : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cWWW : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpqMi : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpQM : [{ConjugateySM(d)(3,3): [-0.25,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,2],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c3pq : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c3pQ3 : [{ConjugateySM(d)(3,3): [0.0625,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,2],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpl1 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpl2 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpl3 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c3pl1 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c3pl2 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c3pl3 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpui : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpdi : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpt : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpe : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpmu : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cpta : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c81qq : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c11qq : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c83qq : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c13qq : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c8qt : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c1qt : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c8ut : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c1ut : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c8qu : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c1qu : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c8dt : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c1dt : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c8qd : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+c1qd : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cQQ1 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cQQ8 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cQt1 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cQt8 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ctt1 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cll : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cll1111 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cbp : [{ConjugateySM(d)(3,3): [0.125*ConjugateySM[d][3., 3.],0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,2],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ctp : [{ConjugateySM(d)(3,3): [0.25*ConjugateySM[u][3., 3.],0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,2],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ctG : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ccp : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ctap : [{ConjugateySM(d)(3,3): [Subscript[wC, e\[Phi]][3., 3., mif3, mif4],0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ctW : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ctZ : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cp : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cQe : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cQl31 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cQlM1 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ctl1 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cte : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cql31 : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+0<> : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+clb : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+clu : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+cld : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ceu : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ced : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+ceb : [{ConjugateySM(d)(3,3): [0.,0],ConjugateySM(u)(3,3): [1,0],lamT1f3: [1,0],Subscript(wC,e\[Phi])(3,3,mif3,mif4): [1,0]}]
+# ~~~~~~~~~~~~~~~~~~~~~~
+# Miscellaneous information
+# Matching results address: C:\Users\alejo\Documents\match2fit\/sample_results/Granada_Collection/Matching_Result_Tree_Level_Mod_47_18_07_2025.dat
+# Export date: Fri 18 Jul 2025 11:23:35

@@ -1,0 +1,10 @@
+{gBdf[1, 2] -> 0, gBdf[1, 3] -> 0, gBdf[2, 1] -> 0, gBdf[2, 2] -> gBdf[1, 1], 
+ gBdf[2, 3] -> 0, gBdf[3, 1] -> 0, gBdf[3, 2] -> 0, gBdf[3, 3] -> gBdf[1, 1], 
+ gBef[1, 2] -> 0, gBef[1, 3] -> 0, gBef[2, 1] -> 0, gBef[2, 3] -> 0, 
+ gBef[3, 1] -> 0, gBef[3, 2] -> 0, gBLf[1, 2] -> 0, gBLf[1, 3] -> 0, 
+ gBLf[2, 1] -> 0, gBLf[2, 3] -> 0, gBLf[3, 1] -> 0, gBLf[3, 2] -> 0, 
+ gBqf[1, 2] -> 0, gBqf[1, 3] -> 0, gBqf[2, 1] -> 0, gBqf[2, 2] -> gBqf[1, 1], 
+ gBqf[2, 3] -> 0, gBqf[3, 1] -> 0, gBqf[3, 2] -> 0, gBuf[1, 2] -> 0, 
+ gBuf[1, 3] -> 0, gBuf[2, 1] -> 0, gBuf[2, 2] -> gBuf[1, 1], gBuf[2, 3] -> 0, 
+ gBuf[3, 1] -> 0, gBuf[3, 2] -> 0, gBqf[1, 1] -> 0, gBdf[1, 1] -> 0, 
+ gBuf[1, 1] -> 0}
