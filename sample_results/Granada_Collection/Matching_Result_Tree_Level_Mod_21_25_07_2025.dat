@@ -3,30 +3,36 @@
   alphaOH -> 0, alphaOHB -> 0, alphaOHBox -> -1/2*gBH^2/m^2, alphaOHBt -> 0, 
   alphaOHD -> (-2*gBH^2)/m^2, alphaOHG -> 0, alphaOHGt -> 0, alphaOHW -> 0, 
   alphaOHWB -> 0, alphaOHWBt -> 0, alphaOHWt -> 0, alphaOlambda -> lam, 
-  alphaOmuH2 -> muH^2, alphaKd[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKdbar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKe[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKebar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKl[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKlbar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKq[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKqbar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKu[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
-  alphaKubar[mif1_, mif2_] -> KroneckerDelta[mif1, mif2], 
+  alphaOmuH2 -> muH^2, alphaKd[mif1_, mif2_] -> 
+   I*Im[KroneckerDelta[mif1, mif2]] + Re[KroneckerDelta[mif1, mif2]], 
+  alphaKdbar[mif1_, mif2_] -> I*Im[KroneckerDelta[mif1, mif2]] + 
+    Re[KroneckerDelta[mif1, mif2]], alphaKe[mif1_, mif2_] -> 
+   I*Im[KroneckerDelta[mif1, mif2]] + Re[KroneckerDelta[mif1, mif2]], 
+  alphaKebar[mif1_, mif2_] -> I*Im[KroneckerDelta[mif1, mif2]] + 
+    Re[KroneckerDelta[mif1, mif2]], alphaKl[mif1_, mif2_] -> 
+   I*Im[KroneckerDelta[mif1, mif2]] + Re[KroneckerDelta[mif1, mif2]], 
+  alphaKlbar[mif1_, mif2_] -> I*Im[KroneckerDelta[mif1, mif2]] + 
+    Re[KroneckerDelta[mif1, mif2]], alphaKq[mif1_, mif2_] -> 
+   I*Im[KroneckerDelta[mif1, mif2]] + Re[KroneckerDelta[mif1, mif2]], 
+  alphaKqbar[mif1_, mif2_] -> I*Im[KroneckerDelta[mif1, mif2]] + 
+    Re[KroneckerDelta[mif1, mif2]], alphaKu[mif1_, mif2_] -> 
+   I*Im[KroneckerDelta[mif1, mif2]] + Re[KroneckerDelta[mif1, mif2]], 
+  alphaKubar[mif1_, mif2_] -> I*Im[KroneckerDelta[mif1, mif2]] + 
+    Re[KroneckerDelta[mif1, mif2]], 
   alphaOddbar[mif1_, mif2_, mif3_, mif4_] -> 
-   -1/2*Conjugate[gBdf[mif1, mif2]*gBdf[mif3, mif4]]/m^2, 
+   -1/2*(gBdf[mif1, mif2]*gBdf[mif3, mif4])/m^2, 
   alphaOeebar[mif1_, mif2_, mif3_, mif4_] -> 
-   -1/2*Conjugate[gBef[mif1, mif2]*gBef[mif3, mif4]]/m^2, 
-  alphaOHdbar[mif1_, mif2_] -> -((gBH*Conjugate[gBdf[mif1, mif2]])/m^2), 
-  alphaOHebar[mif1_, mif2_] -> -((gBH*Conjugate[gBef[mif1, mif2]])/m^2), 
-  alphaOHl1bar[mif1_, mif2_] -> -((gBH*Conjugate[gBLf[mif1, mif2]])/m^2), 
+   -1/2*(gBef[mif1, mif2]*gBef[mif3, mif4])/m^2, 
+  alphaOHdbar[mif1_, mif2_] -> -((gBH*gBdf[mif1, mif2])/m^2), 
+  alphaOHebar[mif1_, mif2_] -> -((gBH*gBef[mif1, mif2])/m^2), 
+  alphaOHl1bar[mif1_, mif2_] -> -((gBH*gBLf[mif1, mif2])/m^2), 
   alphaOHl3bar[mif1_, mif2_] -> 0, alphaOHq1bar[mif1_, mif2_] -> 
-   -((gBH*Conjugate[gBqf[mif1, mif2]])/m^2), alphaOHq3bar[mif1_, mif2_] -> 0, 
-  alphaOHubar[mif1_, mif2_] -> -((gBH*Conjugate[gBuf[mif1, mif2]])/m^2), 
+   -((gBH*gBqf[mif1, mif2])/m^2), alphaOHq3bar[mif1_, mif2_] -> 0, 
+  alphaOHubar[mif1_, mif2_] -> -((gBH*gBuf[mif1, mif2])/m^2), 
   alphaOllbar[mif1_, mif2_, mif3_, mif4_] -> 
-   -1/2*Conjugate[gBLf[mif1, mif2]*gBLf[mif3, mif4]]/m^2, 
+   -1/2*(gBLf[mif1, mif2]*gBLf[mif3, mif4])/m^2, 
   alphaOuubar[mif1_, mif2_, mif3_, mif4_] -> 
-   -1/2*Conjugate[gBuf[mif1, mif2]*gBuf[mif3, mif4]]/m^2, 
+   -1/2*(gBuf[mif1, mif2]*gBuf[mif3, mif4])/m^2, 
   alphaWeinberg[mif1_, mif2_] -> 0, alphaWeinbergbar[mif1_, mif2_] -> 0, 
   alphaOdB[mif1_, mif2_] -> 0, alphaOdBbar[mif1_, mif2_] -> 0, 
   alphaOdd[mif1_, mif2_, mif3_, mif4_] -> 
@@ -37,29 +43,28 @@
   alphaOeBbar[mif1_, mif2_] -> 0, alphaOed[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBdf[mif3, mif4]*gBef[mif1, mif2])/m^2), 
   alphaOedbar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBdf[mif3, mif4]*gBef[mif1, mif2]]/m^2), 
+   -((gBdf[mif3, mif4]*gBef[mif1, mif2])/m^2), 
   alphaOee[mif1_, mif2_, mif3_, mif4_] -> 
    -1/2*(gBef[mif1, mif2]*gBef[mif3, mif4])/m^2, alphaOeH[mif1_, mif2_] -> 0, 
   alphaOeHbar[mif1_, mif2_] -> 0, alphaOeu[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBef[mif1, mif2]*gBuf[mif3, mif4])/m^2), 
   alphaOeubar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBef[mif1, mif2]*gBuf[mif3, mif4]]/m^2), 
-  alphaOeW[mif1_, mif2_] -> 0, alphaOeWbar[mif1_, mif2_] -> 0, 
-  alphaOHd[mif1_, mif2_] -> -((gBH*gBdf[mif1, mif2])/m^2), 
-  alphaOHe[mif1_, mif2_] -> -((gBH*gBef[mif1, mif2])/m^2), 
-  alphaOHl1[mif1_, mif2_] -> -((gBH*gBLf[mif1, mif2])/m^2), 
-  alphaOHl3[mif1_, mif2_] -> 0, alphaOHq1[mif1_, mif2_] -> 
-   -((gBH*gBqf[mif1, mif2])/m^2), alphaOHq3[mif1_, mif2_] -> 0, 
-  alphaOHu[mif1_, mif2_] -> -((gBH*gBuf[mif1, mif2])/m^2), 
-  alphaOHud[mif1_, mif2_] -> 0, alphaOHudbar[mif1_, mif2_] -> 0, 
-  alphaOld[mif1_, mif2_, mif3_, mif4_] -> 
+   -((gBef[mif1, mif2]*gBuf[mif3, mif4])/m^2), alphaOeW[mif1_, mif2_] -> 0, 
+  alphaOeWbar[mif1_, mif2_] -> 0, alphaOHd[mif1_, mif2_] -> 
+   -((gBH*gBdf[mif1, mif2])/m^2), alphaOHe[mif1_, mif2_] -> 
+   -((gBH*gBef[mif1, mif2])/m^2), alphaOHl1[mif1_, mif2_] -> 
+   -((gBH*gBLf[mif1, mif2])/m^2), alphaOHl3[mif1_, mif2_] -> 0, 
+  alphaOHq1[mif1_, mif2_] -> -((gBH*gBqf[mif1, mif2])/m^2), 
+  alphaOHq3[mif1_, mif2_] -> 0, alphaOHu[mif1_, mif2_] -> 
+   -((gBH*gBuf[mif1, mif2])/m^2), alphaOHud[mif1_, mif2_] -> 0, 
+  alphaOHudbar[mif1_, mif2_] -> 0, alphaOld[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBdf[mif3, mif4]*gBLf[mif1, mif2])/m^2), 
   alphaOldbar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBdf[mif3, mif4]*gBLf[mif1, mif2]]/m^2), 
+   -((gBdf[mif3, mif4]*gBLf[mif1, mif2])/m^2), 
   alphaOle[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBef[mif1, mif2]*gBef[mif3, mif4])/m^2), 
   alphaOlebar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBdf[mif3, mif4]*gBLf[mif1, mif2]]/m^2), 
+   -((gBdf[mif3, mif4]*gBLf[mif1, mif2])/m^2), 
   alphaOledq[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOledqbar[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOlequ1[mif1_, mif2_, mif3_, mif4_] -> 0, 
@@ -71,33 +76,33 @@
   alphaOlq1[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBLf[mif1, mif2]*gBqf[mif3, mif4])/m^2), 
   alphaOlq1bar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBLf[mif1, mif2]*gBqf[mif3, mif4]]/m^2), 
+   -((gBLf[mif1, mif2]*gBqf[mif3, mif4])/m^2), 
   alphaOlq3[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOlq3bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOlu[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBLf[mif1, mif2]*gBuf[mif3, mif4])/m^2), 
   alphaOlubar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBLf[mif1, mif2]*gBuf[mif3, mif4]]/m^2), 
+   -((gBLf[mif1, mif2]*gBuf[mif3, mif4])/m^2), 
   alphaOqd1[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBdf[mif3, mif4]*gBqf[mif1, mif2])/m^2), 
   alphaOqd1bar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBdf[mif3, mif4]*gBqf[mif1, mif2]]/m^2), 
+   -((gBdf[mif3, mif4]*gBqf[mif1, mif2])/m^2), 
   alphaOqd8[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOqd8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOqe[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBef[mif3, mif4]*gBqf[mif1, mif2])/m^2), 
   alphaOqebar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBef[mif3, mif4]*gBqf[mif1, mif2]]/m^2), 
+   -((gBef[mif3, mif4]*gBqf[mif1, mif2])/m^2), 
   alphaOqq1[mif1_, mif2_, mif3_, mif4_] -> 
    -1/2*(gBqf[mif1, mif2]*gBqf[mif3, mif4])/m^2, 
   alphaOqq1bar[mif1_, mif2_, mif3_, mif4_] -> 
-   -1/2*Conjugate[gBqf[mif1, mif2]*gBqf[mif3, mif4]]/m^2, 
+   -1/2*(gBqf[mif1, mif2]*gBqf[mif3, mif4])/m^2, 
   alphaOqq3[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOqq3bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOqu1[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBqf[mif1, mif2]*gBuf[mif3, mif4])/m^2), 
   alphaOqu1bar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBqf[mif1, mif2]*gBuf[mif3, mif4]]/m^2), 
+   -((gBqf[mif1, mif2]*gBuf[mif3, mif4])/m^2), 
   alphaOqu8[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOqu8bar[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOquqd1[mif1_, mif2_, mif3_, mif4_] -> 0, 
@@ -108,17 +113,16 @@
   alphaOud1[mif1_, mif2_, mif3_, mif4_] -> 
    -((gBdf[mif3, mif4]*gBuf[mif1, mif2])/m^2), 
   alphaOud1bar[mif1_, mif2_, mif3_, mif4_] -> 
-   -(Conjugate[gBdf[mif3, mif4]*gBuf[mif1, mif2]]/m^2), 
+   -((gBdf[mif3, mif4]*gBuf[mif1, mif2])/m^2), 
   alphaOud8[mif1_, mif2_, mif3_, mif4_] -> 0, 
   alphaOud8bar[mif1_, mif2_, mif3_, mif4_] -> 0, alphaOuG[mif1_, mif2_] -> 0, 
   alphaOuGbar[mif1_, mif2_] -> 0, alphaOuH[mif1_, mif2_] -> 0, 
   alphaOuHbar[mif1_, mif2_] -> 0, alphaOuu[mif1_, mif2_, mif3_, mif4_] -> 
-   -1/2*Conjugate[gBuf[mif1, mif2]*gBuf[mif3, mif4]]/m^2, 
-  alphaOuW[mif1_, mif2_] -> 0, alphaOuWbar[mif1_, mif2_] -> 0, 
-  alphaOlambdad[mif1_, mif2_] -> yd[mif1, mif2], 
-  alphaOlambdadbar[mif1_, mif2_] -> Conjugate[yd[mif1, mif2]], 
+   -1/2*(gBuf[mif1, mif2]*gBuf[mif3, mif4])/m^2, alphaOuW[mif1_, mif2_] -> 0, 
+  alphaOuWbar[mif1_, mif2_] -> 0, alphaOlambdad[mif1_, mif2_] -> 
+   yd[mif1, mif2], alphaOlambdadbar[mif1_, mif2_] -> yd[mif1, mif2], 
   alphaOlambdae[mif1_, mif2_] -> yl[mif1, mif2], 
-  alphaOlambdaebar[mif1_, mif2_] -> Conjugate[yl[mif1, mif2]], 
+  alphaOlambdaebar[mif1_, mif2_] -> yl[mif1, mif2], 
   alphaOlambdau[mif1_, mif2_] -> yu[mif1, mif2], 
-  alphaOlambdaubar[mif1_, mif2_] -> Conjugate[yu[mif1, mif2]]}, 
+  alphaOlambdaubar[mif1_, mif2_] -> yu[mif1, mif2]}, 
  {g1 -> g1, g2 -> g2, g3 -> g3}}

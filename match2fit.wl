@@ -33,8 +33,8 @@ modelToUVscanCard::usage = "modelToUVscanCard[directory,model,mass,looporder,Opt
 the \), runs MMEFT to add that model to the SM and match it onto SMEFT at looporder level, reads the results and prints the run card for a fit on the UV couplings and the card that defines the corresponding UV invariants.
 It also takes mandatorily a value for the mass of the UV particles which is applied only when producing the run cards. The OptionalArguments are \"UVFlavourAssumption\" and \"Collection\". 
 An example of how to set them, using their default value is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\"}.";
-(*dictionaryToPrint::usage = "TEST ONLY"
-reempMuH2::usage="TEST ONLY"
+dictionaryToPrint::usage = "TEST ONLY"
+(*reempMuH2::usage="TEST ONLY"
 reempLamH4::usage="TEST ONLY"*)
 
 
@@ -296,7 +296,7 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCtl1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][1,1,3,3]},
 {Symbol[SymbolName[wwCte]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][1,1,3,3]},
 {Symbol[SymbolName[wwCql31]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][1,1,1,1]},
-{Symbol[SymbolName[wwCqlM1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][1,1,1,1]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][1,1,1,1]}
+{Symbol[SymbolName[wwCqlM1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][1,1,1,1]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][1,1,1,1]},
 {Symbol[SymbolName[wwCqe]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][1,1,1,1]},
 {Symbol[SymbolName[wwClb]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][1,1,3,3]},
 {Symbol[SymbolName[wwClu]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][1,1,1,1]},
@@ -686,11 +686,11 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Dictionary*)
 
 
@@ -1058,15 +1058,15 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Run card printing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV scan run card printing*)
 
 
-dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal"]:=
+dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal",uvInvar_:"True"]:=
 Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,invarsUV,sumTerm,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3},
 (*Load the dictionary with matching results*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
@@ -1107,14 +1107,14 @@ coeffList=N[CoefficientList[dicTotal[[ind1,2]],varsUV]];
 (*/// Skip the WCs that are zero. ///*)
 If[coeffList=={}||coeffList=={{0.`}},Continue[];];
 (*/// Convert the format of the list of terms. ///*)
-termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],coeffList,{Length[varsUV]}],1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
+termList=Select[Flatten[MapIndexed[writeTabBlock[varsUV],coeffList,{Length[varsUV]}],Length[varsUV]-1],(Flatten[#][[2]]!="0"&&Flatten[#][[2]]!="0.")&];
 WriteLine[str1,"  O"<>StringDrop[printNameWCs[dicTotal[[ind1,1]]],1]<>":"];
 WriteLine[str1,"    constrain:"];
 For[ind2=1,ind2<=Length[termList],ind2++,
 (*/// ind2 runs over the terms in the sum that makes up the WC. ///*)
 sumTerm=termList[[ind2]];
-If[Length[varsUV]>2,sumTerm=Flatten[sumTerm,Length[varsUV]-2]];
-If[Length[varsUV]==1,sumTerm={sumTerm};];
+(*If[Length[varsUV]>2,sumTerm=Flatten[sumTerm,Length[varsUV]-2]];
+If[Length[varsUV]==1,sumTerm={sumTerm};];*)
 For[ind3=1,ind3<=Length[varsUV],ind3++,
 (*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
 If[ind3==1,
@@ -1188,12 +1188,13 @@ WriteLine[str1,"# Miscellaneous information"];
 WriteLine[str1,"# Matching results address: "<>matchResFile];
 WriteLine[str1,"# Export date: "<>DateString[]];
 Close[str1];];
-(*/// Printing the UV invariants. ///*);
+If[uvInvar=="True",
+(*/// Printing the UV invariants. ///*)
 {invarsUV,inverRelUV}=computeInvariants1L[Chop[(dicInvar/.massReempInvar/.simpleUVnames)]];
 zeroWCs=Select[dicInvar,(#[[2]]==0)&][[;;,1]];
 nonZeroWCs=Select[dicInvar,(FreeQ[zeroWCs,#[[1]]])&];
 reempNamesRelev=Table[nonZeroWCs[[i,1]]->ToExpression[printNameWCs[nonZeroWCs[[i,1]]]],{i,1,Length[nonZeroWCs]}];
-invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reempNamesRelev];
+invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reempNamesRelev]];
 ];];
 
 
@@ -1326,7 +1327,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Invariant printing*)
 
 
@@ -1471,8 +1472,8 @@ flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile
 (*UV scan*)
 
 
-Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False","OutputFormat"->"Universal"};
-matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]]
+Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False","OutputFormat"->"Universal","UVinvariants"->"True"};
+matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"],OptionValue["UVinvariants"]]
 
 
 (* ::Subsubsection:: *)
@@ -1487,7 +1488,7 @@ matchResToMasScanCard[matchResFile_,UVcoup_,looplevel_,OptionsPattern[]]:=dictPr
 (*\[DoubleDot]*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*From model to run card*)
 
 
