@@ -58,7 +58,8 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},{"c11qq",ToString[
 {"clu",ToString[x]=="wwClu"},
 {"cld",ToString[x]=="wwCld"},
 {"clb",ToString[x]=="wwClb"},
-{"cqe",ToString[x]=="wwCqe"},
+{"cqe",ToString[x
+]=="wwCqe"},
 {"ceu",ToString[x]=="wwCeu"},
 {"ced",ToString[x]=="wwCed"},
 {"ceb",ToString[x]=="wwCeb"},
@@ -88,7 +89,9 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},{"c11qq",ToString[
 {"ctat",ToString[x]=="wwCeu3333"},
 {"cQta",ToString[x]=="wwCqe3333"},
 {"ctl3",ToString[x]=="wwClu3333"},
-{"ctl2",ToString[x]=="wwClu2233"}
+{"ctl2",ToString[x]=="wwClu2233"},
+{"cQl13",ToString[x]=="wwClq13333"},
+{"cQl33",ToString[x]=="wwClq33333"}
 }];
 (*Original function taken from: https://mathematica.stackexchange.com/a/250929 *)
 Clear[EinsteinSum]
@@ -338,7 +341,28 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCll2222]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][2,2,2,2]},
 {Symbol[SymbolName[wwCll2332]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][2,3,3,2]},
 {Symbol[SymbolName[wwCll2233]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][2,2,3,3]},
-{Symbol[SymbolName[wwCll3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][3,3,3,3]}
+{Symbol[SymbolName[wwCll3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][3,3,3,3]},
+{Symbol[SymbolName[wwCle1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][1,1,1,1]},
+{Symbol[SymbolName[wwCle2222]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][2,2,2,2]},
+{Symbol[SymbolName[wwCle3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][3,3,3,3]},
+{Symbol[SymbolName[wwCle1122]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][1,1,2,2]},
+{Symbol[SymbolName[wwCle1133]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][1,1,3,3]},
+{Symbol[SymbolName[wwCle2233]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][2,2,3,3]},
+{Symbol[SymbolName[wwCle2211]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][2,2,1,1]},
+{Symbol[SymbolName[wwCle3311]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][3,3,1,1]},
+{Symbol[SymbolName[wwCle3322]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[le]]][3,3,2,2]},
+{Symbol[SymbolName[wwCee1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]][1,1,1,1]},
+{Symbol[SymbolName[wwCee2222]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]][2,2,2,2]},
+{Symbol[SymbolName[wwCee3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]][3,3,3,3]},
+{Symbol[SymbolName[wwCee1122]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]][1,1,2,2]},
+{Symbol[SymbolName[wwCee1133]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]][1,1,3,3]},
+{Symbol[SymbolName[wwCee2233]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ee]]][2,2,3,3]},
+{Symbol[SymbolName[wwCeu3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][3,3,3,3]},
+{Symbol[SymbolName[wwCqe3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][3,3,3,3]},
+{Symbol[SymbolName[wwClu3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][3,3,3,3]},
+{Symbol[SymbolName[wwClu2233]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][2,2,3,3]},
+{Symbol[SymbolName[wwClq13333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][3,3,3,3]},
+{Symbol[SymbolName[wwClq33333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]}
 };
 vanishBviolation={Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]]->0};
 
