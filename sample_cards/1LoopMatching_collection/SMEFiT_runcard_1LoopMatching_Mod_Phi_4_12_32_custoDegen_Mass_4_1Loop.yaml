@@ -4,304 +4,333 @@ UV model: Phi_4_12_32_custoDegen
 coefficients:
   OpBox:
     constrain:
-    - lamPhi:
-      - -9.261258086655654e-6
-      - 0
-    - lamPhi:
+      lamPhi:
       - 0.0015831434944115277
       - 2
     max: 100
     min: -100
   OpD:
     constrain:
-    - lamPhi:
-      - -1.0841923755457767e-6
-      - 0
     max: 100
     min: -100
   OWWW:
     constrain:
-    - lamPhi:
-      - 6.119802892092046e-6
-      - 0
     max: 100
     min: -100
   OpqMi:
     constrain:
-    - lamPhi:
-      - 5.8127745992551775e-6
-      - 0
     max: 100
     min: -100
   OpQM:
     constrain:
-    - lamPhi:
-      - 5.8127745992551775e-6
-      - 0
     max: 100
     min: -100
   O3pq:
     constrain:
-    - lamPhi:
-      - -5.9934733285128066e-6
-      - 0
     max: 100
     min: -100
   O3pQ3:
     constrain:
-    - lamPhi:
-      - -5.9934733285128066e-6
-      - 0
     max: 100
     min: -100
   Opl1:
     constrain:
-    - lamPhi:
-      - 5.420961877728883e-7
-      - 0
     max: 100
     min: -100
   Opl2:
     constrain:
-    - lamPhi:
-      - 5.420961877728883e-7
-      - 0
     max: 100
     min: -100
   Opl3:
     constrain:
-    - lamPhi:
-      - 5.420961877728883e-7
-      - 0
     max: 100
     min: -100
   O3pl1:
     constrain:
-    - lamPhi:
-      - -5.9934733285128066e-6
-      - 0
     max: 100
     min: -100
   O3pl2:
     constrain:
-    - lamPhi:
-      - -5.9934733285128066e-6
-      - 0
     max: 100
     min: -100
   O3pl3:
     constrain:
-    - lamPhi:
-      - -5.9934733285128066e-6
-      - 0
     max: 100
     min: -100
   Opui:
     constrain:
-    - lamPhi:
-      - -7.227949170305178e-7
-      - 0
     max: 100
     min: -100
   Opdi:
     constrain:
-    - lamPhi:
-      - 3.613974585152589e-7
-      - 0
     max: 100
     min: -100
   Opt:
     constrain:
-    - lamPhi:
-      - -7.227949170305178e-7
-      - 0
     max: 100
     min: -100
   Ope:
     constrain:
-    - lamPhi:
-      - 1.0841923755457767e-6
-      - 0
     max: 100
     min: -100
   Opmu:
     constrain:
-    - lamPhi:
-      - 1.0841923755457767e-6
-      - 0
     max: 100
     min: -100
   Opta:
     constrain:
-    - lamPhi:
-      - 1.0841923755457767e-6
-      - 0
     max: 100
     min: -100
   O11qq:
     constrain:
-    - lamPhi:
-      - -3.0116454876271574e-8
-      - 0
     max: 100
     min: -100
   O13qq:
     constrain:
-    - lamPhi:
-      - -2.9967366642564033e-6
-      - 0
     max: 100
     min: -100
   O1qt:
     constrain:
-    - lamPhi:
-      - -2.409316390101726e-7
-      - 0
     max: 100
     min: -100
   O1ut:
     constrain:
-    - lamPhi:
-      - -4.818632780203452e-7
-      - 0
     max: 100
     min: -100
   O1qu:
     constrain:
-    - lamPhi:
-      - -2.409316390101726e-7
-      - 0
     max: 100
     min: -100
   O1dt:
     constrain:
-    - lamPhi:
-      - 4.818632780203452e-7
-      - 0
     max: 100
     min: -100
   O1qd:
     constrain:
-    - lamPhi:
-      - 1.204658195050863e-7
-      - 0
     max: 100
     min: -100
   OQQ1:
     constrain:
-    - lamPhi:
-      - 1.937591533085059e-6
-      - 0
     max: 100
     min: -100
   OQQ8:
     constrain:
-    - lamPhi:
-      - -0.000023973893314051226
-      - 0
     max: 100
     min: -100
   OQt1:
     constrain:
-    - lamPhi:
-      - -2.409316390101726e-7
-      - 0
     max: 100
     min: -100
   Ott1:
     constrain:
-    - lamPhi:
-      - -4.818632780203452e-7
-      - 0
     max: 100
     min: -100
   Oll:
     constrain:
-    - lamPhi:
-      - -5.9934733285128066e-6
-      - 0
     max: 100
     min: -100
   Oll1111:
     constrain:
-    - lamPhi:
-      - -3.2677847581428473e-6
-      - 0
     max: 100
     min: -100
   Obp:
     constrain:
-    - lamPhi:
-      - -1.4389527372130482e-7
-      - 0
-    - lamPhi:
+      lamPhi:
       - 0.00005067887549938742
       - 2
     max: 100
     min: -100
   Otp:
     constrain:
-    - lamPhi:
-      - -5.9472123177255075e-6
-      - 0
-    - lamPhi:
+      lamPhi:
       - 0.0020945651988694193
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-    - lamPhi:
-      - -6.127597780476617e-8
-      - 0
-    - lamPhi:
+      lamPhi:
       - 0.000021580956552370722
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-    - lamPhi:
-      - -3.101825684542887e-6
-      - 0
-    - lamPhi:
+      lamPhi:
       - 0.04419293553048622
       - 2
     max: 100
     min: -100
   OQe:
     constrain:
-    - lamPhi:
-      - 3.613974585152589e-7
-      - 0
     max: 100
     min: -100
   OQl31:
     constrain:
-    - lamPhi:
-      - -5.9934733285128066e-6
-      - 0
     max: 100
     min: -100
   OQlM1:
     constrain:
-    - lamPhi:
-      - 6.174172057770436e-6
-      - 0
     max: 100
     min: -100
   Otl1:
     constrain:
-    - lamPhi:
-      - 7.227949170305178e-7
-      - 0
     max: 100
     min: -100
   Ote:
     constrain:
-    - lamPhi:
-      - 1.4455898340610357e-6
-      - 0
+    max: 100
+    min: -100
+  Oql31:
+    constrain:
+    max: 100
+    min: -100
+  OqlM1:
+    constrain:
+    max: 100
+    min: -100
+  Oqe:
+    constrain:
+    max: 100
+    min: -100
+  Olb:
+    constrain:
+    max: 100
+    min: -100
+  Olu:
+    constrain:
+    max: 100
+    min: -100
+  Old:
+    constrain:
+    max: 100
+    min: -100
+  Oeu:
+    constrain:
+    max: 100
+    min: -100
+  Oed:
+    constrain:
+    max: 100
+    min: -100
+  Oeb:
+    constrain:
+    max: 100
+    min: -100
+  Obb:
+    constrain:
+    max: 100
+    min: -100
+  Oll1122:
+    constrain:
+    max: 100
+    min: -100
+  Oll1133:
+    constrain:
+    max: 100
+    min: -100
+  Oll1331:
+    constrain:
+    max: 100
+    min: -100
+  Oll2222:
+    constrain:
+    max: 100
+    min: -100
+  Oll2332:
+    constrain:
+    max: 100
+    min: -100
+  Oll2233:
+    constrain:
+    max: 100
+    min: -100
+  Oll3333:
+    constrain:
+    max: 100
+    min: -100
+  Ole1111:
+    constrain:
+    max: 100
+    min: -100
+  Ole2222:
+    constrain:
+    max: 100
+    min: -100
+  Ole3333:
+    constrain:
+    max: 100
+    min: -100
+  Ole1122:
+    constrain:
+    max: 100
+    min: -100
+  Ole1133:
+    constrain:
+    max: 100
+    min: -100
+  Ole2233:
+    constrain:
+    max: 100
+    min: -100
+  Ole2211:
+    constrain:
+    max: 100
+    min: -100
+  Ole3311:
+    constrain:
+    max: 100
+    min: -100
+  Ole3322:
+    constrain:
+    max: 100
+    min: -100
+  Oee1111:
+    constrain:
+    max: 100
+    min: -100
+  Oee2222:
+    constrain:
+    max: 100
+    min: -100
+  Oee3333:
+    constrain:
+    max: 100
+    min: -100
+  Oee1122:
+    constrain:
+    max: 100
+    min: -100
+  Oee1133:
+    constrain:
+    max: 100
+    min: -100
+  Oee2233:
+    constrain:
+    max: 100
+    min: -100
+  Otat:
+    constrain:
+    max: 100
+    min: -100
+  OQta:
+    constrain:
+    max: 100
+    min: -100
+  Otl3:
+    constrain:
+    max: 100
+    min: -100
+  Otl2:
+    constrain:
+    max: 100
+    min: -100
+  OQl13:
+    constrain:
+    max: 100
+    min: -100
+  OQl33:
+    constrain:
     max: 100
     min: -100
   lamPhi:

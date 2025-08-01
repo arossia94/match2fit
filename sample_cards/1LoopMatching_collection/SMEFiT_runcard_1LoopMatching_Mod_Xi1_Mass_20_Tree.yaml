@@ -4,45 +4,45 @@ UV model: Xi1
 coefficients:
   OpBox:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - 0.0000125
       - 2
     max: 100
     min: -100
   OpD:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - 0.000025
       - 2
     max: 100
     min: -100
   Obp:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - 3.001082716026083e-7
       - 2
     max: 100
     min: -100
   Otp:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - 0.000012403517943078134
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - 1.2779730226139778e-7
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - 6.469173871573229e-6
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -5.103103630798289e-6
       - 2
       lamXi1:

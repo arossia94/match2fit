@@ -4,7 +4,7 @@ UV model: Phi_4_12_32_custoDegen
 coefficients:
   Op:
     constrain:
-    - lamPhi:
+      lamPhi:
       - 0.041666666666666664
       - 2
     max: 100

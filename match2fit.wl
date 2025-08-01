@@ -1117,11 +1117,11 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Run card printing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV scan run card printing*)
 
 
@@ -1259,7 +1259,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Mass Scan printing*)
 
 
@@ -1428,7 +1428,7 @@ Close[str2];]
 (*Public functions*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV to EFT matching*)
 
 
@@ -1472,7 +1472,7 @@ Run["bash ./script_move_models"];
 Run["matchmakereft <./script_MMEFT"];
 (*/// Check existence of results and alert if there was a problem. ///*)
 listResultFiles=FileNames["*.dat",directory<>model<>"_MM/"];
-If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingResult.dat"],
+(*If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingResult.dat"],
 Print["The matching results are available in:\n"<>directory<>model<>"_MM/MatchingResult.dat"];
 (*/// If successful, delete auxiliar directories and files created by MMEFT and this package ///*)
 DeleteDirectory[directory<>model<>"_MM/FORM/",DeleteContents->True];
@@ -1482,7 +1482,7 @@ DeleteFile[directory<>"script_MMEFT_copymodels"];
 DeleteFile[directory<>"script_move_models"];
 DeleteFile[directory<>"script_MMEFT"];
 DeleteFile[directory<>"UnbrokenSM_BFM.fr"];,
-Print["There was a problem during the matching and no results were generated.\nCheck input files."];];
+Print["There was a problem during the matching and no results were generated.\nCheck input files."];]*);
 If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingProblems.dat"],
 listProblems=Get[directory<>model<>"_MM/MatchingProblems.dat"];
 If[Not[MemberQ[{0,"Tree","tree"},looplevel]],

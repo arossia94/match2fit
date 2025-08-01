@@ -4,489 +4,509 @@ UV model: Xi1
 coefficients:
   OpB:
     constrain:
-    - kappaXi1:
-      - 2.0714922797562372e-7
-      - 0
       lamXi1:
+      - 2.0714922797562372e-7
       - 1
-      - 1
-    - kappaXi1:
+      kappaXi1:
       - -5.074099091517444e-9
       - 2
     max: 100
     min: -100
   OpW:
     constrain:
-    - kappaXi1:
-      - 4.591907932914658e-7
-      - 0
       lamXi1:
+      - 4.5919079329146604e-7
       - 1
-      - 1
-    - kappaXi1:
-      - -5.623915690739581e-9
+      kappaXi1:
+      - -5.623915690739582e-9
       - 2
     max: 100
     min: -100
   OpWB:
     constrain:
-    - kappaXi1:
-      - -1.542084776559328e-8
+      kappaXi1:
+      - -1.5420847765593284e-8
       - 2
     max: 100
     min: -100
   OpBox:
     constrain:
-    - kappaXi1:
-      - -7.517425706879103e-8
-      - 0
-    - kappaXi1:
-      - -6.5964312267147e-7
-      - 0
       lamXi1:
-      - 1
+      - -6.5964312267147e-7
       - 2
-    - kappaXi1:
+      kappaXi1:
       - 0.000012548668070886834
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -1.1310523440168619e-7
       - 2
       lamXi1:
       - 1
       - 1
-    - kappaXi1:
+      kappaXi1:
       - -4.0897873605631136e-9
       - 4
     max: 100
     min: -100
   OpD:
     constrain:
-    - kappaXi1:
-      - -1.3010308506549321e-8
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - 0.000025123079864038688
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -2.5852625006099704e-7
       - 2
       lamXi1:
       - 1
       - 1
-    - kappaXi1:
+      kappaXi1:
       - -6.5964312267147e-9
       - 4
     max: 100
     min: -100
   OWWW:
     constrain:
-    - kappaXi1:
-      - 4.895842313673638e-8
-      - 0
     max: 100
     min: -100
   OpqMi:
     constrain:
-    - kappaXi1:
-      - 4.57794018770109e-8
-      - 0
-    - kappaXi1:
-      - -7.163855716048948e-9
+      kappaXi1:
+      - -7.163855716048953e-9
       - 2
     max: 100
     min: -100
   OpQM:
     constrain:
-    - kappaXi1:
-      - 4.57794018770109e-8
-      - 0
-    - kappaXi1:
-      - 1.8762893767588176e-7
+      kappaXi1:
+      - 1.8762893767588174e-7
       - 2
     max: 100
     min: -100
   O3pq:
     constrain:
-    - kappaXi1:
-      - -4.794778662810246e-8
-      - 0
-    - kappaXi1:
-      - 9.841852458794266e-9
+      kappaXi1:
+      - 9.841852458794271e-9
       - 2
     max: 100
     min: -100
   O3pQ3:
     constrain:
-    - kappaXi1:
-      - -4.794778662810246e-8
-      - 0
-    - kappaXi1:
-      - -3.889912162281214e-8
+      kappaXi1:
+      - -3.8899121622812135e-8
       - 2
     max: 100
     min: -100
   Opl1:
     constrain:
-    - kappaXi1:
-      - 6.5051542532746605e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -8.033990228235952e-9
       - 2
     max: 100
     min: -100
   Opl2:
     constrain:
-    - kappaXi1:
-      - 6.5051542532746605e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -8.033990228235952e-9
       - 2
     max: 100
     min: -100
   Opl3:
     constrain:
-    - kappaXi1:
-      - 6.5051542532746605e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -8.049503910891277e-9
       - 2
     max: 100
     min: -100
   O3pl1:
     constrain:
-    - kappaXi1:
-      - -4.794778662810246e-8
-      - 0
-    - kappaXi1:
-      - 9.841852458794266e-9
+      kappaXi1:
+      - 9.841852458794271e-9
       - 2
     max: 100
     min: -100
   O3pl2:
     constrain:
-    - kappaXi1:
-      - -4.794778662810246e-8
-      - 0
-    - kappaXi1:
-      - 9.841852458794266e-9
+      kappaXi1:
+      - 9.841852458794271e-9
       - 2
     max: 100
     min: -100
   O3pl3:
     constrain:
-    - kappaXi1:
-      - -4.794778662810246e-8
-      - 0
-    - kappaXi1:
-      - 9.836681231242491e-9
+      kappaXi1:
+      - 9.836681231242496e-9
       - 2
     max: 100
     min: -100
   Opui:
     constrain:
-    - kappaXi1:
-      - -8.673539004366214e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - 1.0711986970981271e-8
       - 2
     max: 100
     min: -100
   Opdi:
     constrain:
-    - kappaXi1:
-      - 4.336769502183107e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -5.3559934854906355e-9
       - 2
     max: 100
     min: -100
   Opt:
     constrain:
-    - kappaXi1:
-      - -8.673539004366214e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -2.8156275458416223e-7
       - 2
     max: 100
     min: -100
   Ope:
     constrain:
-    - kappaXi1:
-      - 1.3010308506549321e-8
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -1.6067980456471904e-8
       - 2
     max: 100
     min: -100
   Opmu:
     constrain:
-    - kappaXi1:
-      - 1.3010308506549321e-8
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -1.6067980456471904e-8
       - 2
     max: 100
     min: -100
   Opta:
     constrain:
-    - kappaXi1:
-      - 1.3010308506549321e-8
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -1.6036953091161254e-8
       - 2
     max: 100
     min: -100
   O11qq:
     constrain:
-    - kappaXi1:
-      - -3.613974585152589e-10
-      - 0
     max: 100
     min: -100
   O13qq:
     constrain:
-    - kappaXi1:
-      - -2.397389331405123e-8
-      - 0
     max: 100
     min: -100
   O1qt:
     constrain:
-    - kappaXi1:
-      - -2.8911796681220712e-9
-      - 0
     max: 100
     min: -100
   O1ut:
     constrain:
-    - kappaXi1:
-      - -5.7823593362441424e-9
-      - 0
     max: 100
     min: -100
   O1qu:
     constrain:
-    - kappaXi1:
-      - -2.8911796681220712e-9
-      - 0
     max: 100
     min: -100
   O1dt:
     constrain:
-    - kappaXi1:
-      - 5.7823593362441424e-9
-      - 0
     max: 100
     min: -100
   O8qd:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - -4.5627449198654807e-11
       - 2
     max: 100
     min: -100
   O1qd:
     constrain:
-    - kappaXi1:
-      - 1.4455898340610356e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -7.604574866442468e-12
       - 2
     max: 100
     min: -100
   OQQ1:
     constrain:
-    - kappaXi1:
-      - 1.5259800625670305e-8
-      - 0
     max: 100
     min: -100
   OQQ8:
     constrain:
-    - kappaXi1:
-      - -1.9179114651240983e-7
-      - 0
     max: 100
     min: -100
   OQt1:
     constrain:
-    - kappaXi1:
-      - -2.8911796681220712e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - -1.2989988513561934e-8
       - 2
     max: 100
     min: -100
   OQt8:
     constrain:
-    - kappaXi1:
+      kappaXi1:
       - -7.79399310813716e-8
       - 2
     max: 100
     min: -100
   Ott1:
     constrain:
-    - kappaXi1:
-      - -5.7823593362441424e-9
-      - 0
     max: 100
     min: -100
   Oll:
     constrain:
-    - kappaXi1:
-      - -4.794778662810246e-8
-      - 0
     max: 100
     min: -100
   Oll1111:
     constrain:
-    - kappaXi1:
-      - -2.7226470440688557e-8
-      - 0
     max: 100
     min: -100
   Obp:
     constrain:
-    - kappaXi1:
-      - -1.1511621897704386e-9
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - 3.00524916705007e-7
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -5.04308129453112e-9
       - 2
       lamXi1:
       - 1
       - 1
-    - kappaXi1:
+      kappaXi1:
       - -9.660660642070729e-11
       - 4
     max: 100
     min: -100
   Otp:
     constrain:
-    - kappaXi1:
-      - -4.757769854180407e-8
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - 0.00001265261715922945
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -2.0843127379023828e-7
       - 2
       lamXi1:
       - 1
       - 1
-    - kappaXi1:
+      kappaXi1:
       - -3.992764910344831e-9
       - 4
     max: 100
     min: -100
   Otap:
     constrain:
-    - kappaXi1:
-      - -4.902078224381293e-10
-      - 0
-    - kappaXi1:
+      kappaXi1:
       - 1.2936871973826022e-7
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -2.1475322259008115e-9
       - 2
       lamXi1:
       - 1
       - 1
-    - kappaXi1:
+      kappaXi1:
       - -4.1138698427956686e-11
       - 4
     max: 100
     min: -100
   Op:
     constrain:
-    - kappaXi1:
-      - -2.481460547634309e-8
-      - 0
-    - kappaXi1:
-      - -5.385963542937439e-7
-      - 0
       lamXi1:
-      - 1
+      - -5.385963542937439e-7
       - 3
-    - kappaXi1:
+      kappaXi1:
       - 6.660022874999158e-6
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -5.4794051647506305e-6
       - 2
       lamXi1:
       - 1
       - 1
-    - kappaXi1:
+      kappaXi1:
       - 1.7150721189458217e-7
       - 2
       lamXi1:
       - 1
       - 2
-    - kappaXi1:
+      kappaXi1:
       - -5.462202948799036e-9
       - 4
-    - kappaXi1:
+      kappaXi1:
       - 6.624735157813044e-9
       - 4
       lamXi1:
       - 1
       - 1
-    - kappaXi1:
+      kappaXi1:
       - -2.3747152416172915e-11
       - 6
     max: 100
     min: -100
   OQe:
     constrain:
-    - kappaXi1:
-      - 4.336769502183107e-9
-      - 0
     max: 100
     min: -100
   OQl31:
     constrain:
-    - kappaXi1:
-      - -4.794778662810246e-8
-      - 0
     max: 100
     min: -100
   OQlM1:
     constrain:
-    - kappaXi1:
-      - 5.0116171379194014e-8
-      - 0
     max: 100
     min: -100
   Otl1:
     constrain:
-    - kappaXi1:
-      - 8.673539004366214e-9
-      - 0
     max: 100
     min: -100
   Ote:
     constrain:
-    - kappaXi1:
-      - 1.7347078008732428e-8
-      - 0
+    max: 100
+    min: -100
+  Oql31:
+    constrain:
+    max: 100
+    min: -100
+  OqlM1:
+    constrain:
+    max: 100
+    min: -100
+  Oqe:
+    constrain:
+    max: 100
+    min: -100
+  Olb:
+    constrain:
+    max: 100
+    min: -100
+  Olu:
+    constrain:
+    max: 100
+    min: -100
+  Old:
+    constrain:
+    max: 100
+    min: -100
+  Oeu:
+    constrain:
+    max: 100
+    min: -100
+  Oed:
+    constrain:
+    max: 100
+    min: -100
+  Oeb:
+    constrain:
+    max: 100
+    min: -100
+  Obb:
+    constrain:
+    max: 100
+    min: -100
+  Oll1122:
+    constrain:
+    max: 100
+    min: -100
+  Oll1133:
+    constrain:
+    max: 100
+    min: -100
+  Oll1331:
+    constrain:
+    max: 100
+    min: -100
+  Oll2222:
+    constrain:
+    max: 100
+    min: -100
+  Oll2332:
+    constrain:
+    max: 100
+    min: -100
+  Oll2233:
+    constrain:
+    max: 100
+    min: -100
+  Oll3333:
+    constrain:
+    max: 100
+    min: -100
+  Ole1111:
+    constrain:
+    max: 100
+    min: -100
+  Ole2222:
+    constrain:
+    max: 100
+    min: -100
+  Ole3333:
+    constrain:
+      kappaXi1:
+      - -4.1369820414201216e-12
+      - 2
+    max: 100
+    min: -100
+  Ole1122:
+    constrain:
+    max: 100
+    min: -100
+  Ole1133:
+    constrain:
+    max: 100
+    min: -100
+  Ole2233:
+    constrain:
+    max: 100
+    min: -100
+  Ole2211:
+    constrain:
+    max: 100
+    min: -100
+  Ole3311:
+    constrain:
+    max: 100
+    min: -100
+  Ole3322:
+    constrain:
+    max: 100
+    min: -100
+  Oee1111:
+    constrain:
+    max: 100
+    min: -100
+  Oee2222:
+    constrain:
+    max: 100
+    min: -100
+  Oee3333:
+    constrain:
+    max: 100
+    min: -100
+  Oee1122:
+    constrain:
+    max: 100
+    min: -100
+  Oee1133:
+    constrain:
+    max: 100
+    min: -100
+  Oee2233:
+    constrain:
+    max: 100
+    min: -100
+  Otat:
+    constrain:
+    max: 100
+    min: -100
+  OQta:
+    constrain:
+    max: 100
+    min: -100
+  Otl3:
+    constrain:
+    max: 100
+    min: -100
+  Otl2:
+    constrain:
+    max: 100
+    min: -100
+  OQl13:
+    constrain:
+    max: 100
+    min: -100
+  OQl33:
+    constrain:
     max: 100
     min: -100
   kappaXi1:

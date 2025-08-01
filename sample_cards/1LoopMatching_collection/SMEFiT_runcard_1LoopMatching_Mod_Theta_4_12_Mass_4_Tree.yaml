@@ -4,7 +4,7 @@ UV model: Theta_4_12
 coefficients:
   Op:
     constrain:
-    - lamPhi:
+      lamPhi:
       - 0.020833333333333332
       - 2
     max: 100

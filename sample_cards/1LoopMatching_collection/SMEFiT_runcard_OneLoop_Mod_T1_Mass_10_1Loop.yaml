@@ -4,528 +4,548 @@ UV model: T1
 coefficients:
   OpG:
     constrain:
-    - lambdaT13:
+      lambdaT13:
       - 0.000011727729869084038
       - 2
     max: 100
     min: -100
   OpB:
     constrain:
-    - lambdaT13:
+      lambdaT13:
       - -8.456831819195738e-8
       - 2
     max: 100
     min: -100
   OpW:
     constrain:
-    - lambdaT13:
-      - 5.9051114752765595e-6
+      lambdaT13:
+      - 5.905111475276562e-6
       - 2
     max: 100
     min: -100
   OpWB:
     constrain:
-    - lambdaT13:
-      - -6.168339106237313e-7
+      lambdaT13:
+      - -6.168339106237314e-7
       - 2
     max: 100
     min: -100
   OpBox:
     constrain:
-    - lambdaT13:
-      - -6.9391754304642185e-6
-      - 0
-    - lambdaT13:
-      - -0.0001106592233733768
+      lambdaT13:
+      - -0.00011065922337337679
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -0.000015831434944115278
       - 4
     max: 100
     min: -100
   OpD:
     constrain:
-    - lambdaT13:
-      - -1.3877662406985942e-7
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -0.00025603638216786724
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -0.00003759965799227378
       - 4
     max: 100
     min: -100
   OWWW:
     constrain:
-    - lambdaT13:
-      - -1.175002155281673e-6
-      - 0
     max: 100
     min: -100
   OpqMi:
     constrain:
-    - lambdaT13:
-      - 4.57985807895286e-6
-      - 0
-    - lambdaT13:
-      - -5.820543157084602e-6
+      lambdaT13:
+      - -5.820543157084604e-6
       - 2
     max: 100
     min: -100
   OpQM:
     constrain:
-    - lambdaT13:
-      - 4.57985807895286e-6
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -0.0025292894268506877
       - 2
-    - lambdaT13:
+      lambdaT13:
       - 0.00003660879630225011
       - 4
     max: 100
     min: -100
   O3pq:
     constrain:
-    - lambdaT13:
-      - -4.602987516297836e-6
-      - 0
-    - lambdaT13:
-      - 5.9051114752765595e-6
+      lambdaT13:
+      - 5.905111475276562e-6
       - 2
     max: 100
     min: -100
   O3pQ3:
     constrain:
-    - lambdaT13:
-      - -4.602987516297836e-6
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 0.0006397793513538202
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -0.000010636396101573334
       - 4
     max: 100
     min: -100
   Opl1:
     constrain:
-    - lambdaT13:
-      - 6.938831203492971e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -2.537049545758722e-7
       - 2
     max: 100
     min: -100
   Opl2:
     constrain:
-    - lambdaT13:
-      - 6.938831203492971e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -2.537049545758722e-7
       - 2
     max: 100
     min: -100
   Opl3:
     constrain:
-    - lambdaT13:
-      - 6.938831203492971e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -2.537049545758722e-7
       - 2
     max: 100
     min: -100
   O3pl1:
     constrain:
-    - lambdaT13:
-      - -4.602987516297836e-6
-      - 0
-    - lambdaT13:
-      - 5.9051114752765595e-6
+      lambdaT13:
+      - 5.905111475276562e-6
       - 2
     max: 100
     min: -100
   O3pl2:
     constrain:
-    - lambdaT13:
-      - -4.602987516297836e-6
-      - 0
-    - lambdaT13:
-      - 5.9051114752765595e-6
+      lambdaT13:
+      - 5.905111475276562e-6
       - 2
     max: 100
     min: -100
   O3pl3:
     constrain:
-    - lambdaT13:
-      - -4.602987516297836e-6
-      - 0
-    - lambdaT13:
-      - 5.9051114752765595e-6
+      lambdaT13:
+      - 5.905111475276562e-6
       - 2
     max: 100
     min: -100
   Opui:
     constrain:
-    - lambdaT13:
-      - -9.251774937990628e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 3.382732727678295e-7
       - 2
     max: 100
     min: -100
   Opdi:
     constrain:
-    - lambdaT13:
-      - 4.625887468995314e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -1.6913663638391476e-7
       - 2
     max: 100
     min: -100
   Opt:
     constrain:
-    - lambdaT13:
-      - -9.251774937990628e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -0.00003668319399088369
       - 2
     max: 100
     min: -100
   Ope:
     constrain:
-    - lambdaT13:
-      - 1.3877662406985942e-7
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -5.074099091517444e-7
       - 2
     max: 100
     min: -100
   Opmu:
     constrain:
-    - lambdaT13:
-      - 1.3877662406985942e-7
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -5.074099091517444e-7
       - 2
     max: 100
     min: -100
   Opta:
     constrain:
-    - lambdaT13:
-      - 1.3877662406985942e-7
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -5.074099091517444e-7
       - 2
     max: 100
     min: -100
   O81qq:
     constrain:
-    - lambdaT13:
-      - -0.00002780082
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 6.841175756965689e-6
       - 2
     max: 100
     min: -100
   O11qq:
     constrain:
-    - lambdaT13:
-      - -3.854906224162762e-9
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -1.1040863763949994e-7
       - 2
     max: 100
     min: -100
   O13qq:
     constrain:
-    - lambdaT13:
-      - -2.301493758148918e-6
-      - 0
-    - lambdaT13:
-      - 9.138862997451818e-7
+      lambdaT13:
+      - 9.138862997451822e-7
       - 2
     max: 100
     min: -100
   O8qt:
     constrain:
-    - lambdaT13:
-      - -0.00005560164
-      - 0
     max: 100
     min: -100
   O1qt:
     constrain:
-    - lambdaT13:
-      - -3.083924979330209e-8
-      - 0
     max: 100
     min: -100
   O8ut:
     constrain:
-    - lambdaT13:
-      - -0.00002780082
-      - 0
     max: 100
     min: -100
   O1ut:
     constrain:
-    - lambdaT13:
-      - -6.167849958660419e-8
-      - 0
     max: 100
     min: -100
   O8qu:
     constrain:
-    - lambdaT13:
-      - -0.00005560164
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 0.000013682351513931378
       - 2
     max: 100
     min: -100
   O1qu:
     constrain:
-    - lambdaT13:
-      - -3.083924979330209e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -8.832691011159995e-7
       - 2
     max: 100
     min: -100
   O8dt:
     constrain:
-    - lambdaT13:
-      - -0.00005560164
-      - 0
     max: 100
     min: -100
   O1dt:
     constrain:
-    - lambdaT13:
-      - 6.167849958660419e-8
-      - 0
     max: 100
     min: -100
   O8qd:
     constrain:
-    - lambdaT13:
-      - -0.00005560164
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 0.000013654975044412186
       - 2
     max: 100
     min: -100
   O1qd:
     constrain:
-    - lambdaT13:
-      - 1.5419624896651046e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 4.2680562956843695e-7
       - 2
     max: 100
     min: -100
   OQQ1:
     constrain:
-    - lambdaT13:
-      - 1.5266193596509532e-6
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -0.000017236728970859566
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -4.287680297364554e-6
       - 4
     max: 100
     min: -100
   OQQ8:
     constrain:
-    - lambdaT13:
-      - -0.00007401359006519135
-      - 0
-    - lambdaT13:
-      - 0.000018591216264614586
+      lambdaT13:
+      - 0.000018591216264614593
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -1.9789293680144098e-6
       - 4
     max: 100
     min: -100
   OQt1:
     constrain:
-    - lambdaT13:
-      - -3.083924979330209e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 1.0652291759182905e-6
       - 2
     max: 100
     min: -100
   OQt8:
     constrain:
-    - lambdaT13:
-      - -0.00005560164
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -0.00007984556578371455
       - 2
     max: 100
     min: -100
   Ott1:
     constrain:
-    - lambdaT13:
-      - -9.328618499586604e-6
-      - 0
     max: 100
     min: -100
   Oll:
     constrain:
-    - lambdaT13:
-      - -4.602987516297836e-6
-      - 0
     max: 100
     min: -100
   Oll1111:
     constrain:
-    - lambdaT13:
-      - -2.3361879141663833e-6
-      - 0
     max: 100
     min: -100
   Obp:
     constrain:
-    - lambdaT13:
-      - -1.1051157021796214e-7
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 0.000028106750848090542
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -1.122457906568464e-6
       - 4
     max: 100
     min: -100
   Otp:
     constrain:
-    - lambdaT13:
-      - -4.567459060013191e-6
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 0.002528882555626293
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -0.00010161613624293922
       - 4
     max: 100
     min: -100
   OtG:
     constrain:
-    - lambdaT13:
+      lambdaT13:
       - 0.000016731120783798808
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-    - lambdaT13:
-      - -4.705995095406042e-8
-      - 0
-    - lambdaT13:
-      - -5.908478336037929e-7
+      lambdaT13:
+      - -5.908478336037928e-7
       - 2
-    - lambdaT13:
+      lambdaT13:
       - -2.630179079820182e-7
       - 4
     max: 100
     min: -100
   OtW:
     constrain:
-    - lambdaT13:
+      lambdaT13:
       - 3.846239273023644e-6
       - 2
     max: 100
     min: -100
   OtZ:
     constrain:
-    - lambdaT13:
+      lambdaT13:
       - -9.280013382668142e-7
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-    - lambdaT13:
-      - -2.3822021257289373e-6
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - -0.0002172687012794731
       - 2
-    - lambdaT13:
+      lambdaT13:
       - 0.00008022748584470787
       - 4
-    - lambdaT13:
+      lambdaT13:
       - 8.905182156064843e-6
       - 6
     max: 100
     min: -100
   OQe:
     constrain:
-    - lambdaT13:
-      - 4.625887468995314e-8
-      - 0
-    - lambdaT13:
+      lambdaT13:
       - 1.324903651673999e-6
       - 2
     max: 100
     min: -100
   OQl31:
     constrain:
-    - lambdaT13:
-      - -4.602987516297836e-6
-      - 0
-    - lambdaT13:
-      - 1.8277725994903636e-6
+      lambdaT13:
+      - 1.8277725994903644e-6
       - 2
     max: 100
     min: -100
   OQlM1:
     constrain:
-    - lambdaT13:
-      - 4.626116953642813e-6
-      - 0
-    - lambdaT13:
-      - -1.1653207736533641e-6
+      lambdaT13:
+      - -1.165320773653365e-6
       - 2
     max: 100
     min: -100
   Otl1:
     constrain:
-    - lambdaT13:
-      - 9.251774937990628e-8
-      - 0
     max: 100
     min: -100
   Ote:
     constrain:
-    - lambdaT13:
-      - 1.8503549875981256e-7
-      - 0
+    max: 100
+    min: -100
+  Oql31:
+    constrain:
+    max: 100
+    min: -100
+  OqlM1:
+    constrain:
+    max: 100
+    min: -100
+  Oqe:
+    constrain:
+    max: 100
+    min: -100
+  Olb:
+    constrain:
+    max: 100
+    min: -100
+  Olu:
+    constrain:
+    max: 100
+    min: -100
+  Old:
+    constrain:
+    max: 100
+    min: -100
+  Oeu:
+    constrain:
+    max: 100
+    min: -100
+  Oed:
+    constrain:
+    max: 100
+    min: -100
+  Oeb:
+    constrain:
+    max: 100
+    min: -100
+  Obb:
+    constrain:
+    max: 100
+    min: -100
+  Oll1122:
+    constrain:
+    max: 100
+    min: -100
+  Oll1133:
+    constrain:
+    max: 100
+    min: -100
+  Oll1331:
+    constrain:
+    max: 100
+    min: -100
+  Oll2222:
+    constrain:
+    max: 100
+    min: -100
+  Oll2332:
+    constrain:
+    max: 100
+    min: -100
+  Oll2233:
+    constrain:
+    max: 100
+    min: -100
+  Oll3333:
+    constrain:
+    max: 100
+    min: -100
+  Ole1111:
+    constrain:
+    max: 100
+    min: -100
+  Ole2222:
+    constrain:
+    max: 100
+    min: -100
+  Ole3333:
+    constrain:
+      lambdaT13:
+      - -2.482189224852073e-9
+      - 2
+    max: 100
+    min: -100
+  Ole1122:
+    constrain:
+    max: 100
+    min: -100
+  Ole1133:
+    constrain:
+    max: 100
+    min: -100
+  Ole2233:
+    constrain:
+    max: 100
+    min: -100
+  Ole2211:
+    constrain:
+    max: 100
+    min: -100
+  Ole3311:
+    constrain:
+    max: 100
+    min: -100
+  Ole3322:
+    constrain:
+    max: 100
+    min: -100
+  Oee1111:
+    constrain:
+    max: 100
+    min: -100
+  Oee2222:
+    constrain:
+    max: 100
+    min: -100
+  Oee3333:
+    constrain:
+    max: 100
+    min: -100
+  Oee1122:
+    constrain:
+    max: 100
+    min: -100
+  Oee1133:
+    constrain:
+    max: 100
+    min: -100
+  Oee2233:
+    constrain:
+    max: 100
+    min: -100
+  Otat:
+    constrain:
+    max: 100
+    min: -100
+  OQta:
+    constrain:
+      lambdaT13:
+      - 1.32304200975536e-6
+      - 2
+    max: 100
+    min: -100
+  Otl3:
+    constrain:
+    max: 100
+    min: -100
+  Otl2:
+    constrain:
+    max: 100
+    min: -100
+  OQl13:
+    constrain:
+      lambdaT13:
+      - 6.63382646796319e-7
+      - 2
+    max: 100
+    min: -100
+  OQl33:
+    constrain:
+      lambdaT13:
+      - 1.8274623258372579e-6
+      - 2
     max: 100
     min: -100
   lambdaT13:
