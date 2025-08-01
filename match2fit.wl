@@ -188,7 +188,7 @@ ret
 massHandler[matchResFile_,mass_,looplevel_,flaUVassum_]:=Block[{dicTotal,preVarsUV,massString,massInt,massIntList,massReemp,looporderset},
 looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
 If[Length[mass]>1,
-{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}//.flaUVassum;
 (*preVarsUV stores the names of the recognised UV masses.*)
 massString=StringRiffle[ToString/@IntegerPart/@mass,""];
 If[Length[mass]<Length[preVarsUV],
@@ -202,7 +202,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 ,
 massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
 massString=ToString[massInt];
-dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}//.flaUVassum;
 massReemp={Symbol[SymbolName[m]]->massInt};
 If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
 ];
@@ -211,7 +211,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 massHandlerCusto[matchResFile_,mass_,looplevel_,flaUVassum_]:=Block[{dicTotal,preVarsUV,massString,massInt,massIntList,massReemp,looporderset},
 looporderset=Piecewise[{{0,looplevel==0||looplevel=="Tree"||looplevel=="tree"},{1,looplevel==1||looplevel=="loop"||looplevel=="1loop"}},1];
 If[Length[mass]>1,
-{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+{dicTotal,preVarsUV}=dictionaryToPrintMultiPart[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}//.flaUVassum;
 (*preVarsUV stores the names of the recognised UV masses.*)
 massString=StringRiffle[ToString/@IntegerPart/@mass,""];
 If[Length[mass]<Length[preVarsUV],
@@ -226,7 +226,7 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 ,
 massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
 massString=ToString[massInt];
-dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}/.flaUVassum;
+dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}//.flaUVassum;
 massReemp={Symbol[SymbolName[m]]->massInt};
 If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
 ];
@@ -378,7 +378,7 @@ ret]
 datasetSMEFiT={"ATLAS_CMS_SSinc_RunI","ATLAS_CMS_tt_AC_8TeV","ATLAS_ggF_13TeV_2015","ATLAS_ggF_13TeV_2015_proj","ATLAS_ggF_ZZ_13TeV","ATLAS_ggF_ZZ_13TeV_proj","ATLAS_hh_runII_13TeV","ATLAS_SSinc_RunII","ATLAS_SSinc_RunII_proj","ATLAS_STXS_runII_13TeV","ATLAS_STXS_runII_13TeV_uncor","ATLAS_STXS_runII_13TeV_uncor_proj","ATLAS_t_sch_13TeV_inc","ATLAS_t_sch_13TeV_inc_proj","ATLAS_t_sch_8TeV","ATLAS_tt_13TeV_asy_2022","ATLAS_tt_13TeV_asy_2022_uncor","ATLAS_tt_13TeV_asy_2022_uncor_proj","ATLAS_tt_13TeV_ljets_2016_Mtt","ATLAS_tt_13TeV_ljets_2016_Mtt_proj","ATLAS_tt_8TeV_dilep_Mtt","ATLAS_tt_8TeV_ljets_Mtt","ATLAS_tta_8TeV","ATLAS_tt_AC_13TeV","ATLAS_ttbb_13TeV_2016","ATLAS_ttbb_13TeV_2016_proj","ATLAS_t_tch_13TeV_inc","ATLAS_t_tch_13TeV_inc_proj","ATLAS_t_tch_8TeV_diff_Yt","ATLAS_tttt_13TeV_2023","ATLAS_tttt_13TeV_2023_proj","ATLAS_tttt_13TeV_run2","ATLAS_tttt_13TeV_run2_proj","ATLAS_tttt_13TeV_slep_inc","ATLAS_tttt_13TeV_slep_inc_proj","ATLAS_ttW_13TeV_2016","ATLAS_ttW_13TeV_2016_proj","ATLAS_ttW_13TeV","ATLAS_ttW_8TeV","ATLAS_ttZ_13TeV_2016","ATLAS_ttZ_13TeV","ATLAS_ttZ_13TeV_pTZ","ATLAS_ttZ_13TeV_pTZ_uncor","ATLAS_ttZ_13TeV_pTZ_uncor_proj","ATLAS_ttZ_8TeV","ATLAS_tW_13TeV_inc","ATLAS_tW_13TeV_inc_proj","ATLAS_tW_8TeV_inc","ATLAS_tW_slep_8TeV_inc","ATLAS_tZ_13TeV_inc","ATLAS_tZ_13TeV_run2_inc","ATLAS_tZ_13TeV_run2_inc_proj","ATLAS_Whel_13TeV","ATLAS_Whel_13TeV_uncor","ATLAS_Whel_13TeV_uncor_proj","ATLAS_WhelF_8TeV","ATLAS_WH_Hbb_13TeV","ATLAS_WH_Hbb_13TeV_proj","ATLAS_WW_13TeV_2016_memu","ATLAS_WW_13TeV_2016_memu_proj","ATLAS_WZ_13TeV_2016_mTWZ","ATLAS_WZ_13TeV_2016_mTWZ_proj","ATLAS_ZH_Hbb_13TeV","ATLAS_ZH_Hbb_13TeV_proj","CEPC_161_ww_leptonic_optim_obs","CEPC_161_ww_semilep_optim_obs","CEPC_240_ww_leptonic_optim_obs","CEPC_240_ww_semilep_optim_obs","CEPC_365_tt_optim_obs","CEPC_365_ww_leptonic_optim_obs","CEPC_365_ww_semilep_optim_obs","CEPC_alphaEW","CEPC_bb_240GeV","CEPC_bb_365GeV","CEPC_bb_Afb_240GeV","CEPC_bb_Afb_365GeV","CEPC_Brw_161GeV","CEPC_Brw_240GeV","CEPC_Brw_365GeV","CEPC_cc_240GeV","CEPC_cc_365GeV","CEPC_cc_Afb_240GeV","CEPC_cc_Afb_365GeV","CEPC_ee_240GeV","CEPC_ee_365GeV","CEPC_ee_Afb_240GeV","CEPC_ee_Afb_365GeV","CEPC_mumu_240GeV","CEPC_mumu_365GeV","CEPC_mumu_Afb_240GeV","CEPC_mumu_Afb_365GeV","CEPC_tautau_240GeV","CEPC_tautau_365GeV","CEPC_tautau_Afb_240GeV","CEPC_tautau_Afb_365GeV","CEPC_vvh_aa_365GeV","CEPC_vvh_bb_240GeV","CEPC_vvh_bb_365GeV","CEPC_vvh_cc_365GeV","CEPC_vvh_gg_365GeV","CEPC_vvh_tautau_365GeV","CEPC_vvh_WW_365GeV","CEPC_vvh_ZZ_365GeV","CEPC_ww_161GeV","CEPC_ww_240GeV","CEPC_ww_365GeV","CEPC_Wwidth","CEPC_Zdata","CEPC_zh_240GeV","CEPC_zh_365GeV","CEPC_zh_aa_240GeV","CEPC_zh_aa_365GeV","CEPC_zh_aZ_240GeV","CEPC_zh_bb_240GeV","CEPC_zh_bb_365GeV","CEPC_zh_cc_240GeV","CEPC_zh_cc_365GeV","CEPC_zh_gg_240GeV","CEPC_zh_gg_365GeV","CEPC_zh_tautau_240GeV","CEPC_zh_tautau_365GeV","CEPC_zh_WW_240GeV","CEPC_zh_WW_365GeV","CEPC_zh_ZZ_240GeV","CEPC_zh_ZZ_365GeV","CMS_ggF_aa_13TeV","CMS_ggF_aa_13TeV_proj","CMS_H_13TeV_2015_pTH","CMS_H_13TeV_2015_pTH_proj","CMS_SSinc_RunII","CMS_SSinc_RunII_proj","CMS_t_sch_8TeV","CMS_tt_13TeV_asy","CMS_tt_13TeV_asy_proj","CMS_tt_13TeV_dilep_2015_Mtt","CMS_tt_13TeV_dilep_2016_Mtt","CMS_tt_13TeV_dilep_2016_Mtt_proj","CMS_tt_13TeV_ljets_2015_Mtt","CMS_tt_13TeV_ljets_2016_Mtt","CMS_tt_13TeV_ljets_inc","CMS_tt_13TeV_ljets_inc_proj","CMS_tt_13TeV_Mtt","CMS_tt_13TeV_Mtt_proj","CMS_tt2D_8TeV_dilep_MttYtt","CMS_tt_8TeV_ljets_Ytt","CMS_tta_8TeV","CMS_ttbb_13TeV_2016","CMS_ttbb_13TeV_2016_proj","CMS_ttbb_13TeV_dilepton_inc","CMS_ttbb_13TeV_dilepton_inc_proj","CMS_ttbb_13TeV","CMS_ttbb_13TeV_ljets_inc","CMS_ttbb_13TeV_ljets_inc_proj","CMS_t_tch_13TeV_2016_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt_proj","CMS_t_tch_13TeV_inc","CMS_t_tch_8TeV_diff_Yt","CMS_t_tch_8TeV_inc","CMS_tttt_13TeV_2023","CMS_tttt_13TeV_2023_proj","CMS_tttt_13TeV","CMS_tttt_13TeV_run2","CMS_tttt_13TeV_run2_proj","CMS_tttt_13TeV_slep_inc","CMS_tttt_13TeV_slep_inc_proj","CMS_ttW_13TeV","CMS_ttW_13TeV_proj","CMS_ttW_8TeV","CMS_ttZ_13TeV","CMS_ttZ_13TeV_pTZ","CMS_ttZ_13TeV_pTZ_proj","CMS_ttZ_8TeV","CMS_tW_13TeV_inc","CMS_tW_13TeV_inc_proj","CMS_tW_13TeV_slep_inc","CMS_tW_13TeV_slep_inc_proj","CMS_tW_8TeV_inc","CMS_tZ_13TeV_2016_inc","CMS_tZ_13TeV_2016_inc_proj","CMS_tZ_13TeV_inc","CMS_tZ_13TeV_pTt","CMS_tZ_13TeV_pTt_uncor","CMS_tZ_13TeV_pTt_uncor_proj","CMS_WhelF_8TeV","CMS_WZ_13TeV_2016_pTZ","CMS_WZ_13TeV_2016_pTZ_proj","CMS_WZ_13TeV_2022_pTZ","CMS_WZ_13TeV_2022_pTZ_proj","FCCee_alphaEW","FCCee_bb_240GeV","FCCee_bb_365GeV","FCCee_bb_Afb_240GeV","FCCee_bb_Afb_365GeV","FCCee_Brw_161GeV","FCCee_Brw_240GeV","FCCee_Brw_365GeV","FCCee_cc_240GeV","FCCee_cc_365GeV","FCCee_cc_Afb_240GeV","FCCee_cc_Afb_365GeV","FCCee_ee_240GeV","FCCee_ee_365GeV","FCCee_ee_Afb_240GeV","FCCee_ee_Afb_365GeV","FCCee_mumu_240GeV","FCCee_mumu_365GeV","FCCee_mumu_Afb_240GeV","FCCee_mumu_Afb_365GeV","FCCee_tautau_240GeV","FCCee_tautau_365GeV","FCCee_tautau_Afb_240GeV","FCCee_tautau_Afb_365GeV","FCCee_vvh_240GeV","FCCee_vvh_365GeV","FCCee_vvh_aa_365GeV","FCCee_vvh_bb_240GeV","FCCee_vvh_bb_365GeV","FCCee_vvh_cc_365GeV","FCCee_vvh_gg_365GeV","FCCee_vvh_tautau_365GeV","FCCee_vvh_WW_365GeV","FCCee_vvh_ZZ_365GeV","FCCee_ww_161GeV","FCCee_ww_240GeV","FCCee_ww_365GeV","FCCee_Wwidth","FCCee_Zdata","FCCee_zh_240GeV","FCCee_zh_365GeV","FCCee_zh_aa_240GeV","FCCee_zh_aa_365GeV","FCCee_zh_aZ_240GeV","FCCee_zh_bb_240GeV","FCCee_zh_bb_365GeV","FCCee_zh_cc_240GeV","FCCee_zh_cc_365GeV","FCCee_zh_gg_240GeV","FCCee_zh_gg_365GeV","FCCee_zh_tautau_240GeV","FCCee_zh_tautau_365GeV","FCCee_zh_WW_240GeV","FCCee_zh_WW_365GeV","FCCee_zh_ZZ_240GeV","FCCee_zh_ZZ_365GeV","HLLHC_tt_13TeV_asy","HLLHC_tt_13TeV_Mtt","LEP1_EWPOs_2006","LEP_alphaEW","LEP_Bhabha_2013","LEP_Brw_2013","LEP_eeWW_182GeV","LEP_eeWW_189GeV","LEP_eeWW_198GeV","LEP_eeWW_206GeV","LHC_HH_14TeV"};
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Flavour assumptions*)
 
 
@@ -494,7 +494,7 @@ Subscript[wwC, quqd1],Subscript[wwC, quqd8],Subscript[wwC, lequ1],Subscript[wwC,
 
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Assumption checker*)
 
 
@@ -520,7 +520,7 @@ Print["First WC for which the conditions are not satisfied: "<>ToString[Standard
 ];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Flavour solver*)
 
 
@@ -1126,7 +1126,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 
 
 dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal",uvInvar_:"True"]:=
-Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,invarsUV,sumTerm,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3},
+Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,invarsUV,sumTerm,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3,indAux},
 (*Load the dictionary with matching results*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
 If[degenMass=="True",
@@ -1174,17 +1174,19 @@ For[ind2=1,ind2<=Length[termList],ind2++,
 sumTerm=termList[[ind2]];
 (*If[Length[varsUV]>2,sumTerm=Flatten[sumTerm,Length[varsUV]-2]];
 If[Length[varsUV]==1,sumTerm={sumTerm};];*)
+indAux=1;
 For[ind3=1,ind3<=Length[varsUV],ind3++,
 (*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
-If[ind3==1,
+(*If[ind3==1,
 WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
 WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
-Continue[];];
+Continue[];];*)
 If[sumTerm[[ind3,3]]!="0",
 WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
-WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
+WriteLine[str1,"      - "<>Piecewise[{{sumTerm[[1,2]],indAux==1}},sumTerm[[ind3,2]]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
+indAux=0;
 ];
 ];
 ];
@@ -1257,12 +1259,13 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
 dictPrinterUVmass[matchResFile_,UVcoup_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal"]:=
-Block[{indFree,massString,dicTotal,invertMassesNames,dicInvar,invertMasses,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,massNames,invarsUV,sumTerm,inverRelUV,evalUVcoup,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3},
+Block[{indFree,massString,dicTotal,invertMassesNames,indAux,dicInvar,invertMasses,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,massNames,invarsUV,sumTerm,inverRelUV,
+evalUVcoup,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3},
 (*Load the dictionary with matching results*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
 {dicTotal,massString,massReemp}=massHandler[matchResFile,1,looplevel,flaUVassum];
@@ -1303,16 +1306,17 @@ For[ind2=1,ind2<=Length[termList],ind2++,
 sumTerm=termList[[ind2]];
 If[Length[invertMassesNames]>2,sumTerm=Flatten[sumTerm,Length[invertMassesNames]-2]];
 If[Length[invertMassesNames]==1,sumTerm={sumTerm};];
+indAux=1;
 For[ind3=1,ind3<=Length[invertMassesNames],ind3++,
 (*/// ind3 runs over all the UV masses that can appear in a monomial in each term of the sum. ///*)
-If[ind3==1,
+(*If[ind3==1,
 WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
 WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
-Continue[];];
+Continue[];];*)
 If[sumTerm[[ind3,3]]!="0",
 WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
-WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
+WriteLine[str1,"      - "<>Piecewise[{{sumTerm[[1,2]],indAux==1}},sumTerm[[ind3,2]]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
 ];
 ];
