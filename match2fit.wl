@@ -233,7 +233,29 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 {dicTotal,massString,massReemp}]
 
 
-(* ::Section:: *)
+(*/// YAML parser done by ChatGPT. ///*)
+parseYAMLString[yaml_String]:=Module[{lines,cleaned,currentKey=None,data=<||>,line,content,inner,items,kvPairs,kv,key,val,assoc},(*1) Split into lines and strip trailing comments and whitespace*)lines=StringSplit[yaml,"\n"];
+cleaned=StringTrim/@StringReplace[lines,RegularExpression["\\s*#.*$"]->""];(*remove trailing comments*)cleaned=Select[cleaned,#=!=""&];
+(*2) Walk lines and build structure*)Do[line=StringTrim[cleaned[[i]]];
+(*Header like "FCCee91:"*)If[StringEndsQ[line,":"],currentKey=StringTrim[StringTrim[line,":"]];
+data[currentKey]={};(*initialize list*)Continue[]];
+(*List item*)If[StringStartsQ[line,"-"],content=StringTrim[StringDrop[line,1]];(*after the dash*)(*Inline mapping:-{k:v,k2:v2}*)If[StringStartsQ[content,"{"]&&StringEndsQ[content,"}"],inner=StringTrim[StringTake[content,{2,-2}]];(*drop braces*)items=StringSplit[inner,","];(*split into key:val pieces*)kvPairs=Map[Function[s,kv=StringSplit[StringTrim[s],":",2];(*only first ":"*)key=StringTrim[kv[[1]]];
+val=If[Length[kv]>=2,StringTrim[kv[[2]]],""];
+val=StringTrim[val,{"\"","'"}];(*drop surrounding quotes if any*)Rule[key,val]],items];
+assoc=Association[kvPairs];
+AppendTo[data[currentKey],assoc];
+Continue[]];
+(*Mapping style:-key:value*)If[StringContainsQ[content,":"],kv=StringSplit[content,":",2];
+key=StringTrim[kv[[1]]];
+val=StringTrim[kv[[2]]];
+val=StringTrim[val,{"\"","'"}];
+AppendTo[data[currentKey],Association[key->val]];
+Continue[]];
+(*Scalar list item:-something*)AppendTo[data[currentKey],content];],{i,Length[cleaned]}];
+data]
+
+
+(* ::Section::Closed:: *)
 (*MMEFT conventions*)
 
 
@@ -283,7 +305,7 @@ ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[2,1,2]],{onelooporder,0,1
 ret]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SMEFiT conventions*)
 
 
@@ -374,11 +396,11 @@ ret=Flatten[Table[{ToExpression[ToString[UVcoups[[j]]]<>"[a_]:>ToExpression[\""<
 ret]
 
 
-(*/// Dataset on smefit_database/main/theory. Updated to 9 December 2024. Remote reading for the future.///*)
-datasetSMEFiT={"ATLAS_CMS_SSinc_RunI","ATLAS_CMS_tt_AC_8TeV","ATLAS_ggF_13TeV_2015","ATLAS_ggF_13TeV_2015_proj","ATLAS_ggF_ZZ_13TeV","ATLAS_ggF_ZZ_13TeV_proj","ATLAS_hh_runII_13TeV","ATLAS_SSinc_RunII","ATLAS_SSinc_RunII_proj","ATLAS_STXS_runII_13TeV","ATLAS_STXS_runII_13TeV_uncor","ATLAS_STXS_runII_13TeV_uncor_proj","ATLAS_t_sch_13TeV_inc","ATLAS_t_sch_13TeV_inc_proj","ATLAS_t_sch_8TeV","ATLAS_tt_13TeV_asy_2022","ATLAS_tt_13TeV_asy_2022_uncor","ATLAS_tt_13TeV_asy_2022_uncor_proj","ATLAS_tt_13TeV_ljets_2016_Mtt","ATLAS_tt_13TeV_ljets_2016_Mtt_proj","ATLAS_tt_8TeV_dilep_Mtt","ATLAS_tt_8TeV_ljets_Mtt","ATLAS_tta_8TeV","ATLAS_tt_AC_13TeV","ATLAS_ttbb_13TeV_2016","ATLAS_ttbb_13TeV_2016_proj","ATLAS_t_tch_13TeV_inc","ATLAS_t_tch_13TeV_inc_proj","ATLAS_t_tch_8TeV_diff_Yt","ATLAS_tttt_13TeV_2023","ATLAS_tttt_13TeV_2023_proj","ATLAS_tttt_13TeV_run2","ATLAS_tttt_13TeV_run2_proj","ATLAS_tttt_13TeV_slep_inc","ATLAS_tttt_13TeV_slep_inc_proj","ATLAS_ttW_13TeV_2016","ATLAS_ttW_13TeV_2016_proj","ATLAS_ttW_13TeV","ATLAS_ttW_8TeV","ATLAS_ttZ_13TeV_2016","ATLAS_ttZ_13TeV","ATLAS_ttZ_13TeV_pTZ","ATLAS_ttZ_13TeV_pTZ_uncor","ATLAS_ttZ_13TeV_pTZ_uncor_proj","ATLAS_ttZ_8TeV","ATLAS_tW_13TeV_inc","ATLAS_tW_13TeV_inc_proj","ATLAS_tW_8TeV_inc","ATLAS_tW_slep_8TeV_inc","ATLAS_tZ_13TeV_inc","ATLAS_tZ_13TeV_run2_inc","ATLAS_tZ_13TeV_run2_inc_proj","ATLAS_Whel_13TeV","ATLAS_Whel_13TeV_uncor","ATLAS_Whel_13TeV_uncor_proj","ATLAS_WhelF_8TeV","ATLAS_WH_Hbb_13TeV","ATLAS_WH_Hbb_13TeV_proj","ATLAS_WW_13TeV_2016_memu","ATLAS_WW_13TeV_2016_memu_proj","ATLAS_WZ_13TeV_2016_mTWZ","ATLAS_WZ_13TeV_2016_mTWZ_proj","ATLAS_ZH_Hbb_13TeV","ATLAS_ZH_Hbb_13TeV_proj","CEPC_161_ww_leptonic_optim_obs","CEPC_161_ww_semilep_optim_obs","CEPC_240_ww_leptonic_optim_obs","CEPC_240_ww_semilep_optim_obs","CEPC_365_tt_optim_obs","CEPC_365_ww_leptonic_optim_obs","CEPC_365_ww_semilep_optim_obs","CEPC_alphaEW","CEPC_bb_240GeV","CEPC_bb_365GeV","CEPC_bb_Afb_240GeV","CEPC_bb_Afb_365GeV","CEPC_Brw_161GeV","CEPC_Brw_240GeV","CEPC_Brw_365GeV","CEPC_cc_240GeV","CEPC_cc_365GeV","CEPC_cc_Afb_240GeV","CEPC_cc_Afb_365GeV","CEPC_ee_240GeV","CEPC_ee_365GeV","CEPC_ee_Afb_240GeV","CEPC_ee_Afb_365GeV","CEPC_mumu_240GeV","CEPC_mumu_365GeV","CEPC_mumu_Afb_240GeV","CEPC_mumu_Afb_365GeV","CEPC_tautau_240GeV","CEPC_tautau_365GeV","CEPC_tautau_Afb_240GeV","CEPC_tautau_Afb_365GeV","CEPC_vvh_aa_365GeV","CEPC_vvh_bb_240GeV","CEPC_vvh_bb_365GeV","CEPC_vvh_cc_365GeV","CEPC_vvh_gg_365GeV","CEPC_vvh_tautau_365GeV","CEPC_vvh_WW_365GeV","CEPC_vvh_ZZ_365GeV","CEPC_ww_161GeV","CEPC_ww_240GeV","CEPC_ww_365GeV","CEPC_Wwidth","CEPC_Zdata","CEPC_zh_240GeV","CEPC_zh_365GeV","CEPC_zh_aa_240GeV","CEPC_zh_aa_365GeV","CEPC_zh_aZ_240GeV","CEPC_zh_bb_240GeV","CEPC_zh_bb_365GeV","CEPC_zh_cc_240GeV","CEPC_zh_cc_365GeV","CEPC_zh_gg_240GeV","CEPC_zh_gg_365GeV","CEPC_zh_tautau_240GeV","CEPC_zh_tautau_365GeV","CEPC_zh_WW_240GeV","CEPC_zh_WW_365GeV","CEPC_zh_ZZ_240GeV","CEPC_zh_ZZ_365GeV","CMS_ggF_aa_13TeV","CMS_ggF_aa_13TeV_proj","CMS_H_13TeV_2015_pTH","CMS_H_13TeV_2015_pTH_proj","CMS_SSinc_RunII","CMS_SSinc_RunII_proj","CMS_t_sch_8TeV","CMS_tt_13TeV_asy","CMS_tt_13TeV_asy_proj","CMS_tt_13TeV_dilep_2015_Mtt","CMS_tt_13TeV_dilep_2016_Mtt","CMS_tt_13TeV_dilep_2016_Mtt_proj","CMS_tt_13TeV_ljets_2015_Mtt","CMS_tt_13TeV_ljets_2016_Mtt","CMS_tt_13TeV_ljets_inc","CMS_tt_13TeV_ljets_inc_proj","CMS_tt_13TeV_Mtt","CMS_tt_13TeV_Mtt_proj","CMS_tt2D_8TeV_dilep_MttYtt","CMS_tt_8TeV_ljets_Ytt","CMS_tta_8TeV","CMS_ttbb_13TeV_2016","CMS_ttbb_13TeV_2016_proj","CMS_ttbb_13TeV_dilepton_inc","CMS_ttbb_13TeV_dilepton_inc_proj","CMS_ttbb_13TeV","CMS_ttbb_13TeV_ljets_inc","CMS_ttbb_13TeV_ljets_inc_proj","CMS_t_tch_13TeV_2016_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt","CMS_t_tch_13TeV_2019_diff_Yt_proj","CMS_t_tch_13TeV_inc","CMS_t_tch_8TeV_diff_Yt","CMS_t_tch_8TeV_inc","CMS_tttt_13TeV_2023","CMS_tttt_13TeV_2023_proj","CMS_tttt_13TeV","CMS_tttt_13TeV_run2","CMS_tttt_13TeV_run2_proj","CMS_tttt_13TeV_slep_inc","CMS_tttt_13TeV_slep_inc_proj","CMS_ttW_13TeV","CMS_ttW_13TeV_proj","CMS_ttW_8TeV","CMS_ttZ_13TeV","CMS_ttZ_13TeV_pTZ","CMS_ttZ_13TeV_pTZ_proj","CMS_ttZ_8TeV","CMS_tW_13TeV_inc","CMS_tW_13TeV_inc_proj","CMS_tW_13TeV_slep_inc","CMS_tW_13TeV_slep_inc_proj","CMS_tW_8TeV_inc","CMS_tZ_13TeV_2016_inc","CMS_tZ_13TeV_2016_inc_proj","CMS_tZ_13TeV_inc","CMS_tZ_13TeV_pTt","CMS_tZ_13TeV_pTt_uncor","CMS_tZ_13TeV_pTt_uncor_proj","CMS_WhelF_8TeV","CMS_WZ_13TeV_2016_pTZ","CMS_WZ_13TeV_2016_pTZ_proj","CMS_WZ_13TeV_2022_pTZ","CMS_WZ_13TeV_2022_pTZ_proj","FCCee_alphaEW","FCCee_bb_240GeV","FCCee_bb_365GeV","FCCee_bb_Afb_240GeV","FCCee_bb_Afb_365GeV","FCCee_Brw_161GeV","FCCee_Brw_240GeV","FCCee_Brw_365GeV","FCCee_cc_240GeV","FCCee_cc_365GeV","FCCee_cc_Afb_240GeV","FCCee_cc_Afb_365GeV","FCCee_ee_240GeV","FCCee_ee_365GeV","FCCee_ee_Afb_240GeV","FCCee_ee_Afb_365GeV","FCCee_mumu_240GeV","FCCee_mumu_365GeV","FCCee_mumu_Afb_240GeV","FCCee_mumu_Afb_365GeV","FCCee_tautau_240GeV","FCCee_tautau_365GeV","FCCee_tautau_Afb_240GeV","FCCee_tautau_Afb_365GeV","FCCee_vvh_240GeV","FCCee_vvh_365GeV","FCCee_vvh_aa_365GeV","FCCee_vvh_bb_240GeV","FCCee_vvh_bb_365GeV","FCCee_vvh_cc_365GeV","FCCee_vvh_gg_365GeV","FCCee_vvh_tautau_365GeV","FCCee_vvh_WW_365GeV","FCCee_vvh_ZZ_365GeV","FCCee_ww_161GeV","FCCee_ww_240GeV","FCCee_ww_365GeV","FCCee_Wwidth","FCCee_Zdata","FCCee_zh_240GeV","FCCee_zh_365GeV","FCCee_zh_aa_240GeV","FCCee_zh_aa_365GeV","FCCee_zh_aZ_240GeV","FCCee_zh_bb_240GeV","FCCee_zh_bb_365GeV","FCCee_zh_cc_240GeV","FCCee_zh_cc_365GeV","FCCee_zh_gg_240GeV","FCCee_zh_gg_365GeV","FCCee_zh_tautau_240GeV","FCCee_zh_tautau_365GeV","FCCee_zh_WW_240GeV","FCCee_zh_WW_365GeV","FCCee_zh_ZZ_240GeV","FCCee_zh_ZZ_365GeV","HLLHC_tt_13TeV_asy","HLLHC_tt_13TeV_Mtt","LEP1_EWPOs_2006","LEP_alphaEW","LEP_Bhabha_2013","LEP_Brw_2013","LEP_eeWW_182GeV","LEP_eeWW_189GeV","LEP_eeWW_198GeV","LEP_eeWW_206GeV","LHC_HH_14TeV"};
+(*/// Dataset on smefit_database/main.///*)
+datasetSMEFiT=parseYAMLString[Import["https://raw.githubusercontent.com/LHCfitNikhef/smefit_database/main/data_summary.yaml","Text"]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Flavour assumptions*)
 
 
@@ -494,7 +516,7 @@ Subscript[wwC, quqd1],Subscript[wwC, quqd8],Subscript[wwC, lequ1],Subscript[wwC,
 
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Assumption checker*)
 
 
@@ -520,7 +542,7 @@ Print["First WC for which the conditions are not satisfied: "<>ToString[Standard
 ];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Flavour solver*)
 
 
@@ -1117,16 +1139,16 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Run card printing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV scan run card printing*)
 
 
 dictPrinterUVcoup[matchResFile_,mass_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal",uvInvar_:"True"]:=
-Block[{indFree,massString,dicTotal,dicInvar,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,invarsUV,sumTerm,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3,indAux},
+Block[{indFree,massString,dicTotal,dicInvar,dataSubsets,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,invarsUV,sumTerm,inverRelUV,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3,indAux},
 (*Load the dictionary with matching results*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
 If[degenMass=="True",
@@ -1201,9 +1223,13 @@ WriteLine[str1,"    max: 100"];
 ];
 WriteLine[str1,"data_path: /path/to/smefit_database/commondata_projections_L0"];
 WriteLine[str1,"datasets:"];
-For[ind1=1,ind1<=Length[datasetSMEFiT],ind1++,
-WriteLine[str1,"- name: "<>datasetSMEFiT[[ind1]]];
-WriteLine[str1,"  order: "<>Piecewise[{{"NLO_QCD",StringContainsQ[datasetSMEFiT[[ind1]],"ATLAS"]||StringContainsQ[datasetSMEFiT[[ind1]],"CMS"]||StringContainsQ[datasetSMEFiT[[ind1]],"LHC"]},{"NLO_EW",StringContainsQ[datasetSMEFiT[[ind1]],"zh"]&&(StringContainsQ[datasetSMEFiT[[ind1]],"FCCee"]||StringContainsQ[datasetSMEFiT[[ind1]],"CEPC"])}},"LO"]];
+dataSubsets=Keys[datasetSMEFiT];
+For[ind1=1,ind1<=Length[dataSubsets],ind1++,
+dataSublist=datasetSMEFiT[dataSubsets[[ind1]]];
+For[ind2=1,ind2<=Length[dataSublist],ind2++,
+WriteLine[str1,"- name: "<>dataSublist[[ind2]]["name"]];
+WriteLine[str1,"  order: "<>dataSublist[[ind2]]["order"]];
+];
 ];
 WriteLine[str1,"external_chi2:"];
 WriteLine[str1,"  OptimalWW161:"];
@@ -1259,7 +1285,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
@@ -1333,9 +1359,13 @@ WriteLine[str1,"    max: 300"];
 ];
 WriteLine[str1,"data_path: /path/to/smefit_database/commondata_projections_L0"];
 WriteLine[str1,"datasets:"];
-For[ind1=1,ind1<=Length[datasetSMEFiT],ind1++,
-WriteLine[str1,"- name: "<>datasetSMEFiT[[ind1]]];
-WriteLine[str1,"  order: "<>Piecewise[{{"NLO_QCD",StringContainsQ[datasetSMEFiT[[ind1]],"ATLAS"]||StringContainsQ[datasetSMEFiT[[ind1]],"CMS"]||StringContainsQ[datasetSMEFiT[[ind1]],"LHC"]},{"NLO_EW",StringContainsQ[datasetSMEFiT[[ind1]],"zh"]&&(StringContainsQ[datasetSMEFiT[[ind1]],"FCCee"]||StringContainsQ[datasetSMEFiT[[ind1]],"CEPC"])}},"LO"]];
+dataSubsets=Keys[datasetSMEFiT];
+For[ind1=1,ind1<=Length[dataSubsets],ind1++,
+dataSublist=datasetSMEFiT[dataSubsets[[ind1]]];
+For[ind2=1,ind2<=Length[dataSublist],ind2++,
+WriteLine[str1,"- name: "<>dataSublist[[ind2]]["name"]];
+WriteLine[str1,"  order: "<>dataSublist[[ind2]]["order"]];
+];
 ];
 WriteLine[str1,"external_chi2:"];
 WriteLine[str1,"  OptimalWW161:"];
@@ -1428,7 +1458,7 @@ Close[str2];]
 (*Public functions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV to EFT matching*)
 
 
@@ -1472,7 +1502,7 @@ Run["bash ./script_move_models"];
 Run["matchmakereft <./script_MMEFT"];
 (*/// Check existence of results and alert if there was a problem. ///*)
 listResultFiles=FileNames["*.dat",directory<>model<>"_MM/"];
-(*If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingResult.dat"],
+If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingResult.dat"],
 Print["The matching results are available in:\n"<>directory<>model<>"_MM/MatchingResult.dat"];
 (*/// If successful, delete auxiliar directories and files created by MMEFT and this package ///*)
 DeleteDirectory[directory<>model<>"_MM/FORM/",DeleteContents->True];
@@ -1482,7 +1512,8 @@ DeleteFile[directory<>"script_MMEFT_copymodels"];
 DeleteFile[directory<>"script_move_models"];
 DeleteFile[directory<>"script_MMEFT"];
 DeleteFile[directory<>"UnbrokenSM_BFM.fr"];,
-Print["There was a problem during the matching and no results were generated.\nCheck input files."];]*);
+Print["There was a problem during the matching and no results were generated.\nCheck input files."];
+];
 If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingProblems.dat"],
 listProblems=Get[directory<>model<>"_MM/MatchingProblems.dat"];
 If[Not[MemberQ[{0,"Tree","tree"},looplevel]],

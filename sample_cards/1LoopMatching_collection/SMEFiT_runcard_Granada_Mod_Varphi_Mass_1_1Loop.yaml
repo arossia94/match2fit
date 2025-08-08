@@ -1,25 +1,528 @@
-Model name: 16
+Model name: Varphi
 UV Collection: Granada
-UV model: 16
+UV model: Varphi
 coefficients:
+  OpBox:
+    constrain:
+      lamVarphi:
+      - -0.009498860966469166
+      - 2
+    max: 100
+    min: -100
+  OpD:
+    constrain:
+    max: 100
+    min: -100
+  OWWW:
+    constrain:
+    max: 100
+    min: -100
+  OpqMi:
+    constrain:
+    max: 100
+    min: -100
+  OpQM:
+    constrain:
+      yVarphiuf33:
+      - 0.0039877528358807325
+      - 2
+    max: 100
+    min: -100
+  O3pq:
+    constrain:
+    max: 100
+    min: -100
+  O3pQ3:
+    constrain:
+      yVarphiuf33:
+      - -0.0004821067692708801
+      - 2
+    max: 100
+    min: -100
+  Opl1:
+    constrain:
+    max: 100
+    min: -100
+  Opl2:
+    constrain:
+    max: 100
+    min: -100
+  Opl3:
+    constrain:
+    max: 100
+    min: -100
+  O3pl1:
+    constrain:
+    max: 100
+    min: -100
+  O3pl2:
+    constrain:
+    max: 100
+    min: -100
+  O3pl3:
+    constrain:
+    max: 100
+    min: -100
+  Opui:
+    constrain:
+    max: 100
+    min: -100
+  Opdi:
+    constrain:
+    max: 100
+    min: -100
+  Opt:
+    constrain:
+      yVarphiuf33:
+      - -0.0036729576050258212
+      - 2
+    max: 100
+    min: -100
+  Ope:
+    constrain:
+    max: 100
+    min: -100
+  Opmu:
+    constrain:
+    max: 100
+    min: -100
+  Opta:
+    constrain:
+    max: 100
+    min: -100
+  O81qq:
+    constrain:
+      yVarphiuf33:
+      - -0.0020849297545038293
+      - 2
+    max: 100
+    min: -100
+  O11qq:
+    constrain:
+      yVarphiuf33:
+      - -0.000021925119531248212
+      - 2
+    max: 100
+    min: -100
+  O13qq:
+    constrain:
+      yVarphiuf33:
+      - 0.000018746385635798607
+      - 2
+    max: 100
+    min: -100
+  O8qt:
+    constrain:
+      yVarphiuf33:
+      - -0.008339719018015317
+      - 2
+    max: 100
+    min: -100
+  O1qt:
+    constrain:
+      yVarphiuf33:
+      - -0.000012528639732141836
+      - 2
+    max: 100
+    min: -100
+  O8ut:
+    constrain:
+      yVarphiuf33:
+      - -0.004169859509007659
+      - 2
+    max: 100
+    min: -100
+  O1ut:
+    constrain:
+      yVarphiuf33:
+      - -0.000025057279464283672
+      - 2
+    max: 100
+    min: -100
+  O8qu:
+    constrain:
+      yVarphiuf33:
+      - -0.004169859509007659
+      - 2
+    max: 100
+    min: -100
+  O1qu:
+    constrain:
+      yVarphiuf33:
+      - -0.0001754009562499857
+      - 2
+    max: 100
+    min: -100
+  O8dt:
+    constrain:
+      yVarphiuf33:
+      - -0.00833789392004737
+      - 2
+    max: 100
+    min: -100
+  O1dt:
+    constrain:
+      yVarphiuf33:
+      - 0.00002536146245894137
+      - 2
+    max: 100
+    min: -100
+  O8qd:
+    constrain:
+      yVarphiuf33:
+      - -0.004169859509007659
+      - 2
+    max: 100
+    min: -100
+  O1qd:
+    constrain:
+      yVarphiuf33:
+      - 0.00008770047812499285
+      - 2
+    max: 100
+    min: -100
   OQQ1:
     constrain:
-      m:
-      - 0.3333333333333333
-      - -2
+      yVarphiuf33:
+      - 0.00040690388156975303
+      - 2
+      yVarphiuf33:
+      - -0.0005277144981371759
+      - 4
     max: 100
     min: -100
   OQQ8:
     constrain:
-      m:
-      - 2.
-      - -2
+      yVarphiuf33:
+      - -0.0049221796045876755
+      - 2
+      yVarphiuf33:
+      - -0.0031662869888230555
+      - 4
     max: 100
     min: -100
-  m:
-    is_mass: true
-    min: 0.1
-    max: 300
+  OQt1:
+    constrain:
+      yVarphiuf33:
+      - -0.17591655150625649
+      - 2
+      yVarphiuf33:
+      - 0.0023747152416172916
+      - 4
+    max: 100
+    min: -100
+  OQt8:
+    constrain:
+      yVarphiuf33:
+      - -0.9919707996540442
+      - 2
+      yVarphiuf33:
+      - 0.004749430483234583
+      - 4
+    max: 100
+    min: -100
+  Ott1:
+    constrain:
+      yVarphiuf33:
+      - -0.0012712222766395737
+      - 2
+      yVarphiuf33:
+      - -0.0015831434944115277
+      - 4
+    max: 100
+    min: -100
+  Oll:
+    constrain:
+    max: 100
+    min: -100
+  Oll1111:
+    constrain:
+    max: 100
+    min: -100
+  Obp:
+    constrain:
+      yVarphiuf33:
+      - -0.00003741736578242873
+      - 2
+      lamVarphi:
+      - 0.00011314734148650149
+      - 1
+      yVarphiuf33:
+      - 1
+      - 1
+      lamVarphi:
+      - 0.0001520366264981623
+      - 2
+    max: 100
+    min: -100
+  Otp:
+    constrain:
+      yVarphiuf33:
+      - 0.014574511604595554
+      - 2
+      lamVarphi:
+      - -1.0202607318852208
+      - 1
+      yVarphiuf33:
+      - 1
+      - 1
+      lamVarphi:
+      - 0.0023747152416172916
+      - 1
+      yVarphiuf33:
+      - 1
+      - 3
+      lamVarphi:
+      - 0.006283695596608257
+      - 2
+    max: 100
+    min: -100
+  OtG:
+    constrain:
+      yVarphiuf33:
+      - 0.0019121280895770068
+      - 2
+    max: 100
+    min: -100
+  Otap:
+    constrain:
+      lamVarphi:
+      - 0.00006474286965711216
+      - 2
+    max: 100
+    min: -100
+  OtW:
+    constrain:
+      yVarphiuf33:
+      - -0.0016239676930544272
+      - 2
+    max: 100
+    min: -100
+  OtZ:
+    constrain:
+      yVarphiuf33:
+      - -0.0005011207226640796
+      - 2
+    max: 100
+    min: -100
+  Op:
+    constrain:
+      lamVarphi:
+      - 1.027857235038875
+      - 2
+    max: 100
+    min: -100
+  OQe:
+    constrain:
+      yVarphiuf33:
+      - 0.00026310143437497855
+      - 2
+    max: 100
+    min: -100
+  OQl31:
+    constrain:
+      yVarphiuf33:
+      - 0.00003749277127159721
+      - 2
+    max: 100
+    min: -100
+  OQlM1:
+    constrain:
+      yVarphiuf33:
+      - 0.00009405794591589207
+      - 2
+    max: 100
+    min: -100
+  Otl1:
+    constrain:
+      yVarphiuf33:
+      - 0.000037585919196425505
+      - 2
+    max: 100
+    min: -100
+  Ote:
+    constrain:
+      yVarphiuf33:
+      - 0.00007517183839285101
+      - 2
+    max: 100
+    min: -100
+  Oql31:
+    constrain:
+    max: 100
+    min: -100
+  OqlM1:
+    constrain:
+    max: 100
+    min: -100
+  Oqe:
+    constrain:
+    max: 100
+    min: -100
+  Olb:
+    constrain:
+    max: 100
+    min: -100
+  Olu:
+    constrain:
+    max: 100
+    min: -100
+  Old:
+    constrain:
+    max: 100
+    min: -100
+  Oeu:
+    constrain:
+    max: 100
+    min: -100
+  Oed:
+    constrain:
+    max: 100
+    min: -100
+  Oeb:
+    constrain:
+    max: 100
+    min: -100
+  Obb:
+    constrain:
+    max: 100
+    min: -100
+  Oll1122:
+    constrain:
+    max: 100
+    min: -100
+  Oll1133:
+    constrain:
+    max: 100
+    min: -100
+  Oll1331:
+    constrain:
+    max: 100
+    min: -100
+  Oll2222:
+    constrain:
+    max: 100
+    min: -100
+  Oll2332:
+    constrain:
+    max: 100
+    min: -100
+  Oll2233:
+    constrain:
+    max: 100
+    min: -100
+  Oll3333:
+    constrain:
+    max: 100
+    min: -100
+  Ole1111:
+    constrain:
+    max: 100
+    min: -100
+  Ole2222:
+    constrain:
+    max: 100
+    min: -100
+  Ole3333:
+    constrain:
+    max: 100
+    min: -100
+  Ole1122:
+    constrain:
+    max: 100
+    min: -100
+  Ole1133:
+    constrain:
+    max: 100
+    min: -100
+  Ole2233:
+    constrain:
+    max: 100
+    min: -100
+  Ole2211:
+    constrain:
+    max: 100
+    min: -100
+  Ole3311:
+    constrain:
+    max: 100
+    min: -100
+  Ole3322:
+    constrain:
+    max: 100
+    min: -100
+  Oee1111:
+    constrain:
+    max: 100
+    min: -100
+  Oee2222:
+    constrain:
+    max: 100
+    min: -100
+  Oee3333:
+    constrain:
+    max: 100
+    min: -100
+  Oee1122:
+    constrain:
+    max: 100
+    min: -100
+  Oee1133:
+    constrain:
+    max: 100
+    min: -100
+  Oee2233:
+    constrain:
+    max: 100
+    min: -100
+  Otat:
+    constrain:
+      yVarphiuf33:
+      - 0.00007517183839285101
+      - 2
+    max: 100
+    min: -100
+  OQta:
+    constrain:
+      yVarphiuf33:
+      - 0.00026310143437497855
+      - 2
+    max: 100
+    min: -100
+  Otl3:
+    constrain:
+      yVarphiuf33:
+      - 0.000037585919196425505
+      - 2
+    max: 100
+    min: -100
+  Otl2:
+    constrain:
+      yVarphiuf33:
+      - 0.000037585919196425505
+      - 2
+    max: 100
+    min: -100
+  OQl13:
+    constrain:
+      yVarphiuf33:
+      - 0.00013155071718748927
+      - 2
+    max: 100
+    min: -100
+  OQl33:
+    constrain:
+      yVarphiuf33:
+      - 0.00003749277127159721
+      - 2
+    max: 100
+    min: -100
+  lamVarphi:
+    min: -100
+    max: 100
+  yVarphiuf33:
+    min: -100
+    max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
 datasets:
 - name: LEP1_EWPOs_2006
@@ -568,7 +1071,7 @@ use_t0: false
 use_theory_covmat: true
 uv_couplings: true
 rge:
- init_scale: 4000.0
+ init_scale: 1000.
  obs_scale: dynamic
  smeft_accuracy: integrate
  yukawa: top
