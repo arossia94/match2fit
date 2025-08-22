@@ -11,7 +11,7 @@ BeginPackage["match2fit`"];
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
 Print["Version: 1.9"];
-Print["Date: 04/04/2025"];
+Print["Date: 22/08/2025"];
 Print["Author: Alejo N. Rossia"];
 Print["Affiliations: Universit\[AGrave] degli Studi di Padova e INFN Sezione di Padova."];
 
@@ -86,11 +86,11 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},{"c11qq",ToString[
 {"cee1122",ToString[x]=="wwCee1122"},
 {"cee1133",ToString[x]=="wwCee1133"},
 {"cee2233",ToString[x]=="wwCee2233"},
-{"ctat",ToString[x]=="wwCeu3333"},
+{"ctta",ToString[x]=="wwCeu3333"},
 {"cQta",ToString[x]=="wwCqe3333"},
 {"ctl3",ToString[x]=="wwClu3333"},
 {"ctl2",ToString[x]=="wwClu2233"},
-{"cQl13",ToString[x]=="wwClq13333"},
+{"cQlM3",ToString[x]=="wwClqM3333"},
 {"cQl33",ToString[x]=="wwClq33333"}
 }];
 (*Original function taken from: https://mathematica.stackexchange.com/a/250929 *)
@@ -305,7 +305,7 @@ ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[2,1,2]],{onelooporder,0,1
 ret]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SMEFiT conventions*)
 
 
@@ -383,7 +383,7 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCqe3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][3,3,3,3]},
 {Symbol[SymbolName[wwClu3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][3,3,3,3]},
 {Symbol[SymbolName[wwClu2233]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][2,2,3,3]},
-{Symbol[SymbolName[wwClq13333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][3,3,3,3]},
+{Symbol[SymbolName[wwClqM3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][3,3,3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]},
 {Symbol[SymbolName[wwClq33333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]}
 };
 vanishBviolation={Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]]->0};
@@ -767,7 +767,7 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Dictionary and invariant computing*)
 
 
@@ -805,7 +805,7 @@ dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMake
 {dictProv,uvparams[[1]]}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Invariant building*)
 
 
@@ -1285,7 +1285,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Mass Scan printing*)
 
 
@@ -1558,11 +1558,11 @@ flavourSymChecker[matchResFile_,OptionsPattern[]]:=flavourSymCheckerBack[matchRe
 flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile,OptionValue["UVFlavourAssumption"]];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*From matching result to run card*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*UV scan*)
 
 
@@ -1570,7 +1570,7 @@ Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserColl
 matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"],OptionValue["UVinvariants"]]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Mass scan*)
 
 
