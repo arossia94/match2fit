@@ -11,7 +11,7 @@ BeginPackage["match2fit`"];
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
 Print["Version: 1.9"];
-Print["Date: 04/04/2025"];
+Print["Date: 22/08/2025"];
 Print["Author: Alejo N. Rossia"];
 Print["Affiliations: Universit\[AGrave] degli Studi di Padova e INFN Sezione di Padova."];
 
