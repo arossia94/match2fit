@@ -102,13 +102,13 @@ cee3333 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0
 cee1122 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cee1133 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cee2233 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-ctat : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+ctta : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cQta : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctl3 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctl2 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cQl13 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cQlM3 : [{gWtiH: [0.04,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,1],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cQl33 : [{gWtiH: [-0.04,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,1],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
 # Matching results address: /home/alejorossia/match2fit//sample_results/MatchingResult_multiparticle_treelevel.dat
-# Export date: Fri 1 Aug 2025 10:42:55
+# Export date: Fri 22 Aug 2025 11:09:39
