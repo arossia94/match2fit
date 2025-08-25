@@ -100,14 +100,14 @@ coefficients:
       - -2
     max: 100
     min: -100
-  OQl31:
+  OQl13:
     constrain:
       m:
       - -1.
       - -2
     max: 100
     min: -100
-  OQlM1:
+  OQl1M:
     constrain:
       m:
       - 1.

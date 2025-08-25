@@ -338,11 +338,11 @@ coefficients:
     constrain:
     max: 100
     min: -100
-  OQl31:
+  OQl13:
     constrain:
     max: 100
     min: -100
-  OQlM1:
+  OQl1M:
     constrain:
     max: 100
     min: -100
@@ -354,11 +354,11 @@ coefficients:
     constrain:
     max: 100
     min: -100
-  Oql31:
+  Oql13:
     constrain:
     max: 100
     min: -100
-  OqlM1:
+  Oql1M:
     constrain:
     max: 100
     min: -100
@@ -366,11 +366,11 @@ coefficients:
     constrain:
     max: 100
     min: -100
-  Olb:
+  Ol1b:
     constrain:
     max: 100
     min: -100
-  Olu:
+  Ol1u:
     constrain:
     max: 100
     min: -100
