@@ -55,7 +55,7 @@ cQQ8 : [{gWtiH: [-1.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,2],
 cQt1 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cQt8 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctt1 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cll : [{gWtiH: [-0.25,0],gWLf11: [1,1],gWLf22: [1,1],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cll1221 : [{gWtiH: [-0.25,0],gWLf11: [1,1],gWLf22: [1,1],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cll1111 : [{gWtiH: [-0.125,0],gWLf11: [1,2],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cbp : [{gWtiH: [-0.006002165432052166,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctp : [{gWtiH: [0.4961407177231255,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,2]},{gWtiH: [0.4961407177231255,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,2],lamQ7f33: [1,0]},{gWtiH: [-0.2480703588615627,2],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
