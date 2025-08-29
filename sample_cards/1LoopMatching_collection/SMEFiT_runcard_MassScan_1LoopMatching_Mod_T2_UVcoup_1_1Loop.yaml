@@ -295,7 +295,7 @@ coefficients:
       - -2
     max: 100
     min: -100
-  Oll:
+  Oll1221:
     constrain:
       m:
       - -0.00046029875162978396
@@ -371,14 +371,14 @@ coefficients:
       - -2
     max: 100
     min: -100
-  OQl31:
+  OQl13:
     constrain:
       m:
       - -0.0002775214916807475
       - -2
     max: 100
     min: -100
-  OQlM1:
+  OQl1M:
     constrain:
       m:
       - 0.0002007954764569148
@@ -399,14 +399,14 @@ coefficients:
       - -2
     max: 100
     min: -100
-  Oql31:
+  Oql13:
     constrain:
       m:
       - -0.00046029875162978396
       - -2
     max: 100
     min: -100
-  OqlM1:
+  Oql1M:
     constrain:
       m:
       - 0.0004695505265677746
@@ -420,21 +420,21 @@ coefficients:
       - -2
     max: 100
     min: -100
-  Olb:
+  Ol1b:
     constrain:
       m:
       - -0.000018503549875981254
       - -2
     max: 100
     min: -100
-  Olu:
+  Ol1u:
     constrain:
       m:
       - 0.00003700709975196251
       - -2
     max: 100
     min: -100
-  Old:
+  Ol1d:
     constrain:
       m:
       - -0.000018503549875981254

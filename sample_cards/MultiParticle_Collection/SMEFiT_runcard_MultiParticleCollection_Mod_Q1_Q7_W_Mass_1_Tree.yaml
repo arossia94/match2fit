@@ -83,7 +83,7 @@ coefficients:
       - 2
     max: 100
     min: -100
-  Oll:
+  Oll1221:
     constrain:
       gWLf11:
       - -0.25
@@ -137,7 +137,7 @@ coefficients:
       - 4
     max: 100
     min: -100
-  OQl31:
+  OQl13:
     constrain:
       gWLf11:
       - -0.25
@@ -147,7 +147,7 @@ coefficients:
       - 1
     max: 100
     min: -100
-  OQlM1:
+  OQl1M:
     constrain:
       gWLf11:
       - 0.25
