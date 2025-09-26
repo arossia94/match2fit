@@ -355,7 +355,8 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCll]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,2,2,1]},{Symbol[SymbolName[wwCll1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,1,1,1]},
 {Symbol[SymbolName[wwCb\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[d\[Phi]]]][3,3]},{Symbol[SymbolName[wwCt\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][3,3]},
 {Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
-{Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},{Symbol[SymbolName[wwC\[Mu]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},
+{Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},
+{Symbol[SymbolName[wwC\[Mu]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][2,2]},
 {Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
 {Symbol[SymbolName[wwCtZ]],-Symbol[SymbolName[sW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]+Symbol[SymbolName[cW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]},
 {Symbol[SymbolName[wwC\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]]]]},
@@ -401,8 +402,7 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwClu3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][3,3,3,3]},
 {Symbol[SymbolName[wwClu2233]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][2,2,3,3]},
 {Symbol[SymbolName[wwClqM3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][3,3,3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]},
-{Symbol[SymbolName[wwClq33333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]},
-
+{Symbol[SymbolName[wwClq33333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]}
 };
 vanishBviolation={Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]]->0};
 
