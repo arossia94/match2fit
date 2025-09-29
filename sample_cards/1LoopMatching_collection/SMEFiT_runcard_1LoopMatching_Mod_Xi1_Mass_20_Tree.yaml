@@ -7,6 +7,9 @@ coefficients:
       kappaXi1:
       - 0.0000125
       - 2
+      lamXi1:
+      - 1
+      - 0
     max: 100
     min: -100
   OpD:
@@ -14,6 +17,9 @@ coefficients:
       kappaXi1:
       - 0.000025
       - 2
+      lamXi1:
+      - 1
+      - 0
     max: 100
     min: -100
   Obp:
@@ -21,6 +27,9 @@ coefficients:
       kappaXi1:
       - 3.001082716026083e-7
       - 2
+      lamXi1:
+      - 1
+      - 0
     max: 100
     min: -100
   Otp:
@@ -28,6 +37,9 @@ coefficients:
       kappaXi1:
       - 0.000012403517943078134
       - 2
+      lamXi1:
+      - 1
+      - 0
     max: 100
     min: -100
   Otap:
@@ -35,6 +47,9 @@ coefficients:
       kappaXi1:
       - 1.2779730226139778e-7
       - 2
+      lamXi1:
+      - 1
+      - 0
     max: 100
     min: -100
   Op:
@@ -42,6 +57,9 @@ coefficients:
       kappaXi1:
       - 6.469173871573229e-6
       - 2
+      lamXi1:
+      - 1
+      - 0
       kappaXi1:
       - -5.103103630798289e-6
       - 2

@@ -33,6 +33,9 @@ coefficients:
   OpBox:
     constrain:
       lambdaT23:
+      - -7.0432578985166184e-6
+      - 0
+      lambdaT23:
       - -0.000027347974832139952
       - 2
       lambdaT23:
@@ -43,6 +46,9 @@ coefficients:
   OpD:
     constrain:
       lambdaT23:
+      - -5.551064962794377e-7
+      - 0
+      lambdaT23:
       - 0.00026415494071429515
       - 2
       lambdaT23:
@@ -52,10 +58,16 @@ coefficients:
     min: -100
   OWWW:
     constrain:
+      lambdaT23:
+      - -1.1750021552816732e-6
+      - 0
     max: 100
     min: -100
   OpqMi:
     constrain:
+      lambdaT23:
+      - 4.510469766917933e-6
+      - 0
       lambdaT23:
       - -5.313133247932859e-6
       - 2
@@ -63,6 +75,9 @@ coefficients:
     min: -100
   OpQM:
     constrain:
+      lambdaT23:
+      - 4.510469766917933e-6
+      - 0
       lambdaT23:
       - 0.0012653377743088794
       - 2
@@ -74,12 +89,18 @@ coefficients:
   O3pq:
     constrain:
       lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
+      lambdaT23:
       - 5.905111475276562e-6
       - 2
     max: 100
     min: -100
   O3pQ3:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
       lambdaT23:
       - 0.0006062514307191869
       - 2
@@ -91,12 +112,18 @@ coefficients:
   Opl1:
     constrain:
       lambdaT23:
+      - 2.7755324813971885e-7
+      - 0
+      lambdaT23:
       - -1.7759346820311052e-6
       - 2
     max: 100
     min: -100
   Opl2:
     constrain:
+      lambdaT23:
+      - 2.7755324813971885e-7
+      - 0
       lambdaT23:
       - -1.7759346820311052e-6
       - 2
@@ -105,12 +132,18 @@ coefficients:
   Opl3:
     constrain:
       lambdaT23:
+      - 2.7755324813971885e-7
+      - 0
+      lambdaT23:
       - -1.7759346820311052e-6
       - 2
     max: 100
     min: -100
   O3pl1:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
       lambdaT23:
       - 5.905111475276562e-6
       - 2
@@ -119,12 +152,18 @@ coefficients:
   O3pl2:
     constrain:
       lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
+      lambdaT23:
       - 5.905111475276562e-6
       - 2
     max: 100
     min: -100
   O3pl3:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
       lambdaT23:
       - 5.905111475276562e-6
       - 2
@@ -133,12 +172,18 @@ coefficients:
   Opui:
     constrain:
       lambdaT23:
+      - -3.700709975196251e-7
+      - 0
+      lambdaT23:
       - 2.367912909374807e-6
       - 2
     max: 100
     min: -100
   Opdi:
     constrain:
+      lambdaT23:
+      - 1.8503549875981256e-7
+      - 0
       lambdaT23:
       - -1.1839564546874035e-6
       - 2
@@ -147,12 +192,18 @@ coefficients:
   Opt:
     constrain:
       lambdaT23:
+      - -3.700709975196251e-7
+      - 0
+      lambdaT23:
       - 4.1941463234051687e-7
       - 2
     max: 100
     min: -100
   Ope:
     constrain:
+      lambdaT23:
+      - 5.551064962794377e-7
+      - 0
       lambdaT23:
       - -3.5518693640622104e-6
       - 2
@@ -161,12 +212,18 @@ coefficients:
   Opmu:
     constrain:
       lambdaT23:
+      - 5.551064962794377e-7
+      - 0
+      lambdaT23:
       - -3.5518693640622104e-6
       - 2
     max: 100
     min: -100
   Opta:
     constrain:
+      lambdaT23:
+      - 5.551064962794377e-7
+      - 0
       lambdaT23:
       - -3.5518693640622104e-6
       - 2
@@ -175,12 +232,18 @@ coefficients:
   O81qq:
     constrain:
       lambdaT23:
+      - -0.00002780082
+      - 0
+      lambdaT23:
       - 6.841175756965689e-6
       - 2
     max: 100
     min: -100
   O11qq:
     constrain:
+      lambdaT23:
+      - -1.5419624896651046e-8
+      - 0
       lambdaT23:
       - 1.4329631693637223e-7
       - 2
@@ -189,28 +252,46 @@ coefficients:
   O13qq:
     constrain:
       lambdaT23:
+      - -2.3014937581489197e-6
+      - 0
+      lambdaT23:
       - 9.138862997451822e-7
       - 2
     max: 100
     min: -100
   O8qt:
     constrain:
+      lambdaT23:
+      - -0.00005560164
+      - 0
     max: 100
     min: -100
   O1qt:
     constrain:
+      lambdaT23:
+      - -1.2335699917320837e-7
+      - 0
     max: 100
     min: -100
   O8ut:
     constrain:
+      lambdaT23:
+      - -0.00002780082
+      - 0
     max: 100
     min: -100
   O1ut:
     constrain:
+      lambdaT23:
+      - -2.4671399834641674e-7
+      - 0
     max: 100
     min: -100
   O8qu:
     constrain:
+      lambdaT23:
+      - -0.00005560164
+      - 0
       lambdaT23:
       - 0.000013682351513931378
       - 2
@@ -219,20 +300,32 @@ coefficients:
   O1qu:
     constrain:
       lambdaT23:
+      - -1.2335699917320837e-7
+      - 0
+      lambdaT23:
       - 1.1463705354909779e-6
       - 2
     max: 100
     min: -100
   O8dt:
     constrain:
+      lambdaT23:
+      - -0.00005560164
+      - 0
     max: 100
     min: -100
   O1dt:
     constrain:
+      lambdaT23:
+      - 2.4671399834641674e-7
+      - 0
     max: 100
     min: -100
   O8qd:
     constrain:
+      lambdaT23:
+      - -0.00005560164
+      - 0
       lambdaT23:
       - 0.000013627598574892992
       - 2
@@ -241,12 +334,18 @@ coefficients:
   O1qd:
     constrain:
       lambdaT23:
+      - 6.167849958660419e-8
+      - 0
+      lambdaT23:
       - -5.720445815155226e-7
       - 2
     max: 100
     min: -100
   OQQ1:
     constrain:
+      lambdaT23:
+      - 1.5034899223059775e-6
+      - 0
       lambdaT23:
       - 0.00001883052748192175
       - 2
@@ -258,6 +357,9 @@ coefficients:
   OQQ8:
     constrain:
       lambdaT23:
+      - -0.00007401359006519135
+      - 0
+      lambdaT23:
       - 0.000018591216264614593
       - 2
       lambdaT23:
@@ -268,6 +370,9 @@ coefficients:
   OQt1:
     constrain:
       lambdaT23:
+      - -1.2335699917320837e-7
+      - 0
+      lambdaT23:
       - -0.00002418410706595479
       - 2
     max: 100
@@ -275,24 +380,39 @@ coefficients:
   OQt8:
     constrain:
       lambdaT23:
+      - -0.00005560164
+      - 0
+      lambdaT23:
       - -0.00003308160713489159
       - 2
     max: 100
     min: -100
   Ott1:
     constrain:
+      lambdaT23:
+      - -9.513653998346418e-6
+      - 0
     max: 100
     min: -100
   Oll1221:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
     max: 100
     min: -100
   Oll1111:
     constrain:
+      lambdaT23:
+      - -2.4402703822187794e-6
+      - 0
     max: 100
     min: -100
   Obp:
     constrain:
+      lambdaT23:
+      - -1.105115702179622e-7
+      - 0
       lambdaT23:
       - 0.000058709431618728215
       - 2
@@ -303,6 +423,9 @@ coefficients:
     min: -100
   Otp:
     constrain:
+      lambdaT23:
+      - -4.567459060013194e-6
+      - 0
       lambdaT23:
       - 0.00121769352379381
       - 2
@@ -320,6 +443,9 @@ coefficients:
     min: -100
   Otap:
     constrain:
+      lambdaT23:
+      - -4.705995095406047e-8
+      - 0
       lambdaT23:
       - -7.103040159924555e-7
       - 2
@@ -345,6 +471,9 @@ coefficients:
   Op:
     constrain:
       lambdaT23:
+      - -2.382202125728939e-6
+      - 0
+      lambdaT23:
       - -0.0001312259875608547
       - 2
       lambdaT23:
@@ -358,12 +487,18 @@ coefficients:
   OQe:
     constrain:
       lambdaT23:
+      - 1.8503549875981256e-7
+      - 0
+      lambdaT23:
       - -1.719555803236467e-6
       - 2
     max: 100
     min: -100
   OQl13:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
       lambdaT23:
       - 1.8277725994903644e-6
       - 2
@@ -372,96 +507,165 @@ coefficients:
   OQl1M:
     constrain:
       lambdaT23:
+      - 4.695505265677746e-6
+      - 0
+      lambdaT23:
       - -2.687550501108598e-6
       - 2
     max: 100
     min: -100
   Otl1:
     constrain:
+      lambdaT23:
+      - 3.700709975196251e-7
+      - 0
     max: 100
     min: -100
   Ote:
     constrain:
+      lambdaT23:
+      - 7.401419950392502e-7
+      - 0
     max: 100
     min: -100
   Oql13:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
     max: 100
     min: -100
   Oql1M:
     constrain:
+      lambdaT23:
+      - 4.695505265677746e-6
+      - 0
     max: 100
     min: -100
   Oqe:
     constrain:
+      lambdaT23:
+      - 1.8503549875981256e-7
+      - 0
     max: 100
     min: -100
   Ol1b:
     constrain:
+      lambdaT23:
+      - -1.8503549875981256e-7
+      - 0
     max: 100
     min: -100
   Ol1u:
     constrain:
+      lambdaT23:
+      - 3.700709975196251e-7
+      - 0
     max: 100
     min: -100
   Ol1d:
     constrain:
+      lambdaT23:
+      - -1.8503549875981256e-7
+      - 0
     max: 100
     min: -100
   Oeu:
     constrain:
+      lambdaT23:
+      - 7.401419950392502e-7
+      - 0
     max: 100
     min: -100
   Oed:
     constrain:
+      lambdaT23:
+      - -3.700709975196251e-7
+      - 0
     max: 100
     min: -100
   Oeb:
     constrain:
+      lambdaT23:
+      - -3.700709975196251e-7
+      - 0
     max: 100
     min: -100
   Obb:
     constrain:
+      lambdaT23:
+      - -9.328618499586604e-6
+      - 0
     max: 100
     min: -100
   Oll1122:
     constrain:
+      lambdaT23:
+      - 2.16271713407906e-6
+      - 0
     max: 100
     min: -100
   Oll1133:
     constrain:
+      lambdaT23:
+      - 2.16271713407906e-6
+      - 0
     max: 100
     min: -100
   Oll1331:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
     max: 100
     min: -100
   Oll2222:
     constrain:
+      lambdaT23:
+      - -2.4402703822187794e-6
+      - 0
     max: 100
     min: -100
   Oll2332:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
     max: 100
     min: -100
   Oll2233:
     constrain:
+      lambdaT23:
+      - 2.16271713407906e-6
+      - 0
     max: 100
     min: -100
   Oll3333:
     constrain:
+      lambdaT23:
+      - -2.4402703822187794e-6
+      - 0
     max: 100
     min: -100
   Ole1111:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Ole2222:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Ole3333:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
       lambdaT23:
       - -2.482189224852073e-9
       - 2
@@ -469,58 +673,100 @@ coefficients:
     min: -100
   Ole1122:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Ole1133:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Ole2233:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Ole2211:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Ole3311:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Ole3322:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Oee1111:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Oee2222:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Oee3333:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Oee1122:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Oee1133:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Oee2233:
     constrain:
+      lambdaT23:
+      - -5.551064962794377e-7
+      - 0
     max: 100
     min: -100
   Otta:
     constrain:
+      lambdaT23:
+      - 7.401419950392502e-7
+      - 0
     max: 100
     min: -100
   OQta:
     constrain:
+      lambdaT23:
+      - 1.8503549875981256e-7
+      - 0
       lambdaT23:
       - -1.717694161317828e-6
       - 2
@@ -528,14 +774,23 @@ coefficients:
     min: -100
   Otl3:
     constrain:
+      lambdaT23:
+      - 3.700709975196251e-7
+      - 0
     max: 100
     min: -100
   Otl2:
     constrain:
+      lambdaT23:
+      - 3.700709975196251e-7
+      - 0
     max: 100
     min: -100
   OQlM3:
     constrain:
+      lambdaT23:
+      - 4.695505265677746e-6
+      - 0
       lambdaT23:
       - -2.688171048414811e-6
       - 2
@@ -543,6 +798,9 @@ coefficients:
     min: -100
   OQl33:
     constrain:
+      lambdaT23:
+      - -4.6029875162978395e-6
+      - 0
       lambdaT23:
       - 1.8274623258372579e-6
       - 2
