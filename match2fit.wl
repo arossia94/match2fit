@@ -785,7 +785,7 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Dictionary and invariant computing*)
 
 
@@ -823,7 +823,7 @@ dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMake
 {dictProv,uvparams[[1]]}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Invariant building*)
 
 
@@ -1215,8 +1215,8 @@ sumTerm=termList[[ind2]];
 indAux=1;
 For[ind3=1,ind3<=Length[varsUV],ind3++,
 (*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
-If[sumTerm[[ind3,2]]!="0",
-WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
+If[ind3==1||sumTerm[[ind3,3]]!="0",
+WriteLine[str1,Piecewise[{{"    - ",ind3==1}},"      "]<>sumTerm[[ind3,1]]<>":"];
 WriteLine[str1,"      - "<>Piecewise[{{sumTerm[[1,2]],indAux==1}},sumTerm[[ind3,2]]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
 indAux=0;
@@ -1352,7 +1352,7 @@ WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
 Continue[];];*)
 If[sumTerm[[ind3,3]]!="0",
-WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
+WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
 WriteLine[str1,"      - "<>Piecewise[{{sumTerm[[1,2]],indAux==1}},sumTerm[[ind3,2]]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
 ];
