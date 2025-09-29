@@ -1212,17 +1212,10 @@ WriteLine[str1,"    constrain:"];
 For[ind2=1,ind2<=Length[termList],ind2++,
 (*/// ind2 runs over the terms in the sum that makes up the WC. ///*)
 sumTerm=termList[[ind2]];
-(*If[Length[varsUV]>2,sumTerm=Flatten[sumTerm,Length[varsUV]-2]];
-If[Length[varsUV]==1,sumTerm={sumTerm};];*)
 indAux=1;
 For[ind3=1,ind3<=Length[varsUV],ind3++,
 (*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
-(*If[ind3==1,
-WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
-WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
-WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
-Continue[];];*)
-If[sumTerm[[ind3,3]]!="0",
+If[sumTerm[[ind3,2]]!="0",
 WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
 WriteLine[str1,"      - "<>Piecewise[{{sumTerm[[1,2]],indAux==1}},sumTerm[[ind3,2]]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
@@ -1303,7 +1296,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
