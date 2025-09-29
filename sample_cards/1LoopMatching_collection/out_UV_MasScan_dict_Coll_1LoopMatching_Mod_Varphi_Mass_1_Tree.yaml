@@ -61,6 +61,7 @@ ctp : [{m: [-1.,-2]}]
 ctG : [{m: [0.,0]}]
 ccp : [{m: [0.,0]}]
 ctap : [{m: [0.,0]}]
+cmup : [{m: [0.,0]}]
 ctW : [{m: [0.,0]}]
 ctZ : [{m: [0.,0]}]
 cp : [{m: [1,-2]}]
@@ -101,13 +102,13 @@ cee3333 : [{m: [0.,0]}]
 cee1122 : [{m: [0.,0]}]
 cee1133 : [{m: [0.,0]}]
 cee2233 : [{m: [0.,0]}]
-ctat : [{m: [0.,0]}]
+ctta : [{m: [0.,0]}]
 cQta : [{m: [0.,0]}]
 ctl3 : [{m: [0.,0]}]
 ctl2 : [{m: [0.,0]}]
-cQl13 : [{m: [0.,0]}]
+cQlM3 : [{m: [0.,0]}]
 cQl33 : [{m: [0.,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
 # Matching results address: /home/alejorossia/match2fit//sample_results/MatchingResult_Varphi_oneloop.dat
-# Export date: Fri 1 Aug 2025 11:23:12
+# Export date: Fri 26 Sep 2025 12:39:03

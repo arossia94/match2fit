@@ -62,6 +62,7 @@ ctp : [{lamvarphi: [-0.015625,1],yVarphiuf33: [1,1]}]
 ctG : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
 ccp : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
 ctap : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
+cmup : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
 ctW : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
 ctZ : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
 cp : [{lamvarphi: [0.015625,2],yVarphiuf33: [1,0]}]
@@ -111,4 +112,4 @@ cQl33 : [{lamvarphi: [0.,0],yVarphiuf33: [1,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
 # Matching results address: /home/alejorossia/match2fit//sample_results/MatchingResult_Varphi_oneloop.dat
-# Export date: Fri 22 Aug 2025 11:27:29
+# Export date: Fri 26 Sep 2025 12:35:45
