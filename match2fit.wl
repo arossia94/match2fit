@@ -41,7 +41,7 @@ reempLamH4::usage="TEST ONLY"*)
 Begin["`Private`"];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Utility functions*)
 
 
@@ -321,7 +321,7 @@ ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[2,1,2]],{onelooporder,0,1
 ret]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SMEFiT conventions*)
 
 
@@ -1157,11 +1157,11 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Run card printing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV scan run card printing*)
 
 
@@ -1296,7 +1296,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Mass Scan printing*)
 
 
@@ -1474,7 +1474,7 @@ Close[str2];]
 
 
 (*/// Function that does the matching procedure. ///*)
-matcher[directory_,model_,looplevel_]:=Block[{listInputFiles,listResultFiles,listProblems,streamScriptMatch,streamScript1,streamScript2},
+matcher[directory_,model_,looplevel_,qgrafpath_]:=Block[{listInputFiles,listResultFiles,listProblems,streamScriptMatch,streamScript1,streamScript2},
 (*/// Checking existence of mandatory input files. ///*)
 listInputFiles=FileNames[model<>"*",directory];
 If[Not[MemberQ[listInputFiles,directory<>model<>".fr"]],
@@ -1507,6 +1507,10 @@ WriteLine[streamScriptMatch,"create_model UnbrokenSM_BFM.fr "<>model<>".fr"];
 WriteLine[streamScriptMatch,"match_model_to_eft"<>Piecewise[{{"_onlytree ",looplevel==0||looplevel=="Tree"||looplevel=="tree"},{" ",looplevel==1||looplevel=="loop"||looplevel=="1loop"}}," "]<>model<>"_MM/ SMEFT_Green_Bpreserving_MM/"];
 WriteLine[streamScriptMatch,"exit"];
 Close[streamScriptMatch];
+(*/// Set Qgraf path if needed. ///*)
+If[qgrafpath!="",
+SetEnvironment["PATH"->GetEnvironment["PATH"][[2]]<>":"<>qgrafpath]
+];
 (*/// Run Scripts. ///*)
 Run["matchmakereft <./script_MMEFT_copymodels"];
 Run["bash ./script_move_models"];
@@ -1596,13 +1600,13 @@ matchResToMasScanCard[matchResFile_,UVcoup_,looplevel_,OptionsPattern[]]:=dictPr
 (*\[DoubleDot]*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*From model to run card*)
 
 
-Options[modelToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","OutputFormat"->"Universal"};
+Options[modelToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","OutputFormat"->"Universal","QGRAFPath"->""};
 modelToUVscanCard[directory_,model_,mass_,looplevel_,OptionsPattern[]]:=Block[{direct},
-matcher[directory,model,looplevel];
+matcher[directory,model,looplevel,OptionValue["QGRAFPath"]];
 If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
 dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList[directory,"T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,Not[DuplicateFreeQ[mass]],OptionValue["OutputFormat"]];]
 
