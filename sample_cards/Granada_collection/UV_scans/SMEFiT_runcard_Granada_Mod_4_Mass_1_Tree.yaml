@@ -4,7 +4,7 @@ UV model: 4
 coefficients:
   Oee2233:
     constrain:
-      yS2f32:
+    - yS2f32:
       - 0.5
       - 2
     max: 100

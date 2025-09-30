@@ -4,28 +4,34 @@ UV model: 10
 coefficients:
   OQQ1:
     constrain:
-      yomega1qqf33:
+    - yomega1qLf33:
       - 1.3333333333333333
+      - 0
+      yomega1qqf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQQ8:
     constrain:
-      yomega1qqf33:
+    - yomega1qLf33:
       - -4.
+      - 0
+      yomega1qqf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQlM3:
     constrain:
-      yomega1qLf33:
+    - yomega1qLf33:
       - 0.5
       - 2
     max: 100
     min: -100
   OQl33:
     constrain:
-      yomega1qLf33:
+    - yomega1qLf33:
       - -0.25
       - 2
     max: 100

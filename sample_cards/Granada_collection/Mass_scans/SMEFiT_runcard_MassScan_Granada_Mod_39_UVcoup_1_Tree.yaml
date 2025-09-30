@@ -4,14 +4,14 @@ UV model: 39
 coefficients:
   Opta:
     constrain:
-      m:
+    - m:
       - 0.5
       - -2
     max: 100
     min: -100
   Otap:
     constrain:
-      m:
+    - m:
       - 0.005111892090455911
       - -2
     max: 100

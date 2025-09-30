@@ -4,21 +4,27 @@ UV model: 5
 coefficients:
   OQt1:
     constrain:
-      yVarphiuf33:
+    - lamVarphi:
       - -0.16666666666666666
+      - 0
+      yVarphiuf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQt8:
     constrain:
-      yVarphiuf33:
+    - lamVarphi:
       - -1.
+      - 0
+      yVarphiuf33:
+      - 1
       - 2
     max: 100
     min: -100
   Otp:
     constrain:
-      lamVarphi:
+    - lamVarphi:
       - -1.
       - 1
       yVarphiuf33:
@@ -28,7 +34,7 @@ coefficients:
     min: -100
   Op:
     constrain:
-      lamVarphi:
+    - lamVarphi:
       - 1.
       - 2
     max: 100

@@ -4,7 +4,7 @@ UV model: 18
 coefficients:
   Ott1:
     constrain:
-      yOmega4f33:
+    - yOmega4f33:
       - 0.5
       - 2
     max: 100

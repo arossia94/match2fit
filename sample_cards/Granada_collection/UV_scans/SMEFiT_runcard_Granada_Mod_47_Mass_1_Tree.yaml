@@ -4,14 +4,14 @@ UV model: 47
 coefficients:
   Opt:
     constrain:
-      lamQ7f3:
+    - lamQ7f3:
       - 0.5
       - 2
     max: 100
     min: -100
   Otp:
     constrain:
-      lamQ7f3:
+    - lamQ7f3:
       - 0.4961407177231255
       - 2
     max: 100

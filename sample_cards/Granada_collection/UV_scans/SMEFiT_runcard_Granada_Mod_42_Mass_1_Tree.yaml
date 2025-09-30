@@ -4,21 +4,21 @@ UV model: 42
 coefficients:
   Opl3:
     constrain:
-      lamSigma1f3:
+    - lamSigma1f3:
       - -0.1875
       - 2
     max: 100
     min: -100
   O3pl3:
     constrain:
-      lamSigma1f3:
+    - lamSigma1f3:
       - 0.0625
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-      lamSigma1f3:
+    - lamSigma1f3:
       - 0.0012779730226139777
       - 2
     max: 100

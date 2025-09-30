@@ -4,14 +4,14 @@ UV model: 19
 coefficients:
   OQQ1:
     constrain:
-      yUpsf33:
+    - yUpsf33:
       - 1.3333333333333333
       - 2
     max: 100
     min: -100
   OQQ8:
     constrain:
-      yUpsf33:
+    - yUpsf33:
       - 2.
       - 2
     max: 100

@@ -4,7 +4,7 @@ UV model: 18
 coefficients:
   Ott1:
     constrain:
-      m:
+    - m:
       - 0.5
       - -2
     max: 100

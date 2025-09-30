@@ -4,7 +4,7 @@ UV model: 14
 coefficients:
   Otl3:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100

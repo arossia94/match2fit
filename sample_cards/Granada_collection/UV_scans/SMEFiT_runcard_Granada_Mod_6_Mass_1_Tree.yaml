@@ -4,45 +4,45 @@ UV model: 6
 coefficients:
   OpBox:
     constrain:
-      kXi:
+    - kXi:
       - 0.5
       - 2
     max: 100
     min: -100
   OpD:
     constrain:
-      kXi:
+    - kXi:
       - -2.
       - 2
     max: 100
     min: -100
   Obp:
     constrain:
-      kXi:
+    - kXi:
       - 0.024008661728208668
       - 2
     max: 100
     min: -100
   Otp:
     constrain:
-      kXi:
+    - kXi:
       - 0.992281435446251
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-      kXi:
+    - kXi:
       - 0.010223784180911823
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-      kXi:
+    - kXi:
       - 0.5175339097258583
       - 2
-      kXi:
+    - kXi:
       - -1.
       - 2
       lamXi:

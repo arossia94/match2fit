@@ -4,14 +4,14 @@ UV model: 36
 coefficients:
   OQt1:
     constrain:
-      gY5f33:
+    - gY5f33:
       - 0.6666666666666666
       - 2
     max: 100
     min: -100
   OQt8:
     constrain:
-      gY5f33:
+    - gY5f33:
       - 1.
       - 2
     max: 100

@@ -4,28 +4,28 @@ UV model: 48
 coefficients:
   OpQM:
     constrain:
-      m:
+    - m:
       - -0.25
       - -2
     max: 100
     min: -100
   O3pQ3:
     constrain:
-      m:
+    - m:
       - 0.0625
       - -2
     max: 100
     min: -100
   Obp:
     constrain:
-      m:
+    - m:
       - 0.003001082716026083
       - -2
     max: 100
     min: -100
   Otp:
     constrain:
-      m:
+    - m:
       - 0.2480703588615627
       - -2
     max: 100

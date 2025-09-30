@@ -4,21 +4,21 @@ UV model: 21
 coefficients:
   OpBox:
     constrain:
-      gBH:
+    - gBH:
       - -0.5
       - 2
     max: 100
     min: -100
   OpD:
     constrain:
-      gBH:
+    - gBH:
       - -2.
       - 2
     max: 100
     min: -100
   OpQM:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBqf33:
@@ -28,7 +28,7 @@ coefficients:
     min: -100
   Opl1:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBLf11:
@@ -38,7 +38,7 @@ coefficients:
     min: -100
   Opl2:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBLf22:
@@ -48,7 +48,7 @@ coefficients:
     min: -100
   Opl3:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBLf33:
@@ -58,7 +58,7 @@ coefficients:
     min: -100
   Opt:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBuf33:
@@ -68,7 +68,7 @@ coefficients:
     min: -100
   Ope:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBef11:
@@ -78,7 +78,7 @@ coefficients:
     min: -100
   Opmu:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBef22:
@@ -88,7 +88,7 @@ coefficients:
     min: -100
   Opta:
     constrain:
-      gBH:
+    - gBH:
       - -1.
       - 1
       gBef33:
@@ -98,15 +98,21 @@ coefficients:
     min: -100
   OQQ1:
     constrain:
-      gBqf33:
+    - gBH:
       - -1.
+      - 0
+      gBqf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQt1:
     constrain:
-      gBqf33:
+    - gBH:
       - -1.
+      - 0
+      gBqf33:
+      - 1
       - 1
       gBuf33:
       - 1
@@ -115,22 +121,31 @@ coefficients:
     min: -100
   Ott1:
     constrain:
-      gBuf33:
+    - gBH:
       - -0.5
+      - 0
+      gBuf33:
+      - 1
       - 2
     max: 100
     min: -100
   Oll1111:
     constrain:
-      gBLf11:
+    - gBH:
       - -0.5
+      - 0
+      gBLf11:
+      - 1
       - 2
     max: 100
     min: -100
   OQe:
     constrain:
-      gBef11:
+    - gBH:
       - -1.
+      - 0
+      gBef11:
+      - 1
       - 1
       gBqf33:
       - 1
@@ -139,8 +154,11 @@ coefficients:
     min: -100
   OQl1M:
     constrain:
-      gBLf11:
+    - gBH:
       - -1.
+      - 0
+      gBLf11:
+      - 1
       - 1
       gBqf33:
       - 1
@@ -149,8 +167,11 @@ coefficients:
     min: -100
   Otl1:
     constrain:
-      gBLf11:
+    - gBH:
       - -1.
+      - 0
+      gBLf11:
+      - 1
       - 1
       gBuf33:
       - 1
@@ -159,8 +180,11 @@ coefficients:
     min: -100
   Ote:
     constrain:
-      gBef11:
+    - gBH:
       - -1.
+      - 0
+      gBef11:
+      - 1
       - 1
       gBuf33:
       - 1
@@ -169,8 +193,11 @@ coefficients:
     min: -100
   Oll1122:
     constrain:
-      gBLf11:
+    - gBH:
       - -0.5
+      - 0
+      gBLf11:
+      - 1
       - 1
       gBLf22:
       - 1
@@ -179,8 +206,11 @@ coefficients:
     min: -100
   Oll1133:
     constrain:
-      gBLf11:
+    - gBH:
       - -0.5
+      - 0
+      gBLf11:
+      - 1
       - 1
       gBLf33:
       - 1
@@ -189,15 +219,21 @@ coefficients:
     min: -100
   Oll2222:
     constrain:
-      gBLf22:
+    - gBH:
       - -0.5
+      - 0
+      gBLf22:
+      - 1
       - 2
     max: 100
     min: -100
   Oll2233:
     constrain:
-      gBLf22:
+    - gBH:
       - -0.5
+      - 0
+      gBLf22:
+      - 1
       - 1
       gBLf33:
       - 1
@@ -206,36 +242,51 @@ coefficients:
     min: -100
   Oll3333:
     constrain:
-      gBLf33:
+    - gBH:
       - -0.5
+      - 0
+      gBLf33:
+      - 1
       - 2
     max: 100
     min: -100
   Ole1111:
     constrain:
-      gBef11:
+    - gBH:
       - -1.
+      - 0
+      gBef11:
+      - 1
       - 2
     max: 100
     min: -100
   Ole2222:
     constrain:
-      gBef22:
+    - gBH:
       - -1.
+      - 0
+      gBef22:
+      - 1
       - 2
     max: 100
     min: -100
   Ole3333:
     constrain:
-      gBef33:
+    - gBH:
       - -1.
+      - 0
+      gBef33:
+      - 1
       - 2
     max: 100
     min: -100
   Ole1122:
     constrain:
-      gBef11:
+    - gBH:
       - -1.
+      - 0
+      gBef11:
+      - 1
       - 1
       gBef22:
       - 1
@@ -244,8 +295,11 @@ coefficients:
     min: -100
   Ole1133:
     constrain:
-      gBef11:
+    - gBH:
       - -1.
+      - 0
+      gBef11:
+      - 1
       - 1
       gBef33:
       - 1
@@ -254,8 +308,11 @@ coefficients:
     min: -100
   Ole2233:
     constrain:
-      gBef22:
+    - gBH:
       - -1.
+      - 0
+      gBef22:
+      - 1
       - 1
       gBef33:
       - 1
@@ -264,8 +321,11 @@ coefficients:
     min: -100
   Ole2211:
     constrain:
-      gBef11:
+    - gBH:
       - -1.
+      - 0
+      gBef11:
+      - 1
       - 1
       gBef22:
       - 1
@@ -274,8 +334,11 @@ coefficients:
     min: -100
   Ole3311:
     constrain:
-      gBef11:
+    - gBH:
       - -1.
+      - 0
+      gBef11:
+      - 1
       - 1
       gBef33:
       - 1
@@ -284,8 +347,11 @@ coefficients:
     min: -100
   Ole3322:
     constrain:
-      gBef22:
+    - gBH:
       - -1.
+      - 0
+      gBef22:
+      - 1
       - 1
       gBef33:
       - 1
@@ -294,29 +360,41 @@ coefficients:
     min: -100
   Oee1111:
     constrain:
-      gBef11:
+    - gBH:
       - -0.5
+      - 0
+      gBef11:
+      - 1
       - 2
     max: 100
     min: -100
   Oee2222:
     constrain:
-      gBef22:
+    - gBH:
       - -0.5
+      - 0
+      gBef22:
+      - 1
       - 2
     max: 100
     min: -100
   Oee3333:
     constrain:
-      gBef33:
+    - gBH:
       - -0.5
+      - 0
+      gBef33:
+      - 1
       - 2
     max: 100
     min: -100
   Oee1122:
     constrain:
-      gBef11:
+    - gBH:
       - -0.5
+      - 0
+      gBef11:
+      - 1
       - 1
       gBef22:
       - 1
@@ -325,8 +403,11 @@ coefficients:
     min: -100
   Oee1133:
     constrain:
-      gBef11:
+    - gBH:
       - -0.5
+      - 0
+      gBef11:
+      - 1
       - 1
       gBef33:
       - 1
@@ -335,8 +416,11 @@ coefficients:
     min: -100
   Oee2233:
     constrain:
-      gBef22:
+    - gBH:
       - -0.5
+      - 0
+      gBef22:
+      - 1
       - 1
       gBef33:
       - 1
@@ -345,8 +429,11 @@ coefficients:
     min: -100
   Otta:
     constrain:
-      gBef33:
+    - gBH:
       - -1.
+      - 0
+      gBef33:
+      - 1
       - 1
       gBuf33:
       - 1
@@ -355,8 +442,11 @@ coefficients:
     min: -100
   OQta:
     constrain:
-      gBef33:
+    - gBH:
       - -1.
+      - 0
+      gBef33:
+      - 1
       - 1
       gBqf33:
       - 1
@@ -365,8 +455,11 @@ coefficients:
     min: -100
   Otl3:
     constrain:
-      gBLf33:
+    - gBH:
       - -1.
+      - 0
+      gBLf33:
+      - 1
       - 1
       gBuf33:
       - 1
@@ -375,8 +468,11 @@ coefficients:
     min: -100
   Otl2:
     constrain:
-      gBLf22:
+    - gBH:
       - -1.
+      - 0
+      gBLf22:
+      - 1
       - 1
       gBuf33:
       - 1
@@ -385,8 +481,11 @@ coefficients:
     min: -100
   OQlM3:
     constrain:
-      gBLf33:
+    - gBH:
       - -1.
+      - 0
+      gBLf33:
+      - 1
       - 1
       gBqf33:
       - 1
