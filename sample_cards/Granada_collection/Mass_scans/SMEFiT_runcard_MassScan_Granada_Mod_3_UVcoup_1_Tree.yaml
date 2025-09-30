@@ -4,14 +4,14 @@ UV model: 3
 coefficients:
   Oll1221:
     constrain:
-      m:
+    - m:
       - 1.
       - -2
     max: 100
     min: -100
   Oll1122:
     constrain:
-      m:
+    - m:
       - 1.
       - -2
     max: 100

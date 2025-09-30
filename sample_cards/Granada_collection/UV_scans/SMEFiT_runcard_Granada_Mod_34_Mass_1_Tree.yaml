@@ -4,14 +4,14 @@ UV model: 34
 coefficients:
   OQlM3:
     constrain:
-      gXf33:
+    - gXf33:
       - -0.5
       - 2
     max: 100
     min: -100
   OQl33:
     constrain:
-      gXf33:
+    - gXf33:
       - 0.125
       - 2
     max: 100

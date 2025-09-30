@@ -4,42 +4,42 @@ UV model: 24
 coefficients:
   OpBox:
     constrain:
-      gW1H:
+    - gW1H:
       - -0.125
       - 2
     max: 100
     min: -100
   OpD:
     constrain:
-      gW1H:
+    - gW1H:
       - -0.25
       - 2
     max: 100
     min: -100
   Obp:
     constrain:
-      gW1H:
+    - gW1H:
       - -0.003001082716026083
       - 2
     max: 100
     min: -100
   Otp:
     constrain:
-      gW1H:
+    - gW1H:
       - -0.12403517943078135
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-      gW1H:
+    - gW1H:
       - -0.0012779730226139777
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-      gW1H:
+    - gW1H:
       - -0.06469173871573229
       - 2
     max: 100

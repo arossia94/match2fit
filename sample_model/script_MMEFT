@@ -1,3 +1,3 @@
-create_model UnbrokenSM_BFM.fr T1.fr
-match_model_to_eft_onlytree T1_MM/ SMEFT_Green_Bpreserving_MM/
+create_model UnbrokenSM_BFM.fr Q17_W1.fr
+match_model_to_eft_onlytree Q17_W1_MM/ SMEFT_Green_Bpreserving_MM/
 exit

@@ -4,7 +4,7 @@ UV model: 31
 coefficients:
   Otta:
     constrain:
-      gUv5edf33:
+    - gUv5edf33:
       - -1.
       - 2
     max: 100

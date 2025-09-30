@@ -4,20 +4,26 @@ UV model: 2
 coefficients:
   OpBox:
     constrain:
-      kS:
+    - k3S:
       - -0.5
+      - 0
+      kS:
+      - 1
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-      kS:
+    - k3S:
       - -1.
+      - 0
+      kS:
+      - 1
       - 2
       lamS:
       - 1
       - 1
-      k3S:
+    - k3S:
       - 1.
       - 1
       kS:

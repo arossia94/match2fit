@@ -4,14 +4,14 @@ UV model: 25
 coefficients:
   OQQ8:
     constrain:
-      gGqf33:
+    - gGqf33:
       - -1.
       - 2
     max: 100
     min: -100
   OQt8:
     constrain:
-      gGqf33:
+    - gGqf33:
       - -1.
       - 1
       gGuf33:
@@ -21,8 +21,11 @@ coefficients:
     min: -100
   Ott1:
     constrain:
-      gGuf33:
+    - gGqf33:
       - -0.16666666666666666
+      - 0
+      gGuf33:
+      - 1
       - 2
     max: 100
     min: -100

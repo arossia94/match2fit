@@ -4,7 +4,7 @@ UV model: 12
 coefficients:
   Ott1:
     constrain:
-      yomega4uuf33:
+    - yomega4uuf33:
       - 1.
       - 2
     max: 100

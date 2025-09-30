@@ -4,14 +4,14 @@ UV model: 37
 coefficients:
   Opl3:
     constrain:
-      m:
+    - m:
       - 0.25
       - -2
     max: 100
     min: -100
   O3pl3:
     constrain:
-      m:
+    - m:
       - -0.25
       - -2
     max: 100

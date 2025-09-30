@@ -4,14 +4,14 @@ UV model: 44
 coefficients:
   O3pQ3:
     constrain:
-      m:
+    - m:
       - -0.25
       - -2
     max: 100
     min: -100
   Obp:
     constrain:
-      m:
+    - m:
       - 0.012004330864104332
       - -2
     max: 100

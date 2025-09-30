@@ -4,301 +4,301 @@ UV model: 21
 coefficients:
   OpBox:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   OpD:
     constrain:
-      m:
+    - m:
       - -2.
       - -2
     max: 100
     min: -100
   OpQM:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Opl1:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Opl2:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Opl3:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Opt:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ope:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Opmu:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Opta:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   OQQ1:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   OQt1:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ott1:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oll1111:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   OQe:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   OQl1M:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Otl1:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ote:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Oll1122:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oll1133:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oll2222:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oll2233:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oll3333:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Ole1111:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole2222:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole3333:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole1122:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole1133:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole2233:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole2211:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole3311:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Ole3322:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Oee1111:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oee2222:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oee3333:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oee1122:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oee1133:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Oee2233:
     constrain:
-      m:
+    - m:
       - -0.5
       - -2
     max: 100
     min: -100
   Otta:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   OQta:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Otl3:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   Otl2:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100
     min: -100
   OQlM3:
     constrain:
-      m:
+    - m:
       - -1.
       - -2
     max: 100

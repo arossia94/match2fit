@@ -4,14 +4,14 @@ UV model: 23
 coefficients:
   OpBox:
     constrain:
-      gWH:
+    - gWH:
       - -0.375
       - 2
     max: 100
     min: -100
   OpQM:
     constrain:
-      gWH:
+    - gWH:
       - 0.25
       - 1
       gWqf33:
@@ -21,7 +21,7 @@ coefficients:
     min: -100
   O3pQ3:
     constrain:
-      gWH:
+    - gWH:
       - -0.25
       - 1
       gWqf33:
@@ -31,7 +31,7 @@ coefficients:
     min: -100
   O3pl1:
     constrain:
-      gWH:
+    - gWH:
       - -0.25
       - 1
       gWLf11:
@@ -41,7 +41,7 @@ coefficients:
     min: -100
   O3pl2:
     constrain:
-      gWH:
+    - gWH:
       - -0.25
       - 1
       gWLf22:
@@ -51,7 +51,7 @@ coefficients:
     min: -100
   O3pl3:
     constrain:
-      gWH:
+    - gWH:
       - -0.25
       - 1
       gWLf33:
@@ -61,22 +61,31 @@ coefficients:
     min: -100
   OQQ1:
     constrain:
-      gWqf33:
+    - gWH:
       - 0.08333333333333333
+      - 0
+      gWqf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQQ8:
     constrain:
-      gWqf33:
+    - gWH:
       - -1.
+      - 0
+      gWqf33:
+      - 1
       - 2
     max: 100
     min: -100
   Oll1221:
     constrain:
-      gWLf11:
+    - gWH:
       - -0.25
+      - 0
+      gWLf11:
+      - 1
       - 1
       gWLf22:
       - 1
@@ -85,43 +94,49 @@ coefficients:
     min: -100
   Oll1111:
     constrain:
-      gWLf11:
+    - gWH:
       - -0.125
+      - 0
+      gWLf11:
+      - 1
       - 2
     max: 100
     min: -100
   Obp:
     constrain:
-      gWH:
+    - gWH:
       - -0.006002165432052166
       - 2
     max: 100
     min: -100
   Otp:
     constrain:
-      gWH:
+    - gWH:
       - -0.2480703588615627
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-      gWH:
+    - gWH:
       - -0.0025559460452279554
       - 2
     max: 100
     min: -100
   Op:
     constrain:
-      gWH:
+    - gWH:
       - -0.12938347743146458
       - 2
     max: 100
     min: -100
   OQl13:
     constrain:
-      gWLf11:
+    - gWH:
       - -1.
+      - 0
+      gWLf11:
+      - 1
       - 1
       gWqf33:
       - 1
@@ -130,8 +145,11 @@ coefficients:
     min: -100
   OQl1M:
     constrain:
-      gWLf11:
+    - gWH:
       - 1.
+      - 0
+      gWLf11:
+      - 1
       - 1
       gWqf33:
       - 1
@@ -140,8 +158,11 @@ coefficients:
     min: -100
   Oll1122:
     constrain:
-      gWLf11:
+    - gWH:
       - 0.125
+      - 0
+      gWLf11:
+      - 1
       - 1
       gWLf22:
       - 1
@@ -150,8 +171,11 @@ coefficients:
     min: -100
   Oll1133:
     constrain:
-      gWLf11:
+    - gWH:
       - 0.125
+      - 0
+      gWLf11:
+      - 1
       - 1
       gWLf33:
       - 1
@@ -160,8 +184,11 @@ coefficients:
     min: -100
   Oll1331:
     constrain:
-      gWLf11:
+    - gWH:
       - -0.25
+      - 0
+      gWLf11:
+      - 1
       - 1
       gWLf33:
       - 1
@@ -170,15 +197,21 @@ coefficients:
     min: -100
   Oll2222:
     constrain:
-      gWLf22:
+    - gWH:
       - -0.125
+      - 0
+      gWLf22:
+      - 1
       - 2
     max: 100
     min: -100
   Oll2332:
     constrain:
-      gWLf22:
+    - gWH:
       - -0.25
+      - 0
+      gWLf22:
+      - 1
       - 1
       gWLf33:
       - 1
@@ -187,8 +220,11 @@ coefficients:
     min: -100
   Oll2233:
     constrain:
-      gWLf22:
+    - gWH:
       - 0.125
+      - 0
+      gWLf22:
+      - 1
       - 1
       gWLf33:
       - 1
@@ -197,15 +233,21 @@ coefficients:
     min: -100
   Oll3333:
     constrain:
-      gWLf33:
+    - gWH:
       - -0.125
+      - 0
+      gWLf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQlM3:
     constrain:
-      gWLf33:
+    - gWH:
       - 1.
+      - 0
+      gWLf33:
+      - 1
       - 1
       gWqf33:
       - 1
@@ -214,8 +256,11 @@ coefficients:
     min: -100
   OQl33:
     constrain:
-      gWLf33:
+    - gWH:
       - -1.
+      - 0
+      gWLf33:
+      - 1
       - 1
       gWqf33:
       - 1

@@ -4,21 +4,21 @@ UV model: 38
 coefficients:
   Opl3:
     constrain:
-      lamEff3:
+    - lamEff3:
       - -0.25
       - 2
     max: 100
     min: -100
   O3pl3:
     constrain:
-      lamEff3:
+    - lamEff3:
       - -0.25
       - 2
     max: 100
     min: -100
   Otap:
     constrain:
-      lamEff3:
+    - lamEff3:
       - 0.005111892090455911
       - 2
     max: 100

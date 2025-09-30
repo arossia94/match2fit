@@ -4,28 +4,34 @@ UV model: 15
 coefficients:
   OQQ1:
     constrain:
-      yZetaqqf33:
+    - yZetaqLf33:
       - 3.3333333333333335
+      - 0
+      yZetaqqf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQQ8:
     constrain:
-      yZetaqqf33:
+    - yZetaqLf33:
       - -4.
+      - 0
+      yZetaqqf33:
+      - 1
       - 2
     max: 100
     min: -100
   OQlM3:
     constrain:
-      yZetaqLf33:
+    - yZetaqLf33:
       - 0.5
       - 2
     max: 100
     min: -100
   OQl33:
     constrain:
-      yZetaqLf33:
+    - yZetaqLf33:
       - 0.25
       - 2
     max: 100

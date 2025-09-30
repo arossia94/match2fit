@@ -61,7 +61,8 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},
 {"cbp",ToString[x]=="wwCb\[CurlyPhi]"},{"ctp",ToString[x]=="wwCt\[CurlyPhi]"},
 {"ctG",ToString[x]=="wwCtG"},{"ccp",ToString[x]=="wwCc\[CurlyPhi]"},
 {"ctap",ToString[x]=="wwC\[Tau]\[CurlyPhi]"},{"ctW",ToString[x]=="wwCtW"},
-{"ctZ",ToString[x]=="wwCtZ"},{"c3pQ3",ToString[x]=="wwC\[CurlyPhi]Q3"},{"cpQM",ToString[x]=="wwC\[CurlyPhi]Qm"},{"cpt",ToString[x]=="wwC\[CurlyPhi]t"},{"cpl1",ToString[x]=="wwC\[CurlyPhi]l11"},{"c3pl1",ToString[x]=="wwC\[CurlyPhi]l31"},{"cpl2",ToString[x]=="wwC\[CurlyPhi]l12"},{"c3pl2",ToString[x]=="wwC\[CurlyPhi]l32"},{"cpl3",ToString[x]=="wwC\[CurlyPhi]l13"},{"c3pl3",ToString[x]=="wwC\[CurlyPhi]l33"},{"cpe",ToString[x]=="wwC\[CurlyPhi]e"},{"cpmu",ToString[x]=="wwC\[CurlyPhi]\[Mu]"},{"cpta",ToString[x]=="wwC\[CurlyPhi]\[Tau]"},{"c3pq",ToString[x]=="wwC\[CurlyPhi]q3"},{"cpqMi",ToString[x]=="wwC\[CurlyPhi]qm"},{"cpui",ToString[x]=="wwC\[CurlyPhi]ui"},{"cpdi",ToString[x]=="wwC\[CurlyPhi]di"},{"cpG",ToString[x]=="wwC\[CurlyPhi]G"},{"cpB",ToString[x]=="wwC\[CurlyPhi]B"},{"cpW",ToString[x]=="wwC\[CurlyPhi]W"},{"cpBox",ToString[x]=="wwC\[CurlyPhi]Box"},{"cpWB",ToString[x]=="wwC\[CurlyPhi]WB"},{"cpD",ToString[x]=="wwC\[CurlyPhi]D"},{"cWWW",ToString[x]=="wwCWWW"},
+{"ctZ",ToString[x]=="wwCtZ"},{"c3pQ3",ToString[x]=="wwC\[CurlyPhi]Q3"},
+{"cpQM",ToString[x]=="wwC\[CurlyPhi]Qm"},{"cpt",ToString[x]=="wwC\[CurlyPhi]t"},{"cpl1",ToString[x]=="wwC\[CurlyPhi]l11"},{"c3pl1",ToString[x]=="wwC\[CurlyPhi]l31"},{"cpl2",ToString[x]=="wwC\[CurlyPhi]l12"},{"c3pl2",ToString[x]=="wwC\[CurlyPhi]l32"},{"cpl3",ToString[x]=="wwC\[CurlyPhi]l13"},{"c3pl3",ToString[x]=="wwC\[CurlyPhi]l33"},{"cpe",ToString[x]=="wwC\[CurlyPhi]e"},{"cpmu",ToString[x]=="wwC\[CurlyPhi]\[Mu]"},{"cpta",ToString[x]=="wwC\[CurlyPhi]\[Tau]"},{"c3pq",ToString[x]=="wwC\[CurlyPhi]q3"},{"cpqMi",ToString[x]=="wwC\[CurlyPhi]qm"},{"cpui",ToString[x]=="wwC\[CurlyPhi]ui"},{"cpdi",ToString[x]=="wwC\[CurlyPhi]di"},{"cpG",ToString[x]=="wwC\[CurlyPhi]G"},{"cpB",ToString[x]=="wwC\[CurlyPhi]B"},{"cpW",ToString[x]=="wwC\[CurlyPhi]W"},{"cpBox",ToString[x]=="wwC\[CurlyPhi]Box"},{"cpWB",ToString[x]=="wwC\[CurlyPhi]WB"},{"cpD",ToString[x]=="wwC\[CurlyPhi]D"},{"cWWW",ToString[x]=="wwCWWW"},
 {"cp",ToString[x]=="wwC\[CurlyPhi]"},
 {"cQe",ToString[x]=="wwCQe"},
 {"cQl13",ToString[x]=="wwCQl31"},
@@ -105,7 +106,8 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},
 {"ctl3",ToString[x]=="wwClu3333"},
 {"ctl2",ToString[x]=="wwClu2233"},
 {"cQlM3",ToString[x]=="wwClqM3333"},
-{"cQl33",ToString[x]=="wwClq33333"}
+{"cQl33",ToString[x]=="wwClq33333"},
+{"cmup",ToString[x]=="wwC\[Mu]\[CurlyPhi]"}
 }];
 (*Original function taken from: https://mathematica.stackexchange.com/a/250929 *)
 Clear[EinsteinSum]
@@ -353,7 +355,9 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCll]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,2,2,1]},{Symbol[SymbolName[wwCll1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,1,1,1]},
 {Symbol[SymbolName[wwCb\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[d\[Phi]]]][3,3]},{Symbol[SymbolName[wwCt\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][3,3]},
 {Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
-{Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},{Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
+{Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},
+{Symbol[SymbolName[wwC\[Mu]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][2,2]},
+{Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
 {Symbol[SymbolName[wwCtZ]],-Symbol[SymbolName[sW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]+Symbol[SymbolName[cW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]},
 {Symbol[SymbolName[wwC\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]]]]},
 {Symbol[SymbolName[wwCQe]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][3,3,1,1]},
@@ -781,7 +785,7 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Dictionary and invariant computing*)
 
 
@@ -819,7 +823,7 @@ dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMake
 {dictProv,uvparams[[1]]}];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Invariant building*)
 
 
@@ -1208,18 +1212,11 @@ WriteLine[str1,"    constrain:"];
 For[ind2=1,ind2<=Length[termList],ind2++,
 (*/// ind2 runs over the terms in the sum that makes up the WC. ///*)
 sumTerm=termList[[ind2]];
-(*If[Length[varsUV]>2,sumTerm=Flatten[sumTerm,Length[varsUV]-2]];
-If[Length[varsUV]==1,sumTerm={sumTerm};];*)
 indAux=1;
 For[ind3=1,ind3<=Length[varsUV],ind3++,
 (*/// ind3 runs over all the UV couplings that can appear in a monomial in each term of the sum. ///*)
-(*If[ind3==1,
-WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
-WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
-WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
-Continue[];];*)
-If[sumTerm[[ind3,3]]!="0",
-WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
+If[ind3==1||sumTerm[[ind3,3]]!="0",
+WriteLine[str1,Piecewise[{{"    - ",ind3==1}},"      "]<>sumTerm[[ind3,1]]<>":"];
 WriteLine[str1,"      - "<>Piecewise[{{sumTerm[[1,2]],indAux==1}},sumTerm[[ind3,2]]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
 indAux=0;
@@ -1299,7 +1296,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
@@ -1355,7 +1352,7 @@ WriteLine[str1,"      - "<>sumTerm[[ind3,2]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
 Continue[];];*)
 If[sumTerm[[ind3,3]]!="0",
-WriteLine[str1,"      "<>sumTerm[[ind3,1]]<>":"];
+WriteLine[str1,"    "<>Piecewise[{{"- ",ind3==1}},"  "]<>sumTerm[[ind3,1]]<>":"];
 WriteLine[str1,"      - "<>Piecewise[{{sumTerm[[1,2]],indAux==1}},sumTerm[[ind3,2]]]];
 WriteLine[str1,"      - "<>sumTerm[[ind3,3]]];
 ];

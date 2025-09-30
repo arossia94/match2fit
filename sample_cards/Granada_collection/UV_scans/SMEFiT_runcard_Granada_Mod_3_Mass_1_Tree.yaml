@@ -4,7 +4,7 @@ UV model: 3
 coefficients:
   Oll1221:
     constrain:
-      yS1f12:
+    - yS1f12:
       - 1.
       - 1
       yS1f21:
@@ -14,7 +14,7 @@ coefficients:
     min: -100
   Oll1122:
     constrain:
-      yS1f12:
+    - yS1f12:
       - 1.
       - 2
     max: 100
