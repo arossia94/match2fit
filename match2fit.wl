@@ -1523,7 +1523,10 @@ DeleteFile[directory<>"script_MMEFT_copymodels"];
 DeleteFile[directory<>"script_move_models"];
 DeleteFile[directory<>"script_MMEFT"];
 DeleteFile[directory<>"UnbrokenSM_BFM.fr"];,
-Print["There was a problem during the matching and no results were generated.\nCheck input files."];
+Print["There was a problem during the matching and no results were generated.\nCheck input files.
+\nIf no evidence of matchmakereft having run, a PATH issue is very likely.
+\nTry again after launching Mathematica from the terminal where matchmakereft runs.
+\nOr use the optional argument QGRAFPath."];
 ];
 If[MemberQ[listResultFiles,directory<>model<>"_MM/MatchingProblems.dat"],
 listProblems=Get[directory<>model<>"_MM/MatchingProblems.dat"];

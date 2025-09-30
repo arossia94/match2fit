@@ -1,3 +1,0 @@
-mv ./MatchMakerEFT/SMEFT_Green_Bpreserving_MM/ .
-mv ./MatchMakerEFT/UnbrokenSM_BFM.fr .
-rm -r ./MatchMakerEFT/
