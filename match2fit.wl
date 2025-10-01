@@ -24,7 +24,8 @@ matchResToUVscanCard::usage = "matchResToUVscanCard[matchResFile,mass,looporder,
 prints the run card for a fit on the UV couplings and the card that defines the corresponding UV invariants. It also takes mandatorily a value for the mass of the UV particles which is applied only 
 when producing the run cards. The looporder argument indicates at which loop level the results must be read. It is inconsequential if the source file contains tree-level results only. The OptionalArguments 
 are \"UVFlavourAssumption\", \"Collection\" and \"Model\". An example of how to set them, using their default values is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\",\"Model\"->\"UserModel\"}.";
-matchResToMasScanCard::usage = "For Mass Scans, under development.";
+matchResToMasScanCard::usage = "matchResToMasScanCard[matchResFile,UVcoup,looplevel,OptionalArguments] takes the matching results in matchResFile at looplevel order and prints the card required to run a \[Chi]^2 scan as a function of the heavy mass of the model with SMEFiT.
+The optional arguments are \"UVFlavourAssumption\", \"Collection\", \"Model\", \"DegenerateMasses\" (\"True\" by default since mass scans are intended to be along a single mass), and \"OutputFormat\" (\"Universal\" by default).";
 flavourSymChecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to a fulfilment of the flavour symmetry. It treats the SM yukawas symbolically with the notation used in the matchResFile."
 flavourSolver::usage = "flavourSolver[matchResFile, OptionalArguments] reads the file matchResFile and solves for the UV couplings and SM yukawas such that the WCs fulfill the SMEFiT flavour symmetry. It returns all the possible solutions it finds. 
@@ -33,6 +34,9 @@ modelToUVscanCard::usage = "modelToUVscanCard[directory,model,mass,looporder,Opt
 the \), runs MMEFT to add that model to the SM and match it onto SMEFT at looporder level, reads the results and prints the run card for a fit on the UV couplings and the card that defines the corresponding UV invariants.
 It also takes mandatorily a value for the mass of the UV particles which is applied only when producing the run cards. The OptionalArguments are \"UVFlavourAssumption\" and \"Collection\". 
 An example of how to set them, using their default value is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\"}.";
+modelToMasScanCard::usage = "modelToMasScanCard[directory,model,UVcoup,looporder,OptionalArguments] reads the file directory\\model.fr (usually the input directory already contains
+the \), runs MMEFT to add that model to the SM and match it onto SMEFT at looporder level, reads the results and prints a mass scan card by executing matchResToMasScanCard. All the UV couplings that do not vanish after applying the UVFlavourAssumptions (optional argument)
+are set to the numerical value UVcoup. Other optional arguments are \"Collection\", \"OutputFormat\" (\"Universal\" by default), \"DegenerateMasses\" (\"True\" by default since mass scans are usually along a single mass) and \"QGRAFPath\""
 (*dictionaryToPrint::usage = "TEST ONLY"*)
 
 
@@ -1155,7 +1159,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Run card printing*)
 
 
@@ -1429,7 +1433,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Invariant printing*)
 
 
@@ -1463,11 +1467,11 @@ WriteLine[str2,"\treturn "<>StringReplace[ToString[FortranForm[invarsUV[[indInva
 Close[str2];]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Running Matching Code*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Run MatchmakerEFT*)
 
 
@@ -1542,7 +1546,7 @@ Print["There was a problem during the matching and no problem list was generated
 (*Public functions*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV to EFT matching*)
 
 
@@ -1592,7 +1596,7 @@ flavourSolver[matchResFile_,OptionsPattern[]]:=flavourSolverGeneral[matchResFile
 (*From matching result to run card*)
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*UV scan*)
 
 
@@ -1600,19 +1604,15 @@ Options[matchResToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserColl
 matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrinterUVcoup[matchResFile,mass,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"],OptionValue["UVinvariants"]]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Mass scan*)
 
 
-Options[matchResToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"False","OutputFormat"->"Universal"};
+Options[matchResToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"True","OutputFormat"->"Universal"};
 matchResToMasScanCard[matchResFile_,UVcoup_,looplevel_,OptionsPattern[]]:=dictPrinterUVmass[matchResFile,UVcoup,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]]
 
 
-(* ::Input:: *)
-(*\[DoubleDot]*)
-
-
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*From model to run card*)
 
 
@@ -1621,6 +1621,14 @@ modelToUVscanCard[directory_,model_,mass_,looplevel_,OptionsPattern[]]:=Block[{d
 matcher[directory,model,looplevel,"QGRAFPath"->OptionValue["QGRAFPath"]];
 If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
 dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList[directory,"T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,ToString[Not[DuplicateFreeQ[Flatten[{mass}]]]],OptionValue["OutputFormat"]];]
+
+
+Options[modelToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","OutputFormat"->"Universal","DegenerateMasses"->"True","QGRAFPath"->""};
+modelToMasScanCard[directory_,model_,UVcoup_,looplevel_,OptionsPattern[]]:=Block[{direct},
+matcher[directory,model,looplevel,"QGRAFPath"->OptionValue["QGRAFPath"]];
+If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
+dictPrinterUVmass[direct<>model<>"_MM/MatchingResult.dat",UVcoup,looplevel,parametersListFromMatchingResult[direct<>model<>"_MM/MatchingResult.dat",looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]];
+]
 
 
 (* ::Section::Closed:: *)
