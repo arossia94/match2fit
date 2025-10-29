@@ -1,0 +1,51 @@
+model=T1_MM
+ - FeynRules - 
+Version: 2.3.49 (*29 September 2021).
+Authors: A. Alloul, N. Christensen, C. Degrande, C. Duhr, B. Fuks
+ 
+Please cite:
+    - Comput.Phys.Commun.185:2250-2300,2014 (arXiv:1310.1921);
+    - Comput.Phys.Commun.180:1614-1641,2009 (arXiv:0806.4194).
+ 
+http://feynrules.phys.ucl.ac.be
+ 
+The FeynRules palette can be opened using the command FRPalette[].
+Merging model-files...
+This model implementation was created by
+Alejo Rossia
+Model Version: 1.0
+For more information, type ModelInformation[].
+
+   - Loading particle classes.
+   - Loading gauge group classes.
+   - Loading parameter classes.
+
+Model T1 loaded.
+IndexForm={{Colour, m, 3}, {Global`Generation, Global`fl, 3}, {Gluon, Global`a, 8}, {Global`SU2D, l, 2}, {Global`SU2W, n, 3}, {Spin, y, Dy}, {Lorentz, mu, D}}
+T1_MM
+Style[Starting Feynman rule calculation., RGBColor[1, 0.5, 0], Bold]
+Expanding the Lagrangian...
+Expanding the indices over 6 cores
+Collecting the different structures that enter the vertex.
+94 possible non-zero vertices have been found -> starting the computation: Dynamic[FR$FeynmanRules] / 94.
+94 vertices obtained.
+Writing new symbols and functions
+Writing New flavor functions
+Writing New flavor mass functions
+done
+Writing QGRAF model
+Let's write the Qgraf model
+done
+Writing propagators
+done
+Writing Polarizations
+done
+Writing Particle Lists
+{G, Wi, B, lL, lLbar, eR, eRbar, qL, qLbar, uR, uRbar, dR, dRbar, Phi, Phibar}
+done
+Writing vertices
+done
+Writing QGRAF files
+done
+Writing FORM files
+Model done
