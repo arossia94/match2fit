@@ -43,7 +43,7 @@ are set to the numerical value UVcoup. Other optional arguments are \"Collection
 Begin["`Private`"];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Utility functions*)
 
 
@@ -107,7 +107,7 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},
 {"cQta",ToString[x]=="wwCqe3333"},
 {"ctl3",ToString[x]=="wwClu3333"},
 {"ctl2",ToString[x]=="wwClu2233"},
-{"cQlM3",ToString[x]=="wwClqM3333"},
+{"cQl3M",ToString[x]=="wwClqM3333"},
 {"cQl33",ToString[x]=="wwClq33333"},
 {"cmup",ToString[x]=="wwC\[Mu]\[CurlyPhi]"}
 }];
@@ -323,7 +323,7 @@ ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[2,1,2]],{onelooporder,0,1
 ret]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SMEFiT conventions*)
 
 
