@@ -107,7 +107,7 @@ ctta : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cQta : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 ctl3 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 ctl2 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
-cQlM3 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
+cQl3M : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 cQl33 : [{lamVarphi: [0.,0],yVarphiuf33: [1,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information

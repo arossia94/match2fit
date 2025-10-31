@@ -541,7 +541,7 @@ coefficients:
       - -2
     max: 100
     min: -100
-  OQlM3:
+  OQl3M:
     constrain:
     - m:
       - 0.00009878675292432705

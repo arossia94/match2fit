@@ -107,7 +107,7 @@ ctta : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],l
 cQta : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctl3 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 ctl2 : [{gWtiH: [0.,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,0],gWqf33: [1,0],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
-cQlM3 : [{gWtiH: [0.25,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,1],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
+cQl3M : [{gWtiH: [0.25,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,1],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 cQl33 : [{gWtiH: [-0.25,0],gWLf11: [1,0],gWLf22: [1,0],gWLf33: [1,1],gWqf33: [1,1],lamQ1uf3: [1,0],lamQ7f33: [1,0]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
