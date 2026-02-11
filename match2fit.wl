@@ -234,7 +234,7 @@ expo=Exponent[term,varUV];
 {Piecewise[{{Coefficient[term,varUV[[1]],0],Total[Abs[expo]]==0}},Coefficient[term,Product[varUV[[i]]^expo[[i]],{i,1,Length[varUV]}],1]],expo}//Flatten]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*MMEFT conventions*)
 
 
@@ -312,7 +312,7 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCQt8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][3,3,3,3]},{Symbol[SymbolName[wwCtt1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][3,3,3,3]},
 {Symbol[SymbolName[wwCll]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,2,2,1]},{Symbol[SymbolName[wwCll1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,1,1,1]},
 {Symbol[SymbolName[wwCb\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[d\[Phi]]]][3,3]},{Symbol[SymbolName[wwCt\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][3,3]},
-{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
+{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]/Symbol[SymbolName[g3]]},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
 {Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},{Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
 {Symbol[SymbolName[wwCtZ]],-Symbol[SymbolName[sW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]+Symbol[SymbolName[cW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]},
 {Symbol[SymbolName[wwC\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]]]]},
@@ -690,11 +690,11 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SM numerical inputs*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Gauge and Higgs parameters*)
 
 
@@ -1422,7 +1422,7 @@ WriteLine[str2,"\treturn "<>StringReplace[ToString[FortranForm[invarsUV[[indInva
 Close[str2];]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Public functions*)
 
 
@@ -1490,7 +1490,7 @@ If[listProblems!={},Print["The matching was completed but problems were reported
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV parameters recognition*)
 
 
