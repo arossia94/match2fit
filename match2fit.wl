@@ -273,7 +273,7 @@ Continue[]];
 data]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*MMEFT conventions*)
 
 
@@ -323,7 +323,7 @@ ret={Symbol[SymbolName[lam]]->Normal[Series[solutions[[2,1,2]],{onelooporder,0,1
 ret]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SMEFiT conventions*)
 
 
@@ -356,7 +356,9 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCQt8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][3,3,3,3]},{Symbol[SymbolName[wwCtt1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][3,3,3,3]},
 {Symbol[SymbolName[wwCll]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,2,2,1]},{Symbol[SymbolName[wwCll1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,1,1,1]},
 {Symbol[SymbolName[wwCb\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[d\[Phi]]]][3,3]},{Symbol[SymbolName[wwCt\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][3,3]},
-{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
+{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]/Symbol[SymbolName[g3]]
+
+},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
 {Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},
 {Symbol[SymbolName[wwC\[Mu]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][2,2]},
 {Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
@@ -736,11 +738,11 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SM numerical inputs*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Gauge and Higgs parameters*)
 
 
@@ -1557,7 +1559,7 @@ matcher[directory_,model_,looplevel_,OptionsPattern[]]:=Block[{aux},
 matcherMMEFT[directory,model,looplevel,OptionValue["QGRAFPath"]]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV parameters recognition*)
 
 
