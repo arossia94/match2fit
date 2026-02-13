@@ -58,7 +58,7 @@ cll1221 : [{m: [-4.794778662810249e-6,-2]}]
 cll1111 : [{m: [-2.61422780651428e-6,-2]}]
 cbp : [{m: [0.00022765148598325797,-2]}]
 ctp : [{m: [-0.9970325672122538,-2]}]
-ctG : [{m: [0.0019121280895770068,-2]}]
+ctG : [{m: [0.0015709238991520643,-2]}]
 ccp : [{m: [0.,0]}]
 ctap : [{m: [0.00006469384887486835,-2]}]
 cmup : [{m: [0.,0]}]
@@ -111,4 +111,4 @@ cQl33 : [{m: [0.00003269799260878696,-2]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
 # Matching results address: /home/alejorossia/match2fit//sample_results/MatchingResult_Varphi_oneloop.dat
-# Export date: Tue 30 Sep 2025 08:05:40
+# Export date: Fri 13 Feb 2026 08:48:14
