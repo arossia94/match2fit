@@ -1,0 +1,74 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "S1";
+
+
+FeynmanGauge = True;
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+S[667]=={ClassName->Sa,
+SelfConjugate->False,
+QuantumNumbers->{Y-> 1},
+FullName->"heavy",
+Mass->MSa,
+Width->0}};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+  
+MSa== { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+ TS11=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+L1=={
+ParameterType->Internal,
+ComplexParameter->True},
+ TS21=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+L2=={
+ParameterType->Internal,
+ComplexParameter->False},
+L3=={
+ParameterType->Internal,
+ComplexParameter->False},
+ TS41=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+L4=={
+ParameterType->Internal,
+Indices-> {Index[Generation],Index[Generation]},
+ComplexParameter->True}};
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+
+LHeavy := Block[{mu,ii,cc,nn}, DC[Sa, mu]*DC[Sabar, mu] + MSa^2 Sabar Sa ]/.gotoBFM;
+
+ LNP:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L1 Sabar Phi[ss1] Phi[ss2] TS11[ss1, ss2] + L4[ff0,ff1] CC[LLbar[sp1,ss0,ff0]].LL[sp1,ss1,ff1] Sa TS41[ss0, ss1]];
+
+ LNPH:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L2 Phibar[ss0] Sabar Phi[ss2] Sa TS21[ss0, ss2] + L3 Sabar Sabar Sa Sa];
+
+Ltot := LSM + LHeavy + LNP + HC[LNP] + LNPH;
