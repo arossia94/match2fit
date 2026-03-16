@@ -1,0 +1,118 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "Pi7";
+
+
+FeynmanGauge = True;
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+S[667]=={ClassName->Sa,
+SelfConjugate->False,
+QuantumNumbers->{Y-> 7/6},
+Indices->{Index[SU2D], Index[Colour]},
+FullName->"heavy",
+Mass->MSa,
+Width->0}};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+  
+MSa== { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+TS11=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC11=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Colour]},
+ComplexParameter->True},
+TS12=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC12=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Colour]},
+ComplexParameter->True},
+L1=={
+ParameterType->Internal,
+ComplexParameter->False},
+L2=={
+ParameterType->Internal,
+ComplexParameter->False},
+TS22=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC22=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Colour], Index[Colour], Index[Colour]},
+ComplexParameter->True},
+TS23=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC23=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Colour], Index[Colour], Index[Colour]},
+ComplexParameter->True},
+L3=={
+ParameterType->Internal,
+ComplexParameter->False},
+L4=={
+ParameterType->Internal,
+ComplexParameter->False},
+TS31=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC31=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Colour]},
+ComplexParameter->True},
+L5=={
+ParameterType->Internal,
+Indices-> {Index[Generation],Index[Generation]},
+ComplexParameter->True},
+TS41=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC41=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Colour]},
+ComplexParameter->True},
+L6=={
+ParameterType->Internal,
+Indices-> {Index[Generation],Index[Generation]},
+ComplexParameter->True}};
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+
+LHeavy := Block[{mu,ii,cc,nn}, DC[Sa[nn, cc], mu]*DC[Sabar[nn, cc], mu] + MSa^2 Sabar Sa ]/.gotoBFM;
+
+ LNP:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L5[ff0,ff1] QLbar[sp1,ss0,ff0,cc0].LR[sp1,ff1] Sa[ss2, cc2] TC31[cc0, cc2] TS31[ss0, ss2] + L6[ff0,ff1] URbar[sp1,ff0,cc0].LL[sp1,ss1,ff1] Sa[ss2, cc2] TC41[cc0, cc2] TS41[ss1, ss2]];
+
+ LNPH:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L1 Phibar[ss0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc3] TC11[cc1, cc3] TS11[ss0, ss1, ss2, ss3] + L2 Phibar[ss0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc3] TC12[cc1, cc3] TS12[ss0, ss1, ss2, ss3] + L3 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC22[cc0, cc1, cc2, cc3] TS22[ss0, ss1, ss2, ss3] + L4 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC23[cc0, cc1, cc2, cc3] TS23[ss0, ss1, ss2, ss3]];
+
+Ltot := LSM + LHeavy + LNP + HC[LNP] + LNPH;

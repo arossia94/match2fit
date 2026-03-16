@@ -422,7 +422,7 @@ ret]
 datasetSMEFiT=parseYAMLString[Import["https://raw.githubusercontent.com/LHCfitNikhef/smefit_database/main/data_summary.yaml","Text"]];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Flavour assumptions*)
 
 
@@ -538,7 +538,7 @@ Subscript[wwC, quqd1],Subscript[wwC, quqd8],Subscript[wwC, lequ1],Subscript[wwC,
 
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Assumption checker*)
 
 
@@ -564,7 +564,7 @@ Print["First WC for which the conditions are not satisfied: "<>ToString[Standard
 ];
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Flavour solver*)
 
 
@@ -789,11 +789,11 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Dictionary*)
 
 
@@ -1161,11 +1161,11 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Run card printing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV scan run card printing*)
 
 
@@ -1300,7 +1300,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
@@ -1580,6 +1580,7 @@ It returns a list with 2 lists, {listMasses,listUVcouplings}. listMasses is a li
 listUVcouplings is a list with all the couplings defined for those particles. ///*)
 parametersListFromMatchingResult[matchingResultFile_,looporder_]:=Module[{matchRes,varsSM,listMass,listUVcoup,allVar,allVarSimp,uvVarsComp},
 matchRes=Get[matchingResultFile]/.Piecewise[{{{Symbol[SymbolName[onelooporder]]->0},looporder==0||looporder=="tree"||looporder=="Tree"}},{Symbol[SymbolName[onelooporder]]->1}];
+Print[matchRes];
 allVar=Variables[matchRes[[3]][[;;,2]]];
 varsSM={g1,g2,g3,lam,muH,yu,yubar,yd,ydbar,yl,ylbar,KroneckerDelta,onelooporder,aEV,bEV,cEV,iCPV,Log,invepsilonbar,ee};
 listMass=Select[allVar,(MemberQ[{"m","M"},StringTake[ToString[#],1]]&&FreeQ[Map[SymbolName,varsSM],ToString[#]])&];
