@@ -273,7 +273,7 @@ Continue[]];
 data]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*MMEFT conventions*)
 
 
@@ -419,7 +419,17 @@ ret]
 
 
 (*/// Dataset on smefit_database/main.///*)
-datasetSMEFiT=parseYAMLString[Import["https://raw.githubusercontent.com/LHCfitNikhef/smefit_database/main/data_summary.yaml","Text"]];
+InternetConnectedQ[] := Quiet[
+  Module[{result},
+    result = Check[URLRead["https://www.google.com", "StatusCode"], $Failed];
+    IntegerQ[result] && result < 400
+  ]
+]
+datasetSMEFiT=If[InternetConnectedQ[],parseYAMLString[Import["https://raw.githubusercontent.com/LHCfitNikhef/smefit_database/main/data_summary.yaml","Text"]],
+Association["LEP"->{<|"name"->"LEP1_EWPOs_2006","order"->"LO","allowed_orders"->"[LO]"|>,<|"name"->"LEP_Bhabha_2013","order"->"LO","allowed_orders"->"[LO]"|>,<|"name"->"LEP_Brw_2013","order"->"LO","allowed_orders"->"[LO]"|>,
+<|"name"->"LEP_eeWW_182GeV","order"->"LO","allowed_orders"->"[LO]"|>,<|"name"->"LEP_eeWW_189GeV","order"->"LO","allowed_orders"->"[LO]"|>,<|"name"->"LEP_eeWW_198GeV","order"->"LO","allowed_orders"->"[LO]"|>,
+<|"name"->"LEP_eeWW_206GeV","order"->"LO","allowed_orders"->"[LO]"|>}]
+];
 
 
 (* ::Subsection:: *)
@@ -538,7 +548,7 @@ Subscript[wwC, quqd1],Subscript[wwC, quqd8],Subscript[wwC, lequ1],Subscript[wwC,
 
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Assumption checker*)
 
 
@@ -1165,7 +1175,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 (*Run card printing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*UV scan run card printing*)
 
 
@@ -1300,7 +1310,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Mass Scan printing*)
 
 
@@ -1580,9 +1590,8 @@ It returns a list with 2 lists, {listMasses,listUVcouplings}. listMasses is a li
 listUVcouplings is a list with all the couplings defined for those particles. ///*)
 parametersListFromMatchingResult[matchingResultFile_,looporder_]:=Module[{matchRes,varsSM,listMass,listUVcoup,allVar,allVarSimp,uvVarsComp},
 matchRes=Get[matchingResultFile]/.Piecewise[{{{Symbol[SymbolName[onelooporder]]->0},looporder==0||looporder=="tree"||looporder=="Tree"}},{Symbol[SymbolName[onelooporder]]->1}];
-Print[matchRes];
 allVar=Variables[matchRes[[3]][[;;,2]]];
-varsSM={g1,g2,g3,lam,muH,yu,yubar,yd,ydbar,yl,ylbar,KroneckerDelta,onelooporder,aEV,bEV,cEV,iCPV,Log,invepsilonbar,ee};
+varsSM={g1,g2,g3,lam,muH,yu,yubar,yd,ydbar,yl,ylbar,KroneckerDelta,onelooporder,aEV,bEV,cEV,iCPV,Log,invepsilonbar,ee,epsilonbar};
 listMass=Select[allVar,(MemberQ[{"m","M"},StringTake[ToString[#],1]]&&FreeQ[Map[SymbolName,varsSM],ToString[#]])&];
 allVarSimp=allVar/.{a_[b_]:>a,a_[b_,c_]:>a,a_[b_,c_,d_]:>a,a_[b_,c_,d_,e_]:>a}//DeleteDuplicates;
 uvVarsComp=Complement[allVarSimp,Union[listMass,varsSM],SameTest->(SymbolName[#1]==SymbolName[#2]&)];
