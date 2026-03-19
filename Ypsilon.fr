@@ -1,0 +1,156 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "Ypsilon";
+
+
+FeynmanGauge = True;
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+S[667]=={ClassName->Sa,
+SelfConjugate->False,
+QuantumNumbers->{Y-> -1/3},
+Indices->{Index[SU2W], Index[SU36]},
+FullName->"heavy",
+Mass->MSa,
+Width->0}};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+  
+MSa== { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+TS11=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2W], Index[SU2D], Index[SU2W]},
+ComplexParameter->True},
+TC11=={
+ParameterType->Internal,
+Indices-> {Index[SU36], Index[SU36]},
+ComplexParameter->True},
+TS12=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2W], Index[SU2D], Index[SU2W]},
+ComplexParameter->True},
+TC12=={
+ParameterType->Internal,
+Indices-> {Index[SU36], Index[SU36]},
+ComplexParameter->True},
+L1=={
+ParameterType->Internal,
+ComplexParameter->False},
+L2=={
+ParameterType->Internal,
+ComplexParameter->False},
+
+(****
+TS21=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2W], Index[SU2W], Index[SU2W]},
+ComplexParameter->True},
+TC21=={
+ParameterType->Internal,
+Indices-> {Index[SU36], Index[SU36], Index[SU36], Index[SU36]},
+ComplexParameter->True},
+TS23=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2W], Index[SU2W], Index[SU2W]},
+ComplexParameter->True},
+TC23=={
+ParameterType->Internal,
+Indices-> {Index[SU36], Index[SU36], Index[SU36], Index[SU36]},
+ComplexParameter->True},
+TS25=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2W], Index[SU2W], Index[SU2W]},
+ComplexParameter->True},
+TC25=={
+ParameterType->Internal,
+Indices-> {Index[SU36], Index[SU36], Index[SU36], Index[SU36]},
+ComplexParameter->True},
+TS27=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2W], Index[SU2W], Index[SU2W]},
+ComplexParameter->True},
+TC27=={
+ParameterType->Internal,
+Indices-> {Index[SU36], Index[SU36], Index[SU36], Index[SU36]},
+ComplexParameter->True},
+TS29=={
+ParameterType->Internal,
+Indices-> {Index[SU2W], Index[SU2W], Index[SU2W], Index[SU2W]},
+ComplexParameter->True},
+TC29=={
+ParameterType->Internal,
+Indices-> {Index[SU36], Index[SU36], Index[SU36], Index[SU36]},
+ComplexParameter->True},
+****)
+
+L3=={
+ParameterType->Internal,
+ComplexParameter->False},
+L4=={
+ParameterType->Internal,
+ComplexParameter->False},
+L5=={
+ParameterType->Internal,
+ComplexParameter->False},
+L6=={
+ParameterType->Internal,
+ComplexParameter->False},
+L7=={
+ParameterType->Internal,
+ComplexParameter->False},
+TS31=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2W]},
+ComplexParameter->True},
+TC31=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Colour], Index[SU36]},
+ComplexParameter->True},
+L8=={
+ParameterType->Internal,
+Indices-> {Index[Generation],Index[Generation]},
+ComplexParameter->True}};
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+
+LHeavy := Block[{mu,ii,cc,nn}, DC[Sa[nn, cc], mu]*DC[Sabar[nn, cc], mu] + MSa^2 Sabar Sa ]/.gotoBFM;
+
+ LNP:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},
+L8[ff0,ff1] CC[QLbar[sp1,ss0,ff0,cc0]].QL[sp1,ss1,ff1,cc1] Sa[ss2, cc2] TC31[cc0, cc1, cc2] TS31[ss0, ss1, ss2]];
+
+ LNPH:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},
+L1 Phibar[ss0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc1] TS11[ss0, ss1, ss2, ss3] 
++ L2 Phibar[ss0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc1] TS12[ss0, ss1, ss2, ss3] 
+
+(**
++ L3 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC21[cc0, cc1, cc2, cc3] TS21[ss0, ss1, ss2, ss3] 
++ L4 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC23[cc0, cc1, cc2, cc3] TS23[ss0, ss1, ss2, ss3] 
++ L5 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC25[cc0, cc1, cc2, cc3] TS25[ss0, ss1, ss2, ss3] 
++ L6 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC27[cc0, cc1, cc2, cc3] TS27[ss0, ss1, ss2, ss3] 
++ L7 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC29[cc0, cc1, cc2, cc3] TS29[ss0, ss1, ss2, ss3]
+***)
+
+];
+
+Ltot := LSM + LHeavy + LNP + HC[LNP] + LNPH;

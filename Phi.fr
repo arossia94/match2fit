@@ -1,0 +1,231 @@
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "Phi";
+
+
+FeynmanGauge = True;
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+S[667]=={ClassName->Sa,
+SelfConjugate->False,
+QuantumNumbers->{Y-> 1/2},
+Indices->{Index[SU2D], Index[Gluon]},
+FullName->"heavy",
+Mass->MSa,
+Width->0}};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+  (* External parameters *)
+
+  (* Internal Parameters *)
+  
+MSa== { 
+    ParameterType     -> Internal, 
+    ComplexParameter  -> False
+  },
+TS12=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC12=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+L1=={
+ParameterType->Internal,
+ComplexParameter->True},
+TS21=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC21=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+TS22=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC22=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+L2=={
+ParameterType->Internal,
+ComplexParameter->False},
+L3=={
+ParameterType->Internal,
+ComplexParameter->False},
+
+L4=={
+ParameterType->Internal,
+ComplexParameter->True},
+L5=={
+ParameterType->Internal,
+ComplexParameter->True},
+
+
+(*****
+TS42=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TS34=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TS32=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC32=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+
+TC34=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+
+TS43=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TS45=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TS412=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TS414=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TS415=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D], Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+
+
+TC42=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+TC43=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+TC45=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+TC412=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+TC414=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+TC415=={
+ParameterType->Internal,
+Indices-> {Index[Gluon], Index[Gluon], Index[Gluon], Index[Gluon]},
+ComplexParameter->True},
+
+****)
+
+L6=={
+ParameterType->Internal,
+ComplexParameter->False},
+L7=={
+ParameterType->Internal,
+ComplexParameter->False},
+L8=={
+ParameterType->Internal,
+ComplexParameter->False},
+L9=={
+ParameterType->Internal,
+ComplexParameter->False},
+L10=={
+ParameterType->Internal,
+ComplexParameter->False},
+L11=={
+ParameterType->Internal,
+ComplexParameter->False},
+TS51=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC51=={
+ParameterType->Internal,
+Indices-> {Index[Colour], Index[Gluon], Index[Colour]},
+ComplexParameter->True},
+L12=={
+ParameterType->Internal,
+Indices-> {Index[Generation],Index[Generation]},
+ComplexParameter->True},
+TS61=={
+ParameterType->Internal,
+Indices-> {Index[SU2D], Index[SU2D]},
+ComplexParameter->True},
+TC61=={
+ParameterType->Internal,
+Indices-> {Index[Colour],  Index[Gluon], Index[Colour]},
+ComplexParameter->True},
+L13=={
+ParameterType->Internal,
+Indices-> {Index[Generation],Index[Generation]},
+ComplexParameter->True}};
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
+
+
+LHeavy := Block[{mu,ii,cc,nn}, DC[Sa[nn, cc], mu]*DC[Sabar[nn, cc], mu] + MSa^2 Sabar Sa ]/.gotoBFM;
+
+ LNP:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},
+
++L12[ff0,ff1] QLbar[sp1,ss0,ff0,cc0].DR[sp1,ff1,cc1] Sa[ss0, cc2] T[cc2, cc0, cc1] 
++ L13[ff0,ff1] URbar[sp1,ff0,cc0].QL[sp1,ss1,ff1,cc1] Sa[ss2, cc2] T[cc2, cc0, cc1] TS61[ss1, ss2] 
+(*
++ L1 Sabar[ss0, cc0] Sabar[ss1, cc1] Phi[ss2] Phi[ss3] TC12[cc0, cc1] TS12[ss0, ss1, ss2, ss3] 
++ L4 Sabar[ss0, cc0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc3] TC32[cc0, cc1, cc3] TS32[ss0, ss1, ss2, ss3] 
++ L5 Sabar[ss0, cc0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc3] TC34[cc0, cc1, cc3] TS34[ss0, ss1, ss2, ss3]
+*)
+];
+
+ LNPH:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},
+
+(*
++L10 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC414[cc0, cc1, cc2, cc3] TS414[ss0, ss1, ss2, ss3] 
++ L11 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC415[cc0, cc1, cc2, cc3] TS415[ss0, ss1, ss2, ss3]
+*)
+ 
++ L2 Phibar[ss0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc1]  TS21[ss0, ss1, ss2, ss3] 
++ L3 Phibar[ss0] Sabar[ss1, cc1] Phi[ss2] Sa[ss3, cc1]  TS22[ss0, ss1, ss2, ss3] 
+
+(*
++ L6 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC42[cc0, cc1, cc2, cc3] TS42[ss0, ss1, ss2, ss3] 
++ L7 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC43[cc0, cc1, cc2, cc3] TS43[ss0, ss1, ss2, ss3] 
++ L8 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC45[cc0, cc1, cc2, cc3] TS45[ss0, ss1, ss2, ss3] 
++ L9 Sabar[ss0, cc0] Sabar[ss1, cc1] Sa[ss2, cc2] Sa[ss3, cc3] TC412[cc0, cc1, cc2, cc3] TS412[ss0, ss1, ss2, ss3]
+*)
+];
+
+Ltot := LSM + LHeavy + LNP + HC[LNP] + LNPH;
