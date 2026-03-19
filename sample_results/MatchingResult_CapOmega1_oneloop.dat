@@ -4670,8 +4670,8 @@ MatchingResult = {{{{alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1,
             L5[mif1, mif3] - 3456*L2*L4bar[mif4, mif2]*L5[mif1, mif3] - 
            3456*invepsilonbar*L2*L4bar[mif4, mif2]*L5[mif1, mif3] - 
            17280*L3*L4bar[mif4, mif2]*L5[mif1, mif3] - 17280*invepsilonbar*L3*
-            L4bar[mif4, mif2]*L5[mif1, mif3] + 756*Coupling[g2]^2*
-            L4bar[mif4, mif2]*L5[mif1, mif3] - 5376*Coupling[g3]^2*
+            L4bar[mif4, mif2]*L5[mif1, mif3] + 756*g2^2*
+            L4bar[mif4, mif2]*L5[mif1, mif3] - 5376*g3^2*
             L4bar[mif4, mif2]*L5[mif1, mif3] + 18*L4[fl1, MIF1]*
             L4bar[fl1, mif3]*L4bar[mif4, mif2]*L5[MIF1, mif1] - 
            9*epsilonbar*L4[fl1, MIF1]*L4bar[fl1, mif3]*L4bar[mif4, mif2]*
@@ -4701,8 +4701,8 @@ MatchingResult = {{{{alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1,
            12960*epsilonbar*L3*L4bar[mif4, mif2]*L5[mif3, mif1] + 
            25920*invepsilonbar*L3*L4bar[mif4, mif2]*L5[mif3, mif1] - 
            12960*epsilonbar*invepsilonbar*L3*L4bar[mif4, mif2]*
-            L5[mif3, mif1] - 2268*Coupling[g2]^2*L4bar[mif4, mif2]*
-            L5[mif3, mif1] + 8064*Coupling[g3]^2*L4bar[mif4, mif2]*
+            L5[mif3, mif1] - 2268*g2^2*L4bar[mif4, mif2]*
+            L5[mif3, mif1] + 8064*g3^2*L4bar[mif4, mif2]*
             L5[mif3, mif1] - 48*L4bar[mif4, mif2]*L5[fl1, mif3]*
             L5[mif1, MIF1]*L5bar[fl1, MIF1] - 96*invepsilonbar*
             L4bar[mif4, mif2]*L5[fl1, mif3]*L5[mif1, MIF1]*L5bar[fl1, MIF1] - 
@@ -4811,12 +4811,12 @@ MatchingResult = {{{{alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1,
             L5[mif1, mif3] - 864*L2*L4bar[mif4, mif2]*L5[mif1, mif3] - 
            864*invepsilonbar*L2*L4bar[mif4, mif2]*L5[mif1, mif3] - 
            4320*L3*L4bar[mif4, mif2]*L5[mif1, mif3] - 4320*invepsilonbar*L3*
-            L4bar[mif4, mif2]*L5[mif1, mif3] + 189*Coupling[g2]^2*
-            L4bar[mif4, mif2]*L5[mif1, mif3] + 168*Coupling[g3]^2*
+            L4bar[mif4, mif2]*L5[mif1, mif3] + 189*g2^2*
+            L4bar[mif4, mif2]*L5[mif1, mif3] + 168*g3^2*
             L4bar[mif4, mif2]*L5[mif1, mif3] - 3*L4[fl1, MIF1]*
             L4bar[fl1, mif1]*L4bar[mif4, mif2]*L5[MIF1, mif3] - 
            6*invepsilonbar*L4[fl1, MIF1]*L4bar[fl1, mif1]*L4bar[mif4, mif2]*
-            L5[MIF1, mif3] + 252*Coupling[g3]^2*L4bar[mif4, mif2]*
+            L5[MIF1, mif3] + 252*g3^2*L4bar[mif4, mif2]*
             L5[mif3, mif1] - 12*L4bar[mif4, mif2]*L5[fl1, mif3]*
             L5[mif1, MIF1]*L5bar[fl1, MIF1] - 24*invepsilonbar*
             L4bar[mif4, mif2]*L5[fl1, mif3]*L5[mif1, MIF1]*L5bar[fl1, MIF1] - 
@@ -5209,45 +5209,3 @@ MatchingResult = {{{{alphaKB -> 1, alphaKG -> 1, alphaKH -> 1, alphaKW -> 1,
             (g1^2*Log[MSa^2/\[Mu]^2])/(72*Pi^2)))/2), g2 -> g2, 
       g3 -> g3*(1 + (onelooporder*((5*g3^2*invepsilonbar)/(96*Pi^2) - 
             (5*g3^2*Log[MSa^2/\[Mu]^2])/(96*Pi^2)))/2)}}
- 
-Coupling /: MakeBoxes[Coupling[gL], NiceForm] := 
-     Format[Subscript[g, SubscriptStyle[Format[L, NiceForm]]], NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[gs], NiceForm] := 
-     Format[Subscript[g, SubscriptStyle[Format[s, NiceForm]]], NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[gY], NiceForm] := 
-     Format[Subscript[g, SubscriptStyle[Format[Y, NiceForm]]], NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[Yu, ind_], NiceForm] := 
-     Format[Subsuperscript[Y, SubscriptStyle[Format[u, NiceForm]], 
-       SubscriptStyle[Row[(Format[#1, NiceForm] & ) /@ ind]]], NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[Yd, ind_], NiceForm] := 
-     Format[Subsuperscript[Y, SubscriptStyle[Format[d, NiceForm]], 
-       SubscriptStyle[Row[(Format[#1, NiceForm] & ) /@ ind]]], NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[Ye, ind_], NiceForm] := 
-     Format[Subsuperscript[Y, SubscriptStyle[Format[e, NiceForm]], 
-       SubscriptStyle[Row[(Format[#1, NiceForm] & ) /@ ind]]], NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[label_, ind_], NiceForm] := 
-     Format[Subsuperscript[C, SubscriptStyle[
-        Format[Symbol[StringReplace[ToString[label], "C" -> ""]], NiceForm]], 
-       SubscriptStyle[Row[(Format[#1, NiceForm] & ) /@ ind]]], NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[label:\[Mu] | \[Lambda]], NiceForm] := 
-     Format[label, NiceForm]
- 
-Coupling /: MakeBoxes[Coupling[label_], NiceForm] := 
-     Format[Subscript[C, SubscriptStyle[Format[label, NiceForm]]], NiceForm]
- 
-Attributes[MakeBoxes] = {HoldAllComplete}
- 
-ParentForm[NiceForm] ^= StandardForm
- 
-Attributes[Subscript] = {NHoldRest}
- 
-SubscriptStyle[x_] := Style[x, FontSize -> 10]
- 
-Attributes[Subsuperscript] = {NHoldRest, ReadProtected}

@@ -1,0 +1,736 @@
+Model name: CapOmega4
+UV Collection: 1LoopMatching
+UV model: CapOmega4
+coefficients:
+  OpG:
+    constrain:
+    - L1Omega4:
+      - -9.773108224236698e-7
+      - 1
+    max: 100
+    min: -100
+  OpB:
+    constrain:
+    - L1Omega4:
+      - -7.2164964857136965e-6
+      - 1
+    max: 100
+    min: -100
+  OpBox:
+    constrain:
+    - L1Omega4:
+      - -4.625887468995314e-8
+      - 0
+    - L1Omega4:
+      - -0.000031662869888230556
+      - 2
+    max: 100
+    min: -100
+  OpD:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  OpqMi:
+    constrain:
+    - L1Omega4:
+      - -3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  OpQM:
+    constrain:
+    - L1Omega4:
+      - -3.083924979330209e-8
+      - 0
+    - L1Omega4:
+      - 6.927993873899698e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O3pQ3:
+    constrain:
+    - L1Omega4:
+      - -3.463996936949849e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Opl1:
+    constrain:
+    - L1Omega4:
+      - 9.251774937990628e-8
+      - 0
+    max: 100
+    min: -100
+  Opl2:
+    constrain:
+    - L1Omega4:
+      - 9.251774937990628e-8
+      - 0
+    max: 100
+    min: -100
+  Opl3:
+    constrain:
+    - L1Omega4:
+      - 9.251774937990628e-8
+      - 0
+    max: 100
+    min: -100
+  Opui:
+    constrain:
+    - L1Omega4:
+      - -1.2335699917320837e-7
+      - 0
+    max: 100
+    min: -100
+  Opdi:
+    constrain:
+    - L1Omega4:
+      - 6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Opt:
+    constrain:
+    - L1Omega4:
+      - -1.2335699917320837e-7
+      - 0
+    - L1Omega4:
+      - -0.00002947207742897735
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ope:
+    constrain:
+    - L1Omega4:
+      - 1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Opmu:
+    constrain:
+    - L1Omega4:
+      - 1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Opta:
+    constrain:
+    - L1Omega4:
+      - 1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  O81qq:
+    constrain:
+    - L1Omega4:
+      - -2.89591875e-7
+      - 0
+    max: 100
+    min: -100
+  O11qq:
+    constrain:
+    - L1Omega4:
+      - -5.139874965550349e-9
+      - 0
+    max: 100
+    min: -100
+  O8qt:
+    constrain:
+    - L1Omega4:
+      - -5.7918375e-7
+      - 0
+    - L1Omega4:
+      - 1.5323643160970023e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1qt:
+    constrain:
+    - L1Omega4:
+      - -4.1118999724402795e-8
+      - 0
+    - L1Omega4:
+      - 5.679650011904298e-7
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8ut:
+    constrain:
+    - L1Omega4:
+      - -2.89591875e-7
+      - 0
+    - L1Omega4:
+      - -4.446142228211071e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1ut:
+    constrain:
+    - L1Omega4:
+      - -8.223799944880559e-8
+      - 0
+    - L1Omega4:
+      - 9.354717666665905e-7
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8qu:
+    constrain:
+    - L1Omega4:
+      - -5.7918375e-7
+      - 0
+    max: 100
+    min: -100
+  O1qu:
+    constrain:
+    - L1Omega4:
+      - -4.1118999724402795e-8
+      - 0
+    max: 100
+    min: -100
+  O8dt:
+    constrain:
+    - L1Omega4:
+      - -5.7918375e-7
+      - 0
+    - L1Omega4:
+      - 1.5323643160970023e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1dt:
+    constrain:
+    - L1Omega4:
+      - 8.223799944880559e-8
+      - 0
+    - L1Omega4:
+      - -1.1359300023808597e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8qd:
+    constrain:
+    - L1Omega4:
+      - -5.7918375e-7
+      - 0
+    max: 100
+    min: -100
+  O1qd:
+    constrain:
+    - L1Omega4:
+      - 2.0559499862201397e-8
+      - 0
+    max: 100
+    min: -100
+  OQQ1:
+    constrain:
+    - L1Omega4:
+      - -1.0279749931100699e-8
+      - 0
+    max: 100
+    min: -100
+  OQQ8:
+    constrain:
+    - L1Omega4:
+      - -5.7918375e-7
+      - 0
+    max: 100
+    min: -100
+  OQt1:
+    constrain:
+    - L1Omega4:
+      - -4.1118999724402795e-8
+      - 0
+    - L1Omega4:
+      - -1.1640334672844946e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQt8:
+    constrain:
+    - L1Omega4:
+      - -5.7918375e-7
+      - 0
+    - L1Omega4:
+      - 6.728359721521775e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ott1:
+    constrain:
+    - L1Omega4:
+      - -1.7876862444880556e-7
+      - 0
+    - L1Omega4:
+      - 0.0008301742372061275
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    - L1Omega4:
+      - -8.795241635619599e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 4
+    - L1Omega4:
+      - -0.00031662869888230555
+      - 0
+      L3Omega4:
+      - 1
+      - 1
+      yOmega4uu33:
+      - 1
+      - 2
+    - L1Omega4:
+      - -0.00006332573977646111
+      - 0
+      L2Omega4:
+      - 1
+      - 1
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oll1111:
+    constrain:
+    - L1Omega4:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Otp:
+    constrain:
+    - L1Omega4:
+      - -0.00001374903941191205
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    - L1Omega4:
+      - 0.00002094565198869419
+      - 1
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OtG:
+    constrain:
+    - L1Omega4:
+      - -6.109148496702472e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OtZ:
+    constrain:
+    - L1Omega4:
+      - -1.3198241255350243e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Op:
+    constrain:
+    - L1Omega4:
+      - 0.00006332573977646111
+      - 3
+    max: 100
+    min: -100
+  OQe:
+    constrain:
+    - L1Omega4:
+      - 6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  OQl1M:
+    constrain:
+    - L1Omega4:
+      - 3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Otl1:
+    constrain:
+    - L1Omega4:
+      - 1.2335699917320837e-7
+      - 0
+    - L1Omega4:
+      - -1.7038950035712895e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ote:
+    constrain:
+    - L1Omega4:
+      - 2.4671399834641674e-7
+      - 0
+    - L1Omega4:
+      - -3.407790007142579e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oql1M:
+    constrain:
+    - L1Omega4:
+      - 3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Oqe:
+    constrain:
+    - L1Omega4:
+      - 6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1b:
+    constrain:
+    - L1Omega4:
+      - -6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1u:
+    constrain:
+    - L1Omega4:
+      - 1.2335699917320837e-7
+      - 0
+    max: 100
+    min: -100
+  Ol1d:
+    constrain:
+    - L1Omega4:
+      - -6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Oeu:
+    constrain:
+    - L1Omega4:
+      - 2.4671399834641674e-7
+      - 0
+    max: 100
+    min: -100
+  Oed:
+    constrain:
+    - L1Omega4:
+      - -1.2335699917320837e-7
+      - 0
+    max: 100
+    min: -100
+  Oeb:
+    constrain:
+    - L1Omega4:
+      - -1.2335699917320837e-7
+      - 0
+    max: 100
+    min: -100
+  Obb:
+    constrain:
+    - L1Omega4:
+      - -1.170901248622014e-7
+      - 0
+    max: 100
+    min: -100
+  Oll1122:
+    constrain:
+    - L1Omega4:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Oll1133:
+    constrain:
+    - L1Omega4:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Oll2222:
+    constrain:
+    - L1Omega4:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Oll2233:
+    constrain:
+    - L1Omega4:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Oll3333:
+    constrain:
+    - L1Omega4:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Ole1111:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole2222:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole3333:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole1122:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole1133:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole2233:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole2211:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole3311:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Ole3322:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Oee1111:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Oee2222:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Oee3333:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Oee1122:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Oee1133:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Oee2233:
+    constrain:
+    - L1Omega4:
+      - -1.8503549875981256e-7
+      - 0
+    max: 100
+    min: -100
+  Otta:
+    constrain:
+    - L1Omega4:
+      - 2.4671399834641674e-7
+      - 0
+    - L1Omega4:
+      - -3.407790007142579e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQta:
+    constrain:
+    - L1Omega4:
+      - 6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Otl3:
+    constrain:
+    - L1Omega4:
+      - 1.2335699917320837e-7
+      - 0
+    - L1Omega4:
+      - -1.7038950035712895e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otl2:
+    constrain:
+    - L1Omega4:
+      - 1.2335699917320837e-7
+      - 0
+    - L1Omega4:
+      - -1.7038950035712895e-6
+      - 0
+      yOmega4uu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl3M:
+    constrain:
+    - L1Omega4:
+      - 3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  L1Omega4:
+    min: -100
+    max: 100
+  L2Omega4:
+    min: -100
+    max: 100
+  L3Omega4:
+    min: -100
+    max: 100
+  yOmega4uu33:
+    min: -15
+    max: 15
+data_path: /path/to/smefit_database/commondata_projections_L0
+datasets:
+- name: LEP1_EWPOs_2006
+  order: LO
+- name: LEP_Bhabha_2013
+  order: LO
+- name: LEP_Brw_2013
+  order: LO
+- name: LEP_eeWW_182GeV
+  order: LO
+- name: LEP_eeWW_189GeV
+  order: LO
+- name: LEP_eeWW_198GeV
+  order: LO
+- name: LEP_eeWW_206GeV
+  order: LO
+external_chi2:
+  OptimalWW161:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 161.00
+  OptimalWW240:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 240.00
+  OptimalWW365:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+  Optimaltt:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+maxiter: 10000
+frac_remain: 0.001
+lepsilon: 0.001
+nlive: 1000
+result_path: /path/to/your/results/
+target_evidence_unc: 0.5
+target_post_unc: 0.5
+theory_path: /path/to/smefit_database/theory
+use_quad: true
+use_t0: false
+use_theory_covmat: true
+uv_couplings: true
+rge:
+ init_scale: 10000.
+ obs_scale: dynamic
+ smeft_accuracy: integrate
+ yukawa: top
+ adm_QCD: False

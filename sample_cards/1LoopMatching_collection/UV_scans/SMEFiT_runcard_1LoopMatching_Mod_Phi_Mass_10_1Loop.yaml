@@ -1,0 +1,1116 @@
+Model name: Phi
+UV Collection: 1LoopMatching
+UV model: Phi
+coefficients:
+  OpG:
+    constrain:
+    - L2Phi:
+      - -0.000049756543910120064
+      - 0
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - -0.000023455459738168075
+      - 1
+    max: 100
+    min: -100
+  OpB:
+    constrain:
+    - L2Phi:
+      - -2.8703439008195873e-6
+      - 0
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - -1.353093091071318e-6
+      - 1
+    max: 100
+    min: -100
+  OpW:
+    constrain:
+    - L2Phi:
+      - -9.544101412184123e-6
+      - 0
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - -4.499132552591666e-6
+      - 1
+    max: 100
+    min: -100
+  OpWB:
+    constrain:
+    - L2Phi:
+      - -3.4893395285428575e-6
+      - 0
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - 4.934671284989851e-6
+      - 1
+    max: 100
+    min: -100
+  OpBox:
+    constrain:
+    - L2Phi:
+      - -5.927205175459624e-7
+      - 0
+    - L2Phi:
+      - -0.00008443431970194815
+      - 0
+      L3Phi:
+      - 1
+      - 2
+    - L2Phi:
+      - -0.00011940816005224089
+      - 1
+      L3Phi:
+      - 1
+      - 1
+    max: 100
+    min: -100
+  OpD:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    - L2Phi:
+      - -0.00004221715985097408
+      - 0
+      L3Phi:
+      - 1
+      - 2
+    - L2Phi:
+      - 0.00011940816005224089
+      - 1
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - -0.00008443431970194815
+      - 2
+    max: 100
+    min: -100
+  OWWW:
+    constrain:
+    - L2Phi:
+      - 3.916673850938911e-7
+      - 0
+    max: 100
+    min: -100
+  OpqMi:
+    constrain:
+    - L2Phi:
+      - 3.7201757435233167e-7
+      - 0
+    max: 100
+    min: -100
+  OpQM:
+    constrain:
+    - L2Phi:
+      - 3.7201757435233167e-7
+      - 0
+    - L2Phi:
+      - 0.0000531700378117431
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O3pq:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  O3pQ3:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    - L2Phi:
+      - -6.428090256945068e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Opl1:
+    constrain:
+    - L2Phi:
+      - 3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Opl2:
+    constrain:
+    - L2Phi:
+      - 3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Opl3:
+    constrain:
+    - L2Phi:
+      - 3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  O3pl1:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  O3pl2:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  O3pl3:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  Opui:
+    constrain:
+    - L2Phi:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Opdi:
+    constrain:
+    - L2Phi:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Opt:
+    constrain:
+    - L2Phi:
+      - -4.625887468995314e-8
+      - 0
+    - L2Phi:
+      - -0.00004897276806701094
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ope:
+    constrain:
+    - L2Phi:
+      - 6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Opmu:
+    constrain:
+    - L2Phi:
+      - 6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Opta:
+    constrain:
+    - L2Phi:
+      - 6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  O81qq:
+    constrain:
+    - L2Phi:
+      - -0.00001390041
+      - 0
+    - L2Phi:
+      - 7.384126213867728e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O11qq:
+    constrain:
+    - L2Phi:
+      - -1.927453112081381e-9
+      - 0
+    - L2Phi:
+      - -2.923349270833095e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O13qq:
+    constrain:
+    - L2Phi:
+      - -1.9179114651240996e-7
+      - 0
+    - L2Phi:
+      - 2.4995180847731474e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8qt:
+    constrain:
+    - L2Phi:
+      - -0.00002780082
+      - 0
+    - L2Phi:
+      - 0.000029536504855470912
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1qt:
+    constrain:
+    - L2Phi:
+      - -1.5419624896651046e-8
+      - 0
+    - L2Phi:
+      - -1.6704852976189112e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8ut:
+    constrain:
+    - L2Phi:
+      - -0.00001390041
+      - 0
+    - L2Phi:
+      - 0.000014768252427735456
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1ut:
+    constrain:
+    - L2Phi:
+      - -3.083924979330209e-8
+      - 0
+    - L2Phi:
+      - -3.3409705952378223e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8qu:
+    constrain:
+    - L2Phi:
+      - -0.00002780082
+      - 0
+    - L2Phi:
+      - 0.000014768252427735456
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1qu:
+    constrain:
+    - L2Phi:
+      - -1.5419624896651046e-8
+      - 0
+    - L2Phi:
+      - -2.338679416666476e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8dt:
+    constrain:
+    - L2Phi:
+      - -0.00002780082
+      - 0
+    - L2Phi:
+      - 0.000029533463025524335
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1dt:
+    constrain:
+    - L2Phi:
+      - 3.083924979330209e-8
+      - 0
+    - L2Phi:
+      - 3.381528327858849e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8qd:
+    constrain:
+    - L2Phi:
+      - -0.00002780082
+      - 0
+    - L2Phi:
+      - 0.000014768252427735456
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1qd:
+    constrain:
+    - L2Phi:
+      - 7.709812448325523e-9
+      - 0
+    - L2Phi:
+      - 1.169339708333238e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQQ1:
+    constrain:
+    - L2Phi:
+      - 1.240058581174439e-7
+      - 0
+    - L2Phi:
+      - 5.425385087596706e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - -9.381591077994239e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 4
+    max: 100
+    min: -100
+  OQQ8:
+    constrain:
+    - L2Phi:
+      - -0.00002933514917209928
+      - 0
+    - L2Phi:
+      - 0.000028339738385683174
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - -8.795241635619599e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 4
+    max: 100
+    min: -100
+  OQt1:
+    constrain:
+    - L2Phi:
+      - -1.5419624896651046e-8
+      - 0
+    - L2Phi:
+      - -0.002251928128900765
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - 0.000017590483271239198
+      - 0
+      yPhiqu33:
+      - 1
+      - 4
+    max: 100
+    min: -100
+  OQt8:
+    constrain:
+    - L2Phi:
+      - -0.00002780082
+      - 0
+    - L2Phi:
+      - 0.001606520707441251
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - -0.000015831434944115278
+      - 0
+      yPhiqu33:
+      - 1
+      - 4
+    max: 100
+    min: -100
+  Ott1:
+    constrain:
+    - L2Phi:
+      - -4.664309249793302e-6
+      - 0
+    - L2Phi:
+      - 0.000014373302904867512
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - -9.67476579918156e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 4
+    max: 100
+    min: -100
+  Oll1221:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  Oll1111:
+    constrain:
+    - L2Phi:
+      - -2.0913822452114242e-7
+      - 0
+    max: 100
+    min: -100
+  Obp:
+    constrain:
+    - L2Phi:
+      - -9.209297518163515e-9
+      - 0
+    - L2Phi:
+      - -4.988982104323832e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - 3.583537652852563e-7
+      - 0
+      L3Phi:
+      - 1
+      - 1
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - 5.067887549938743e-7
+      - 0
+      L3Phi:
+      - 1
+      - 2
+    - L2Phi:
+      - 5.067887549938743e-7
+      - 1
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - -1.4334150611410253e-6
+      - 1
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - 1.0135775099877486e-6
+      - 2
+    max: 100
+    min: -100
+  Otp:
+    constrain:
+    - L2Phi:
+      - -3.806215883344328e-7
+      - 0
+    - L2Phi:
+      - -0.000020635632523411166
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - 0.00007405406278789579
+      - 0
+      L3Phi:
+      - 1
+      - 1
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - 0.00002094565198869419
+      - 0
+      L3Phi:
+      - 1
+      - 2
+    - L2Phi:
+      - 0.00002094565198869419
+      - 1
+      yPhiqu33:
+      - 1
+      - 2
+    - L2Phi:
+      - -0.00005924325023031663
+      - 1
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - 0.00004189130397738838
+      - 2
+    max: 100
+    min: -100
+  OtG:
+    constrain:
+    - L2Phi:
+      - -0.000030109374733747897
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otap:
+    constrain:
+    - L2Phi:
+      - -3.921662579505038e-9
+      - 0
+    - L2Phi:
+      - 2.158095655237072e-7
+      - 0
+      L3Phi:
+      - 1
+      - 2
+    - L2Phi:
+      - -6.104016289069438e-7
+      - 1
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - 4.316191310474144e-7
+      - 2
+    max: 100
+    min: -100
+  OtW:
+    constrain:
+    - L2Phi:
+      - -1.139626451266265e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OtZ:
+    constrain:
+    - L2Phi:
+      - 7.424010706134508e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Op:
+    constrain:
+    - L2Phi:
+      - -1.9851684381074488e-7
+      - 0
+    - L2Phi:
+      - 0.000010924405897598074
+      - 0
+      L3Phi:
+      - 1
+      - 2
+    - L2Phi:
+      - 0.00026866836011754197
+      - 0
+      L3Phi:
+      - 1
+      - 3
+    - L2Phi:
+      - -0.00003089888596250364
+      - 1
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - 0.00012665147955292222
+      - 1
+      L3Phi:
+      - 1
+      - 2
+    - L2Phi:
+      - 0.000021848811795196147
+      - 2
+    - L2Phi:
+      - 0.00017911224007836131
+      - 2
+      L3Phi:
+      - 1
+      - 1
+    - L2Phi:
+      - 0.00008443431970194815
+      - 3
+    max: 100
+    min: -100
+  OQe:
+    constrain:
+    - L2Phi:
+      - 2.312943734497657e-8
+      - 0
+    - L2Phi:
+      - 3.508019124999714e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl13:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    - L2Phi:
+      - 4.999036169546295e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl1M:
+    constrain:
+    - L2Phi:
+      - 3.951470116973082e-7
+      - 0
+    - L2Phi:
+      - 1.2541059455452275e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otl1:
+    constrain:
+    - L2Phi:
+      - 4.625887468995314e-8
+      - 0
+    - L2Phi:
+      - 5.011455892856735e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ote:
+    constrain:
+    - L2Phi:
+      - 9.251774937990628e-8
+      - 0
+    - L2Phi:
+      - 1.002291178571347e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oql13:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  Oql1M:
+    constrain:
+    - L2Phi:
+      - 3.951470116973082e-7
+      - 0
+    max: 100
+    min: -100
+  Oqe:
+    constrain:
+    - L2Phi:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1b:
+    constrain:
+    - L2Phi:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1u:
+    constrain:
+    - L2Phi:
+      - 4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1d:
+    constrain:
+    - L2Phi:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Oeu:
+    constrain:
+    - L2Phi:
+      - 9.251774937990628e-8
+      - 0
+    max: 100
+    min: -100
+  Oed:
+    constrain:
+    - L2Phi:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Oeb:
+    constrain:
+    - L2Phi:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Obb:
+    constrain:
+    - L2Phi:
+      - -4.641179812448326e-6
+      - 0
+    max: 100
+    min: -100
+  Oll1122:
+    constrain:
+    - L2Phi:
+      - 1.744440685036775e-7
+      - 0
+    max: 100
+    min: -100
+  Oll1133:
+    constrain:
+    - L2Phi:
+      - 1.744440685036775e-7
+      - 0
+    max: 100
+    min: -100
+  Oll1331:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  Oll2222:
+    constrain:
+    - L2Phi:
+      - -2.0913822452114242e-7
+      - 0
+    max: 100
+    min: -100
+  Oll2332:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  Oll2233:
+    constrain:
+    - L2Phi:
+      - 1.744440685036775e-7
+      - 0
+    max: 100
+    min: -100
+  Oll3333:
+    constrain:
+    - L2Phi:
+      - -2.0913822452114242e-7
+      - 0
+    max: 100
+    min: -100
+  Ole1111:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole2222:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole3333:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole1122:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole1133:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole2233:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole2211:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole3311:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Ole3322:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Oee1111:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Oee2222:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Oee3333:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Oee1122:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Oee1133:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Oee2233:
+    constrain:
+    - L2Phi:
+      - -6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Otta:
+    constrain:
+    - L2Phi:
+      - 9.251774937990628e-8
+      - 0
+    - L2Phi:
+      - 1.002291178571347e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQta:
+    constrain:
+    - L2Phi:
+      - 2.312943734497657e-8
+      - 0
+    - L2Phi:
+      - 3.508019124999714e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otl3:
+    constrain:
+    - L2Phi:
+      - 4.625887468995314e-8
+      - 0
+    - L2Phi:
+      - 5.011455892856735e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otl2:
+    constrain:
+    - L2Phi:
+      - 4.625887468995314e-8
+      - 0
+    - L2Phi:
+      - 5.011455892856735e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl3M:
+    constrain:
+    - L2Phi:
+      - 3.951470116973082e-7
+      - 0
+    - L2Phi:
+      - 1.2541059455452275e-6
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl33:
+    constrain:
+    - L2Phi:
+      - -3.835822930248199e-7
+      - 0
+    - L2Phi:
+      - 4.999036169546295e-7
+      - 0
+      yPhiqu33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  L2Phi:
+    min: -15
+    max: 15
+  L3Phi:
+    min: -15
+    max: 15
+  yPhiqu33:
+    min: -100
+    max: 100
+data_path: /path/to/smefit_database/commondata_projections_L0
+datasets:
+- name: LEP1_EWPOs_2006
+  order: LO
+- name: LEP_Bhabha_2013
+  order: LO
+- name: LEP_Brw_2013
+  order: LO
+- name: LEP_eeWW_182GeV
+  order: LO
+- name: LEP_eeWW_189GeV
+  order: LO
+- name: LEP_eeWW_198GeV
+  order: LO
+- name: LEP_eeWW_206GeV
+  order: LO
+external_chi2:
+  OptimalWW161:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 161.00
+  OptimalWW240:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 240.00
+  OptimalWW365:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+  Optimaltt:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+maxiter: 10000
+frac_remain: 0.001
+lepsilon: 0.001
+nlive: 1000
+result_path: /path/to/your/results/
+target_evidence_unc: 0.5
+target_post_unc: 0.5
+theory_path: /path/to/smefit_database/theory
+use_quad: true
+use_t0: false
+use_theory_covmat: true
+uv_couplings: true
+rge:
+ init_scale: 10000.
+ obs_scale: dynamic
+ smeft_accuracy: integrate
+ yukawa: top
+ adm_QCD: False

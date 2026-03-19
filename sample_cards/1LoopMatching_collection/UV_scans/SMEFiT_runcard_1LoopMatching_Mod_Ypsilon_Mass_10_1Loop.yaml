@@ -1,0 +1,945 @@
+Model name: Ypsilon
+UV Collection: 1LoopMatching
+UV model: Ypsilon
+coefficients:
+  OpG:
+    constrain:
+    - L1Ypsilon:
+      - 0.000023939128350377715
+      - 1
+    max: 100
+    min: -100
+  OpB:
+    constrain:
+    - L1Ypsilon:
+      - 5.523979412683299e-7
+      - 1
+    max: 100
+    min: -100
+  OpW:
+    constrain:
+    - L1Ypsilon:
+      - 0.000011020579038995186
+      - 1
+    max: 100
+    min: -100
+  OpWB:
+    constrain:
+    - L1Ypsilon:
+      - 2.849033794751208e-6
+      - 0
+      L2Ypsilon:
+      - 1
+      - 1
+    max: 100
+    min: -100
+  OpBox:
+    constrain:
+    - L1Ypsilon:
+      - -1.734793857616056e-6
+      - 0
+    - L1Ypsilon:
+      - 5.27714498137176e-6
+      - 0
+      L2Ypsilon:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -0.000015831434944115278
+      - 2
+    max: 100
+    min: -100
+  OpD:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    - L1Ypsilon:
+      - -0.00002110857992548704
+      - 0
+      L2Ypsilon:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OWWW:
+    constrain:
+    - L1Ypsilon:
+      - 1.1750021552816732e-6
+      - 0
+    max: 100
+    min: -100
+  OpqMi:
+    constrain:
+    - L1Ypsilon:
+      - 1.1449645197382159e-6
+      - 0
+    max: 100
+    min: -100
+  OpQM:
+    constrain:
+    - L1Ypsilon:
+      - 1.1449645197382159e-6
+      - 0
+    - L1Ypsilon:
+      - 0.000014590656790018169
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O3pq:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  O3pQ3:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    - L1Ypsilon:
+      - -2.5870309320226102e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Opl1:
+    constrain:
+    - L1Ypsilon:
+      - 1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
+  Opl2:
+    constrain:
+    - L1Ypsilon:
+      - 1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
+  Opl3:
+    constrain:
+    - L1Ypsilon:
+      - 1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
+  O3pl1:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  O3pl2:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  O3pl3:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  Opui:
+    constrain:
+    - L1Ypsilon:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Opdi:
+    constrain:
+    - L1Ypsilon:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Opt:
+    constrain:
+    - L1Ypsilon:
+      - -2.312943734497657e-8
+      - 0
+    - L1Ypsilon:
+      - -5.1959954054247735e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ope:
+    constrain:
+    - L1Ypsilon:
+      - 3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Opmu:
+    constrain:
+    - L1Ypsilon:
+      - 3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Opta:
+    constrain:
+    - L1Ypsilon:
+      - 3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  O81qq:
+    constrain:
+    - L1Ypsilon:
+      - -0.0000173755125
+      - 0
+    - L1Ypsilon:
+      - 6.515405482824467e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O11qq:
+    constrain:
+    - L1Ypsilon:
+      - -9.637265560406904e-10
+      - 0
+    - L1Ypsilon:
+      - 4.3850239062496426e-8
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O13qq:
+    constrain:
+    - L1Ypsilon:
+      - -5.753734395372299e-7
+      - 0
+    - L1Ypsilon:
+      - 5.623915690739583e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8qt:
+    constrain:
+    - L1Ypsilon:
+      - -0.000034751025
+      - 0
+    max: 100
+    min: -100
+  O1qt:
+    constrain:
+    - L1Ypsilon:
+      - -7.709812448325523e-9
+      - 0
+    max: 100
+    min: -100
+  O8ut:
+    constrain:
+    - L1Ypsilon:
+      - -0.0000173755125
+      - 0
+    max: 100
+    min: -100
+  O1ut:
+    constrain:
+    - L1Ypsilon:
+      - -1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  O8qu:
+    constrain:
+    - L1Ypsilon:
+      - -0.000034751025
+      - 0
+    - L1Ypsilon:
+      - 9.121567675954251e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1qu:
+    constrain:
+    - L1Ypsilon:
+      - -7.709812448325523e-9
+      - 0
+    - L1Ypsilon:
+      - 4.259737508928224e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O8dt:
+    constrain:
+    - L1Ypsilon:
+      - -0.000034751025
+      - 0
+    max: 100
+    min: -100
+  O1dt:
+    constrain:
+    - L1Ypsilon:
+      - 1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  O8qd:
+    constrain:
+    - L1Ypsilon:
+      - -0.000034751025
+      - 0
+    - L1Ypsilon:
+      - 9.123849048414184e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  O1qd:
+    constrain:
+    - L1Ypsilon:
+      - 3.854906224162762e-9
+      - 0
+    - L1Ypsilon:
+      - -2.1374733293305544e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQQ1:
+    constrain:
+    - L1Ypsilon:
+      - 3.816548399127386e-7
+      - 0
+    - L1Ypsilon:
+      - 0.0005751049886510946
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -4.3976208178097996e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 4
+    max: 100
+    min: -100
+  OQQ8:
+    constrain:
+    - L1Ypsilon:
+      - -0.000039354012516297836
+      - 0
+    - L1Ypsilon:
+      - 0.0008689359012277659
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -4.61750185870029e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 4
+    max: 100
+    min: -100
+  OQt1:
+    constrain:
+    - L1Ypsilon:
+      - -7.709812448325523e-9
+      - 0
+    - L1Ypsilon:
+      - -8.73025100463371e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQt8:
+    constrain:
+    - L1Ypsilon:
+      - -0.000034751025
+      - 0
+    - L1Ypsilon:
+      - 0.000013018564230022831
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ott1:
+    constrain:
+    - L1Ypsilon:
+      - -5.807257124896651e-6
+      - 0
+    max: 100
+    min: -100
+  Oll1221:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  Oll1111:
+    constrain:
+    - L1Ypsilon:
+      - -5.840469785415961e-7
+      - 0
+    max: 100
+    min: -100
+  Obp:
+    constrain:
+    - L1Ypsilon:
+      - -2.762789255449055e-8
+      - 0
+    - L1Ypsilon:
+      - -1.2482192629639192e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -7.314865602949717e-8
+      - 0
+      L2Ypsilon:
+      - 1
+      - 1
+      yYpsilonqq33:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - 2.5339437749693715e-7
+      - 0
+      L2Ypsilon:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -1.5517173213941907e-7
+      - 1
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otp:
+    constrain:
+    - L1Ypsilon:
+      - -1.1418647650032986e-6
+      - 0
+    - L1Ypsilon:
+      - -5.158908130852791e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - 3.0232444535062033e-6
+      - 0
+      L2Ypsilon:
+      - 1
+      - 1
+      yYpsilonqq33:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - 0.000010472825994347095
+      - 0
+      L2Ypsilon:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -6.413269962776564e-6
+      - 1
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OtG:
+    constrain:
+    - L1Ypsilon:
+      - -4.581861372526855e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otap:
+    constrain:
+    - L1Ypsilon:
+      - -1.1764987738515117e-8
+      - 0
+    - L1Ypsilon:
+      - 1.079047827618536e-7
+      - 0
+      L2Ypsilon:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OtW:
+    constrain:
+    - L1Ypsilon:
+      - -1.7094396768993974e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OtZ:
+    constrain:
+    - L1Ypsilon:
+      - -2.474670235378171e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Op:
+    constrain:
+    - L1Ypsilon:
+      - -5.955505314322347e-7
+      - 0
+    - L1Ypsilon:
+      - 5.462202948799037e-6
+      - 0
+      L2Ypsilon:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -0.000012926312503049852
+      - 1
+      L2Ypsilon:
+      - 1
+      - 2
+    - L1Ypsilon:
+      - -0.000012926312503049852
+      - 3
+    max: 100
+    min: -100
+  OQe:
+    constrain:
+    - L1Ypsilon:
+      - 1.1564718672488285e-8
+      - 0
+    - L1Ypsilon:
+      - -6.389606263392337e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl13:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    - L1Ypsilon:
+      - 1.3122469945059026e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl1M:
+    constrain:
+    - L1Ypsilon:
+      - 1.156529238410704e-6
+      - 0
+    - L1Ypsilon:
+      - -1.6317273076755194e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otl1:
+    constrain:
+    - L1Ypsilon:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Ote:
+    constrain:
+    - L1Ypsilon:
+      - 4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Oql13:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  Oql1M:
+    constrain:
+    - L1Ypsilon:
+      - 1.156529238410704e-6
+      - 0
+    max: 100
+    min: -100
+  Oqe:
+    constrain:
+    - L1Ypsilon:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1b:
+    constrain:
+    - L1Ypsilon:
+      - -1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1u:
+    constrain:
+    - L1Ypsilon:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Ol1d:
+    constrain:
+    - L1Ypsilon:
+      - -1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Oeu:
+    constrain:
+    - L1Ypsilon:
+      - 4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Oed:
+    constrain:
+    - L1Ypsilon:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Oeb:
+    constrain:
+    - L1Ypsilon:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Obb:
+    constrain:
+    - L1Ypsilon:
+      - -5.795692406224162e-6
+      - 0
+    max: 100
+    min: -100
+  Oll1122:
+    constrain:
+    - L1Ypsilon:
+      - 5.666999005328637e-7
+      - 0
+    max: 100
+    min: -100
+  Oll1133:
+    constrain:
+    - L1Ypsilon:
+      - 5.666999005328637e-7
+      - 0
+    max: 100
+    min: -100
+  Oll1331:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  Oll2222:
+    constrain:
+    - L1Ypsilon:
+      - -5.840469785415961e-7
+      - 0
+    max: 100
+    min: -100
+  Oll2332:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    max: 100
+    min: -100
+  Oll2233:
+    constrain:
+    - L1Ypsilon:
+      - 5.666999005328637e-7
+      - 0
+    max: 100
+    min: -100
+  Oll3333:
+    constrain:
+    - L1Ypsilon:
+      - -5.840469785415961e-7
+      - 0
+    max: 100
+    min: -100
+  Ole1111:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole2222:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole3333:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole1122:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole1133:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole2233:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole2211:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole3311:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ole3322:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Oee1111:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Oee2222:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Oee3333:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Oee1122:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Oee1133:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Oee2233:
+    constrain:
+    - L1Ypsilon:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Otta:
+    constrain:
+    - L1Ypsilon:
+      - 4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  OQta:
+    constrain:
+    - L1Ypsilon:
+      - 1.1564718672488285e-8
+      - 0
+    - L1Ypsilon:
+      - -6.389606263392337e-7
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otl3:
+    constrain:
+    - L1Ypsilon:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Otl2:
+    constrain:
+    - L1Ypsilon:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  OQl3M:
+    constrain:
+    - L1Ypsilon:
+      - 1.156529238410704e-6
+      - 0
+    - L1Ypsilon:
+      - -1.6317273076755194e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl33:
+    constrain:
+    - L1Ypsilon:
+      - -1.1507468790744599e-6
+      - 0
+    - L1Ypsilon:
+      - 1.3122469945059026e-6
+      - 0
+      yYpsilonqq33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  L1Ypsilon:
+    min: -15
+    max: 15
+  L2Ypsilon:
+    min: -15
+    max: 15
+  yYpsilonqq33:
+    min: -100
+    max: 100
+data_path: /path/to/smefit_database/commondata_projections_L0
+datasets:
+- name: LEP1_EWPOs_2006
+  order: LO
+- name: LEP_Bhabha_2013
+  order: LO
+- name: LEP_Brw_2013
+  order: LO
+- name: LEP_eeWW_182GeV
+  order: LO
+- name: LEP_eeWW_189GeV
+  order: LO
+- name: LEP_eeWW_198GeV
+  order: LO
+- name: LEP_eeWW_206GeV
+  order: LO
+external_chi2:
+  OptimalWW161:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 161.00
+  OptimalWW240:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 240.00
+  OptimalWW365:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+  Optimaltt:
+    path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
+    scale: 365.00
+maxiter: 10000
+frac_remain: 0.001
+lepsilon: 0.001
+nlive: 1000
+result_path: /path/to/your/results/
+target_evidence_unc: 0.5
+target_post_unc: 0.5
+theory_path: /path/to/smefit_database/theory
+use_quad: true
+use_t0: false
+use_theory_covmat: true
+uv_couplings: true
+rge:
+ init_scale: 10000.
+ obs_scale: dynamic
+ smeft_accuracy: integrate
+ yukawa: top
+ adm_QCD: False
