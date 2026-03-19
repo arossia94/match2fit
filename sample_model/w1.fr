@@ -1,23 +1,34 @@
 (* ************************** *)
 (* *****  Information   ***** *)
 (* ************************** *)
-M$ModelName = "w1";
+M$ModelName = "Q1Q7W";
 
-
-FeynmanGauge = True;
+M$Information = {
+  Authors      -> {"Alejo Rossia"}, 
+  Version      -> "1.0",
+  Date         -> "10. 07. 2023",
+  Institutions -> {"University of Manchester"},
+  Emails       -> {"alejo.rossia@manchester.ac.uk"}
+};
 
 (* ************************** *)
 (* **** Particle classes **** *)
 (* ************************** *)
 M$ClassesDescription = {
 
-S[667]=={ClassName->Sa,
-SelfConjugate->False,
-QuantumNumbers->{Y-> -1/3},
-Indices->{Index[Colour]},
-FullName->"heavy",
-Mass->MSa,
-Width->0}};
+(* Heavy spin-1 resonance Wti, corresponding to \mathcal{W} in the Granada dictionary *)
+
+  V[30] == {
+    ClassName        -> Wti,
+    Indices          -> {Index[SU2W]},
+    SelfConjugate    -> True,
+    FullName         -> "heavy",
+    Mass             -> MWti,
+    Width            -> 0,
+    QuantumNumbers   -> {Y -> 0}
+  }
+
+};
 
 (* ************************** *)
 (* *****   Parameters   ***** *)
@@ -27,69 +38,31 @@ M$Parameters = {
   (* External parameters *)
 
   (* Internal Parameters *)
-  
-MSa== { 
+
+  MWti == { 
     ParameterType     -> Internal, 
     ComplexParameter  -> False
   },
-TS11=={
-ParameterType->Internal,
-Indices-> {Index[SU2D], Index[SU2D]},
-ComplexParameter->True},
-TC11=={
-ParameterType->Internal,
-Indices-> {Index[Colour], Index[Colour]},
-ComplexParameter->True},
-L1=={
-ParameterType->Internal,
-ComplexParameter->False},
-TC21=={
-ParameterType->Internal,
-Indices-> {Index[Colour], Index[Colour], Index[Colour], Index[Colour]},
-ComplexParameter->True},
-L2=={
-ParameterType->Internal,
-ComplexParameter->False},
-TC31=={
-ParameterType->Internal,
-Indices-> {Index[Colour], Index[Colour], Index[Colour]},
-ComplexParameter->True},
-L3=={
-ParameterType->Internal,
-Indices-> {Index[Generation],Index[Generation]},
-ComplexParameter->True},
-TS41=={
-ParameterType->Internal,
-Indices-> {Index[SU2D], Index[SU2D]},
-ComplexParameter->True},
-TC41=={
-ParameterType->Internal,
-Indices-> {Index[Colour], Index[Colour], Index[Colour]},
-ComplexParameter->True},
-L4=={
-ParameterType->Internal,
-Indices-> {Index[Generation],Index[Generation]},
-ComplexParameter->True},
-TC51=={
-ParameterType->Internal,
-Indices-> {Index[Colour], Index[Colour]},
-ComplexParameter->True},
-L5=={
-ParameterType->Internal,
-Indices-> {Index[Generation],Index[Generation]},
-ComplexParameter->True},
-TS61=={
-ParameterType->Internal,
-Indices-> {Index[SU2D], Index[SU2D]},
-ComplexParameter->True},
-TC61=={
-ParameterType->Internal,
-Indices-> {Index[Colour], Index[Colour]},
-ComplexParameter->True},
-L6=={
-ParameterType->Internal,
-Indices-> {Index[Generation],Index[Generation]},
-ComplexParameter->True}};
+  
+  gWtiLe == {
+    ParameterType -> Internal,
+    Indices->{Index[Generation],Index[Generation]},
+    ComplexParameter -> True
+  },
+
+  gWtiQ == {
+    ParameterType -> Internal,
+    Indices->{Index[Generation],Index[Generation]},
+    ComplexParameter -> True
+  },
+
+  gWtiH == {
+    ParameterType -> Internal,
+    ComplexParameter -> False
+  }
+
+};
+
 
 
 (* ************************** *)
@@ -98,11 +71,22 @@ ComplexParameter->True}};
 
 gotoBFM={G[a__]->G[a]+GQuantum[a],Wi[a__]->Wi[a]+WiQuantum[a],B[a__]->B[a]+BQuantum[a]};
 
+nDC[f_,ind_,lor1_,lor2_]:=del[f[lor1,ind],lor2]-g2*fsu2[ind,bb,cc] Wi[lor1,bb] f[lor2,cc];
 
-LHeavy := Block[{mu,ii,cc,nn}, DC[Sa[nn], mu]*DC[Sabar[nn], mu] + MSa^2 Sabar Sa ]/.gotoBFM;
+LHeavyWti := Block[{ii,mu,nu}, 
+  (-(1/4)(nDC[Wti,ii,mu,nu] - nDC[Wti,ii,nu,mu])*(nDC[Wti,ii,mu,nu] - nDC[Wti,ii,nu,mu]) + (MWti^2/2)*Wti[mu,ii]*Wti[mu,ii])/.gotoBFM]
 
- LNP:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L3[ff0,ff1] CC[DRbar[sp1,ff0,cc0]].UR[sp1,ff1,cc2] Sa[cc1] TC31[cc0, cc1, cc2] + L4[ff0,ff1] CC[QLbar[sp1,ss0,ff0,cc0]].QL[sp1,ss1,ff1,cc1] Sa[cc2] TC41[cc0, cc1, cc2] TS41[ss0, ss1] + L5[ff0,ff1] CC[LRbar[sp1,ff0]].UR[sp1,ff1,cc2] Sabar[cc0] TC51[cc0, cc2] + L6[ff0,ff1] CC[LLbar[sp1,ss1,ff0]].QL[sp1,ss2,ff1,cc2] Sabar[cc0] TC61[cc0, cc2] TS61[ss1, ss2]];
 
- LNPH:= Block[{sp1,ff0,ff1,ss0,ss1,ss2,ss3,ss4,cc1,cc2,cc3,cc4},L1 Phibar[ss0] Sabar[cc1] Phi[ss2] Sa[cc3] TC11[cc1, cc3] TS11[ss0, ss2] + L2 Sabar[cc0] Sabar[cc1] Sa[cc2] Sa[cc3] TC21[cc0, cc1, cc2, cc3]];
+LHeavylightWti := Block[{ii, jj, mu, nu, ffll1, ffll2, ffll3, ffll4, sp1, sp2, cc, vectorcurrent, kk},
 
-Ltot := LSM + LHeavy + LNP + HC[LNP] + LNPH;
+vectorcurrent=-(gWtiLe[ffll1,ffll2]) Wti[mu,jj]  LLbar[sp1, ii, ffll1].Ga[mu,sp1,sp2].LL[sp2, kk, ffll2] Ta[jj,ii,kk]
+-(gWtiQ[ffll3,ffll4]) Wti[mu,jj]  QLbar[sp1, ii, ffll3, cc].Ga[mu,sp1,sp2].QL[sp2, kk, ffll4,cc] Ta[jj,ii,kk] 
+-gWtiH * Wti[mu,ii] * I *( Phibar[jj] Ta[ii,jj,kk] DC[Phi[kk],mu]  - HC[DC[Phi[jj],mu]] Ta[ii,jj,kk] Phi[kk]);
+ 
+vectorcurrent/.gotoBFM
+];
+
+
+LNP := LHeavyWti + LHeavylightWti;
+
+Ltot := LSM + LNP;
