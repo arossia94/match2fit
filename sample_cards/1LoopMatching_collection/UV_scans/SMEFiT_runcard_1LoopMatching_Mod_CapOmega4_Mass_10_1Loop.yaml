@@ -676,17 +676,17 @@ coefficients:
     max: 100
     min: -100
   L1Omega4:
-    min: -100
-    max: 100
-  L2Omega4:
-    min: -100
-    max: 100
-  L3Omega4:
-    min: -100
-    max: 100
-  yOmega4uu33:
     min: -15
     max: 15
+  L2Omega4:
+    min: -15
+    max: 15
+  L3Omega4:
+    min: -15
+    max: 15
+  yOmega4uu33:
+    min: -100
+    max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
 datasets:
 - name: LEP1_EWPOs_2006

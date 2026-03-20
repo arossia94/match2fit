@@ -1053,20 +1053,20 @@ coefficients:
     max: 100
     min: -100
   L1Zeta:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   L2Zeta:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   L3Zeta:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   L4Zeta:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   L5Zeta:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   yZetaqL33:
     min: -100
     max: 100
