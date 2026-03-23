@@ -2,14 +2,14 @@ Model name: S2
 UV Collection: 1LoopMatching
 UV model: S2
 coefficients:
-  Oee2233:
+  Oee3333:
     constrain:
-    - yS2f23:
+    - yS2f33:
       - 0.005
       - 2
     max: 100
     min: -100
-  yS2f23:
+  yS2f33:
     min: -100
     max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
