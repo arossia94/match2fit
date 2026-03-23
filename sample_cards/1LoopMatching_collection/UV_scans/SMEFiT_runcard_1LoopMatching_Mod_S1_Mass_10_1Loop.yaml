@@ -1258,11 +1258,11 @@ coefficients:
     max: 100
     min: -100
   L2:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   L3:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   yS1f12:
     min: -100
     max: 100

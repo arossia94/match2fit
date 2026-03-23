@@ -49,13 +49,7 @@ coefficients:
       - 1
       - 1
     - kappaXi:
-      - 7.998744995e-6
-      - 3
-      L1bar:
-      - 1
-      - 1
-    - kappaXi:
-      - -0.000016
+      - -2.5100099999999997e-9
       - 4
     max: 100
     min: -100
@@ -70,9 +64,6 @@ coefficients:
     max: 100
     min: -100
   kappaXi:
-    min: -100
-    max: 100
-  L1bar:
     min: -100
     max: 100
   L2Xi1:

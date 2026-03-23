@@ -1084,11 +1084,11 @@ coefficients:
     max: 100
     min: -100
   L1:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   L2:
-    min: -100
-    max: 100
+    min: -15
+    max: 15
   yomega1qLf33:
     min: -100
     max: 100
