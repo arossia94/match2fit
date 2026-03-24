@@ -1043,14 +1043,14 @@ coefficients:
     max: 100
     min: -100
   L1:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L2:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L3:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L4:
     min: -15
     max: 15
