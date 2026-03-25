@@ -1084,17 +1084,17 @@ coefficients:
     max: 100
     min: -100
   L1:
-    min: -15
-    max: 15
+    min: -60.0
+    max: 40.0
   L2:
-    min: -15
-    max: 15
+    min: -100.0
+    max: 100.0
   yomega1qLf33:
-    min: -100
-    max: 100
+    min: -20.0
+    max: 20.0
   yomega1qqf33:
-    min: -100
-    max: 100
+    min: -10.0
+    max: 10.0
 data_path: /path/to/smefit_database/commondata_projections_L0
 datasets:
 - name: ATLAS_CMS_SSinc_RunI
