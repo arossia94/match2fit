@@ -4,13 +4,13 @@ BeginPackage["match2fit`"];
 
 
 ":Name: match2fit"
-":Version: 1.99"
+":Version: 2.0"
 ":Author: Alejo N. Rossia"
 ":Affiliation: Universit\[AGrave] degli Studi di Padova e INFN Sezione di Padova."
 
 
 Print["match2fit: an interface between matching and fitting codes.\n"];
-Print["Version: 1.99"];
+Print["Version: 2.0"];
 Print["Date: 01/10/2025"];
 Print["Author: Alejo N. Rossia"];
 Print["Affiliations: Universit\[AGrave] degli Studi di Padova e INFN Sezione di Padova."];
@@ -251,7 +251,6 @@ If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{
 {dicTotal,massString,massReemp}]
 
 
-(*/// YAML parser done by ChatGPT. ///*)
 parseYAMLString[yaml_String]:=Module[{lines,cleaned,currentKey=None,data=<||>,line,content,inner,items,kvPairs,kv,key,val,assoc},(*1) Split into lines and strip trailing comments and whitespace*)lines=StringSplit[yaml,"\n"];
 cleaned=StringTrim/@StringReplace[lines,RegularExpression["\\s*#.*$"]->""];(*remove trailing comments*)cleaned=Select[cleaned,#=!=""&];
 (*2) Walk lines and build structure*)Do[line=StringTrim[cleaned[[i]]];
