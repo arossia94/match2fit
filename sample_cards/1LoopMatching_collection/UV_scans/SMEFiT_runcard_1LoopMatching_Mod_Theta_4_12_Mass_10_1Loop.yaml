@@ -750,21 +750,175 @@ coefficients:
       - 0
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - L2Theta412:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - L2Theta412:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - L2Theta412:
+      - -1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - L2Theta412:
+      - -1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - L2Theta412:
+      - -1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - L2Theta412:
+      - -1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - L2Theta412:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Oql23:
+    constrain:
+    - L2Theta412:
+      - -4.79477866281025e-7
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - L2Theta412:
+      - -4.79477866281025e-7
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - L2Theta412:
+      - 4.82369045949147e-7
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - L2Theta412:
+      - 4.82369045949147e-7
+      - 0
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - L2Theta412:
+      - -4.79477866281025e-7
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - L2Theta412:
+      - 4.82369045949147e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - L2Theta412:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - L2Theta412:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - L2Theta412:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - L2Theta412:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - L2Theta412:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - L2Theta412:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - L2Theta412:
+      - 5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - L2Theta412:
+      - 5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - L2Theta412:
+      - 5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
   L2Theta412:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L3Theta412:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L4Theta412:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L7Theta412:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L8Theta412:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   lamPhi:
     min: -100
     max: 100
@@ -1714,7 +1868,7 @@ external_chi2:
     path: /path/to/smefit_database/external_chi2/optimal_observables/interface_oos.py
     scale: 365.00
 maxiter: 10000
-frac_remain: 0.005
+frac_remain: 0.001
 lepsilon: 0.001
 nlive: 1000
 result_path: /path/to/your/results/

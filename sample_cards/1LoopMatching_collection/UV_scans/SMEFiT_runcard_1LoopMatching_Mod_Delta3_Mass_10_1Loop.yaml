@@ -706,6 +706,172 @@ coefficients:
       - 0
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - lamDelta3f3:
+      - 8.326597444191565e-7
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - lamDelta3f3:
+      - 8.326597444191565e-7
+      - 0
+    - lamDelta3f3:
+      - -4.810997657142465e-6
+      - 2
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - lamDelta3f3:
+      - -4.163298722095783e-7
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - lamDelta3f3:
+      - -4.163298722095783e-7
+      - 0
+    - lamDelta3f3:
+      - 2.4054988285712323e-6
+      - 2
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - lamDelta3f3:
+      - -4.163298722095783e-7
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - lamDelta3f3:
+      - -4.163298722095783e-7
+      - 0
+    - lamDelta3f3:
+      - 2.3781223590520396e-6
+      - 2
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - lamDelta3f3:
+      - 8.326597444191565e-7
+      - 0
+    max: 100
+    min: -100
+  Oql23:
+    constrain:
+    - lamDelta3f3:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - lamDelta3f3:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - lamDelta3f3:
+      - 4.876647610772144e-7
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - lamDelta3f3:
+      - 4.876647610772144e-7
+      - 0
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - lamDelta3f3:
+      - -3.835822930248199e-7
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - lamDelta3f3:
+      - 4.876647610772144e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - lamDelta3f3:
+      - 4.163298722095783e-7
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - lamDelta3f3:
+      - 4.163298722095783e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - lamDelta3f3:
+      - -2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - lamDelta3f3:
+      - -2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - lamDelta3f3:
+      - -2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - lamDelta3f3:
+      - -2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - lamDelta3f3:
+      - 2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - lamDelta3f3:
+      - 2.0816493610478914e-7
+      - 0
+    - lamDelta3f3:
+      - -1.2027494142856162e-6
+      - 2
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - lamDelta3f3:
+      - 2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
   lamDelta3f3:
     min: -100
     max: 100

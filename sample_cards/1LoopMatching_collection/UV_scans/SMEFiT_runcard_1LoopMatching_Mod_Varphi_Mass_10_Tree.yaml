@@ -553,11 +553,7 @@ datasets:
   order: LO
 - name: FCCee_Zdata
   order: LO
-- name: FCCee_alphaEW
-  order: LO
 - name: LCF_Zdata_GigaZ
-  order: LO
-- name: LCF_alphaEW_250GeV
   order: LO
 - name: LCF_vvh_bb_250GeV
   order: LO
@@ -917,8 +913,6 @@ datasets:
   order: LO
 - name: LEP_Brw_2013
   order: LO
-- name: LEP_alphaEW
-  order: LO
 - name: LEP_eeWW_182GeV
   order: LO
 - name: LEP_eeWW_189GeV
@@ -982,8 +976,6 @@ datasets:
 - name: LEP3_Wwidth
   order: LO
 - name: LEP3_Zdata
-  order: LO
-- name: LEP3_alphaEW
   order: LO
 external_chi2:
   OptimalWW161:

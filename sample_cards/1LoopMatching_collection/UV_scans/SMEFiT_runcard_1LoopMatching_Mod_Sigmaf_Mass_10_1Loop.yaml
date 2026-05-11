@@ -453,6 +453,75 @@ coefficients:
       - 2
     max: 100
     min: -100
+  Oql23:
+    constrain:
+    - lamSigmaf3:
+      - -7.671645860496398e-7
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - lamSigmaf3:
+      - -7.671645860496398e-7
+      - 0
+    - lamSigmaf3:
+      - 1.8277725994903644e-6
+      - 2
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - lamSigmaf3:
+      - 7.671645860496398e-7
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - lamSigmaf3:
+      - 7.671645860496398e-7
+      - 0
+    - lamSigmaf3:
+      - -1.6727306828051093e-6
+      - 2
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - lamSigmaf3:
+      - -7.671645860496398e-7
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - lamSigmaf3:
+      - 7.671645860496398e-7
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - lamSigmaf3:
+      - 6.201676667410209e-7
+      - 2
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - lamSigmaf3:
+      - -3.1008383337051044e-7
+      - 2
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - lamSigmaf3:
+      - -2.9981765730081313e-7
+      - 2
+    max: 100
+    min: -100
   lamSigmaf3:
     min: -100
     max: 100

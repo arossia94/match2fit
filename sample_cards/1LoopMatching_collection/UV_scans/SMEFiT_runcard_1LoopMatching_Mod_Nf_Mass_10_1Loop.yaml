@@ -312,6 +312,41 @@ coefficients:
       - 2
     max: 100
     min: -100
+  Oql33:
+    constrain:
+    - lamNff3:
+      - -2.0621024199378473e-6
+      - 2
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - lamNff3:
+      - 2.2688249755181875e-6
+      - 2
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - lamNff3:
+      - 8.268902223213612e-7
+      - 2
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - lamNff3:
+      - -4.134451111606806e-7
+      - 2
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - lamNff3:
+      - -3.9975687640108415e-7
+      - 2
+    max: 100
+    min: -100
   lamNff3:
     min: -100
     max: 100

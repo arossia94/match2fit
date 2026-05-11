@@ -989,6 +989,190 @@ coefficients:
       - 2
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - kappaXi:
+      - 6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - kappaXi:
+      - 6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - kappaXi:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - kappaXi:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - kappaXi:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - kappaXi:
+      - -3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - kappaXi:
+      - 6.938831203492971e-8
+      - 0
+    max: 100
+    min: -100
+  Oql23:
+    constrain:
+    - kappaXi:
+      - -1.9179114651240996e-7
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - kappaXi:
+      - -1.9179114651240996e-7
+      - 0
+    - kappaXi:
+      - 2.249566276295833e-6
+      - 0
+      L6Xi133:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - kappaXi:
+      - 2.004646855167762e-7
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - kappaXi:
+      - 2.004646855167762e-7
+      - 0
+    - kappaXi:
+      - -3.151628337010045e-6
+      - 0
+      L6Xi133:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - kappaXi:
+      - -1.9179114651240996e-7
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - kappaXi:
+      - 2.004646855167762e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - kappaXi:
+      - 3.4694156017464856e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - kappaXi:
+      - 3.4694156017464856e-8
+      - 0
+    - kappaXi:
+      - -3.6082482428568483e-6
+      - 0
+      L6Xi133:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - kappaXi:
+      - -1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - kappaXi:
+      - -1.7347078008732428e-8
+      - 0
+    - kappaXi:
+      - 1.8041241214284241e-6
+      - 0
+      L6Xi133:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - kappaXi:
+      - -1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - kappaXi:
+      - -1.7347078008732428e-8
+      - 0
+    - kappaXi:
+      - 1.8041241214284241e-6
+      - 0
+      L6Xi133:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - kappaXi:
+      - 1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - kappaXi:
+      - 1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - kappaXi:
+      - 1.7347078008732428e-8
+      - 0
+    max: 100
+    min: -100
   kappaXi:
     min: -100
     max: 100
@@ -996,8 +1180,8 @@ coefficients:
     min: -100
     max: 100
   L4Xi1:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L5Xi1:
     min: -100
     max: 100

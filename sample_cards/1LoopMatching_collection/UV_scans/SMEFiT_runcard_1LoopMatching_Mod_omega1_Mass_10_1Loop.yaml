@@ -1083,18 +1083,225 @@ coefficients:
       - 2
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - L1:
+      - 7.709812448325523e-9
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - L1:
+      - 7.709812448325523e-9
+      - 0
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - L1:
+      - -3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - L1:
+      - -3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - L1:
+      - -3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - L1:
+      - -3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - L1:
+      - 7.709812448325523e-9
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - L1:
+      - -8.998265105183332e-6
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - L1:
+      - 9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - L1:
+      - 9.637265560406904e-10
+      - 0
+    - L1:
+      - 9.223780620361884e-6
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - L1:
+      - -0.000032993638719005556
+      - 0
+      yomega1qqf33:
+      - 1
+      - 2
+    - L1:
+      - -2.999421701727777e-6
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - L1:
+      - 9.637265560406904e-10
+      - 0
+    - L1:
+      - 0.000029084703122577303
+      - 0
+      yomega1qqf33:
+      - 1
+      - 2
+    - L1:
+      - 3.97665560083484e-6
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - L1:
+      - 3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - L1:
+      - 3.854906224162762e-9
+      - 0
+    - L1:
+      - 9.020620607142121e-7
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - L1:
+      - -1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - L1:
+      - -1.927453112081381e-9
+      - 0
+    - L1:
+      - -4.5103103035710603e-7
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - L1:
+      - -1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - L1:
+      - -1.927453112081381e-9
+      - 0
+    - L1:
+      - -4.555937752769715e-7
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - L1:
+      - 1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - L1:
+      - 1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - L1:
+      - 1.927453112081381e-9
+      - 0
+    - L1:
+      - -7.817871192856506e-6
+      - 0
+      yomega1qqf33:
+      - 1
+      - 2
+    - L1:
+      - 1.9544677982141265e-6
+      - 0
+      yomega1qLf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
   L1:
-    min: -60.0
-    max: 40.0
+    min: -100
+    max: 100
   L2:
-    min: -100.0
-    max: 100.0
+    min: -100
+    max: 100
   yomega1qLf33:
-    min: -20.0
-    max: 20.0
+    min: -100
+    max: 100
   yomega1qqf33:
-    min: -10.0
-    max: 10.0
+    min: -100
+    max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
 datasets:
 - name: ATLAS_CMS_SSinc_RunI

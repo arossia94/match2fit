@@ -696,18 +696,172 @@ coefficients:
       - 0
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - L2Theta432:
+      - 2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - L2Theta432:
+      - 2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - L2Theta432:
+      - -1.0408246805239457e-7
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - L2Theta432:
+      - -1.0408246805239457e-7
+      - 0
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - L2Theta432:
+      - -1.0408246805239457e-7
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - L2Theta432:
+      - -1.0408246805239457e-7
+      - 0
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - L2Theta432:
+      - 2.0816493610478914e-7
+      - 0
+    max: 100
+    min: -100
+  Oql23:
+    constrain:
+    - L2Theta432:
+      - -4.79477866281025e-7
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - L2Theta432:
+      - -4.79477866281025e-7
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - L2Theta432:
+      - 5.054984832941236e-7
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - L2Theta432:
+      - 5.054984832941236e-7
+      - 0
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - L2Theta432:
+      - -4.79477866281025e-7
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - L2Theta432:
+      - 5.054984832941236e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - L2Theta432:
+      - 1.0408246805239457e-7
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - L2Theta432:
+      - 1.0408246805239457e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - L2Theta432:
+      - -5.2041234026197284e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - L2Theta432:
+      - -5.2041234026197284e-8
+      - 0
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - L2Theta432:
+      - -5.2041234026197284e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - L2Theta432:
+      - -5.2041234026197284e-8
+      - 0
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - L2Theta432:
+      - 5.2041234026197284e-8
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - L2Theta432:
+      - 5.2041234026197284e-8
+      - 0
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - L2Theta432:
+      - 5.2041234026197284e-8
+      - 0
+    max: 100
+    min: -100
   L2Theta432:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L3Theta432:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L4Theta432:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L5Theta432:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   lamPhi:
     min: -100
     max: 100

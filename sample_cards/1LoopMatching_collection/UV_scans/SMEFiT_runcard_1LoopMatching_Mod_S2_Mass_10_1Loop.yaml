@@ -547,12 +547,169 @@ coefficients:
       - 0
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - L1:
+      - 9.251774937990628e-8
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - L1:
+      - 9.251774937990628e-8
+      - 0
+    - L1:
+      - -8.419245899999312e-6
+      - 0
+      yS2f33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - L1:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - L1:
+      - -4.625887468995314e-8
+      - 0
+    - L1:
+      - 4.209622949999656e-6
+      - 0
+      yS2f33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - L1:
+      - -4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - L1:
+      - -4.625887468995314e-8
+      - 0
+    - L1:
+      - 4.209622949999656e-6
+      - 0
+      yS2f33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - L1:
+      - 9.251774937990628e-8
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - L1:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - L1:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - L1:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - L1:
+      - 4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - L1:
+      - 4.625887468995314e-8
+      - 0
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - L1:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - L1:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - L1:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - L1:
+      - -2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - L1:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - L1:
+      - 2.312943734497657e-8
+      - 0
+    - L1:
+      - -2.104811474999828e-6
+      - 0
+      yS2f33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - L1:
+      - 2.312943734497657e-8
+      - 0
+    max: 100
+    min: -100
   L1:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   L2:
-    min: -15
-    max: 15
+    min: -100
+    max: 100
   yS2f33:
     min: -100
     max: 100

@@ -757,12 +757,166 @@ coefficients:
       - 0
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - L2:
+      - 3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - L2:
+      - 3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - L2:
+      - -1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - L2:
+      - -1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - L2:
+      - -1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - L2:
+      - -1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - L2:
+      - 3.854906224162762e-9
+      - 0
+    max: 100
+    min: -100
+  Oql23:
+    constrain:
+    - L2:
+      - -1.4384335988430748e-7
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - L2:
+      - -1.4384335988430748e-7
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - L2:
+      - 1.4432522316232783e-7
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - L2:
+      - 1.4432522316232783e-7
+      - 0
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - L2:
+      - -1.4384335988430748e-7
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - L2:
+      - 1.4432522316232783e-7
+      - 0
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - L2:
+      - 1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - L2:
+      - 1.927453112081381e-9
+      - 0
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - L2:
+      - -9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - L2:
+      - -9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - L2:
+      - -9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - L2:
+      - -9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - L2:
+      - 9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - L2:
+      - 9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - L2:
+      - 9.637265560406904e-10
+      - 0
+    max: 100
+    min: -100
   L2:
-    min: -40.0
-    max: 40.0
+    min: -100
+    max: 100
   L3:
-    min: -40.0
-    max: 40.0
+    min: -100
+    max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
 datasets:
 - name: ATLAS_CMS_SSinc_RunI

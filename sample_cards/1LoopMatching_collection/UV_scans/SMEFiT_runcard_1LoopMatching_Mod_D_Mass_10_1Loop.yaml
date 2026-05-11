@@ -728,6 +728,152 @@ coefficients:
       - 2
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - lamDff3:
+      - 6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - lamDff3:
+      - 6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - lamDff3:
+      - -3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - lamDff3:
+      - -3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - lamDff3:
+      - -3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - lamDff3:
+      - -3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - lamDff3:
+      - 6.167849958660419e-8
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - lamDff3:
+      - 7.709812448325523e-9
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - lamDff3:
+      - 7.709812448325523e-9
+      - 0
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - lamDff3:
+      - -2.0621024199378473e-6
+      - 2
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - lamDff3:
+      - 7.709812448325523e-9
+      - 0
+    - lamDff3:
+      - 2.945371521053847e-6
+      - 2
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - lamDff3:
+      - 3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - lamDff3:
+      - 3.083924979330209e-8
+      - 0
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - lamDff3:
+      - -1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - lamDff3:
+      - -1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - lamDff3:
+      - -1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - lamDff3:
+      - -1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - lamDff3:
+      - 1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - lamDff3:
+      - 1.5419624896651046e-8
+      - 0
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - lamDff3:
+      - 1.5419624896651046e-8
+      - 0
+    - lamDff3:
+      - 1.766538202231999e-6
+      - 2
+    max: 100
+    min: -100
   lamDff3:
     min: -100
     max: 100

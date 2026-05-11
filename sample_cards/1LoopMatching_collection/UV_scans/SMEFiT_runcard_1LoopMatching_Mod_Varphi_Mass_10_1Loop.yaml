@@ -880,6 +880,184 @@ coefficients:
       - 2
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - lamvarphi:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - lamvarphi:
+      - 1.1564718672488285e-8
+      - 0
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - lamvarphi:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - lamvarphi:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - lamvarphi:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - lamvarphi:
+      - -5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - lamvarphi:
+      - 1.1564718672488285e-8
+      - 0
+    - lamvarphi:
+      - 7.517183839285101e-7
+      - 0
+      yVarphiuf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Oql23:
+    constrain:
+    - lamvarphi:
+      - -4.794778662810249e-8
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - lamvarphi:
+      - -4.794778662810249e-8
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - lamvarphi:
+      - 4.939337646216353e-8
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - lamvarphi:
+      - 4.939337646216353e-8
+      - 0
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - lamvarphi:
+      - -4.794778662810249e-8
+      - 0
+    - lamvarphi:
+      - 3.749277127159721e-7
+      - 0
+      yVarphiuf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - lamvarphi:
+      - 4.939337646216353e-8
+      - 0
+    - lamvarphi:
+      - 9.405794591589207e-7
+      - 0
+      yVarphiuf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - lamvarphi:
+      - 5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - lamvarphi:
+      - 5.7823593362441424e-9
+      - 0
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - lamvarphi:
+      - -2.8911796681220712e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - lamvarphi:
+      - -2.8911796681220712e-9
+      - 0
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - lamvarphi:
+      - -2.8911796681220712e-9
+      - 0
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - lamvarphi:
+      - -2.8911796681220712e-9
+      - 0
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - lamvarphi:
+      - 2.8911796681220712e-9
+      - 0
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - lamvarphi:
+      - 2.8911796681220712e-9
+      - 0
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - lamvarphi:
+      - 2.8911796681220712e-9
+      - 0
+    - lamvarphi:
+      - 2.6310143437497854e-6
+      - 0
+      yVarphiuf33:
+      - 1
+      - 2
+    max: 100
+    min: -100
   lamvarphi:
     min: -100
     max: 100
@@ -1394,11 +1572,7 @@ datasets:
   order: LO
 - name: FCCee_Zdata
   order: LO
-- name: FCCee_alphaEW
-  order: LO
 - name: LCF_Zdata_GigaZ
-  order: LO
-- name: LCF_alphaEW_250GeV
   order: LO
 - name: LCF_vvh_bb_250GeV
   order: LO
@@ -1758,8 +1932,6 @@ datasets:
   order: LO
 - name: LEP_Brw_2013
   order: LO
-- name: LEP_alphaEW
-  order: LO
 - name: LEP_eeWW_182GeV
   order: LO
 - name: LEP_eeWW_189GeV
@@ -1823,8 +1995,6 @@ datasets:
 - name: LEP3_Wwidth
   order: LO
 - name: LEP3_Zdata
-  order: LO
-- name: LEP3_alphaEW
   order: LO
 external_chi2:
   OptimalWW161:

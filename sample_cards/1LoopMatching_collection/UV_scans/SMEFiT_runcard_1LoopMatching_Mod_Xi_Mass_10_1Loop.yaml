@@ -563,6 +563,48 @@ coefficients:
       - 0
     max: 100
     min: -100
+  Oql23:
+    constrain:
+    - kappaXi:
+      - -9.589557325620498e-8
+      - 0
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - kappaXi:
+      - -9.589557325620498e-8
+      - 0
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - kappaXi:
+      - 9.589557325620498e-8
+      - 0
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - kappaXi:
+      - 9.589557325620498e-8
+      - 0
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - kappaXi:
+      - -9.589557325620498e-8
+      - 0
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - kappaXi:
+      - 9.589557325620498e-8
+      - 0
+    max: 100
+    min: -100
   kappaXi:
     min: -100
     max: 100
