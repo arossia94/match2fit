@@ -37,7 +37,8 @@ An example of how to set them, using their default value is, {\"UVFlavourAssumpt
 modelToMasScanCard::usage = "modelToMasScanCard[directory,model,UVcoup,looporder,OptionalArguments] reads the file directory\\model.fr (usually the input directory already contains
 the \), runs MMEFT to add that model to the SM and match it onto SMEFT at looporder level, reads the results and prints a mass scan card by executing matchResToMasScanCard. All the UV couplings that do not vanish after applying the UVFlavourAssumptions (optional argument)
 are set to the numerical value UVcoup. Other optional arguments are \"Collection\", \"OutputFormat\" (\"Universal\" by default), \"DegenerateMasses\" (\"True\" by default since mass scans are usually along a single mass) and \"QGRAFPath\""
-(*dictionaryToPrint::usage = "TEST ONLY"*)
+dictionaryToPrint::usage = "TEST ONLY"
+printNameWCs::usage= "TEST ONLY"
 
 
 Begin["`Private`"];
@@ -61,7 +62,8 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},
 {"cQt8",ToString[x]=="wwCQt8"},{"ctt1",ToString[x]=="wwCtt1"},
 {"cll1221",ToString[x]=="wwCll"},{"cll1111",ToString[x]=="wwCll1111"},
 {"cbp",ToString[x]=="wwCb\[CurlyPhi]"},{"ctp",ToString[x]=="wwCt\[CurlyPhi]"},
-{"ctG",ToString[x]=="wwCtG"},{"ccp",ToString[x]=="wwCc\[CurlyPhi]"},
+{"ctG",ToString[x]=="wwCtG"},
+{"ccp",ToString[x]=="wwCc\[CurlyPhi]"},
 {"ctap",ToString[x]=="wwC\[Tau]\[CurlyPhi]"},{"ctW",ToString[x]=="wwCtW"},
 {"ctZ",ToString[x]=="wwCtZ"},{"c3pQ3",ToString[x]=="wwC\[CurlyPhi]Q3"},
 {"cpQM",ToString[x]=="wwC\[CurlyPhi]Qm"},{"cpt",ToString[x]=="wwC\[CurlyPhi]t"},{"cpl1",ToString[x]=="wwC\[CurlyPhi]l11"},{"c3pl1",ToString[x]=="wwC\[CurlyPhi]l31"},{"cpl2",ToString[x]=="wwC\[CurlyPhi]l12"},{"c3pl2",ToString[x]=="wwC\[CurlyPhi]l32"},{"cpl3",ToString[x]=="wwC\[CurlyPhi]l13"},{"c3pl3",ToString[x]=="wwC\[CurlyPhi]l33"},{"cpe",ToString[x]=="wwC\[CurlyPhi]e"},{"cpmu",ToString[x]=="wwC\[CurlyPhi]\[Mu]"},{"cpta",ToString[x]=="wwC\[CurlyPhi]\[Tau]"},{"c3pq",ToString[x]=="wwC\[CurlyPhi]q3"},{"cpqMi",ToString[x]=="wwC\[CurlyPhi]qm"},{"cpui",ToString[x]=="wwC\[CurlyPhi]ui"},{"cpdi",ToString[x]=="wwC\[CurlyPhi]di"},{"cpG",ToString[x]=="wwC\[CurlyPhi]G"},{"cpB",ToString[x]=="wwC\[CurlyPhi]B"},{"cpW",ToString[x]=="wwC\[CurlyPhi]W"},{"cpBox",ToString[x]=="wwC\[CurlyPhi]Box"},{"cpWB",ToString[x]=="wwC\[CurlyPhi]WB"},{"cpD",ToString[x]=="wwC\[CurlyPhi]D"},{"cWWW",ToString[x]=="wwCWWW"},
@@ -109,7 +111,30 @@ printNameWCs[x_]:=Piecewise[{{"c81qq",ToString[x]=="wwCQq18"},
 {"ctl2",ToString[x]=="wwClu2233"},
 {"cQl3M",ToString[x]=="wwClqM3333"},
 {"cQl33",ToString[x]=="wwClq33333"},
-{"cmup",ToString[x]=="wwC\[Mu]\[CurlyPhi]"}
+{"cmup",ToString[x]=="wwC\[Mu]\[CurlyPhi]"},
+{"cmuu",ToString[x]=="wwC\[Mu]u"},
+{"ctau",ToString[x]=="wwC\[Tau]u"},
+{"cmud",ToString[x]=="wwC\[Mu]d"},
+{"ctad",ToString[x]=="wwC\[Tau]d"},
+{"cmub",ToString[x]=="wwC\[Mu]b"},
+{"ctab",ToString[x]=="wwC\[Tau]b"},
+{"ctmu",ToString[x]=="wwCtmu"},
+{"cql23",ToString[x]=="wwCql23"},
+{"cql33",ToString[x]=="wwCql33"},
+{"cql2M",ToString[x]=="wwCql2M"},
+{"cql3M",ToString[x]=="wwCql3M"},
+{"cQl23",ToString[x]=="wwCQl23"},
+{"cQl33",ToString[x]=="wwCQl33"},
+{"cQl2M",ToString[x]=="wwCQl2M"},
+{"cl2u",ToString[x]=="wwCl2u"},
+{"cl3u",ToString[x]=="wwCl3u"},
+{"cl2d",ToString[x]=="wwCl2d"},
+{"cl3d",ToString[x]=="wwCl3d"},
+{"cl2b",ToString[x]=="wwCl2b"},
+{"cl3b",ToString[x]=="wwCl3b"},
+{"cqmu",ToString[x]=="wwCqmu"},
+{"cqta",ToString[x]=="wwCqta"},
+{"cQmu",ToString[x]=="wwCQmu"}
 }];
 (*Original function taken from: https://mathematica.stackexchange.com/a/250929 *)
 Clear[EinsteinSum]
@@ -355,9 +380,8 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwCQt8]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qu8]]][3,3,3,3]},{Symbol[SymbolName[wwCtt1]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uu]]][3,3,3,3]},
 {Symbol[SymbolName[wwCll]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,2,2,1]},{Symbol[SymbolName[wwCll1111]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ll]]][1,1,1,1]},
 {Symbol[SymbolName[wwCb\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[d\[Phi]]]][3,3]},{Symbol[SymbolName[wwCt\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][3,3]},
-{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]/Symbol[SymbolName[g3]]
-
-},{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
+{Symbol[SymbolName[wwCtG]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uG]]][3,3]/Symbol[SymbolName[g3]]},
+{Symbol[SymbolName[wwCc\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[u\[Phi]]]][2,2]},
 {Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},
 {Symbol[SymbolName[wwC\[Mu]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][2,2]},
 {Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
@@ -405,7 +429,31 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwClu3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][3,3,3,3]},
 {Symbol[SymbolName[wwClu2233]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][2,2,3,3]},
 {Symbol[SymbolName[wwClqM3333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][3,3,3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]},
-{Symbol[SymbolName[wwClq33333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]}
+{Symbol[SymbolName[wwClq33333]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]},
+{Symbol[SymbolName[wwC\[Mu]u]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][2,2,1,1]},
+{Symbol[SymbolName[wwC\[Tau]u]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][3,3,1,1]},
+{Symbol[SymbolName[wwC\[Mu]d]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ed]]][2,2,1,1]},
+{Symbol[SymbolName[wwC\[Tau]d]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ed]]][3,3,1,1]},
+{Symbol[SymbolName[wwC\[Mu]b]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ed]]][2,2,3,3]},
+{Symbol[SymbolName[wwC\[Tau]b]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ed]]][3,3,3,3]},
+{Symbol[SymbolName[wwCtmu]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[eu]]][2,2,3,3]},
+{Symbol[SymbolName[wwCql23]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][2,2,1,1]},
+{Symbol[SymbolName[wwCql33]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,1,1]},
+{Symbol[SymbolName[wwCql2M]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][2,2,1,1]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][2,2,1,1]},
+{Symbol[SymbolName[wwCql3M]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][3,3,1,1]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,1,1]},
+{Symbol[SymbolName[wwCQl23]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][2,2,3,3]},
+{Symbol[SymbolName[wwCQl33]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]},
+{Symbol[SymbolName[wwCQl2M]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][2,2,3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][2,2,3,3]},
+{Symbol[SymbolName[wwCQl3M]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq1]]][3,3,3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][3,3,3,3]},
+{Symbol[SymbolName[wwCl2u]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][2,2,1,1]},
+{Symbol[SymbolName[wwCl3u]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lu]]][3,3,1,1]},
+{Symbol[SymbolName[wwCl2d]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][2,2,1,1]},
+{Symbol[SymbolName[wwCl3d]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][3,3,1,1]},
+{Symbol[SymbolName[wwCl2b]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][2,2,3,3]},
+{Symbol[SymbolName[wwCl3b]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ld]]][3,3,3,3]},
+{Symbol[SymbolName[wwCqmu]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][1,1,2,2]},
+{Symbol[SymbolName[wwCqta]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][1,1,3,3]},
+{Symbol[SymbolName[wwCQmu]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][3,3,2,2]}
 };
 vanishBviolation={Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]]->0,Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]]->0};
 
@@ -747,11 +795,11 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*SM numerical inputs*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Gauge and Higgs parameters*)
 
 
@@ -798,11 +846,11 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Dictionary*)
 
 
@@ -1170,7 +1218,7 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Run card printing*)
 
 
@@ -1553,7 +1601,7 @@ If[listProblems!={},Print["The matching was completed but problems were reported
 Print["There was a problem during the matching and no problem list was generated.\nCheck input files."];];];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*Public functions*)
 
 
