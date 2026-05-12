@@ -665,6 +665,160 @@ coefficients:
       - -2
     max: 100
     min: -100
+  Omuu:
+    constrain:
+    - m:
+      - 0.00007401419950392502
+      - -2
+    max: 100
+    min: -100
+  Otau:
+    constrain:
+    - m:
+      - 0.00007401419950392502
+      - -2
+    max: 100
+    min: -100
+  Omud:
+    constrain:
+    - m:
+      - -0.00003700709975196251
+      - -2
+    max: 100
+    min: -100
+  Otad:
+    constrain:
+    - m:
+      - -0.00003700709975196251
+      - -2
+    max: 100
+    min: -100
+  Omub:
+    constrain:
+    - m:
+      - -0.00003700709975196251
+      - -2
+    max: 100
+    min: -100
+  Otab:
+    constrain:
+    - m:
+      - -0.00003700709975196251
+      - -2
+    max: 100
+    min: -100
+  Otmu:
+    constrain:
+    - m:
+      - 0.00007401419950392502
+      - -2
+    max: 100
+    min: -100
+  Oql23:
+    constrain:
+    - m:
+      - -0.00046029875162978396
+      - -2
+    max: 100
+    min: -100
+  Oql33:
+    constrain:
+    - m:
+      - -0.00046029875162978396
+      - -2
+    max: 100
+    min: -100
+  Oql2M:
+    constrain:
+    - m:
+      - 0.0004695505265677746
+      - -2
+    max: 100
+    min: -100
+  Oql3M:
+    constrain:
+    - m:
+      - 0.0004695505265677746
+      - -2
+    max: 100
+    min: -100
+  OQl23:
+    constrain:
+    - m:
+      - -0.0002775214916807475
+      - -2
+    max: 100
+    min: -100
+  OQl2M:
+    constrain:
+    - m:
+      - 0.0002007954764569148
+      - -2
+    max: 100
+    min: -100
+  Ol2u:
+    constrain:
+    - m:
+      - 0.00003700709975196251
+      - -2
+    max: 100
+    min: -100
+  Ol3u:
+    constrain:
+    - m:
+      - 0.00003700709975196251
+      - -2
+    max: 100
+    min: -100
+  Ol2d:
+    constrain:
+    - m:
+      - -0.000018503549875981254
+      - -2
+    max: 100
+    min: -100
+  Ol3d:
+    constrain:
+    - m:
+      - -0.000018503549875981254
+      - -2
+    max: 100
+    min: -100
+  Ol2b:
+    constrain:
+    - m:
+      - -0.000018503549875981254
+      - -2
+    max: 100
+    min: -100
+  Ol3b:
+    constrain:
+    - m:
+      - -0.000018503549875981254
+      - -2
+    max: 100
+    min: -100
+  Oqmu:
+    constrain:
+    - m:
+      - 0.000018503549875981254
+      - -2
+    max: 100
+    min: -100
+  Oqta:
+    constrain:
+    - m:
+      - 0.000018503549875981254
+      - -2
+    max: 100
+    min: -100
+  OQmu:
+    constrain:
+    - m:
+      - -0.00015345203044766543
+      - -2
+    max: 100
+    min: -100
   m:
     is_mass: true
     min: 0.1
@@ -1177,11 +1331,7 @@ datasets:
   order: LO
 - name: FCCee_Zdata
   order: LO
-- name: FCCee_alphaEW
-  order: LO
 - name: LCF_Zdata_GigaZ
-  order: LO
-- name: LCF_alphaEW_250GeV
   order: LO
 - name: LCF_vvh_bb_250GeV
   order: LO
@@ -1541,8 +1691,6 @@ datasets:
   order: LO
 - name: LEP_Brw_2013
   order: LO
-- name: LEP_alphaEW
-  order: LO
 - name: LEP_eeWW_182GeV
   order: LO
 - name: LEP_eeWW_189GeV
@@ -1606,8 +1754,6 @@ datasets:
 - name: LEP3_Wwidth
   order: LO
 - name: LEP3_Zdata
-  order: LO
-- name: LEP3_alphaEW
   order: LO
 external_chi2:
   OptimalWW161:
