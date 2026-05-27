@@ -26,7 +26,7 @@ when producing the run cards. The looporder argument indicates at which loop lev
 are \"UVFlavourAssumption\", \"Collection\" and \"Model\". An example of how to set them, using their default values is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\",\"Model\"->\"UserModel\"}.";
 matchResToMasScanCard::usage = "matchResToMasScanCard[matchResFile,UVcoup,looplevel,OptionalArguments] takes the matching results in matchResFile at looplevel order and prints the card required to run a \[Chi]^2 scan as a function of the heavy mass of the model with SMEFiT.
 The optional arguments are \"UVFlavourAssumption\", \"Collection\", \"Model\", \"DegenerateMasses\" (\"True\" by default since mass scans are intended to be along a single mass), and \"OutputFormat\" (\"Universal\" by default).";
-flavourSymChecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
+flavourSymCheGenecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to a fulfilment of the flavour symmetry. It treats the SM yukawas symbolically with the notation used in the matchResFile."
 flavourSolver::usage = "flavourSolver[matchResFile, OptionalArguments] reads the file matchResFile and solves for the UV couplings and SM yukawas such that the WCs fulfill the SMEFiT flavour symmetry. It returns all the possible solutions it finds. 
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to simpler and fewer solutions."
@@ -39,6 +39,10 @@ the \), runs MMEFT to add that model to the SM and match it onto SMEFT at loopor
 are set to the numerical value UVcoup. Other optional arguments are \"Collection\", \"OutputFormat\" (\"Universal\" by default), \"DegenerateMasses\" (\"True\" by default since mass scans are usually along a single mass) and \"QGRAFPath\""
 dictionaryToPrint::usage = "TEST ONLY"
 printNameWCs::usage= "TEST ONLY"
+statusSMRGE::usage="Check if the SM parameters are being evolved via the SM RGEs up to the matching scale and with which loop order. 0 means they're not being evolved, any number bigger than 0 is the loop order used."
+integrationSMRGE::usage="Check if the SM parameters are being evolved at leading-log or full integration."
+setSMRGELoop::usage="Function to set the loop order used when evolving the SM RGEs. Values allowed: integers between 0 and 5. 0 (default) means no SM RGE evolution and also fixes the integration variable to None."
+setSMRGEintegration::usage="Function to set the integration mode for the SM RGEs. It should be one of the following strings: \"None\" (default), \"leadinglog\", \"integrate\". None means no integration and sets the loop order of the SM RGEs to zero automatically. If any of the two other options is chosen and the loop order is zero, is automatically raised to 1."
 
 
 Begin["`Private`"];
@@ -46,6 +50,10 @@ Begin["`Private`"];
 
 (* ::Section:: *)
 (*Utility functions*)
+
+
+(* ::Subsection::Closed:: *)
+(*General utilities*)
 
 
 (*/// Function that defines convenient aliases for the WCs to print ///*)
@@ -294,6 +302,37 @@ AppendTo[data[currentKey],Association[key->val]];
 Continue[]];
 (*Scalar list item:-something*)AppendTo[data[currentKey],content];],{i,Length[cleaned]}];
 data]
+
+
+(* ::Subsection:: *)
+(*SM RGEs*)
+
+
+$integLevelSMRGE="None";
+$loopLevelSMRGE=0;
+SetAttributes[$integLevelSMRGE,{Protected,Locked}];
+SetAttributes[$loopLevelSMRGE,{Protected,Locked}];
+statusSMRGE[]:=$loopLevelSMRGE;
+integrationSMRGE[]:=$integLevelSMRGE;
+setSMRGELoop[val_]:=Module[{},
+If[IntegerQ[val]&&val<=5&&val>=0,
+Unprotect[$loopLevelSMRGE];
+$loopLevelSMRGE = val;
+Protect[$loopLevelSMRGE];
+If[val==0,
+Unprotect[$integLevelSMRGE];
+$integLevelSMRGE="None";
+Protect[$integLevelSMRGE];
+Print["SM RGE evolution turned off."]
+,
+Print["SM RGE adjusted to "<>ToString[val]<>"-loop level."];
+Print["Pick the integration method via setSMRGEintegration.\nThe current setting is "<>$integLevelSMRGE];
+];
+,
+Print["Input not allowed. Only integers between 0 and 5 are allowed."];
+]
+];
+
 
 
 (* ::Section::Closed:: *)
