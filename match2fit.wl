@@ -1676,7 +1676,7 @@ Options[modelToUVscanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollect
 modelToUVscanCard[directory_,model_,mass_,looplevel_,OptionsPattern[]]:=Block[{direct},
 matcher[directory,model,looplevel,"QGRAFPath"->OptionValue["QGRAFPath"]];
 If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
-dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList[directory,"T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,ToString[Not[DuplicateFreeQ[Flatten[{mass}]]]],OptionValue["OutputFormat"]];]
+dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList[directory,model],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,ToString[Not[DuplicateFreeQ[Flatten[{mass}]]]],OptionValue["OutputFormat"]];]
 
 
 Options[modelToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","OutputFormat"->"Universal","DegenerateMasses"->"True","QGRAFPath"->""};
