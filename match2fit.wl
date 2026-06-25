@@ -26,7 +26,7 @@ when producing the run cards. The looporder argument indicates at which loop lev
 are \"UVFlavourAssumption\", \"Collection\" and \"Model\". An example of how to set them, using their default values is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\",\"Model\"->\"UserModel\"}.";
 matchResToMasScanCard::usage = "matchResToMasScanCard[matchResFile,UVcoup,looplevel,OptionalArguments] takes the matching results in matchResFile at looplevel order and prints the card required to run a \[Chi]^2 scan as a function of the heavy mass of the model with SMEFiT.
 The optional arguments are \"UVFlavourAssumption\", \"Collection\", \"Model\", \"DegenerateMasses\" (\"True\" by default since mass scans are intended to be along a single mass), and \"OutputFormat\" (\"Universal\" by default).";
-flavourSymChecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
+flavourSymCheGenecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to a fulfilment of the flavour symmetry. It treats the SM yukawas symbolically with the notation used in the matchResFile."
 flavourSolver::usage = "flavourSolver[matchResFile, OptionalArguments] reads the file matchResFile and solves for the UV couplings and SM yukawas such that the WCs fulfill the SMEFiT flavour symmetry. It returns all the possible solutions it finds. 
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to simpler and fewer solutions."
@@ -39,6 +39,11 @@ the \), runs MMEFT to add that model to the SM and match it onto SMEFT at loopor
 are set to the numerical value UVcoup. Other optional arguments are \"Collection\", \"OutputFormat\" (\"Universal\" by default), \"DegenerateMasses\" (\"True\" by default since mass scans are usually along a single mass) and \"QGRAFPath\""
 dictionaryToPrint::usage = "TEST ONLY"
 printNameWCs::usage= "TEST ONLY"
+replaceSMparamsMatchMakerEFT::usage="TEST ONLY"
+statusSMRGE::usage="Check if the SM parameters are being evolved via the SM RGEs up to the matching scale and with which loop order. 0 means they're not being evolved, any number bigger than 0 is the loop order used."
+integrationSMRGE::usage="Check if the SM parameters are being evolved at leading-log or full integration."
+setSMRGELoop::usage="Function to set the loop order used when evolving the SM RGEs. Values allowed: integers between 0 and 5. 0 (default) means no SM RGE evolution and also fixes the integration variable to None."
+setSMRGEintegration::usage="Function to set the integration mode for the SM RGEs. It should be one of the following strings: \"None\" (default), \"leadinglog\", \"integrate\". None means no integration and sets the loop order of the SM RGEs to zero automatically. If any of the two other options is chosen and the loop order is zero, is automatically raised to 1."
 
 
 Begin["`Private`"];
@@ -46,6 +51,10 @@ Begin["`Private`"];
 
 (* ::Section:: *)
 (*Utility functions*)
+
+
+(* ::Subsection:: *)
+(*General utilities*)
 
 
 (*/// Function that defines convenient aliases for the WCs to print ///*)
@@ -296,7 +305,110 @@ Continue[]];
 data]
 
 
-(* ::Section::Closed:: *)
+(* ::Subsection:: *)
+(*SM RGEs*)
+
+
+(* --- Variables to control the SM RGE evolution. --- *)
+$integLevelSMRGE="None";
+$loopLevelSMRGE=0;
+SetAttributes[$integLevelSMRGE,{Protected}];
+SetAttributes[$loopLevelSMRGE,{Protected}];
+(* --- Functions to check current settings. --- *)
+statusSMRGE[]:=$loopLevelSMRGE;
+integrationSMRGE[]:=$integLevelSMRGE;
+(* --- Function to change SM RGE loop level. --- *)
+setSMRGELoop[val_]:=Module[{},
+	If[IntegerQ[val]&&val<=5&&val>=0,
+		Unprotect[$loopLevelSMRGE];
+		$loopLevelSMRGE = val;
+		Protect[$loopLevelSMRGE];
+		If[val==0,
+			Unprotect[$integLevelSMRGE];
+			$integLevelSMRGE="None";
+			Protect[$integLevelSMRGE];
+			Print["SM RGE evolution turned off."]
+			,
+			Print["SM RGE adjusted to "<>ToString[val]<>"-loop level."];
+			Print["Pick the integration method via setSMRGEintegration.\nThe current setting is "<>$integLevelSMRGE];
+		];
+	,
+	Print["Input not allowed. Only integers between 0 and 5 are allowed."];
+	]
+];
+(* --- Function to control the SM RGE integration mode. --- *)
+setSMRGEintegration[mode_]:=Module[{},
+If[MemberQ[{"None","leadinglog","integrate"},mode],
+Unprotect[$integLevelSMRGE];
+$integLevelSMRGE=mode;
+Protect[$integLevelSMRGE];
+Print["SM RGE integration mode set to: "<>mode];
+If[mode!="None"&&$loopLevelSMRGE==0, setSMRGELoop[1];];
+If[mode=="None"&&$loopLevelSMRGE>0, setSMRGELoop[0];];
+,
+Print["Input not allowed. Only allowed modes: \"None\", \"leadinglog\", \"integrate\"."]];]
+(* --- SM RGE bootstrap: load copied tools from DsixTools (arXiv:2010.16341, 1704.04504) --- *)
+(* SM parameter heads, in the same order as DsixTools *)
+SMParam = {g,gp,gs,\[Lambda],m2,Gu[1,1],Gu[1,2],Gu[1,3],Gu[2,1],Gu[2,2],Gu[2,3],Gu[3,1],Gu[3,2],Gu[3,3],Gd[1,1],Gd[1,2],Gd[1,3],Gd[2,1],Gd[2,2],Gd[2,3],Gd[3,1],Gd[3,2],Gd[3,3],Ge[1,1],Ge[1,2],Ge[1,3],Ge[2,1],Ge[2,2],Ge[2,3],Ge[3,1],Ge[3,2],Ge[3,3],\[Theta],\[Theta]p,\[Theta]s};
+Block[{DsixToolsDir},
+  DsixToolsDir   = DirectoryName[$InputFileName] <> "src\\";
+  Get[DsixToolsDir <> "tools.m"];  (* loads ToLoopOrder, SMRunRGEs, BuildRGEs, etc. *)
+  BuildRGEs["SM"];                  (* sets RGEsSMt using DsixToolsDir *)
+];
+(* Private. Runs SM RGEs from tStart to tEnd.
+   initAssoc: Association of initial values keyed by DsixTools heads, e.g.
+     <| g -> 0.648, gp -> 0.358, gs -> 1.22, \[Lambda] -> 0.129,
+        Gu[3,3] -> 0.935, Gd[3,3] -> 0.016, Ge[3,3] -> 0.010 |>
+   Returns an Association of evolved values at tEnd (same keys). *)
+runSMCouplings[initAssoc_Association, tStart_?NumericQ, tEnd_] :=
+  Module[{loopOrder, filteredEqs, inputDispatch, sol},
+    loopOrder    = $loopLevelSMRGE;
+    filteredEqs  = RGEsSMt /. ToLoopOrder[loopOrder];  (* RGEsSMt built by BuildRGEs["SM"] *)
+    inputDispatch = Dispatch[Normal[initAssoc]];
+    sol          = SMRunRGEs[inputDispatch, tStart, tEnd];
+    Association[# -> (# @@ {Log10[10^3 Symbol[SymbolName[\[Mu]]]]} /. sol) & /@ Keys[initAssoc]]
+  ]
+smCoupsAtMatchingMu:=
+With[{sol = runSMCouplings[
+            <|g ->Subscript[g2, SM],  (* example: derive from mSM inputs *)
+              gp -> Subscript[g1, SM],
+              gs -> Subscript[g3, SM],
+              \[Lambda] -> 2*\[Lambda]\[Phi],
+              m2 -> -vSM^2*\[Lambda]\[Phi],
+              Gu[1,1]->mSM[u]*Sqrt[2]/vSM,
+              Gu[2,2]->mSM[c]*Sqrt[2]/vSM,
+              Gu[3,3]->mSM[t]*Sqrt[2]/vSM,
+              Gu[1,2]->0,Gu[1,3]->0,
+              Gu[2,1]->0,Gu[2,3]->0,
+              Gu[3,1]->0,Gu[3,2]->0,
+              Gd[1,1]->mSM[d]*Sqrt[2]/vSM,
+              Gd[2,2]->mSM[s]*Sqrt[2]/vSM,
+              Gd[3,3]->mSM[b]*Sqrt[2]/vSM,
+              Gd[1,2]->0,Gd[1,3]->0,
+              Gd[2,1]->0,Gd[2,3]->0,
+              Gd[3,1]->0,Gd[3,2]->0,
+              Ge[1,1]->mSM[e]*Sqrt[2]/vSM,
+              Ge[2,2]->mSM[\[Mu]]*Sqrt[2]/vSM,
+              Ge[3,3]->mSM[\[Tau]]*Sqrt[2]/vSM,
+              Ge[1,2]->0,Ge[1,3]->0,
+              Ge[2,1]->0,Ge[2,3]->0,
+              Ge[3,1]->0,Ge[3,2]->0,
+              \[Theta]->0,\[Theta]p->0,\[Theta]s->0|>,
+            Log10[mSM[Z]*10^3],          (* tStart \[TildeTilde] 1.96 *)
+            Log10[10^3*500]]  (* tEnd   = Log10[500 TeV / GeV], as an upper bound on the matching scale *)
+          },
+      {Symbol[SymbolName[g1]] -> sol[gp],
+       Symbol[SymbolName[g2]] -> sol[g],
+       Symbol[SymbolName[g3]] -> sol[gs],
+       Symbol[SymbolName[yu]][a_,b_] -> If[a==3&&b==3, sol[Gu[3,3]], y[u][a,b]],
+       Symbol[SymbolName[yd]][a_,b_] -> If[a==3&&b==3, sol[Gd[3,3]], y[d][a,b]],
+       Symbol[SymbolName[yl]][a_,b_] -> If[a==3&&b==3, sol[Ge[3,3]], y[e][a,b]],
+       Symbol[SymbolName[lam]] -> sol[\[Lambda]]/2,
+       Symbol[SymbolName[muH]] -> I*Sqrt[sol[m2]]}
+    ]
+
+
+(* ::Section:: *)
 (*MMEFT conventions*)
 
 
@@ -312,7 +424,11 @@ Symbol[SymbolName[alphaOlequ1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[Symbol
 Symbol[SymbolName[alphaOlequ3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ lequ3]]],
 Symbol[SymbolName[alphaOduq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ duq]]],
 Symbol[SymbolName[alphaOqqu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqu]]],Symbol[SymbolName[alphaOqqq]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qqq]]],Symbol[SymbolName[alphaOduu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[duu]]],Symbol[SymbolName[alphaO3W]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[W]]],Symbol[SymbolName[alphaO3Wt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ Wtil]]],Symbol[SymbolName[alphaO3G]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[G]]],Symbol[SymbolName[alphaO3Gt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ Gtil]]],Symbol[SymbolName[alphaOH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]]]],Symbol[SymbolName[alphaOHD]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]D]]],Symbol[SymbolName[alphaOHBox]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Sq]]],Symbol[SymbolName[alphaOHB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]B]]],Symbol[SymbolName[alphaOHBt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Btil]]],Symbol[SymbolName[alphaOHW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]W]]],Symbol[SymbolName[alphaOHWt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]Wtil]]],Symbol[SymbolName[alphaOHWB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]WB]]],Symbol[SymbolName[alphaOHWBt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]WBtil]]],Symbol[SymbolName[alphaOHG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]G]]],Symbol[SymbolName[alphaOHGt]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]Gtil]]],Symbol[SymbolName[alphaOeH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ e\[Phi]]]],Symbol[SymbolName[alphaOdH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ d\[Phi]]]],Symbol[SymbolName[alphaOuH]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ u\[Phi]]]],Symbol[SymbolName[alphaOeB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eB]]],Symbol[SymbolName[alphaOeW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ eW]]],Symbol[SymbolName[alphaOdB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ dB]]],Symbol[SymbolName[alphaOuB]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]],Symbol[SymbolName[alphaOuW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ uW]]],Symbol[SymbolName[alphaOdW]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[dW]]],Symbol[SymbolName[alphaOdG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ dG]]],Symbol[SymbolName[alphaOuG]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ uG]]],Symbol[SymbolName[alphaOHl1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]L1]]],Symbol[SymbolName[alphaOHl3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]L3]]],Symbol[SymbolName[alphaOHq1]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]q1]]],Symbol[SymbolName[alphaOHq3]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]q3]]],Symbol[SymbolName[alphaOHe]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]e]]],Symbol[SymbolName[alphaOHd]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]d]]],Symbol[SymbolName[alphaOHu]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]u]]],Symbol[SymbolName[alphaOHud]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]ud]]],Symbol[SymbolName[alphaOlambda]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ \[Phi]4]]],Symbol[SymbolName[alphaOlambdad]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[d]]],Symbol[SymbolName[alphaOlambdae]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[e]]],Symbol[SymbolName[alphaOlambdau]]->Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[ y]]][Symbol[SymbolName[u]]]};
-replaceSMparamsMatchMakerEFT:={Symbol[SymbolName[g1]]->Subscript[g1, SM],Symbol[SymbolName[g2]]->Subscript[g2,SM],Symbol[SymbolName[g3]]->Subscript[g3,SM],Symbol[SymbolName[yu]][a_,b_]->y[u][a,b],Symbol[SymbolName[yubar]][a_,b_]->Conjugate[y[u][a,b]],Symbol[SymbolName[yd]][a_,b_]->y[d][a,b],Symbol[SymbolName[ydbar]][a_,b_]->Conjugate[y[d][a,b]],Symbol[SymbolName[yl]][a_,b_]->y[e][a,b],Symbol[SymbolName[ylbar]][a_,b_]->Conjugate[y[e][a,b]],Symbol[SymbolName[lam]]->\[Lambda]\[Phi],Symbol[SymbolName[muH]]->I*Rationalize[mSM[h]/Sqrt[2.]]};
+replaceSMparamsMatchMakerEFT:=If[$integLevelSMRGE=="None"||$loopLevelSMRGE==0,
+{Symbol[SymbolName[g1]]->Subscript[g1, SM],Symbol[SymbolName[g2]]->Subscript[g2,SM],Symbol[SymbolName[g3]]->Subscript[g3,SM],Symbol[SymbolName[yu]][a_,b_]->y[u][a,b],Symbol[SymbolName[yubar]][a_,b_]->Conjugate[y[u][a,b]],Symbol[SymbolName[yd]][a_,b_]->y[d][a,b],Symbol[SymbolName[ydbar]][a_,b_]->Conjugate[y[d][a,b]],Symbol[SymbolName[yl]][a_,b_]->y[e][a,b],Symbol[SymbolName[ylbar]][a_,b_]->Conjugate[y[e][a,b]],Symbol[SymbolName[lam]]->\[Lambda]\[Phi],Symbol[SymbolName[muH]]->I*Rationalize[mSM[h]/Sqrt[2.]]}
+,
+smCoupsAtMatchingMu
+];
 ewReemp:={Symbol[SymbolName[sW]]->Symbol[SymbolName[g1]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2],Symbol[SymbolName[cW]]->Symbol[SymbolName[g2]]/Sqrt[Symbol[SymbolName[g2]]^2+Symbol[SymbolName[g1]]^2]};
 (*/// Function to move all the corrections to \[Mu]\.b2 to the dimension-6 WCs via coupling redefinitions. ///*)
 reempMuH2[resMMEFT_]:=Module[{simpExp,x,ret,solutions},
@@ -618,7 +734,7 @@ Print["First WC for which the conditions are not satisfied: "<>ToString[Standard
 ];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Flavour solver*)
 
 
@@ -792,11 +908,11 @@ allSol,
 Print["All conditions satisfied trivially."];{{AA->AA}}]];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*SM numerical inputs*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Gauge and Higgs parameters*)
 
 
@@ -819,7 +935,7 @@ vSM=Rationalize[0.24622];
 \[Lambda]\[Phi]=Rationalize[(1/2)*(mSM[h]/vSM)^2];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Masses and Yukawas*)
 
 
@@ -843,11 +959,11 @@ y[d][i_,j_]:=Piecewise[{{mSM[d]*Sqrt[2]/vSM,i==1&&j==1},{mSM[s]*Sqrt[2]/vSM,i==2
 y[u][i_,j_]:=Piecewise[{{mSM[u]*Sqrt[2]/vSM,i==1&&j==1},{mSM[c]*Sqrt[2]/vSM,i==2&&j==2},{mSM[t]*Sqrt[2]/vSM,i==3&&j==3}},0];
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Dictionary and invariant computing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Dictionary*)
 
 
@@ -881,7 +997,7 @@ dictProv=dictProv/.ewReemp/.reempSquaredDeltasEinstein/.replaceSMparamsMatchMake
 {dictProv,uvparams[[1]]}];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Invariant building*)
 
 
@@ -1215,11 +1331,11 @@ Print["WARNING, couldn't find any solution for the UV couplings in terms of the 
 {invarsToRet,solToRet}]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Run card printing*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*UV scan run card printing*)
 
 
@@ -1354,7 +1470,7 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 ];];
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Mass Scan printing*)
 
 
@@ -1523,11 +1639,11 @@ WriteLine[str2,"\treturn "<>StringReplace[ToString[FortranForm[invarsUV[[indInva
 Close[str2];]
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*Running Matching Code*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Run MatchmakerEFT*)
 
 

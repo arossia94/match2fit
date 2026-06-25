@@ -1,0 +1,1232 @@
+(* ::Package:: *)
+
+(************************************************************************)
+(* Contents of file taken from DsixTools. All credit to its authors.          *)
+(************************************************************************)
+
+
+
+(* ::Input::Initialization:: *)
+H[mat_]:=ConjugateTranspose[mat]
+CC[mat_]:=Conjugate[mat]
+
+
+(* Master DsixTools running routine *)
+RunDsixTools:=Block[{},
+SMEFTRunRGEs;
+Print["Hacked version where we only run SMEFT."]
+];
+
+
+(* Auxiliary replacement rule to fix RGEs and EW matching loop order *)
+ToLoopOrder[n_]:={LoopParameter^i_./;i>n->0,LoopParameter->1}
+
+
+(* Auxiliary replacement rule to fix SMEFT RGEs*)
+ToLoopOrderSMEFT[n_]:={hbar^i_./;i>n->0,hbar->1}
+
+
+(* Routine to write the RGEs in the form required for RGEs resolution methods 1 and 2 *)
+BuildRGEs[theory_]:=Block[{},
+If[theory=="SM",
+RGEsSM=\[Beta]SM/@SMParam/.ToLoopOrder[SMEFTLoopOrder]//Chop;
+RGEsSMt=If[FileExistsQ[DsixToolsDir<>"RGEsSM.mx"],Import[DsixToolsDir<>"RGEsSM.mx"],Import[DsixToolsDir<>"RGEsSM.m"]]/.ToLoopOrder[SMEFTLoopOrder]//Chop;
+];
+
+];
+
+
+BuildAllRGEs:=Block[{},
+BuildRGEs["SM"];
+];
+
+
+SMRunRGEs[input_,start_,finish_]:=Block[{init},
+init={};
+For[i=1,i<=Length[SMParam],
+init=Join[init,{SMParam[[i]][start]==(SMParam[[i]]/.input)}];
+i++;];
+equationsSM=Join[RGEsSMt,init];
+sol=NDSolve[equationsSM,SMParam,{t,start,finish},Method->{"EquationSimplification"->"Solve"}][[1]];
+Return[sol];
+];
+
+
+SMEFTRunRGEs:=Block[{},
+
+If[UseRGEsSM==1,
+If[RGEsMethod==1||RGEsMethod==4,
+solSM=SMRunRGEs[inputSMEFTrunnerSM,tEW,tHIGH];
+ChangeInput[{#->(Re[#[tHIGH]/.solSM])},inputSMEFTrunner,inputSMEFTrunnerPre]&/@SMParam[[1;;5]];
+ChangeInput[{#->(#[tHIGH]/.solSM)},inputSMEFTrunner,inputSMEFTrunnerPre]&/@SMParam[[6;;-1]];
+];
+If[RGEsMethod==2,
+\[Beta]ConstantSM=RGEsSM/.inputSMEFTrunnerSM;
+cHIGHSM=SMParam/.inputSMEFTrunnerSM;
+solSM=Table[SMParam[[i]]->Log[10]\[Beta]ConstantSM[[i]]/(16 Pi^2)(t-tEW)+cHIGHSM[[i]],{i,Length[SMParam]}];
+ChangeInput[{#->(Re[#/.solSM/.t->tHIGH])},inputSMEFTrunner,inputSMEFTrunnerPre]&/@SMParam[[1;;5]];
+ChangeInput[{#->(#/.solSM/.t->tHIGH)},inputSMEFTrunner,inputSMEFTrunnerPre]&/@SMParam[[6;;-1]];
+];
+];
+
+If[RGEsMethod==1,MyPrint["Running SMEFT RGEs"];];
+
+(* Method 1: using Mathematica's NDSolve function *) 
+If[
+RGEsMethod==1,
+
+(* Rotate Yukawas to the input basis *)
+RotateYukawasHIGH[InputBasis];
+inputSMEFTrunner=Dispatch[(#->(#/.ToNewYukawas/.inputSMEFTrunner))&/@SMEFTParameterList[]];
+solSMEFT=RunRGEs[inputSMEFTrunner,tHIGH,tEW,"SMEFT"];
+
+(* Save results in SMEFTrun function *)
+SMEFTrun[x_,"log10"]:=If[MemberQ[ParametersSMEFT[[1;;5]],x],
+Re[x//.SubRedundant/.insertt/.solSMEFT],x//.SubRedundant/.insertt/.solSMEFT];
+
+];
+
+(* Method 2: using leading log approximation *) 
+If[
+RGEsMethod==2,
+
+(* Rotate Yukawas to the input basis *)
+RotateYukawasHIGH[InputBasis];
+inputSMEFTrunner=Dispatch[(#->(#/.ToNewYukawas/.inputSMEFTrunner))&/@SMEFTParameterList[]];
+\[Beta]Constant=RGEsSMEFTt[[;;,2]]/.{a_[t]:>a}/.inputSMEFTrunner;
+cHIGH=ParametersSMEFT/.inputSMEFTrunner;
+solSMEFT=Table[ParametersSMEFT[[i]]->\[Beta]Constant[[i]](t-tHIGH)+cHIGH[[i]],{i,Length[ParametersSMEFT]}];
+
+(* Save results in SMEFTrun function *)
+SMEFTrun[x_,"log10"]:=If[MemberQ[ParametersSMEFT[[1;;5]],x],
+Re[x//.SubRedundant/.solSMEFT],x//.SubRedundant/.solSMEFT];
+
+];
+
+(* Method 4: using next-to-leading log approximation *) 
+(* Work in progress *);
+If[
+RGEsMethod==4,
+(* Rotate Yukawas to the input basis *)
+RotateYukawasHIGH[InputBasis];
+inputSMEFTrunner=Dispatch[(#->(#/.ToNewYukawas/.inputSMEFTrunner))&/@SMEFTParameterList[]];
+inputSMvalues=Dispatch[Normal[inputSMEFTrunner][[1;;35]]];
+(* The first 35 elements of RGEsSMEFTt are the SM parameters. We will ignore them at the moment. *);
+\[Gamma]Eqs1=Coefficient[RGEsSMEFTt[[36;;-1,2]],hbar]/.{a_[t]:>a};
+(*\[Gamma]Eqs2=Piecewise[{{1,SMEFTRGELoopOrder>=2}},0]*Coefficient[RGEsSMEFTt[[36;;-1,2]],hbar^2]/.{a_[t]:>a};*)
+extraVars=Complement[Join[Variables[\[Gamma]Eqs1/.inputSMvalues],Variables[\[Gamma]Eqs2/.inputSMvalues]]//DeleteDuplicates,SMEFTParameterList[]];
+varsFull=Join[SMEFTParameterList[],extraVars];
+varsForMatrix=SMEFTParameterList[][[36;;-1]];
+\[Gamma]matAll=If[FileExistsQ[DsixToolsDir<>"ADM_one_two_loops_sparse.m"],Get[DsixToolsDir<>"ADM_one_two_loops_sparse.m"],
+Block[{temp},
+Print["ADM not fo>>und. Recomputing it."];
+temp=SparseArray[Table[{D[\[Gamma]Eqs1[[i]],j]/.{Conjugate'[a_]:>0},D[\[Gamma]Eqs2[[i]],j]/.{Conjugate'[a_]:>0}},{i,1,Length[\[Gamma]Eqs1]},{j,varsForMatrix}]];
+Put[temp,DsixToolsDir<>"ADM_one_two_loops_sparse.m"];
+temp]
+];
+\[Gamma]mat1=\[Gamma]matAll[[;;,;;,1]];(*Table[D[\[Gamma]Eqs1[[i]],j]/.{Conjugate'[a_]:>0},{i,1,Length[\[Gamma]Eqs1]},{j,SMEFTParameterList[][[36;;-1]]}];*)
+\[Gamma]mat2=Piecewise[{{1,SMEFTRGELoopOrder>=2}},0]*\[Gamma]matAll[[;;,;;,2]];(*Table[D[\[Gamma]Eqs2[[i]],j]/.{Conjugate'[a_]:>0},{i,1,Length[\[Gamma]Eqs2]},{j,SMEFTParameterList[][[36;;-1]]}];*)
+cHIGH=ParametersSMEFT/.inputSMEFTrunner;
+linPiece=(\[Gamma]mat1+\[Gamma]mat2) . cHIGH[[36;;-1]];
+quadPiece=(1/2)(\[Gamma]mat1 . \[Gamma]mat1(*+2 \[Gamma]mat1.\[Gamma]mat2 +\[Gamma]mat2.\[Gamma]mat2*)) . cHIGH[[36;;-1]];
+solSMEFT=Table[ParametersSMEFT[[i]]->linPiece[[i-35]](t-tHIGH)+quadPiece[[i-35]](t-tHIGH)^2+cHIGH[[i]],{i,36,Length[ParametersSMEFT]}];
+(* Save results in SMEFTrun function *)
+(*Print[solSMEFT[[{1,30,50,100,500,750,1253}]]/.inputSMvalues];
+*)
+SMEFTrun[x_,"log10"]:=If[MemberQ[ParametersSMEFT[[1;;5]],x],
+Re[x//.SubRedundant/.solSMEFT/.inputSMvalues],x//.SubRedundant/.solSMEFT/.inputSMvalues];
+];
+(* Method 3: using the evolution matrix formalism *) 
+If[
+RGEsMethod==3,
+
+lastSM=First[SMEFTFindParameter[\[Theta]s]];
+
+(* Initial SMEFT WCs *)
+WCs=SparseArray[ParametersSMEFT[[lastSM+1;;-1]]/.inputSMEFTrunner];
+nonnullWCs=WCs["NonzeroPositions"];
+
+(* Apply evolution matrix *)
+If[nonnullWCs!={},
+newWCs=Sum[USMEFT[[1;;-1,nonnullWCs[[k,1]]]]WCs[[nonnullWCs[[k,1]]]],{k,Length[nonnullWCs]}];,
+newWCs=SparseArray[Table[0,{Length[USMEFT]}]];
+];
+
+(* Running of the SM parameters *)
+solnewWCs=Dispatch[MapThread[(#1[t]->#2/.{t0->tHIGH,tf->t})&,{ParametersSMEFT[[lastSM+1;;-1]],newWCs}]];
+initSM=Map[#[tEW]==(#/.inputSMEFTrunner)&,ParametersSMEFT[[1;;lastSM]]];
+equationsSM=Join[RGEsSMEFTt[[1;;lastSM]]/.solnewWCs/.{t0->tHIGH,tf->t},initSM]//Chop;
+newSM=NDSolve[equationsSM,ParametersSMEFT[[1;;lastSM]],{t,tEW,tHIGH},Method->{"EquationSimplification"->"Solve"}][[1]];
+
+solnewWCs=MapThread[#1[t]->#2&,{ParametersSMEFT[[lastSM+1;;-1]],newWCs}];
+solSMEFT=Dispatch[Join[newSM,solnewWCs]];
+
+(* Save results in SMEFTrun function *)
+SMEFTrun[x_,"log10"]:=
+If[MemberQ[ParametersSMEFT[[1;;lastSM]],x],
+(* SM parameter *)
+If[MemberQ[ParametersSMEFT[[1;;5]],x],Re[x/.insertt/.solSMEFT],x//.SubRedundant/.insertt/.solSMEFT/.{t0->tHIGH,tf->t}]
+,
+(* WC *)
+If[t==tHIGH,x/.inputSMEFTrunner,x//.SubRedundant/.insertt/.solSMEFT/.{t0->tHIGH,tf->t}]
+];
+
+];
+
+(* define input for EWmatcher *)
+inputEWmatcher[x_]:=SMEFTrun[x,"log10"]/.t->tEW;
+
+If[RGEsMethod==1,MyPrint["Running finished!"];];
+
+SMEFTrunner=True;
+
+];
+
+
+(* Definition of SMEFTrun with \[Mu] output *)
+SMEFTrun[x_]:=SMEFTrun[x,"log10"]/.t->Log10[\[Mu]];
+
+
+(* Analytical application of the evolution matrix *)
+SMEFTEvolve[WC_,tfinal_,tini_,"log10"]:=
+Block[{pos},
+
+lastSM=First[SMEFTFindParameter[\[Theta]s]];
+
+If[Length[SMEFTFindParameter[WC/.SubRedundant]]==0||SMEFTFindParameter[WC/.SubRedundant][[1]]<=lastSM, (* The input is not a SMEFT WC *)
+
+Message[SMEFTEvolve::NoWC];
+
+,
+
+If[tfinal==tini, (* No evolution is required *)
+
+Return[WC];
+
+,
+
+pos=SMEFTFindParameter[WC/.SubRedundant][[1]]-lastSM;
+
+WCs=ParametersSMEFT[[lastSM+1;;-1]];
+
+(* Apply evolution matrix *)
+EvolvedSMEFT[WC,tfinal,tini]:=EvolvedSMEFT[WC,tfinal,tini]=
+(USMEFT[[pos,All]] . WCs)/.{tf->tfinal,t0->tini};
+
+Return[EvolvedSMEFT[WC,tfinal,tini]];
+
+];
+];
+]
+
+
+(* Definition of SMEFTEvolve with \[Mu] input *)
+SMEFTEvolve[WC_,\[Mu]final_,\[Mu]ini_]:=SMEFTEvolve[WC,Log10[\[Mu]final],Log10[\[Mu]ini],"log10"];
+
+
+LEFTRunRGEs:=Block[{},
+
+If[RGEsMethod==1,MyPrint["Running LEFT RGEs"];];
+
+(* Method 1: using Mathematica's NDSolve function *) 
+If[
+RGEsMethod==1,
+
+solLEFT=RunRGEs[inputLEFTrunner,tEW,tLOW,"LEFT"];
+
+(* Save results in LEFTrun function *)
+LEFTrun[x_,"log10"]:=x//.SubRedundant/.insertt/.solLEFT;
+
+];
+
+(* Method 2: using leading log approximation *) 
+If[
+RGEsMethod==2,
+
+\[Beta]Constant=RGEsLEFT/.inputLEFTrunner;
+cHIGH=ParametersLEFT/.inputLEFTrunner;
+
+solLEFT=Table[ParametersLEFT[[i]]->Log[10]\[Beta]Constant[[i]]/(16 Pi^2)(t-tEW)+cHIGH[[i]],{i,1,Length[ParametersLEFT]}];
+
+(* Save results in SMEFTrun function *)
+LEFTrun[x_,"log10"]:=x//.SubRedundant/.solLEFT;
+
+];
+
+(* Method 3: using the evolution matrix formalism *) 
+If[
+RGEsMethod==3,
+
+lastQEDQCD=First[LEFTFindParameter[Md[3,3]]];
+
+(* Initial LEFT WCs *)
+(* WCs=SparseArray[Chop[ParametersLEFT[[lastQEDQCD+1;;-1]]/.inputLEFTrunner]]; *)
+WCs=SparseArray[ParametersLEFT[[lastQEDQCD+1;;-1]]/.inputLEFTrunner];
+nonnullWCs=WCs["NonzeroPositions"];
+
+(* Apply evolution matrix *)
+If[nonnullWCs!={},
+newWCs=Sum[ULEFT[[1;;-1,nonnullWCs[[k,1]]]]WCs[[nonnullWCs[[k,1]]]],{k,Length[nonnullWCs]}];,
+newWCs=SparseArray[Table[0,{Length[ULEFT]}]];
+];
+
+(* We neglect the running of the WCs in the running of the QED&QCD parameters and take them as constants *)
+solnewWCs=Dispatch[MapThread[(#1[t]->#2)&,{ParametersLEFT[[lastQEDQCD+1;;-1]],WCs}]];
+initQEDQCD=Map[#[tEW]==(#/.inputLEFTrunner)&,ParametersLEFT[[1;;lastQEDQCD]]];
+(* equationsQEDQCD=Join[RGEsLEFTt[[1;;lastQEDQCD]]/.solnewWCs,initQEDQCD]//Chop; *)
+equationsQEDQCD=Chop[Join[RGEsLEFTt[[1;;lastQEDQCD]]/.solnewWCs,initQEDQCD],10^(-15)];
+newQEDQCD=NDSolve[equationsQEDQCD,ParametersLEFT[[1;;lastQEDQCD]],{t,tLOW,tEW},Method->{"EquationSimplification"->"Solve"}][[1]];
+
+solnewWCs=MapThread[(#1[t]->#2)&,{ParametersLEFT[[lastQEDQCD+1;;-1]],newWCs}];
+solLEFT=Dispatch[Join[newQEDQCD,solnewWCs]];
+
+(* Save results in LEFTrun function *)
+(* LEFTrun[x_,"log10"]:=
+If[MemberQ[ParametersLEFT[[1;;lastQEDQCD]],x],
+(* QED&QCD parameter *)
+If[MemberQ[ParametersLEFT[[1;;4]],x],Re[x/.insertt/.solLEFT],x//.SubRedundant/.insertt/.solLEFT]
+,
+(* WC *)
+If[t\[Equal]tEW,x/.inputLEFTrunner,x//.SubRedundant/.insertt/.solLEFT/.t\[Rule]t]
+]; *)
+LEFTrun[x_,"log10"]:=
+If[MemberQ[ParametersLEFT[[1;;4]],x],
+Re[x/.insertt/.solLEFT],x//.SubRedundant/.insertt/.solLEFT];
+
+];
+
+If[RGEsMethod==1,MyPrint["Running finished!"];];
+
+LEFTrunner=True;
+
+];
+
+
+(* Definition of LEFTrun with \[Mu] output *)
+LEFTrun[x_]:=LEFTrun[x,"log10"]/.t->Log10[\[Mu]];
+
+
+(* Analytical application of the evolution matrix *)
+LEFTEvolve[WC_,\[Mu]final_]:=Block[{pos},
+
+lastQEDQCD=First[LEFTFindParameter[Md[3,3]]];
+
+If[Length[LEFTFindParameter[WC/.SubRedundant]]==0||LEFTFindParameter[WC/.SubRedundant][[1]]<=lastQEDQCD, (* The input is not a LEFT WC *)
+
+Message[LEFTEvolve::NoWC];
+
+,
+
+If[\[Mu]final==EWSCALE, (* No evolution is required *)
+
+Return[WC];
+
+,
+
+pos=LEFTFindParameter[WC][[1]]-lastQEDQCD;
+
+WCs=ParametersLEFT[[lastQEDQCD+1;;-1]];
+
+(* Apply evolution matrix *)
+EvolvedLEFT[WC,\[Mu]final]:=EvolvedLEFT[WC,\[Mu]final]=
+ULEFT[[pos]] . WCs/.t->Log[10,\[Mu]final];
+
+
+Return[EvolvedLEFT[WC,\[Mu]final]];
+
+];
+];
+
+]
+
+
+(* Definition of LEFTEvolve with t input *)
+LEFTEvolve[WC_,tfinal_,"log10"]:=LEFTEvolve[WC,10^tfinal];
+
+
+D6run[x_,"log10"]:=Block[{var,SMEFTCase,LEFTCase,MyRep},
+
+var=Integrate`getAllVariables[x,{}];
+
+If[Head[var]===List,var=var,var={var}];
+
+SMEFTCase=AnyTrue[var,MemberQ[SMEFTParametersTotal,#]&]&&AllTrue[var,!MemberQ[LEFTParametersTotal,#]&];
+LEFTCase=AnyTrue[var,MemberQ[LEFTParametersTotal,#]&]&&AllTrue[var,!MemberQ[SMEFTParametersTotal,#]&];
+
+If[SMEFTCase||LEFTCase,
+
+If[SMEFTCase,MyRep=If[MemberQ[SMEFTParametersTotal,#],#->SMEFTrun[#,"log10"],#->#]&/@var];
+If[LEFTCase,MyRep=If[MemberQ[LEFTParametersTotal,#],#->LEFTrun[#,"log10"],#->#]&/@var];
+
+Return[x/.MyRep];
+
+,
+
+Message[D6run::WrongInput,x];
+Return[0];
+
+];
+]
+
+
+(* Definition of D6run with \[Mu] output *)
+D6run[x_]:=D6run[x,"log10"]/.t->Log10[\[Mu]];
+
+
+(* Routine to obtain the CKM matrix following the standard phase convention *)
+StandardCKM:=Block[{CKM0,\[Alpha]1,\[Alpha]2,\[Alpha]3,\[Beta]1,\[Beta]2,s13,c13,s12,c12,s23,c23,\[Gamma],a,\[Delta],K\[Alpha],K\[Beta],ULnew,URnew,DLnew,DRnew},
+
+CKM0=H[UL] . DL;
+
+\[Alpha]1=\[Delta]+Arg[CKM0[[1,3]]];
+\[Alpha]2=Arg[CKM0[[2,3]]];
+\[Alpha]3=Arg[CKM0[[3,3]]];
+
+\[Beta]1=\[Delta]+Arg[CKM0[[1,3]]]-Arg[CKM0[[1,1]]];
+\[Beta]2=\[Delta]+Arg[CKM0[[1,3]]]-Arg[CKM0[[1,2]]];
+
+(* Fixing \[Delta] to the standard CKM phase *)
+s13=Abs[CKM0[[1,3]]];
+c13=Sqrt[1-s13^2];
+c12=Abs[CKM0[[1,2]]]/c13;
+s12=Sqrt[1-c12^2];
+s23=Abs[CKM0[[2,3]]]/c13;
+c23=Sqrt[1-s23^2];
+\[Gamma]=Arg[-CKM0[[1,1]]CC[CKM0[[1,3]]]/(CKM0[[2,1]]CC[CKM0[[2,3]]])];
+a=c12 s13 s23/(s12 c23);
+\[Delta]=If[Cos[\[Gamma]]>0,2ArcTan[(1-Sqrt[1-(a^2-1)Tan[\[Gamma]]^2])/((a-1)Tan[\[Gamma]])],2ArcTan[(1+Sqrt[1-(a^2-1)Tan[\[Gamma]]^2])/((a-1)Tan[\[Gamma]])]];
+
+K\[Alpha]=DiagonalMatrix[{Exp[I \[Alpha]1],Exp[I \[Alpha]2],Exp[I \[Alpha]3]}];
+K\[Beta]=DiagonalMatrix[{Exp[I \[Beta]1],Exp[I \[Beta]2],1}];
+
+ULnew=UL . K\[Alpha];
+URnew=UR . K\[Alpha];
+DLnew=DL . K\[Beta];
+DRnew=DR . K\[Beta];
+
+Return[{ULnew,URnew,DLnew,DRnew}];
+
+];
+
+
+(* Routine to obtain the PMNS matrix following the standard phase convention. Based on Appendix A.2 of hep-ph/0305273 *)
+StandardPMNS:=Block[{PMNS0,\[Theta]12,\[Theta]23,\[Theta]13,\[Delta],\[Delta]e,\[Delta]\[Mu],\[Delta]\[Tau],H1,H2,s13,c13,s12,c12,s23,c23,U4term,Kmat,ELnew,ERnew},
+
+PMNS0=H[EL] . NL;
+
+\[Theta]13=ArcSin[Abs[PMNS0[[1,3]]]];
+\[Theta]12=ArcTan[Abs[PMNS0[[1,2]]/PMNS0[[1,1]]]];
+\[Theta]23=ArcTan[Abs[PMNS0[[2,3]]/PMNS0[[3,3]]]];
+s12=Sin[\[Theta]12];
+c12=Cos[\[Theta]12];
+s23=Sin[\[Theta]23];
+c23=Cos[\[Theta]23];
+s13=Sin[\[Theta]13];
+c13=Cos[\[Theta]13];
+\[Delta]\[Mu]=Arg[PMNS0[[2,3]]];
+\[Delta]\[Tau]=Arg[PMNS0[[3,3]]];
+U4term=Conjugate[PMNS0[[1,1]]]PMNS0[[1,3]]PMNS0[[3,1]]Conjugate[PMNS0[[3,3]]];
+\[Delta]=If[s12!=0&&s23!=0&&s13!=0,-Arg[(U4term/(c12 c13^2 c23 s13)+c12 c23 s13)/(s12 s23)],0];
+\[Delta]e= Arg[Exp[I \[Delta]] PMNS0[[1,3]]];
+H1=2 Arg[Exp[I \[Delta]e] Conjugate[PMNS0[[1,1]]]];
+H2=2 Arg[Exp[I \[Delta]e] Conjugate[PMNS0[[1,2]]]];
+
+Kmat=DiagonalMatrix[{Exp[I \[Delta]e],Exp[I \[Delta]\[Mu]],Exp[I \[Delta]\[Tau]]}];
+
+ELnew=EL . Kmat;
+ERnew=ER . Kmat;
+
+Return[{ELnew,ERnew}];
+
+];
+
+
+(* Routines to contract 4-fermion WCs with matrices *)
+MyContract[WC_,U1_,U2_,U3_,U4_]:=If[Max@Abs@WC==0,WC,Activate@TensorContract[Inactive[TensorProduct][WC,U1,U2,U3,U4],{{1,6},{2,7},{3,10},{4,11}}]];
+MyContract[WC_,U1_,U2_,U3_,U4_,"T"]:=If[Max@Abs@WC==0,WC,Activate@TensorContract[Inactive[TensorProduct][WC,U1,U2,U3,U4],{{1,5},{2,7},{3,10},{4,11}}]];
+MyContract[WC_,U1_,U2_,U3_,U4_,"TT"]:=If[Max@Abs@WC==0,WC,Activate@TensorContract[Inactive[TensorProduct][WC,U1,U2,U3,U4],{{1,5},{2,7},{3,9},{4,11}}]];
+
+
+(* ::Input::Initialization:: *)
+(* Routine to fix the SMEFT parameters at a given scale *)
+SMEFTatScale[scale_,case_]:=Block[{},
+
+If[case==1||case==2, (* After SMEFT running *)
+AtScale:=If[Length[#]==0,SMEFTrun[#],Map[SMEFTrun,#,{2}]]/.\[Mu]->scale&];
+
+(* SM parameters *)
+gAtScale=g//AtScale;
+gpAtScale=gp//AtScale;
+gsAtScale=gs//AtScale;
+\[Lambda]AtScale=\[Lambda]//AtScale;
+m2AtScale=m2//AtScale;
+GuAtScale=MGu//AtScale;
+GdAtScale=MGd//AtScale;
+GeAtScale=MGe//AtScale;
+\[Theta]AtScale=\[Theta]//AtScale;
+\[Theta]pAtScale=\[Theta]p//AtScale;
+\[Theta]sAtScale=\[Theta]s//AtScale;
+
+(* X^3 *)
+CGAtScale=CG//AtScale;
+CGtildeAtScale=CGtilde//AtScale;
+CWAtScale=CW//AtScale;
+CWtildeAtScale=CWtilde//AtScale;
+
+(* H^6 *)
+CHAtScale=CH//AtScale;
+
+(* H^4D^2 *)
+CHboxAtScale=CHbox//AtScale;
+CHDAtScale=CHD//AtScale;
+
+(* X^2H^2 *)
+CHGAtScale=CHG//AtScale;
+CHBAtScale=CHB//AtScale;
+CHWAtScale=CHW//AtScale;
+CHWBAtScale=CHWB//AtScale;
+CHGtildeAtScale=CHGtilde//AtScale;
+CHBtildeAtScale=CHBtilde//AtScale;
+CHWtildeAtScale=CHWtilde//AtScale;
+CHWtildeBAtScale=CHWtildeB//AtScale;
+
+(* \[Psi]^2H^3 *)
+MCuHAtScale=MCuH//AtScale;
+MCdHAtScale=MCdH//AtScale;
+MCeHAtScale=MCeH//AtScale;
+
+(* \[Psi]^2X H *)
+MCeWAtScale=MCeW//AtScale;
+MCeBAtScale=MCeB//AtScale;
+MCuGAtScale=MCuG//AtScale;
+MCuWAtScale=MCuW//AtScale;
+MCuBAtScale=MCuB//AtScale;
+MCdGAtScale=MCdG//AtScale;
+MCdWAtScale=MCdW//AtScale;
+MCdBAtScale=MCdB//AtScale;
+
+(* \[Psi]^2H^2D *)
+MCHl1AtScale=MCHl1//AtScale;
+MCHl3AtScale=MCHl3//AtScale;
+MCHeAtScale=MCHe//AtScale;
+MCHq1AtScale=MCHq1//AtScale;
+MCHq3AtScale=MCHq3//AtScale;
+MCHuAtScale=MCHu//AtScale;
+MCHdAtScale=MCHd//AtScale;
+MCHudAtScale=MCHud//AtScale;
+
+(* LL LL *)
+MCllAtScale=MCll//AtScale;
+MCqq1AtScale=MCqq1//AtScale;
+MCqq3AtScale=MCqq3//AtScale;
+MClq1AtScale=MClq1//AtScale;
+MClq3AtScale=MClq3//AtScale;
+
+(* RR RR *)
+MCeeAtScale=MCee//AtScale;
+MCuuAtScale=MCuu//AtScale;
+MCddAtScale=MCdd//AtScale;
+MCeuAtScale=MCeu//AtScale;
+MCedAtScale=MCed//AtScale;
+MCud1AtScale=MCud1//AtScale;
+MCud8AtScale=MCud8//AtScale;
+
+(* LL RR *)
+MCleAtScale=MCle//AtScale;
+MCluAtScale=MClu//AtScale;
+MCldAtScale=MCld//AtScale;
+MCqeAtScale=MCqe//AtScale;
+MCqu1AtScale=MCqu1//AtScale;
+MCqu8AtScale=MCqu8//AtScale;
+MCqd1AtScale=MCqd1//AtScale;
+MCqd8AtScale=MCqd8//AtScale;
+
+(* LR RL *)
+MCledqAtScale=MCledq//AtScale;
+
+(* LR LR *)
+MCquqd1AtScale=MCquqd1//AtScale;
+MCquqd8AtScale=MCquqd8//AtScale;
+MClequ1AtScale=MClequ1//AtScale;
+MClequ3AtScale=MClequ3//AtScale;
+
+(* B-violating *)
+MCduqlAtScale=MCduql//AtScale;
+MCqqueAtScale=MCqque//AtScale;
+MCqqqlAtScale=MCqqql//AtScale;
+MCduueAtScale=MCduue//AtScale;
+
+(* dim-5 *)
+MCllHHAtScale=MCllHH//AtScale;
+
+];
+
+
+(* Routine to diagonalize all fermion mass matrices *)
+DiagonalizeFermionsSMEFT[dim6_]:=Block[{},
+
+(* QUARKS *)
+
+(* Up quarks *)
+mu=If[dim6,v/Sqrt[2](GuAtScale-1/2v^2 MCuHAtScale),v/Sqrt[2]GuAtScale];
+mu=SetPrecision[mu,20];
+mudiag=Diagonalize[mu][[1]];
+UL=Diagonalize[mu][[2]];
+UR=Diagonalize[mu][[3]];
+
+(* Down quarks *)
+md=If[dim6,v/Sqrt[2](GdAtScale-1/2v^2 MCdHAtScale),v/Sqrt[2]GdAtScale];
+md=SetPrecision[md,20];
+mddiag=Diagonalize[md][[1]];
+DL=Diagonalize[md][[2]];
+DR=Diagonalize[md][[3]];
+
+(* Rephasing to obtain the CKM matrix with standard phase convention - only done if the CKM matrix is complex *)
+If[Re[H[UL] . DL]!=H[UL] . DL,
+NewRotationsCKM=StandardCKM;
+UL=NewRotationsCKM[[1]];
+UR=NewRotationsCKM[[2]];
+DL=NewRotationsCKM[[3]];
+DR=NewRotationsCKM[[4]];
+];
+
+(* LEPTONS *)
+
+(* Charged leptons *)
+me=If[dim6,v/Sqrt[2](GeAtScale-1/2v^2 MCeHAtScale),v/Sqrt[2]GeAtScale];
+me=SetPrecision[me,20];
+mediag=Diagonalize[me][[1]];
+EL=Diagonalize[me][[2]];
+ER=Diagonalize[me][[3]];
+
+(* Neutrinos *)
+m\[Nu]=-v^2/2MCllHHAtScale;
+
+(* Diagonalization and rephasing to obtain the PMNS matrix with standard phase convention *)
+(* This is only done if neutrinos are massive *)
+If[Max[Abs[m\[Nu]]]!=0,
+m\[Nu]=SetPrecision[m\[Nu],30];
+m\[Nu]diag=Diagonalize[m\[Nu]][[1]];
+NL=Diagonalize[m\[Nu]][[2]];
+NR=NL;
+(* Rephasing to obtain the PMNS matrix with standard phase convention - only done if the PMNS matrix is complex *)
+If[Re[H[EL] . NL]!=H[EL] . NL,
+NewRotationsPMNS=StandardPMNS;
+EL=NewRotationsPMNS[[1]];
+ER=NewRotationsPMNS[[2]];
+];
+,
+NL=DiagonalMatrix[{1,1,1}];
+NR=DiagonalMatrix[{1,1,1}];
+];
+
+(* Useful definitions *)
+ULh=H[UL];
+URh=H[UR];
+DLh=H[DL];
+DRh=H[DR];
+ELh=H[EL];
+ERh=H[ER];
+NLh=H[NL];
+NRh=H[NR];
+
+];
+
+
+(* ::Input::Initialization:: *)
+SMEFTChangeBasis[basis_]:=Block[{},
+
+If[basis=="up"||basis=="down",
+
+If[basis=="up", (* Up basis *)
+(* SU(2) invariant relations *)
+DL=UL;
+DLh=ULh;
+NL=EL;
+NLh=ELh;
+];
+
+If[basis=="down", (* Down basis *)
+(* SU(2) invariant relations *)
+UL=DL;
+ULh=DLh;
+NL=EL;
+NLh=ELh;
+];
+
+(* SM Yukawas *)
+GuNew=ULh . GuAtScale . UR;
+GdNew=DLh . GdAtScale . DR;
+GeNew=ELh . GeAtScale . ER;
+
+(* WCs *)
+
+(* \[Psi]^2H^3 *)
+MCuHNew=ULh . MCuHAtScale . UR;
+MCdHNew=DLh . MCdHAtScale . DR;
+MCeHNew=ELh . MCeHAtScale . ER;
+
+(* \[Psi]^2X H *)
+MCeWNew=ELh . MCeWAtScale . ER;
+MCeBNew=ELh . MCeBAtScale . ER;
+MCuGNew=ULh . MCuGAtScale . UR;
+MCuWNew=ULh . MCuWAtScale . UR;
+MCuBNew=ULh . MCuBAtScale . UR;
+MCdGNew=DLh . MCdGAtScale . DR;
+MCdWNew=DLh . MCdWAtScale . DR;
+MCdBNew=DLh . MCdBAtScale . DR;
+
+(* \[Psi]^2H^2D *)
+MCHl1New=ELh . MCHl3AtScale . EL;
+MCHl3New=ELh . MCHl3AtScale . EL;
+MCHeNew=ERh . MCHeAtScale . ER;
+MCHq1New=DLh . MCHq1AtScale . DL;
+MCHq3New=DLh . MCHq3AtScale . DL;
+MCHuNew=URh . MCHuAtScale . UR;
+MCHdNew=DRh . MCHdAtScale . DR;
+MCHudNew=URh . MCHudAtScale . DR;
+
+(* LL LL *)
+MCllNew=MyContract[MCllAtScale,ELh,EL,ELh,EL];
+MCqq1New=MyContract[MCqq1AtScale,DLh,DL,DLh,DL];
+MCqq3New=MyContract[MCqq3AtScale,DLh,DL,DLh,DL];
+MClq1New=MyContract[MClq1AtScale,ELh,EL,DLh,DL];
+MClq3New=MyContract[MClq3AtScale,ELh,EL,DLh,DL];
+
+(* RR RR *)
+MCeeNew=MyContract[MCeeAtScale,ERh,ER,ERh,ER];
+MCuuNew=MyContract[MCuuAtScale,URh,UR,URh,UR];
+MCddNew=MyContract[MCddAtScale,DRh,DR,DRh,DR];
+MCeuNew=MyContract[MCeuAtScale,ERh,ER,URh,UR];
+MCedNew=MyContract[MCedAtScale,ERh,ER,DRh,DR];
+MCud1New=MyContract[MCud1AtScale,URh,UR,DRh,DR];
+MCud8New=MyContract[MCud8AtScale,URh,UR,DRh,DR];
+
+(* LL RR *)
+MCleNew=MyContract[MCleAtScale,ELh,EL,ERh,ER];
+MCluNew=MyContract[MCluAtScale,ELh,EL,URh,UR];
+MCldNew=MyContract[MCldAtScale,ELh,EL,DRh,DR];
+MCqeNew=MyContract[MCqeAtScale,DLh,DL,ERh,ER];
+MCqu1New=MyContract[MCqu1AtScale,DLh,DL,URh,UR];
+MCqu8New=MyContract[MCqu8AtScale,DLh,DL,URh,UR];
+MCqd1New=MyContract[MCqd1AtScale,DLh,DL,DRh,DR];
+MCqd8New=MyContract[MCqd8AtScale,DLh,DL,DRh,DR];
+
+(* LR RL *)
+MCledqNew=MyContract[MCledqAtScale,ELh,ER,DRh,DL];
+
+(* LR LR *)
+MCquqd1New=MyContract[MCquqd1AtScale,ULh,UR,DLh,DR];
+MCquqd8New=MyContract[MCquqd8AtScale,ULh,UR,DLh,DR];
+MClequ1New=MyContract[MClequ1AtScale,ELh,ER,ULh,UR];
+MClequ3New=MyContract[MClequ3AtScale,ELh,ER,ULh,UR];
+
+(* B-violating *)
+MCduqlNew=MyContract[MCduqlAtScale,DR,UR,DL,NL,"TT"];
+MCqqueNew=MyContract[MCqqueAtScale,DL,UL,UR,ER,"TT"];
+MCqqqlNew=MyContract[MCqqqlAtScale,DL,DL,UL,EL,"TT"];
+MCduueNew=MyContract[MCduueAtScale,DR,UR,UR,ER,"TT"];
+
+(* dim-5 *)
+MCllHHNew=Transpose[EL] . MCllHHAtScale . EL;
+
+];
+
+];
+
+
+(* Rotate SMEFT parameters to new basis *)
+SMEFTToNewBasis[basis_,scale_,case_]:=Block[{includedim6,NewBasis0F,NewBasis2F,NewBasis4F},
+
+(* Cases *)
+(* 1 : Change of basis using the results of SMEFTrun *)
+(* 2 : Change of basis using the results of SMEFTrun - Include dim6 contributions *)
+
+SMEFTatScale[scale,case];
+
+If[case==2,includedim6=True,includedim6=False];
+DiagonalizeFermionsSMEFT[includedim6];
+
+(* Rotate WCs *)
+SMEFTChangeBasis[basis];
+
+NewBasis0F={g->gAtScale,gp->gpAtScale,gs->gsAtScale,\[Lambda]->\[Lambda]AtScale,m2->m2AtScale,\[Theta]->\[Theta]AtScale,\[Theta]p->\[Theta]pAtScale,\[Theta]s->\[Theta]sAtScale,CG->CGAtScale,CGtilde->CGtildeAtScale,CW->CWAtScale,CWtilde->CWtildeAtScale,CH->CHAtScale,CHbox->CHboxAtScale,CHD->CHDAtScale,CHG->CHGAtScale,CHB->CHBAtScale,CHW->CHWAtScale,CHWB->CHWBAtScale,CHGtilde->CHGtildeAtScale,CHBtilde->CHBtildeAtScale,CHWtilde->CHWtildeAtScale,CHWtildeB->CHWtildeBAtScale};
+NewBasis2F=Table[{Gu[r,s]->GuNew[[r,s]],Gd[r,s]->GdNew[[r,s]],Ge[r,s]->GeNew[[r,s]],CuH[r,s]->MCuHNew[[r,s]],CdH[r,s]->MCdHNew[[r,s]],CeH[r,s]->MCeHNew[[r,s]],CeW[r,s]->MCeWNew[[r,s]],CeB[r,s]->MCeBNew[[r,s]],CuG[r,s]->MCuGNew[[r,s]],CuW[r,s]->MCuWNew[[r,s]],CuB[r,s]->MCuBNew[[r,s]],CdG[r,s]->MCdGNew[[r,s]],CdW[r,s]->MCdWNew[[r,s]],CdB[r,s]->MCdBNew[[r,s]],CHl1[r,s]->MCHl1New[[r,s]],CHl3[r,s]->MCHl3New[[r,s]],CHe[r,s]->MCHeNew[[r,s]],CHq1[r,s]->MCHq1New[[r,s]],CHq3[r,s]->MCHq3New[[r,s]],CHu[r,s]->MCHuNew[[r,s]],CHd[r,s]->MCHdNew[[r,s]],CHud[r,s]->MCHudNew[[r,s]],CllHH[r,s]->MCllHHNew[[r,s]]},{r,3},{s,3}];
+NewBasis4F=Table[{Cll[p,r,s,t]->MCllNew[[p,r,s,t]],Cqq1[p,r,s,t]->MCqq1New[[p,r,s,t]],Cqq3[p,r,s,t]->MCqq3New[[p,r,s,t]],Clq1[p,r,s,t]->MClq1New[[p,r,s,t]],Clq3[p,r,s,t]->MClq3New[[p,r,s,t]],Cee[p,r,s,t]->MCeeNew[[p,r,s,t]],Cuu[p,r,s,t]->MCuuNew[[p,r,s,t]],Cdd[p,r,s,t]->MCddNew[[p,r,s,t]],Ceu[p,r,s,t]->MCeuNew[[p,r,s,t]],Ced[p,r,s,t]->MCedNew[[p,r,s,t]],Cud1[p,r,s,t]->MCud1New[[p,r,s,t]],Cud8[p,r,s,t]->MCud8New[[p,r,s,t]],Cle[p,r,s,t]->MCleNew[[p,r,s,t]],Clu[p,r,s,t]->MCluNew[[p,r,s,t]],Cld[p,r,s,t]->MCldNew[[p,r,s,t]],Cqe[p,r,s,t]->MCqeNew[[p,r,s,t]],Cqu1[p,r,s,t]->MCqu1New[[p,r,s,t]],Cqu8[p,r,s,t]->MCqu8New[[p,r,s,t]],Cqd1[p,r,s,t]->MCqd1New[[p,r,s,t]],Cqd8[p,r,s,t]->MCqd8New[[p,r,s,t]],Cledq[p,r,s,t]->MCledqNew[[p,r,s,t]],Cquqd1[p,r,s,t]->MCquqd1New[[p,r,s,t]],Cquqd8[p,r,s,t]->MCquqd8New[[p,r,s,t]],Clequ1[p,r,s,t]->MClequ1New[[p,r,s,t]],Clequ3[p,r,s,t]->MClequ3New[[p,r,s,t]],Cduql[p,r,s,t]->MCduqlNew[[p,r,s,t]],Cqque[p,r,s,t]->MCqqueNew[[p,r,s,t]],Cqqql[p,r,s,t]->MCqqqlNew[[p,r,s,t]],Cduue[p,r,s,t]->MCduueNew[[p,r,s,t]]},{p,3},{r,3},{s,3},{t,3}];
+
+ToNewBasis=Join[NewBasis0F,NewBasis2F,NewBasis4F]//Flatten;
+
+Return[ToNewBasis];
+
+];
+
+
+(* Default use *)
+SMEFTToNewBasis[basis_,scale_]:=SMEFTToNewBasis[basis,scale,1]
+
+
+(* All rotations *)
+SMEFTRotateParameters[scale_]:=Block[{ToUpBasis,ToDownBasis},
+
+ToUpBasis=SMEFTToNewBasis["up",scale,1]//Dispatch;
+ToDownBasis=SMEFTToNewBasis["down",scale,1]//Dispatch;
+
+Return[{ToUpBasis,ToDownBasis}];
+
+];
+
+
+(* SMEFT basis rotation - To be used in the SMEFT-LEFT matching *)
+RotateSMEFTParameters[basis_]:=Block[{},
+
+ToMatchingBasis=SMEFTToNewBasis[basis,EWSCALE,2]//Dispatch;
+
+];
+
+
+(* This routine rotates the Yukawa couplings at HIGHSCALE after running the SM parameters from EWSCALE *)
+RotateYukawasHIGH[basis_]:=Block[{},
+
+GuAtScale=MGu/.inputSMEFTrunner;
+GdAtScale=MGd/.inputSMEFTrunner;
+GeAtScale=MGe/.inputSMEFTrunner;
+
+DiagonalizeFermionsSMEFT[False];
+
+If[basis=="up", (* Up basis *)
+(* SU(2) invariant relations *)
+DL=UL;
+DLh=ULh;
+];
+
+If[basis=="down", (* Down basis *)
+(* SU(2) invariant relations *)
+UL=DL;
+ULh=DLh;
+];
+
+GuNew=ULh . GuAtScale . UR;
+GdNew=DLh . GdAtScale . DR;
+GeNew=ELh . GeAtScale . ER;
+
+ToNewYukawas=Table[{Gu[r,s]->GuNew[[r,s]],Gd[r,s]->GdNew[[r,s]],Ge[r,s]->GeNew[[r,s]]},{r,3},{s,3}]//Flatten//Dispatch;
+
+];
+
+
+(* ::Input::Initialization:: *)
+(* Routine to fix the SMEFT parameters at a given scale *)
+LEFTatScale[scale_,case_]:=Block[{},
+
+If[case==1, (* After LEFT running *)
+AtScale:=If[Length[#]==0,LEFTrun[#],Map[LEFTrun,#,{2}]]/.\[Mu]->scale&];
+If[case==2, (* After matching *)
+AtScale:=#/.Match&];
+
+(* QED & QCD parameters *)
+gQCDAtScale=gQCD//AtScale;
+eQEDAtScale=eQED//AtScale;
+\[Theta]QCDAtScale=\[Theta]QCD//AtScale;
+\[Theta]QEDAtScale=\[Theta]QED//AtScale;
+M\[Nu]AtScale=MM\[Nu]//AtScale;
+MeAtScale=MMe//AtScale;
+MuAtScale=MMu//AtScale;
+MdAtScale=MMd//AtScale;
+
+(* X^3 *)
+LGAtScale=LG//AtScale;
+LGtildeAtScale=LGtilde//AtScale;
+
+(* \[Nu]\[Nu]X *)
+L\[Nu]\[Gamma]AtScale=ML\[Nu]\[Gamma]//AtScale;
+
+(* LRX *)
+Le\[Gamma]AtScale=MLe\[Gamma]//AtScale;
+Lu\[Gamma]AtScale=MLu\[Gamma]//AtScale;
+Ld\[Gamma]AtScale=MLd\[Gamma]//AtScale;
+LuGAtScale=MLuG//AtScale;
+LdGAtScale=MLdG//AtScale;
+
+(* LL LL *)
+L\[Nu]\[Nu]VLLAtScale=ML\[Nu]\[Nu]VLL//AtScale;
+LeeVLLAtScale=MLeeVLL//AtScale;
+L\[Nu]eVLLAtScale=ML\[Nu]eVLL//AtScale;
+L\[Nu]uVLLAtScale=ML\[Nu]uVLL//AtScale;
+L\[Nu]dVLLAtScale=ML\[Nu]dVLL//AtScale;
+LeuVLLAtScale=MLeuVLL//AtScale;
+LedVLLAtScale=MLedVLL//AtScale;
+L\[Nu]eduVLLAtScale=ML\[Nu]eduVLL//AtScale;
+LuuVLLAtScale=MLuuVLL//AtScale;
+LddVLLAtScale=MLddVLL//AtScale;
+LudV1LLAtScale=MLudV1LL//AtScale;
+LudV8LLAtScale=MLudV8LL//AtScale;
+
+(* RR RR *)
+LeeVRRAtScale=MLeeVRR//AtScale;
+LeuVRRAtScale=MLeuVRR//AtScale;
+LedVRRAtScale=MLedVRR//AtScale;
+LuuVRRAtScale=MLuuVRR//AtScale;
+LddVRRAtScale=MLddVRR//AtScale;
+LudV1RRAtScale=MLudV1RR//AtScale;
+LudV8RRAtScale=MLudV8RR//AtScale;
+
+(* LL RR *)
+L\[Nu]eVLRAtScale=ML\[Nu]eVLR//AtScale;
+LeeVLRAtScale=MLeeVLR//AtScale;
+L\[Nu]uVLRAtScale=ML\[Nu]uVLR//AtScale;
+L\[Nu]dVLRAtScale=ML\[Nu]dVLR//AtScale;
+LeuVLRAtScale=MLeuVLR//AtScale;
+LedVLRAtScale=MLedVLR//AtScale;
+LueVLRAtScale=MLueVLR//AtScale;
+LdeVLRAtScale=MLdeVLR//AtScale;
+L\[Nu]eduVLRAtScale=ML\[Nu]eduVLR//AtScale;
+LuuV1LRAtScale=MLuuV1LR//AtScale;
+LuuV8LRAtScale=MLuuV8LR//AtScale;
+LudV1LRAtScale=MLudV1LR//AtScale;
+LudV8LRAtScale=MLudV8LR//AtScale;
+LduV1LRAtScale=MLduV1LR//AtScale;
+LduV8LRAtScale=MLduV8LR//AtScale;
+LddV1LRAtScale=MLddV1LR//AtScale;
+LddV8LRAtScale=MLddV8LR//AtScale;
+LudduV1LRAtScale=MLudduV1LR//AtScale;
+LudduV8LRAtScale=MLudduV8LR//AtScale;
+
+(* LR LR *)
+LeeSRRAtScale=MLeeSRR//AtScale;
+LeuSRRAtScale=MLeuSRR//AtScale;
+LeuTRRAtScale=MLeuTRR//AtScale;
+LedSRRAtScale=MLedSRR//AtScale;
+LedTRRAtScale=MLedTRR//AtScale;
+L\[Nu]eduSRRAtScale=ML\[Nu]eduSRR//AtScale;
+L\[Nu]eduTRRAtScale=ML\[Nu]eduTRR//AtScale;
+LuuS1RRAtScale=MLuuS1RR//AtScale;
+LuuS8RRAtScale=MLuuS8RR//AtScale;
+LudS1RRAtScale=MLudS1RR//AtScale;
+LudS8RRAtScale=MLudS8RR//AtScale;
+LddS1RRAtScale=MLddS1RR//AtScale;
+LddS8RRAtScale=MLddS8RR//AtScale;
+LudduS1RRAtScale=MLudduS1RR//AtScale;
+LudduS8RRAtScale=MLudduS8RR//AtScale;
+
+(* LR RL *)
+LeuSRLAtScale=MLeuSRL//AtScale;
+LedSRLAtScale=MLedSRL//AtScale;
+L\[Nu]eduSRLAtScale=ML\[Nu]eduSRL//AtScale;
+
+(* \[CapitalDelta]L=4 *)
+L\[Nu]\[Nu]SLLAtScale=ML\[Nu]\[Nu]SLL//AtScale;
+
+(* \[CapitalDelta]L=2 *)
+L\[Nu]eSLLAtScale=ML\[Nu]eSLL//AtScale;
+L\[Nu]eTLLAtScale=ML\[Nu]eTLL//AtScale;
+L\[Nu]eSLRAtScale=ML\[Nu]eSLR//AtScale;
+L\[Nu]uSLLAtScale=ML\[Nu]uSLL//AtScale;
+L\[Nu]uTLLAtScale=ML\[Nu]uTLL//AtScale;
+L\[Nu]uSLRAtScale=ML\[Nu]uSLR//AtScale;
+L\[Nu]dSLLAtScale=ML\[Nu]dSLL//AtScale;
+L\[Nu]dTLLAtScale=ML\[Nu]dTLL//AtScale;
+L\[Nu]dSLRAtScale=ML\[Nu]dSLR//AtScale;
+L\[Nu]eduSLLAtScale=ML\[Nu]eduSLL//AtScale;
+L\[Nu]eduTLLAtScale=ML\[Nu]eduTLL//AtScale;
+L\[Nu]eduSLRAtScale=ML\[Nu]eduSLR//AtScale;
+L\[Nu]eduVRLAtScale=ML\[Nu]eduVRL//AtScale;
+L\[Nu]eduVRRAtScale=ML\[Nu]eduVRR//AtScale;
+
+(* \[CapitalDelta]B=\[CapitalDelta]L=1 *)
+LuddSLLAtScale=MLuddSLL//AtScale;
+LduuSLLAtScale=MLduuSLL//AtScale;
+LuudSLRAtScale=MLuudSLR//AtScale;
+LduuSLRAtScale=MLduuSLR//AtScale;
+LuudSRLAtScale=MLuudSRL//AtScale;
+LduuSRLAtScale=MLduuSRL//AtScale;
+LdudSRLAtScale=MLdudSRL//AtScale;
+LdduSRLAtScale=MLdduSRL//AtScale;
+LduuSRRAtScale=MLduuSRR//AtScale;
+
+(* \[CapitalDelta]B=-\[CapitalDelta]L=1 *)
+LdddSLLAtScale=MLdddSLL//AtScale;
+LuddSLRAtScale=MLuddSLR//AtScale;
+LdduSLRAtScale=MLdduSLR//AtScale;
+LdddSLRAtScale=MLdddSLR//AtScale;
+LdddSRLAtScale=MLdddSRL//AtScale;
+LuddSRRAtScale=MLuddSRR//AtScale;
+LdddSRRAtScale=MLdddSRR//AtScale;
+
+];
+
+
+(* Routine to diagonalize all fermion mass matrices *)
+DiagonalizeFermionsLEFT:=Block[{},
+
+(* QUARKS *)
+
+(* Up quarks *)
+mu=MuAtScale;
+mu=SetPrecision[mu,20];
+mudiag=Diagonalize[mu][[1]];
+UL=Diagonalize[mu][[2]];
+UR=Diagonalize[mu][[3]];
+
+(* Down quarks *)
+md=MdAtScale;
+md=SetPrecision[md,20];
+mddiag=Diagonalize[md][[1]];
+DL=Diagonalize[md][[2]];
+DR=Diagonalize[md][[3]];
+
+(* LEPTONS *)
+
+(* Charged leptons *)
+me=MeAtScale;
+me=SetPrecision[me,20];
+mediag=Diagonalize[me][[1]];
+EL=Diagonalize[me][[2]];
+ER=Diagonalize[me][[3]];
+
+(* Neutrinos *)
+m\[Nu]=M\[Nu]AtScale;
+
+(* Diagonalization and rephasing to obtain the PMNS matrix with standard phase convention *)
+(* This is only done if neutrinos are massive *)
+If[Max[Abs[m\[Nu]]]!=0,
+m\[Nu]=SetPrecision[m\[Nu],30];
+m\[Nu]diag=Diagonalize[m\[Nu]][[1]];
+NL=Diagonalize[m\[Nu]][[2]];
+NR=NL;
+(* Rephasing to obtain the PMNS matrix with standard phase convention - only done if the PMNS matrix is complex *)
+If[Re[H[EL] . NL]!=H[EL] . NL,
+NewRotationsPMNS=StandardPMNS;
+EL=NewRotationsPMNS[[1]];
+ER=NewRotationsPMNS[[2]];
+];
+,
+NL=DiagonalMatrix[{1,1,1}];
+NR=DiagonalMatrix[{1,1,1}];
+];
+
+(* Useful definitions *)
+ULh=H[UL];
+URh=H[UR];
+DLh=H[DL];
+DRh=H[DR];
+ELh=H[EL];
+ERh=H[ER];
+NLh=H[NL];
+NRh=H[NR];
+
+];
+
+
+(* ::Input::Initialization:: *)
+LEFTChangeBasis:=Block[{},
+
+(* Mass matrices *)
+MMuNew=ULh . MuAtScale . UR;
+MMdNew=DLh . MdAtScale . DR;
+MMeNew=ELh . MeAtScale . ER;
+MM\[Nu]New=Transpose[NL] . M\[Nu]AtScale . NL;
+
+(* WCs *)
+
+(* \[Nu]\[Nu]X *)
+ML\[Nu]\[Gamma]New=Transpose[NL] . L\[Nu]\[Gamma]AtScale . NL;
+
+(* LRX *)
+MLe\[Gamma]New=ELh . Le\[Gamma]AtScale . ER;
+MLu\[Gamma]New=ULh . Lu\[Gamma]AtScale . UR;
+MLd\[Gamma]New=DLh . Ld\[Gamma]AtScale . DR;
+MLuGNew=ULh . LuGAtScale . UR;
+MLdGNew=DLh . LdGAtScale . DR;
+
+(* LL LL *)
+ML\[Nu]\[Nu]VLLNew=MyContract[L\[Nu]\[Nu]VLLAtScale,NLh,NL,NLh,NL];
+MLeeVLLNew=MyContract[LeeVLLAtScale,ELh,EL,ELh,EL];
+ML\[Nu]eVLLNew=MyContract[L\[Nu]eVLLAtScale,NLh,NL,ELh,EL];
+ML\[Nu]uVLLNew=MyContract[L\[Nu]uVLLAtScale,NLh,NL,ULh,UL];
+ML\[Nu]dVLLNew=MyContract[L\[Nu]dVLLAtScale,NLh,NL,DLh,DL];
+MLeuVLLNew=MyContract[LeuVLLAtScale,ELh,EL,ULh,UL];
+MLedVLLNew=MyContract[LedVLLAtScale,ELh,EL,DLh,DL];
+ML\[Nu]eduVLLNew=MyContract[L\[Nu]eduVLLAtScale,NLh,EL,DLh,UL];
+MLuuVLLNew=MyContract[LuuVLLAtScale,ULh,UL,ULh,UL];
+MLddVLLNew=MyContract[LddVLLAtScale,DLh,DL,DLh,DL];
+MLudV1LLNew=MyContract[LudV1LLAtScale,ULh,UL,DLh,DL];
+MLudV8LLNew=MyContract[LudV8LLAtScale,ULh,UL,DLh,DL];
+
+(* RR RR *)
+MLeeVRRNew=MyContract[LeeVRRAtScale,ERh,ER,ERh,ER];
+MLeuVRRNew=MyContract[LeuVRRAtScale,ERh,ER,URh,UR];
+MLedVRRNew=MyContract[LedVRRAtScale,ERh,ER,DRh,DR];
+MLuuVRRNew=MyContract[LuuVRRAtScale,URh,UR,URh,UR];
+MLddVRRNew=MyContract[LddVRRAtScale,DRh,DR,DRh,DR];
+MLudV1RRNew=MyContract[LudV1RRAtScale,URh,UR,DRh,DR];
+MLudV8RRNew=MyContract[LudV8RRAtScale,URh,UR,DRh,DR];
+
+(* LL RR *)
+ML\[Nu]eVLRNew=MyContract[L\[Nu]eVLRAtScale,NLh,NL,ERh,ER];
+MLeeVLRNew=MyContract[LeeVLRAtScale,ELh,EL,ERh,ER];
+ML\[Nu]uVLRNew=MyContract[L\[Nu]uVLRAtScale,NLh,NL,URh,UR];
+ML\[Nu]dVLRNew=MyContract[L\[Nu]dVLRAtScale,NLh,NL,DRh,DR];
+MLeuVLRNew=MyContract[LeuVLRAtScale,ELh,EL,URh,UR];
+MLedVLRNew=MyContract[LedVLRAtScale,ELh,EL,DRh,DR];
+MLueVLRNew=MyContract[LueVLRAtScale,ULh,UL,ERh,ER];
+MLdeVLRNew=MyContract[LdeVLRAtScale,DLh,DL,ERh,ER];
+ML\[Nu]eduVLRNew=MyContract[L\[Nu]eduVLRAtScale,NLh,EL,DRh,UR];
+MLuuV1LRNew=MyContract[LuuV1LRAtScale,ULh,UL,URh,UR];
+MLuuV8LRNew=MyContract[LuuV8LRAtScale,ULh,UL,URh,UR];
+MLudV1LRNew=MyContract[LudV1LRAtScale,ULh,UL,DRh,DR];
+MLudV8LRNew=MyContract[LudV8LRAtScale,ULh,UL,DRh,DR];
+MLduV1LRNew=MyContract[LduV1LRAtScale,DLh,DL,URh,UR];
+MLduV8LRNew=MyContract[LduV8LRAtScale,DLh,DL,URh,UR];
+MLddV1LRNew=MyContract[LddV1LRAtScale,DLh,DL,DRh,DR];
+MLddV8LRNew=MyContract[LddV8LRAtScale,DLh,DL,DRh,DR];
+MLudduV1LRNew=MyContract[LudduV1LRAtScale,ULh,DL,DRh,UR];
+MLudduV8LRNew=MyContract[LudduV8LRAtScale,ULh,DL,DRh,UR];
+
+(* LR LR *)
+MLeeSRRNew=MyContract[LeeSRRAtScale,ELh,ER,ELh,ER];
+MLeuSRRNew=MyContract[LeuSRRAtScale,ELh,ER,ULh,UR];
+MLeuTRRNew=MyContract[LeuTRRAtScale,ELh,ER,ULh,UR];
+MLedSRRNew=MyContract[LedSRRAtScale,ELh,ER,DLh,DR];
+MLedTRRNew=MyContract[LedTRRAtScale,ELh,ER,DLh,DR];
+ML\[Nu]eduSRRNew=MyContract[L\[Nu]eduSRRAtScale,NLh,ER,DLh,UR];
+ML\[Nu]eduTRRNew=MyContract[L\[Nu]eduTRRAtScale,NLh,ER,DLh,UR];
+MLuuS1RRNew=MyContract[LuuS1RRAtScale,ULh,UR,ULh,UR];
+MLuuS8RRNew=MyContract[LuuS8RRAtScale,ULh,UR,ULh,UR];
+MLudS1RRNew=MyContract[LudS1RRAtScale,ULh,UR,DLh,DR];
+MLudS8RRNew=MyContract[LudS8RRAtScale,ULh,UR,DLh,DR];
+MLddS1RRNew=MyContract[LddS1RRAtScale,DLh,DR,DLh,DR];
+MLddS8RRNew=MyContract[LddS8RRAtScale,DLh,DR,DLh,DR];
+MLudduS1RRNew=MyContract[LudduS1RRAtScale,ULh,DR,DLh,UR];
+MLudduS8RRNew=MyContract[LudduS8RRAtScale,ULh,DR,DLh,UR];
+
+(* LR RL *)
+MLeuSRLNew=MyContract[LeuSRLAtScale,ELh,ER,URh,UL];
+MLedSRLNew=MyContract[LedSRLAtScale,ELh,ER,DRh,DL];
+ML\[Nu]eduSRLNew=MyContract[L\[Nu]eduSRLAtScale,NLh,ER,DRh,UL];
+
+(* \[CapitalDelta]L=4 *)
+ML\[Nu]\[Nu]SLLNew=MyContract[L\[Nu]\[Nu]SLLAtScale,NL,NL,NL,NL,"TT"];
+
+(* \[CapitalDelta]L=2 *)
+ML\[Nu]eSLLNew=MyContract[L\[Nu]eSLLAtScale,NL,NL,ERh,EL,"T"];
+ML\[Nu]eTLLNew=MyContract[L\[Nu]eTLLAtScale,NL,NL,ERh,EL,"T"];
+ML\[Nu]eSLRNew=MyContract[L\[Nu]eSLRAtScale,NL,NL,ELh,ER,"T"];
+ML\[Nu]uSLLNew=MyContract[L\[Nu]uSLLAtScale,NL,NL,URh,UL,"T"];
+ML\[Nu]uTLLNew=MyContract[L\[Nu]uTLLAtScale,NL,NL,URh,UL,"T"];
+ML\[Nu]uSLRNew=MyContract[L\[Nu]uSLRAtScale,NL,NL,ULh,UR,"T"];
+ML\[Nu]dSLLNew=MyContract[L\[Nu]dSLLAtScale,NL,NL,DRh,DL,"T"];
+ML\[Nu]dTLLNew=MyContract[L\[Nu]dTLLAtScale,NL,NL,DRh,DL,"T"];
+ML\[Nu]dSLRNew=MyContract[L\[Nu]dSLRAtScale,NL,NL,DLh,DR,"T"];
+ML\[Nu]eduSLLNew=MyContract[L\[Nu]eduSLLAtScale,NL,EL,DRh,UL,"T"];
+ML\[Nu]eduTLLNew=MyContract[L\[Nu]eduTLLAtScale,NL,EL,DRh,UL,"T"];
+ML\[Nu]eduSLRNew=MyContract[L\[Nu]eduSLRAtScale,NL,EL,DLh,UR,"T"];
+ML\[Nu]eduVRLNew=MyContract[L\[Nu]eduVRLAtScale,NL,ER,DLh,UL,"T"];
+ML\[Nu]eduVRRNew=MyContract[L\[Nu]eduVRRAtScale,NL,ER,DRh,UR,"T"];
+
+(* \[CapitalDelta]B=\[CapitalDelta]L=1 *)
+MLuddSLLNew=MyContract[LuddSLLAtScale,UL,DL,DL,NL,"TT"];
+MLduuSLLNew=MyContract[LduuSLLAtScale,DL,UL,UL,EL,"TT"];
+MLuudSLRNew=MyContract[LuudSLRAtScale,UL,UL,DR,ER,"TT"];
+MLduuSLRNew=MyContract[LduuSLRAtScale,DL,UL,UR,ER,"TT"];
+MLuudSRLNew=MyContract[LuudSRLAtScale,UR,UR,DL,EL,"TT"];
+MLduuSRLNew=MyContract[LduuSRLAtScale,DR,UR,UL,EL,"TT"];
+MLdudSRLNew=MyContract[LdudSRLAtScale,DR,UR,DL,NL,"TT"];
+MLdduSRLNew=MyContract[LdduSRLAtScale,DR,DR,UL,NL,"TT"];
+MLduuSRRNew=MyContract[LduuSRRAtScale,DR,UR,UR,ER,"TT"];
+
+(* \[CapitalDelta]B=-\[CapitalDelta]L=1 *)
+MLdddSLLNew=MyContract[LdddSLLAtScale,DL,DL,ERh,DL,"T"];
+MLuddSLRNew=MyContract[LuddSLRAtScale,UL,DL,NLh,DR,"T"];
+MLdduSLRNew=MyContract[LdduSLRAtScale,DL,DL,NLh,UR,"T"];
+MLdddSLRNew=MyContract[LdddSLRAtScale,DL,DL,ELh,DR,"T"];
+MLdddSRLNew=MyContract[LdddSRLAtScale,DR,DR,ERh,DL,"T"];
+MLuddSRRNew=MyContract[LuddSRRAtScale,UR,DR,NLh,DR,"T"];
+MLdddSRRNew=MyContract[LdddSRRAtScale,DR,DR,ELh,DR,"T"];
+
+];
+
+
+(* Rotate LEFT parameters to Mass basis *)
+LEFTToNewBasis[scale_,case_]:=Block[{NewBasis0F,NewBasis2F,NewBasis4F},
+
+(* Cases *)
+(* 1 : Change of basis using the results of LEFTrun *)
+(* 2 : Change of basis after matching *)
+
+LEFTatScale[scale,case];
+
+DiagonalizeFermionsLEFT;
+
+(* Rotate WCs *)
+LEFTChangeBasis;
+
+NewBasis0F=DeleteCases[If[Length[#[[5]]]==1,#[[2]]->Symbol["DsixTools`Private`"<>ToString[#[[2]]]<>"AtScale"]]&/@LEFTObjectList,Null];
+NewBasis2F=DeleteCases[If[Length[#[[5]]]==2,Table[#[[2]][r,s]->Symbol["DsixTools`Private`M"<>ToString[#[[2]]]<>"New"][[r,s]],{r,#[[5]][[1]]},{s,#[[5]][[2]]}]]&/@LEFTObjectList,Null];
+NewBasis4F=DeleteCases[If[Length[#[[5]]]==4,Table[#[[2]][p,r,s,t]->Symbol["DsixTools`Private`M"<>ToString[#[[2]]]<>"New"][[p,r,s,t]],{p,#[[5]][[1]]},{r,#[[5]][[2]]},{s,#[[5]][[3]]},{t,#[[5]][[4]]}]]&/@LEFTObjectList,Null];
+
+ToNewBasis=Join[NewBasis0F,NewBasis2F,NewBasis4F]//Flatten;
+
+Return[ToNewBasis];
+
+];
+
+
+(* Default use *)
+LEFTToNewBasis[scale_]:=LEFTToNewBasis[scale,1]
+
+
+(* LEFT basis rotation - To be used in the SMEFT-LEFT matching *)
+RotateLEFTParameters:=Block[{},
+
+ToMassBasis=LEFTToNewBasis[EWSCALE,2];
+
+];
+
+
+(* Routine to fix matching loop order *)
+SetMatchingLoopOrder[n_]:=Block[{},
+If[n==MatchingLoopOrder,
+Message[SetMatchingLoopOrder::NoChange,n];
+,
+If[IntegerQ[n]&&0<=n<=1,
+Unprotect[MatchingLoopOrder];
+MatchingLoopOrder=n;
+Protect[MatchingLoopOrder];
+,
+Message[SetMatchingLoopOrder::WrongOrder,n];
+];
+];
+];
+
+
+(* Master EWmatcher routine *)
+SMEFTLEFTMatch:=Block[{},
+
+RotateSMEFTParameters["up"]; (* Rotation to the Up basis in the SMEFT is required for 1-loop matching *)
+ApplyEWMatching;
+RotateLEFTParameters;
+
+(* define input for LEFTrunner *)
+inputLEFTrunner=ToMassBasis;
+
+EWmatcher=True;
+
+];
+
+
+(* Matching to LEFT operators *)
+ApplyEWMatching:=Block[{AfterRunning},
+
+If[RGEsMethod==1,MyPrint["Matching to LEFT operators"]];
+
+If[DispatchQ[ToMatchingBasis],
+Match=Dispatch[(#->MatchEW[#]/.ToLoopOrder[MatchingLoopOrder])/.ToMatchingBasis&/@LEFTParametersTotal]; (* Apply transformation to matching basis if defined *)
+,
+AfterRunning=Dispatch[(#->SMEFTrun[#]/.\[Mu]->EWSCALE)&/@SMEFTParametersTotal];
+Match=Dispatch[(#->MatchEW[#]/.ToLoopOrder[MatchingLoopOrder])/.AfterRunning&/@LEFTParametersTotal];
+];
+
+];
+
+
+MatchAnalytical:=Dispatch[(#->MatchEW[#](*/.ToLoopOrder[MatchingLoopOrder]*))&/@LEFTParametersTotal];
