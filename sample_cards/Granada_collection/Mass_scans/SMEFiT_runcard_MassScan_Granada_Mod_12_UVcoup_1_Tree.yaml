@@ -2,13 +2,6 @@ Model name: 12
 UV Collection: Granada
 UV model: 12
 coefficients:
-  Ott1:
-    constrain:
-    - m:
-      - 1.
-      - -2
-    max: 100
-    min: -100
   m:
     is_mass: true
     min: 0.1
