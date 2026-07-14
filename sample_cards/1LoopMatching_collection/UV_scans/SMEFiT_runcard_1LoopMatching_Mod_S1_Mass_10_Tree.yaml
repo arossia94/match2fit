@@ -5,45 +5,18 @@ coefficients:
   Oll1221:
     constrain:
     - yS1f12:
-      - -0.0025
-      - 0
-      yS1f21:
-      - 1
-      - 2
-    - yS1f12:
-      - 0.005
-      - 1
-      yS1f21:
-      - 1
-      - 1
-    - yS1f12:
-      - -0.0025
+      - -0.01
       - 2
     max: 100
     min: -100
   Oll1122:
     constrain:
     - yS1f12:
-      - 0.0025
-      - 0
-      yS1f21:
-      - 1
-      - 2
-    - yS1f12:
-      - -0.005
-      - 1
-      yS1f21:
-      - 1
-      - 1
-    - yS1f12:
-      - 0.0025
+      - 0.01
       - 2
     max: 100
     min: -100
   yS1f12:
-    min: -100
-    max: 100
-  yS1f21:
     min: -100
     max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
