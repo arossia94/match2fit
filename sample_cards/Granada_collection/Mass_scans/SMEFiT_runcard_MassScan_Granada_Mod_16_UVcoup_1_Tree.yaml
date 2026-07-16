@@ -2,20 +2,6 @@ Model name: 16
 UV Collection: Granada
 UV model: 16
 coefficients:
-  OQQ1:
-    constrain:
-    - m:
-      - 0.3333333333333333
-      - -2
-    max: 100
-    min: -100
-  OQQ8:
-    constrain:
-    - m:
-      - 2.
-      - -2
-    max: 100
-    min: -100
   m:
     is_mass: true
     min: 0.1

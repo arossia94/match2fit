@@ -2,20 +2,6 @@ Model name: 15
 UV Collection: Granada
 UV model: 15
 coefficients:
-  OQQ1:
-    constrain:
-    - m:
-      - 3.3333333333333335
-      - -2
-    max: 100
-    min: -100
-  OQQ8:
-    constrain:
-    - m:
-      - -4.
-      - -2
-    max: 100
-    min: -100
   OQl3M:
     constrain:
     - m:
