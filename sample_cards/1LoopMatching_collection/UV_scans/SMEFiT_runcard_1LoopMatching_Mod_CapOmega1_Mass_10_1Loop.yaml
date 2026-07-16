@@ -45,22 +45,6 @@ coefficients:
     - L1Omega1:
       - -1.927453112081381e-9
       - 0
-    - L1Omega1:
-      - 0.000024729597936902645
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  O3pQ3:
-    constrain:
-    - L1Omega1:
-      - 0.000012347738195908959
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   Opl1:
@@ -103,12 +87,6 @@ coefficients:
     - L1Omega1:
       - -7.709812448325523e-9
       - 0
-    - L1Omega1:
-      - -6.927993873899698e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   Ope:
@@ -137,12 +115,6 @@ coefficients:
     - L1Omega1:
       - -5.7918375e-6
       - 0
-    - L1Omega1:
-      - 0.00004256731582111984
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   O11qq:
@@ -150,22 +122,6 @@ coefficients:
     - L1Omega1:
       - -3.2124218534689684e-10
       - 0
-    - L1Omega1:
-      - 1.586961032737966e-7
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  O13qq:
-    constrain:
-    - L1Omega1:
-      - -1.249759042386574e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   O8qt:
@@ -201,12 +157,6 @@ coefficients:
     - L1Omega1:
       - -0.000011583675
       - 0
-    - L1Omega1:
-      - 0.00005386068532468225
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   O1qu:
@@ -214,12 +164,6 @@ coefficients:
     - L1Omega1:
       - -2.5699374827751747e-9
       - 0
-    - L1Omega1:
-      - 9.688814726189686e-7
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   O8dt:
@@ -241,12 +185,6 @@ coefficients:
     - L1Omega1:
       - -0.000011583675
       - 0
-    - L1Omega1:
-      - 0.00005381505787548359
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   O1qd:
@@ -254,12 +192,6 @@ coefficients:
     - L1Omega1:
       - 1.2849687413875873e-9
       - 0
-    - L1Omega1:
-      - -5.057335459355232e-7
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   OQQ1:
@@ -267,36 +199,6 @@ coefficients:
     - L1Omega1:
       - -6.424843706937937e-10
       - 0
-    - L1Omega1:
-      - -0.0022944177992747063
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    - L1Omega1:
-      - 4.690795538997119e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 4
-    - L1Omega1:
-      - 0.0008443431970194815
-      - 0
-      L3Omega1:
-      - 1
-      - 1
-      yOmega1qq33:
-      - 1
-      - 2
-    - L1Omega1:
-      - 0.0001688686394038963
-      - 0
-      L2Omega1:
-      - 1
-      - 1
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   OQQ8:
@@ -304,36 +206,6 @@ coefficients:
     - L1Omega1:
       - -0.000011583675
       - 0
-    - L1Omega1:
-      - -0.0032700545120063337
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    - L1Omega1:
-      - -3.5180966542478395e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 4
-    - L1Omega1:
-      - 0.0012665147955292222
-      - 0
-      L3Omega1:
-      - 1
-      - 1
-      yOmega1qq33:
-      - 1
-      - 2
-    - L1Omega1:
-      - 0.00025330295910584445
-      - 0
-      L2Omega1:
-      - 1
-      - 1
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   OQt1:
@@ -341,12 +213,6 @@ coefficients:
     - L1Omega1:
       - -2.5699374827751747e-9
       - 0
-    - L1Omega1:
-      - -0.00003540308636535444
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   OQt8:
@@ -354,12 +220,6 @@ coefficients:
     - L1Omega1:
       - -0.000011583675
       - 0
-    - L1Omega1:
-      - -0.000024079245756689356
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   Ott1:
@@ -376,68 +236,6 @@ coefficients:
       - 0
     max: 100
     min: -100
-  Obp:
-    constrain:
-    - L1Omega1:
-      - -4.988982104323832e-7
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    - L1Omega1:
-      - 5.067887549938743e-7
-      - 1
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  Otp:
-    constrain:
-    - L1Omega1:
-      - 6.862446300412933e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    - L1Omega1:
-      - 0.00002094565198869419
-      - 1
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  OtG:
-    constrain:
-    - L1Omega1:
-      - -6.109148496702472e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  OtW:
-    constrain:
-    - L1Omega1:
-      - 2.27925290253253e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  OtZ:
-    constrain:
-    - L1Omega1:
-      - -3.299560313837561e-7
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
   Op:
     constrain:
     - L1Omega1:
@@ -450,22 +248,6 @@ coefficients:
     - L1Omega1:
       - 3.854906224162762e-9
       - 0
-    - L1Omega1:
-      - -1.453322208928453e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  OQl13:
-    constrain:
-    - L1Omega1:
-      - -3.2493735102050925e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   OQl1M:
@@ -473,12 +255,6 @@ coefficients:
     - L1Omega1:
       - 1.927453112081381e-9
       - 0
-    - L1Omega1:
-      - 2.522712405740866e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   Otl1:
@@ -710,12 +486,6 @@ coefficients:
     - L1Omega1:
       - 3.854906224162762e-9
       - 0
-    - L1Omega1:
-      - -1.453322208928453e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   Otl3:
@@ -737,22 +507,6 @@ coefficients:
     - L1Omega1:
       - 1.927453112081381e-9
       - 0
-    - L1Omega1:
-      - 2.522712405740866e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
-  OQl33:
-    constrain:
-    - L1Omega1:
-      - -3.2493735102050925e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   Omuu:
@@ -818,27 +572,11 @@ coefficients:
       - 0
     max: 100
     min: -100
-  OQl23:
-    constrain:
-    - L1Omega1:
-      - -3.2493735102050925e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
-    max: 100
-    min: -100
   OQl2M:
     constrain:
     - L1Omega1:
       - 1.927453112081381e-9
       - 0
-    - L1Omega1:
-      - 2.522712405740866e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   Ol2u:
@@ -902,24 +640,9 @@ coefficients:
     - L1Omega1:
       - 3.854906224162762e-9
       - 0
-    - L1Omega1:
-      - -1.453322208928453e-6
-      - 0
-      yOmega1qq33:
-      - 1
-      - 2
     max: 100
     min: -100
   L1Omega1:
-    min: -100
-    max: 100
-  L2Omega1:
-    min: -100
-    max: 100
-  L3Omega1:
-    min: -100
-    max: 100
-  yOmega1qq33:
     min: -100
     max: 100
 data_path: /path/to/smefit_database/commondata_projections_L0
