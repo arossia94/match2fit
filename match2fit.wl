@@ -25,8 +25,10 @@ prints the run card for a fit on the UV couplings and the card that defines the 
 when producing the run cards. The looporder argument indicates at which loop level the results must be read. It is inconsequential if the source file contains tree-level results only. The OptionalArguments 
 are \"UVFlavourAssumption\", \"Collection\" and \"Model\". An example of how to set them, using their default values is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\",\"Model\"->\"UserModel\"}.";
 matchResToMasScanCard::usage = "matchResToMasScanCard[matchResFile,UVcoup,looplevel,OptionalArguments] takes the matching results in matchResFile at looplevel order and prints the card required to run a \[Chi]^2 scan as a function of the heavy mass of the model with SMEFiT.
-The optional arguments are \"UVFlavourAssumption\", \"Collection\", \"Model\", \"DegenerateMasses\" (\"True\" by default since mass scans are intended to be along a single mass), and \"OutputFormat\" (\"Universal\" by default).";
-flavourSymCheGenecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
+The optional arguments are \"UVFlavourAssumption\", \"Collection\", \"Model\", \"DegenerateMasses\" (\"True\" by default since mass scans are intended to be along a single mass), \"OutputFormat\" (\"Universal\" by default), and \"MaxMass\" (\"None\" by default).
+\"MaxMass\" is a TEMPORARY, intermediate option pending a proper SMEFiT output format for mass-scan cards with running SM couplings (see tests/SM_RGE_open_issues.md, issue 1b): the matching scale \[Mu] should equal the scanned mass itself, but the current card format can only encode WCs as polynomials in the inverse mass with fixed numerical coefficients, so \[Mu] cannot literally track a symbolic scan variable.
+By default (\"MaxMass\"->None) the SM RGE evolution is switched off for this card only, regardless of the global setSMRGELoop/setSMRGEintegration setting, and the printed mass upper bound is 300 (unchanged legacy behaviour). If \"MaxMass\"->value is given instead, that value both sets the printed mass upper bound and, if the SM RGEs are switched on globally, is used as the fixed scale at which the running SM couplings are evaluated -- an approximation that can be poor for wide scan ranges or wherever the true matching scale is far below the maximum, since the SM couplings are then evaluated as if \[Mu]=MaxMass over the whole range instead of tracking the scanned mass.";
+flavourSymChecker::usage = "flavourSymChecker[matchResFile, OptionalArguments] reads the file matchResFile and checks if the matching result fulfils the SMEFiT flavour symmetry. If not, it indicates the first dimension-6 WC for which it found a symmetry violation.
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to a fulfilment of the flavour symmetry. It treats the SM yukawas symbolically with the notation used in the matchResFile."
 flavourSolver::usage = "flavourSolver[matchResFile, OptionalArguments] reads the file matchResFile and solves for the UV couplings and SM yukawas such that the WCs fulfill the SMEFiT flavour symmetry. It returns all the possible solutions it finds. 
 The optional argument is \"UVFlavourAssumption\", through which one can impose restrictions on the UV couplings and SM yukawas that might lead to simpler and fewer solutions."
@@ -36,7 +38,7 @@ It also takes mandatorily a value for the mass of the UV particles which is appl
 An example of how to set them, using their default value is, {\"UVFlavourAssumption\"->{},\"Collection\"->\"UserCollection\"}.";
 modelToMasScanCard::usage = "modelToMasScanCard[directory,model,UVcoup,looporder,OptionalArguments] reads the file directory\\model.fr (usually the input directory already contains
 the \), runs MMEFT to add that model to the SM and match it onto SMEFT at looporder level, reads the results and prints a mass scan card by executing matchResToMasScanCard. All the UV couplings that do not vanish after applying the UVFlavourAssumptions (optional argument)
-are set to the numerical value UVcoup. Other optional arguments are \"Collection\", \"OutputFormat\" (\"Universal\" by default), \"DegenerateMasses\" (\"True\" by default since mass scans are usually along a single mass) and \"QGRAFPath\""
+are set to the numerical value UVcoup. Other optional arguments are \"Collection\", \"OutputFormat\" (\"Universal\" by default), \"DegenerateMasses\" (\"True\" by default since mass scans are usually along a single mass), \"QGRAFPath\" and \"MaxMass\" (\"None\" by default, see matchResToMasScanCard::usage for what it does)."
 dictionaryToPrint::usage = "TEST ONLY"
 printNameWCs::usage= "TEST ONLY"
 replaceSMparamsMatchMakerEFT::usage="TEST ONLY"
@@ -249,13 +251,15 @@ massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->massIntList[[j]],{j,1,Length
 ,
 massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->mass[[j]],{j,1,Length[preVarsUV]}];
 ];
-If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->Min[mass]}]];
+(*/// \[Mu] is the matching scale. Also needed at tree level when the SM RGEs are on, since the SM parameters are then run up to it. ///*)
+massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->Min[mass]}];
 ,
 massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
 massString=ToString[massInt];
 dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}//.flaUVassum;
 massReemp={Symbol[SymbolName[m]]->massInt};
-If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
+(*/// \[Mu] is the matching scale. Also needed at tree level when the SM RGEs are on, since the SM parameters are then run up to it. ///*)
+massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}];
 ];
 {dicTotal,massString,massReemp}]
 (*/// New function to be modified and tested. ///*)
@@ -272,14 +276,16 @@ massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->massIntList[[j]],{j,1,Length
 ,
 massReemp=Table[Symbol[SymbolName[m]<>ToString[j]]->mass[[j]],{j,1,Length[preVarsUV]}];
 ];
-If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->Min[mass]}]];
+(*/// \[Mu] is the matching scale. Also needed at tree level when the SM RGEs are on, since the SM parameters are then run up to it. ///*)
+massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->Min[mass]}];
 (*/// End of section for multiple masses ///*)
 ,
 massInt=Piecewise[{{mass[[1]],Length[mass]==1}},mass];
 massString=ToString[massInt];
 dicTotal=dictionaryToPrint[matchResFile,looplevel]/.{Symbol[SymbolName[onelooporder]]->looporderset}//.flaUVassum;
 massReemp={Symbol[SymbolName[m]]->massInt};
-If[looplevel!=0&&looplevel!="tree"&&looplevel!="Tree",massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}]];
+(*/// \[Mu] is the matching scale. Also needed at tree level when the SM RGEs are on, since the SM parameters are then run up to it. ///*)
+massReemp=Join[massReemp,{Symbol[SymbolName[\[Mu]]]->massInt}];
 ];
 {dicTotal,massString,massReemp}]
 
@@ -1474,12 +1480,23 @@ invarFilePrinter[model,collection,looplevel,massString,invarsUV,inverRelUV,reemp
 (*Mass Scan printing*)
 
 
-dictPrinterUVmass[matchResFile_,UVcoup_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal"]:=
+dictPrinterUVmass[matchResFile_,UVcoup_,looplevel_,varsUVinp_:{},flaUVassum_:{},collection_:"UserCollection",model_:"UserModel",degenMass_:"False",outFormat_:"Universal",maxMass_:None]:=
 Block[{indFree,massString,dicTotal,invertMassesNames,indAux,dicInvar,invertMasses,simpleUVnames,preVarsUV,varsUV,str1,indWCzero,ind1,massNames,invarsUV,sumTerm,inverRelUV,
 evalUVcoup,reempNamesRelev,zeroWCs,nonZeroWCs,massReemp,massReempInvar,orderlabel,coeffList,termList,ind2,ind3},
 (*Load the dictionary with matching results*)
 preVarsUV=parametersListFromMatchingResult[matchResFile,looplevel][[1]];
-{dicTotal,massString,massReemp}=massHandler[matchResFile,1,looplevel,flaUVassum];
+(*/// TEMPORARY, intermediate treatment of the SM RGEs for mass-scan cards, pending a SMEFiT output format that can express a \[Mu]-dependent SM coupling as a function of the (symbolic) scanned mass -- see tests/SM_RGE_open_issues.md, issue 1b. The matching scale should equal the scanned mass itself, which the current polynomial-in-1/mass card format cannot express. By default ("MaxMass"->None) the SM RGE evolution is switched off just for this card, regardless of the global setSMRGELoop/setSMRGEintegration setting, since there is no single numerical \[Mu] that is correct over the whole scan range. If the user opts in with "MaxMass"->value, the running (when switched on globally) is instead evaluated once at that fixed scale -- an explicit, documented approximation. ///*)
+If[maxMass===None,
+Print["WARNING: mass-scan cards cannot track the matching scale to the scanned mass with the current output format, so the SM RGE evolution is switched off for this card (global setting unaffected). Pass \"MaxMass\"->value to matchResToMasScanCard/modelToMasScanCard to opt into evaluating the running SM couplings at a fixed scale instead."];
+{dicTotal,massString,massReemp}=Block[{$loopLevelSMRGE=0,$integLevelSMRGE="None"},massHandler[matchResFile,1,looplevel,flaUVassum]];
+,
+If[statusSMRGE[]>0,
+Print["WARNING: the SM couplings evolved via the SM RGEs are evaluated once at \[Mu]="<>ToString[maxMass]<>" (the \"MaxMass\" value) for the entire mass scan, not at the scanned mass itself. This is an approximation that can be poor for wide scan ranges or wherever the scanned mass is far below "<>ToString[maxMass]<>"."];
+];
+{dicTotal,massString,massReemp}=massHandler[matchResFile,maxMass,looplevel,flaUVassum];
+];
+(*/// Resolve \[Mu] to its placeholder value and force any SM coupling evolved via the SM RGEs (an InterpolatingFunction of \[Mu]) to evaluate to a plain number. This must happen before the logs are zeroed below, otherwise the log implicit in the \[Mu]-dependence of the running is wiped out together with the matching logs, turning the running couplings into 0/0. The heavy masses are deliberately left symbolic, since they are the mass-scan variable. ///*)
+dicTotal=(dicTotal/.Select[massReemp,SymbolName[#[[1]]]=="\[Mu]"&])//.hf_InterpolatingFunction[arg_]:>hf[N[arg]];
 (*/// Remove logs by force. This is easy to justify for one mass, but it is clearly an approximation for several masses.  ///*)
 dicTotal=dicTotal/.{Log[a_]:>0};
 (*/// Get the UV couplings. ///*);
@@ -1540,7 +1557,7 @@ For[ind1=1,ind1<=Length[massNames],ind1++,
 WriteLine[str1,"  "<>ToString[massNames[[ind1]]]<>":"];
 WriteLine[str1,"    is_mass: true"];
 WriteLine[str1,"    min: 0.1"];
-WriteLine[str1,"    max: 300"];
+WriteLine[str1,"    max: "<>ToString[If[maxMass===None,300,maxMass]]];
 ];
 WriteLine[str1,"data_path: /path/to/smefit_database/commondata_projections_L0"];
 WriteLine[str1,"datasets:"];
@@ -1780,8 +1797,8 @@ matchResToUVscanCard[matchResFile_,mass_,looplevel_,OptionsPattern[]]:=dictPrint
 (*Mass scan*)
 
 
-Options[matchResToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"True","OutputFormat"->"Universal"};
-matchResToMasScanCard[matchResFile_,UVcoup_,looplevel_,OptionsPattern[]]:=dictPrinterUVmass[matchResFile,UVcoup,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]]
+Options[matchResToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","Model"->"UserModel","DegenerateMasses"->"True","OutputFormat"->"Universal","MaxMass"->None};
+matchResToMasScanCard[matchResFile_,UVcoup_,looplevel_,OptionsPattern[]]:=dictPrinterUVmass[matchResFile,UVcoup,looplevel,parametersListFromMatchingResult[matchResFile,looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],OptionValue["Model"],OptionValue["DegenerateMasses"],OptionValue["OutputFormat"],OptionValue["MaxMass"]]
 
 
 (* ::Subsection::Closed:: *)
@@ -1795,11 +1812,11 @@ If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
 dictPrinterUVcoup[direct<>model<>"_MM/MatchingResult.dat",mass,looplevel,parametersList[directory,"T1"],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,ToString[Not[DuplicateFreeQ[Flatten[{mass}]]]],OptionValue["OutputFormat"]];]
 
 
-Options[modelToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","OutputFormat"->"Universal","DegenerateMasses"->"True","QGRAFPath"->""};
+Options[modelToMasScanCard]={"UVFlavourAssumption"->{},"Collection"->"UserCollection","OutputFormat"->"Universal","DegenerateMasses"->"True","QGRAFPath"->"","MaxMass"->None};
 modelToMasScanCard[directory_,model_,UVcoup_,looplevel_,OptionsPattern[]]:=Block[{direct},
 matcher[directory,model,looplevel,"QGRAFPath"->OptionValue["QGRAFPath"]];
 If[Characters[directory][[-1]]!="/",direct=directory<>"/",direct=directory];
-dictPrinterUVmass[direct<>model<>"_MM/MatchingResult.dat",UVcoup,looplevel,parametersListFromMatchingResult[direct<>model<>"_MM/MatchingResult.dat",looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,OptionValue["DegenerateMasses"],OptionValue["OutputFormat"]];
+dictPrinterUVmass[direct<>model<>"_MM/MatchingResult.dat",UVcoup,looplevel,parametersListFromMatchingResult[direct<>model<>"_MM/MatchingResult.dat",looplevel],OptionValue["UVFlavourAssumption"],OptionValue["Collection"],model,OptionValue["DegenerateMasses"],OptionValue["OutputFormat"],OptionValue["MaxMass"]];
 ]
 
 
