@@ -133,7 +133,7 @@ coefficients:
   OQl13:
     constrain:
     - gWH:
-      - -1.
+      - -0.25
       - 0
       gWLf11:
       - 1
@@ -146,7 +146,7 @@ coefficients:
   OQl1M:
     constrain:
     - gWH:
-      - 1.
+      - 0.25
       - 0
       gWLf11:
       - 1
@@ -244,7 +244,7 @@ coefficients:
   OQl3M:
     constrain:
     - gWH:
-      - 1.
+      - 0.25
       - 0
       gWLf33:
       - 1
@@ -257,7 +257,7 @@ coefficients:
   OQl33:
     constrain:
     - gWH:
-      - -1.
+      - -0.25
       - 0
       gWLf33:
       - 1
@@ -270,7 +270,7 @@ coefficients:
   OQl23:
     constrain:
     - gWH:
-      - -1.
+      - -0.25
       - 0
       gWLf22:
       - 1
@@ -283,7 +283,7 @@ coefficients:
   OQl2M:
     constrain:
     - gWH:
-      - 1.
+      - 0.25
       - 0
       gWLf22:
       - 1
