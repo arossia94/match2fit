@@ -9,9 +9,9 @@ printer:
 ```mathematica
 Do[
   If[ii == 28, Continue[]];                         (* skip L1 *)
-  condFlaSym = Get[".../Granada_Collection/Flavour_Sym_Cond_SMEFiT_Tree_Level_Mod_" <> ToString[ii] <> "_25_07_2025.dat"];
+  condFlaSym = Get[".../Granada_Collection/Flavour_Sym_Cond_SMEFiT_Tree_Level_Mod_" <> ToString[ii] <> "_20_11_2026.dat"];
   matchResToMasScanCard[
-     ".../Granada_Collection/Matching_Result_Tree_Level_Mod_" <> ToString[ii] <> "_25_07_2025.dat",
+     ".../Granada_Collection/Matching_Result_Tree_Level_Mod_" <> ToString[ii] <> "_20_11_2026.dat",
      1,        (* UVcoup = 1  -> every surviving coupling set to 1 *)
      0,        (* looplevel = Tree *)
      {"UVFlavourAssumption" -> Join[realDiagSMYukas, condFlaSym],
