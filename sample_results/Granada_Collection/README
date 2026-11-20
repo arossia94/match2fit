@@ -1,0 +1,11 @@
+This folder contains tree-level Matching results for all the Granada models in Matchmakereft-like output format.
+These results have been obtained by manually hardcoding in a Mathematica notebook the content of the appendices 
+of the Granada dictionary.
+
+In addition, we provide files with sets of replacements to be applied on the matching results to make these models comply with the SMEFiT flavor symmetry,
+$U(3)_d\times U(2)_q\times U(2)_u\times(U(1)_e\times U(1)_\ell)^3$.
+In addition, for certain models, these replacements contain the antisymmetry conditions that should be respected by their UV couplings.
+
+
+# WARNING
+We have applied explicitly the simplification of real UV and SM couplings, including SM Yukawas. Hence, the results here are not valid in full generality. But this simplifying choice is in perfect agreement with the expected use cases of match2fit and SMEFiT in the foreseeable future.
