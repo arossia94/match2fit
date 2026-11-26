@@ -71,7 +71,7 @@ requiredWCs = {{"WC", "Flavour indices"}, {Subscript[wwC, \[Phi]G], {}}, {Subscr
      Hold[Subscript[wC, u\[Phi]][3, 3]]}, {wwCtG, Hold[Subscript[wC, uG][3, 3]
     ]}, {wwCc\[CurlyPhi], Hold[Subscript[wC, u\[Phi]][2, 2]]}, {wwC\[Tau]\[CurlyPhi], Hold[Subscript[wC,
      e\[Phi]][3, 3]]}, {wwCtW, Hold[Subscript[wC, uW][3, 3]]},{wwCtZ, Hold[-sW
-     * Subscript[wC, uB][3, 3] + cW * Subscript[wC, uB][3, 3]]},{wwC\[CurlyPhi], Hold[
+     * Subscript[wC, uB][3, 3] + cW * Subscript[wC, uW][3, 3]]},{wwC\[CurlyPhi], Hold[
     Subscript[wC, \[Phi]]]}};
      (*/////////*)
      convToSMEFiTbasis = {Subscript[wwC, \[Phi]Sq] -> -wwC\[CurlyPhi]d, Subscript[wwC, qq3
