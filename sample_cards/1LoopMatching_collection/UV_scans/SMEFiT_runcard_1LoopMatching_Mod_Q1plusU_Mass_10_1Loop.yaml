@@ -764,13 +764,13 @@ coefficients:
   OtZ:
     constrain:
     - yQ1u3:
-      - 6.186675588445429e-7
+      - -2.25013414563745e-6
       - 0
       yU3:
       - 1
       - 2
     - yQ1u3:
-      - -6.186675588445429e-7
+      - 7.5128597312405e-7
       - 2
     max: 100
     min: -100
@@ -1437,11 +1437,11 @@ datasets:
 - name: ATLAS_ttbb_13TeV_2016
   order: NLO_QCD
 - name: ATLAS_tttt_13TeV_2023
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: ATLAS_tttt_13TeV_run2
   order: NLO_QCD
 - name: ATLAS_tttt_13TeV_slep_inc
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: ATLAS_Zjj_13TeV_dphijj
   order: LO
 - name: ATLAS_SSinc_RunII_proj
@@ -1481,11 +1481,11 @@ datasets:
 - name: ATLAS_ttbb_13TeV_2016_proj
   order: NLO_QCD
 - name: ATLAS_tttt_13TeV_2023_proj
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: ATLAS_tttt_13TeV_run2_proj
   order: NLO_QCD
 - name: ATLAS_tttt_13TeV_slep_inc_proj
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: CMS_H_13TeV_2015_pTH_proj
   order: NLO_QCD
 - name: CMS_SSinc_RunII_proj
@@ -1523,11 +1523,11 @@ datasets:
 - name: CMS_ttbb_13TeV_ljets_inc_proj
   order: NLO_QCD
 - name: CMS_tttt_13TeV_2023_proj
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: CMS_tttt_13TeV_run2_proj
   order: NLO_QCD
 - name: CMS_tttt_13TeV_slep_inc_proj
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: HLLHC_HH_14TeV
   order: LO
 - name: HLLHC_HH_bbaa_14TeV_low_high_mass
@@ -1747,16 +1747,34 @@ datasets:
 - name: CMS_tttt_13TeV
   order: NLO_QCD
 - name: CMS_tttt_13TeV_2023
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: CMS_tttt_13TeV_run2
   order: NLO_QCD
 - name: CMS_tttt_13TeV_slep_inc
-  order: NLO_QCD
+  order: LO_QCD_EW
 - name: FCCee_161_ww_leptonic_optim_obs
   order: LO
 - name: FCCee_161_ww_semilep_optim_obs
   order: LO
 - name: FCCee_ww_161GeV
+  order: LO
+- name: FCCee_Rb_161GeV
+  order: LO
+- name: FCCee_Rc_161GeV
+  order: LO
+- name: FCCee_Rmu_161GeV
+  order: LO
+- name: FCCee_Rtau_161GeV
+  order: LO
+- name: FCCee_sigmaHad_161GeV
+  order: LO
+- name: FCCee_bb_Afb_161GeV
+  order: LO
+- name: FCCee_cc_Afb_161GeV
+  order: LO
+- name: FCCee_mumu_Afb_161GeV
+  order: LO
+- name: FCCee_tautau_Afb_161GeV
   order: LO
 - name: FCCee_240_H_HADR
   order: NLO_EW_only_for_ZH
@@ -2278,6 +2296,26 @@ datasets:
   order: NLO_EW
 - name: LEP3_zh_tautau_240GeV
   order: NLO_EW
+- name: LEP3_ww_161GeV
+  order: LO
+- name: LEP3_Rb_161GeV
+  order: LO
+- name: LEP3_Rc_161GeV
+  order: LO
+- name: LEP3_Rmu_161GeV
+  order: LO
+- name: LEP3_Rtau_161GeV
+  order: LO
+- name: LEP3_sigmaHad_161GeV
+  order: LO
+- name: LEP3_bb_Afb_161GeV
+  order: LO
+- name: LEP3_cc_Afb_161GeV
+  order: LO
+- name: LEP3_mumu_Afb_161GeV
+  order: LO
+- name: LEP3_tautau_Afb_161GeV
+  order: LO
 - name: LEP3_ww_161GeV
   order: LO
 - name: LEP3_161_ww_leptonic_optim_obs

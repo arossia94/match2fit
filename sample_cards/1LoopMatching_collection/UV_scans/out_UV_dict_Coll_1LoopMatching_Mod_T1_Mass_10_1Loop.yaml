@@ -1,6 +1,6 @@
 # UV dictionary with WCs in terms of UV variables
 # ~~~~~~~~~~~~~~~~~~~~~~
-UV Collection : OneLoop
+UV Collection : 1LoopMatching
 UV model : T1
 Model name : T1
 # ~~~~~~~~~~~~~~~~~~~~~~
@@ -59,12 +59,12 @@ cll1221 : [{lambdaT13: [-4.6029875162978395e-6,0]}]
 cll1111 : [{lambdaT13: [-2.3361879141663845e-6,0]}]
 cbp : [{lambdaT13: [-1.105115702179622e-7,0]},{lambdaT13: [0.000028106750848090546,2]},{lambdaT13: [-1.122457906568464e-6,4]}]
 ctp : [{lambdaT13: [-4.567459060013194e-6,0]},{lambdaT13: [0.002528882555626293,2]},{lambdaT13: [-0.00010161613624293922,4]}]
-ctG : [{lambdaT13: [0.000016731120783798808,2]}]
+ctG : [{lambdaT13: [0.000013745584117580564,2]}]
 ccp : [{lambdaT13: [0.,0]}]
 ctap : [{lambdaT13: [-4.705995095406047e-8,0]},{lambdaT13: [-5.908478336037928e-7,2]},{lambdaT13: [-2.630179079820182e-7,4]}]
 cmup : [{lambdaT13: [0.,0]}]
 ctW : [{lambdaT13: [3.846239273023644e-6,2]}]
-ctZ : [{lambdaT13: [-9.280013382668142e-7,2]}]
+ctZ : [{lambdaT13: [4.499337347841224e-6,2]}]
 cp : [{lambdaT13: [-2.382202125728939e-6,0]},{lambdaT13: [-0.0002172687012794731,2]},{lambdaT13: [0.00008022748584470787,4]},{lambdaT13: [8.905182156064843e-6,6]}]
 cQe : [{lambdaT13: [4.625887468995314e-8,0]},{lambdaT13: [1.324903651673999e-6,2]}]
 cQl13 : [{lambdaT13: [-4.6029875162978395e-6,0]},{lambdaT13: [1.8277725994903644e-6,2]}]
@@ -109,7 +109,29 @@ ctl3 : [{lambdaT13: [9.251774937990628e-8,0]}]
 ctl2 : [{lambdaT13: [9.251774937990628e-8,0]}]
 cQl3M : [{lambdaT13: [4.626116953642816e-6,0]},{lambdaT13: [-1.1640796790409389e-6,2]}]
 cQl33 : [{lambdaT13: [-4.6029875162978395e-6,0]},{lambdaT13: [1.8274623258372579e-6,2]}]
+cmuu : [{lambdaT13: [1.8503549875981256e-7,0]}]
+ctau : [{lambdaT13: [1.8503549875981256e-7,0]}]
+cmud : [{lambdaT13: [-9.251774937990628e-8,0]}]
+ctad : [{lambdaT13: [-9.251774937990628e-8,0]}]
+cmub : [{lambdaT13: [-9.251774937990628e-8,0]}]
+ctab : [{lambdaT13: [-9.251774937990628e-8,0]}]
+ctmu : [{lambdaT13: [1.8503549875981256e-7,0]}]
+cql23 : [{lambdaT13: [-4.6029875162978395e-6,0]}]
+cql33 : [{lambdaT13: [-4.6029875162978395e-6,0]}]
+cql2M : [{lambdaT13: [4.626116953642816e-6,0]}]
+cql3M : [{lambdaT13: [4.626116953642816e-6,0]}]
+cQl23 : [{lambdaT13: [-4.6029875162978395e-6,0]},{lambdaT13: [1.8277725994903644e-6,2]}]
+cQl2M : [{lambdaT13: [4.626116953642816e-6,0]},{lambdaT13: [-1.165320773653365e-6,2]}]
+cl2u : [{lambdaT13: [9.251774937990628e-8,0]}]
+cl3u : [{lambdaT13: [9.251774937990628e-8,0]}]
+cl2d : [{lambdaT13: [-4.625887468995314e-8,0]}]
+cl3d : [{lambdaT13: [-4.625887468995314e-8,0]}]
+cl2b : [{lambdaT13: [-4.625887468995314e-8,0]}]
+cl3b : [{lambdaT13: [-4.625887468995314e-8,0]}]
+cqmu : [{lambdaT13: [4.625887468995314e-8,0]}]
+cqta : [{lambdaT13: [4.625887468995314e-8,0]}]
+cQmu : [{lambdaT13: [4.625887468995314e-8,0]},{lambdaT13: [1.324903651673999e-6,2]}]
 # ~~~~~~~~~~~~~~~~~~~~~~
 # Miscellaneous information
-# Matching results address: /home/alejorossia/match2fit/sample_results/MatchingResult_T1_oneloop.dat
-# Export date: Tue 30 Sep 2025 07:53:02
+# Matching results address: /home/arossia/match2fit//sample_results/MatchingResult_T1_oneloop.dat
+# Export date: Thu 26 Nov 2026 16:35:09
