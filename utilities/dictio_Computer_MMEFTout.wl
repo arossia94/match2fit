@@ -71,7 +71,7 @@ requiredWCs = {{"WC", "Flavour indices"}, {Subscript[wwC, \[Phi]G], {}}, {Subscr
      Hold[Subscript[wC, u\[Phi]][3, 3]]}, {wwCtG, Hold[Subscript[wC, uG][3, 3]
     ]}, {wwCc\[CurlyPhi], Hold[Subscript[wC, u\[Phi]][2, 2]]}, {wwC\[Tau]\[CurlyPhi], Hold[Subscript[wC,
      e\[Phi]][3, 3]]}, {wwCtW, Hold[Subscript[wC, uW][3, 3]]},{wwCtZ, Hold[-sW
-     * Subscript[wC, uB][3, 3] + cW * Subscript[wC, uB][3, 3]]},{wwC\[CurlyPhi], Hold[
+     * Subscript[wC, uB][3, 3] + cW * Subscript[wC, uW][3, 3]]},{wwC\[CurlyPhi], Hold[
     Subscript[wC, \[Phi]]]}};
      (*/////////*)
      convToSMEFiTbasis = {Subscript[wwC, \[Phi]Sq] -> -wwC\[CurlyPhi]d, Subscript[wwC, qq3
@@ -576,7 +576,7 @@ Subscript[wC, ll][i_,j_,k_,l_]:=Sum[(Conjugate[y[S1][r,j,l]])(y[S1][r,i,k])/(M[S
 Subscript[wC, qq1][i_,j_,k_,l_]:=Sum[(Conjugate[y[\[Omega]1][qq][r,l,j]])(y[\[Omega]1][qq][r,i,k])/(2M[\[Omega]1][r]^2),{r,1,n[\[Omega]1]}]+3Sum[(Conjugate[y[\[Zeta]][qq][r,l,j]])(y[\[Zeta]][qq][r,k,i])/(2M[\[Zeta]][r]^2),{r,1,n[\[Zeta]]}]+Sum[(Conjugate[y[\[CapitalOmega]1][qq][r,i,k]])(y[\[CapitalOmega]1][qq][r,j,l])/(4M[\[CapitalOmega]1][r]^2),{r,1,n[\[CapitalOmega]1]}]+3Sum[(Conjugate[y[\[CapitalUpsilon]][r,k,i]])(y[\[CapitalUpsilon]][r,l,j])/(4M[\[CapitalUpsilon]][r]^2),{r,1,n[\[CapitalUpsilon]]}]-Sum[g[B][q][r,k,l]g[B][q][r,i,j]/(2 M[B][r]^2),{r,1,n[B]}]-Sum[g[G][q][r,k,j]g[G][q][r,i,l]/(8 M[G][r]^2),{r,1,n[G]}]+Sum[g[G][q][r,k,l]g[G][q][r,i,j]/(12 M[G][r]^2),{r,1,n[G]}]-3Sum[g[H][r,k,j]g[H][r,i,l]/(32 M[H][r]^2),{r,1,n[H]}];
 Subscript[wC, qq3][i_,j_,k_,l_]:=-Sum[(Conjugate[y[\[Omega]1][qq][r,j,l]])(y[\[Omega]1][qq][r,k,i])/(2M[\[Omega]1][r]^2),{r,1,n[\[Omega]1]}]-Sum[(Conjugate[y[\[Zeta]][qq][r,j,l]])(y[\[Zeta]][qq][r,k,i])/(2M[\[Zeta]][r]^2),{r,1,n[\[Zeta]]}]+Sum[(Conjugate[y[\[CapitalOmega]1][qq][r,k,i]])(y[\[CapitalOmega]1][qq][r,l,j])/(4M[\[CapitalOmega]1][r]^2),{r,1,n[\[CapitalOmega]1]}]+Sum[(Conjugate[y[\[CapitalUpsilon]][r,k,i]])(y[\[CapitalUpsilon]][r,j,l])/(4M[\[CapitalUpsilon]][r]^2),{r,1,n[\[CapitalUpsilon]]}]-Sum[g[W][q][r,k,l]g[W][q][r,i,j]/(8 M[W][r]^2),{r,1,n[W]}]-Sum[g[G][q][r,k,j]g[G][q][r,i,l]/(8 M[G][r]^2),{r,1,n[G]}]+Sum[g[H][r,k,l]g[H][r,i,j]/(48 M[H][r]^2),{r,1,n[H]}]+Sum[g[H][r,k,j]g[H][r,i,l]/(32 M[H][r]^2),{r,1,n[H]}];
 Subscript[wC, lq1][i_,j_,k_,l_]:=Sum[(Conjugate[y[\[Omega]1][qL][r,k,i]])(y[\[Omega]1][qL][r,l,j])/(4M[\[Omega]1][r]^2),{r,1,n[\[Omega]1]}]+3Sum[(Conjugate[y[\[Zeta]][qL][r,k,i]])(y[\[Zeta]][qL][r,l,j])/(4M[\[Zeta]][r]^2),{r,1,n[\[Zeta]]}]-Sum[g[B][q][r,k,l]g[B][L][r,i,j]/( M[B][r]^2),{r,1,n[B]}]-Sum[Conjugate[g[\[ScriptCapitalU]2][Lq][r,j,k]]g[\[ScriptCapitalU]2][Lq][r,i,l]/(2 M[\[ScriptCapitalU]2][r]^2),{r,1,n[\[ScriptCapitalU]2]}]-3Sum[Conjugate[g[X][r,j,k]]g[X][r,i,l]/(8 M[X][r]^2),{r,1,n[X]}];
-Subscript[wC, lq3][i_,j_,k_,l_]:=-Sum[(Conjugate[y[\[Omega]1][qL][r,k,i]])(y[\[Omega]1][qL][r,l,j])/(4M[\[Omega]1][r]^2),{r,1,n[\[Omega]1]}]+Sum[(Conjugate[y[\[Zeta]][qL][r,k,i]])(y[\[Zeta]][qL][r,l,j])/(4M[\[Zeta]][r]^2),{r,1,n[\[Zeta]]}]-Sum[g[W][q][r,k,l]g[W][L][r,i,j]/( M[W][r]^2),{r,1,n[W]}]-Sum[Conjugate[g[\[ScriptCapitalU]2][Lq][r,j,k]]g[\[ScriptCapitalU]2][Lq][r,i,l]/(2 M[\[ScriptCapitalU]2][r]^2),{r,1,n[\[ScriptCapitalU]2]}]+Sum[Conjugate[g[X][r,j,k]]g[X][r,i,l]/(8 M[X][r]^2),{r,1,n[X]}];
+Subscript[wC, lq3][i_,j_,k_,l_]:=-Sum[(Conjugate[y[\[Omega]1][qL][r,k,i]])(y[\[Omega]1][qL][r,l,j])/(4M[\[Omega]1][r]^2),{r,1,n[\[Omega]1]}]+Sum[(Conjugate[y[\[Zeta]][qL][r,k,i]])(y[\[Zeta]][qL][r,l,j])/(4M[\[Zeta]][r]^2),{r,1,n[\[Zeta]]}]-Sum[g[W][q][r,k,l]g[W][L][r,i,j]/( 4 M[W][r]^2),{r,1,n[W]}]-Sum[Conjugate[g[\[ScriptCapitalU]2][Lq][r,j,k]]g[\[ScriptCapitalU]2][Lq][r,i,l]/(2 M[\[ScriptCapitalU]2][r]^2),{r,1,n[\[ScriptCapitalU]2]}]+Sum[Conjugate[g[X][r,j,k]]g[X][r,i,l]/(8 M[X][r]^2),{r,1,n[X]}];
 Subscript[wC, ee][i_,j_,k_,l_]:=Sum[(Conjugate[y[S2][r,l,j]])(y[S2][r,k,i])/(2M[S2][r]^2),{r,1,n[S2]}]-Sum[g[B][e][r,k,l]g[B][e][r,i,j]/(2 M[B][r]^2),{r,1,n[B]}];
 Subscript[wC, dd][i_,j_,k_,l_]:=Sum[(Conjugate[y[\[Omega]2][r,l,j]])(y[\[Omega]2][r,k,i])/(M[\[Omega]2][r]^2),{r,1,n[\[Omega]2]}]+Sum[(Conjugate[y[\[CapitalOmega]2][r,i,k]])(y[\[CapitalOmega]2][r,j,l])/(2M[\[CapitalOmega]2][r]^2),{r,1,n[\[CapitalOmega]2]}]-Sum[g[B][d][r,k,l]g[B][d][r,i,j]/(2 M[B][r]^2),{r,1,n[B]}]-Sum[g[G][d][r,k,j]g[G][d][r,i,l]/(4 M[G][r]^2),{r,1,n[G]}]+Sum[g[G][d][r,k,l]g[G][d][r,i,j]/(12 M[G][r]^2),{r,1,n[G]}];
 Subscript[wC, uu][i_,j_,k_,l_]:=Sum[(Conjugate[y[\[Omega]4][uu][r,l,j]])(y[\[Omega]4][uu][r,k,i])/(M[\[Omega]4][r]^2),{r,1,n[\[Omega]4]}]+Sum[(Conjugate[y[\[CapitalOmega]4][r,i,k]])(y[\[CapitalOmega]4][r,j,l])/(2M[\[CapitalOmega]4][r]^2),{r,1,n[\[CapitalOmega]4]}]-Sum[g[B][u][r,k,l]g[B][u][r,i,j]/(2 M[B][r]^2),{r,1,n[B]}]-Sum[g[G][u][r,k,j]g[G][u][r,i,l]/(4 M[G][r]^2),{r,1,n[G]}]+Sum[g[G][u][r,k,l]g[G][u][r,i,j]/(12 M[G][r]^2),{r,1,n[G]}];
@@ -1027,7 +1027,5 @@ mmEFTdicto>>(Directory[]<>"/Matching_Result_Tree_Level_Mod_"<>ToString[indPart+1
 solFlaSymOut>>(Directory[]<>"/Flavour_Sym_Cond_SMEFiT_Tree_Level_Mod_"<>ToString[indPart+1]<>"_"<>DateString[{"Day","_","Month","_","Year"}]<>".dat")
 ];];
 onePartExtDictioSMEFTsimBasis
-
-
 
 

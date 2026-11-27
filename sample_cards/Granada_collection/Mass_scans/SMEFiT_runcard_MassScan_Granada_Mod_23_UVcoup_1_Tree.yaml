@@ -103,14 +103,14 @@ coefficients:
   OQl13:
     constrain:
     - m:
-      - -1.
+      - -0.25
       - -2
     max: 100
     min: -100
   OQl1M:
     constrain:
     - m:
-      - 1.
+      - 0.25
       - -2
     max: 100
     min: -100
@@ -166,28 +166,28 @@ coefficients:
   OQl3M:
     constrain:
     - m:
-      - 1.
+      - 0.25
       - -2
     max: 100
     min: -100
   OQl33:
     constrain:
     - m:
-      - -1.
+      - -0.25
       - -2
     max: 100
     min: -100
   OQl23:
     constrain:
     - m:
-      - -1.
+      - -0.25
       - -2
     max: 100
     min: -100
   OQl2M:
     constrain:
     - m:
-      - 1.
+      - 0.25
       - -2
     max: 100
     min: -100
