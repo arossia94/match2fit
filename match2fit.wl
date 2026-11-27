@@ -384,7 +384,7 @@ Symbol[SymbolName[\[Phi]q1]]][3,3]-Subscript[Symbol[SymbolName[wwC]],Symbol[Symb
 {Symbol[SymbolName[wwC\[Tau]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][3,3]},
 {Symbol[SymbolName[wwC\[Mu]\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[e\[Phi]]]][2,2]},
 {Symbol[SymbolName[wwCtW]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
-{Symbol[SymbolName[wwCtZ]],-Symbol[SymbolName[sW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]+Symbol[SymbolName[cW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]},
+{Symbol[SymbolName[wwCtZ]],-Symbol[SymbolName[sW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uB]]][3,3]+Symbol[SymbolName[cW]]*Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[uW]]][3,3]},
 {Symbol[SymbolName[wwC\[CurlyPhi]]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[\[Phi]]]]},
 {Symbol[SymbolName[wwCQe]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[qe]]][3,3,1,1]},
 {Symbol[SymbolName[wwCQl31]],Subscript[Symbol[SymbolName[wwC]],Symbol[SymbolName[lq3]]][1,1,3,3]},
@@ -618,7 +618,7 @@ Print["First WC for which the conditions are not satisfied: "<>ToString[Standard
 ];
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Flavour solver*)
 
 
